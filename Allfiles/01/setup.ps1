@@ -22,13 +22,15 @@ foreach ($provider in $provider_list){
 $Region = "westus"
 
 #Rg creation
-[string]$suffix =  -join ((48..57) + (97..122) | Get-Random -Count 7 | % {[char]$_})
-$resourceGroupName = "dp500-$suffix"
-New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
+#[string]$suffix =  -join ((48..57) + (97..122) | Get-Random -Count 7 | % {[char]$_})
+#$resourceGroupName = "dp500-$suffix"
+$resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab01-rg*" }).ResourceGroupName
+$DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["DeploymentId"]
+#New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
 
 # Create Synapse workspace
-$synapseWorkspace = "synapse$suffix"
-$dataLakeAccountName = "datalake$suffix"
+$synapseWorkspace = "synapse$DeploymentID"
+$dataLakeAccountName = "datalake$DeploymentID"
 
 write-host "Creating $synapseWorkspace Synapse Analytics workspace in $resourceGroupName resource group..."
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
@@ -38,7 +40,7 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -dataLakeAccountName $dataLakeAccountName `
   -sqlUser $sqlUser `
   -sqlPassword $sqlPassword `
-  -uniqueSuffix $suffix `
+  -uniqueSuffix $DeploymentID `
   -Force
 
 # Make the current user and the Synapse service principal owners of the data lake blob store
