@@ -6,20 +6,10 @@ Install-Module -Name Az.Synapse -Force
 
 # Setting Sql usn&pwd
 $sqlUser = "SQLUser"
-write-host ""
 $sqlPassword = "Dp500@12345"
 
-# Register resource providers
-Write-Host "Registering resource providers...";
-$provider_list = "Microsoft.Synapse", "Microsoft.Sql", "Microsoft.Storage", "Microsoft.Compute"
-foreach ($provider in $provider_list){
-    $result = Register-AzResourceProvider -ProviderNamespace $provider
-    $status = $result.RegistrationState
-    Write-Host "$provider : $status"
-}
-
 # Choose a random region
-$Region = "westus"
+#$Region = "westus"
 
 #Rg creation
 #[string]$suffix =  -join ((48..57) + (97..122) | Get-Random -Count 7 | % {[char]$_})
