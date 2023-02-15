@@ -22,16 +22,10 @@ $DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["Deployment
 $synapseWorkspace = "synapse$DeploymentID"
 $dataLakeAccountName = "datalake$DeploymentID"
 
+(Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json"
+
 write-host "Creating $synapseWorkspace Synapse Analytics workspace in $resourceGroupName resource group..."
-New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
-  -TemplateFile "setup.json" `
-  -Mode Complete `
-  -workspaceName $synapseWorkspace `
-  -dataLakeAccountName $dataLakeAccountName `
-  -sqlUser $sqlUser `
-  -sqlPassword $sqlPassword `
-  -uniqueSuffix $DeploymentID `
-  -Force
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile ".\setup.json" -TemplateParameterFile ".\parameters.json"
 
 # Make the current user and the Synapse service principal owners of the data lake blob store
 write-host "Granting permissions on the $dataLakeAccountName storage account..."
