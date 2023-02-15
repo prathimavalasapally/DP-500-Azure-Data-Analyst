@@ -25,12 +25,6 @@
         "metadata": {
           "description": "Password for SQL User"
         }
-      },
-      "uniqueSuffix": {
-        "type": "String",
-        "metadata": {
-          "description": "Suffix added to all resource name to make them unique."
-        }
       }
     },
     "variables": {
@@ -48,7 +42,7 @@
         "dependsOn": [],
         "properties": {
             "tags": {
-                "DeploymentId": "[parameters('uniqueSuffix')]"
+                "DeploymentId": "[parameters('workspaceName')]"
             }
         }
     },
