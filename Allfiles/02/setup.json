@@ -171,7 +171,7 @@
       {
         "type": "Microsoft.Synapse/workspaces/bigDataPools",
         "apiVersion": "2019-06-01-preview",
-        "name": "[variables('sparkPoolName')]",
+        "name": "[concat(variables('workspaceName'), '/', variables('sparkPoolName'))]",
         "location": "[variables('location')]",
         "dependsOn": [
           "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
