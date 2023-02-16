@@ -2,41 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "workspaceName": {
-        "type": "String",
-        "metadata": {
-          "description": "Synapse Workspace name"
-        }
-      },
-      "dataLakeAccountName": {
-        "type": "String",
-        "metadata": {
-          "description": "Azure storage account name for data lake."
-        }
-      },
-      "uniqueSuffix": {
-        "type": "String",
-        "metadata": {
-          "description": "Suffix added to all resource name to make them unique."
-        }
-      },
-      "sqlDatabaseName": {
-        "type": "String",
-        "metadata": {
-          "description": "Name for dedicated SQL pool"
-        }
-      },
-      "sqlUser": {
-        "type": "String",
-        "metadata": {
-          "description": "SQL user name"
-        }
-      },
-      "sqlPassword": {
-        "type": "String",
-        "metadata": {
-          "description": "Password for SQL User"
-        }
+      "DeploymentID": {
+        "type": "String"
       }
     },
     "variables": {
@@ -45,7 +12,10 @@
       "computeSubnetId": "",
       "sqlSKU": "DW100c",
       "storageBlobDataOwnerRoleID": "b7e6dc6d-f1e8-4753-8033-0f276bb0955b",
-      "defaultDataLakeStorageAccountUrl": "[concat('https://', parameters('dataLakeAccountName'), '.dfs.core.windows.net')]"
+      "defaultDataLakeStorageAccountUrl": "[concat('https://', parameters('dataLakeAccountName'), '.dfs.core.windows.net')]",
+      "workspaceName": "[concat('workspace',parameters('DeploymentID'))]",
+	  "dataLakeAccountName": "[concat('datalake',parameters('DeploymentID'))]",
+      "sqlDatabaseName": "[concat('sqldb',parameters('DeploymentID'))]",
     },
     "resources": [
       {
@@ -55,14 +25,14 @@
         "dependsOn": [],
         "properties": {
             "tags": {
-                "DeploymentId": "[parameters('uniqueSuffix')]"
+                "DeploymentId": "[variables('workspaceName')]"
             }
         }
     },
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2019-06-01",
-      "name": "[parameters('dataLakeAccountName')]",
+      "name": "[variables('dataLakeAccountName')]",
       "location": "[variables('location')]",
       "dependsOn": [],
       "tags": {},
@@ -82,7 +52,7 @@
           "apiVersion": "2018-07-01",
           "name": "[concat('default/', variables('defaultDataLakeStorageFilesystemName'))]",
           "dependsOn": [
-            "[concat('Microsoft.Storage/storageAccounts/', parameters('dataLakeAccountName'))]"
+            "[concat('Microsoft.Storage/storageAccounts/', variables('dataLakeAccountName'))]"
           ]
         }
       ]
@@ -90,9 +60,9 @@
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
       "apiVersion": "2019-06-01",
-      "name": "[concat(parameters('dataLakeAccountName'), '/default')]",
+      "name": "[concat(variables('dataLakeAccountName'), '/default')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('dataLakeAccountName'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('dataLakeAccountName'))]"
       ],
       "sku": {
         "name": "Standard_LRS",
@@ -110,9 +80,9 @@
     {
       "type": "Microsoft.Storage/storageAccounts/fileServices",
       "apiVersion": "2019-06-01",
-      "name": "[concat(parameters('dataLakeAccountName'), '/default')]",
+      "name": "[concat(variables('dataLakeAccountName'), '/default')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('dataLakeAccountName'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('dataLakeAccountName'))]"
       ],
       "sku": {
         "name": "Standard_LRS",
@@ -127,10 +97,10 @@
     {
       "type": "Microsoft.Synapse/workspaces",
       "apiVersion": "2019-06-01-preview",
-      "name": "[parameters('workspaceName')]",
+      "name": "[variables('workspaceName')]",
       "location": "[variables('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Storage/storageAccounts/', parameters('dataLakeAccountName'), '/blobServices/default/containers/', variables('defaultDataLakeStorageFilesystemName'))]"
+        "[concat('Microsoft.Storage/storageAccounts/', variables('dataLakeAccountName'), '/blobServices/default/containers/', variables('defaultDataLakeStorageFilesystemName'))]"
       ],
       "identity": {
         "type": "SystemAssigned"
@@ -143,8 +113,8 @@
         "virtualNetworkProfile": {
           "computeSubnetId": "[variables('computeSubnetId')]"
         },
-        "sqlAdministratorLogin": "[parameters('sqlUser')]",
-        "sqlAdministratorLoginPassword": "[parameters('sqlPassword')]"
+        "sqlAdministratorLogin": "adminuser",
+        "sqlAdministratorLoginPassword": "Password.1!!"
       },
       "resources": [
         {
@@ -153,7 +123,7 @@
           "name": "allowAll",
           "location": "[variables('location')]",
           "dependsOn": [
-            "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
+            "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
           ],
           "properties": {
             "startIpAddress": "0.0.0.0",
@@ -165,41 +135,41 @@
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers/providers/roleAssignments",
       "apiVersion": "2018-09-01-preview",
-      "name": "[concat(parameters('dataLakeAccountName'), '/default/', variables('defaultDataLakeStorageFilesystemName'), '/Microsoft.Authorization/',  guid(concat(resourceGroup().id, '/', variables('storageBlobDataOwnerRoleID'), '/', parameters('workspaceName'))))]",
+      "name": "[concat(variables('dataLakeAccountName'), '/default/', variables('defaultDataLakeStorageFilesystemName'), '/Microsoft.Authorization/',  guid(concat(resourceGroup().id, '/', variables('storageBlobDataOwnerRoleID'), '/', variables('workspaceName'))))]",
       "location": "[variables('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
+        "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
       ],
       "properties": {
         "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', variables('storageBlobDataOwnerRoleID'))]",
-        "principalId": "[reference(concat('Microsoft.Synapse/workspaces/', parameters('workspaceName')), '2019-06-01-preview', 'Full').identity.principalId]",
+        "principalId": "[reference(concat('Microsoft.Synapse/workspaces/', variables('workspaceName')), '2019-06-01-preview', 'Full').identity.principalId]",
         "principalType": "ServicePrincipal"
       }
     },
     {
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2018-09-01-preview",
-      "name": "[guid(concat(resourceGroup().id, '/', variables('storageBlobDataOwnerRoleID'), '/', parameters('workspaceName'), '2'))]",
+      "name": "[guid(concat(resourceGroup().id, '/', variables('storageBlobDataOwnerRoleID'), '/', variables('workspaceName'), '2'))]",
       "location": "[variables('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
+        "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
       ],
       "properties": {
         "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', variables('storageBlobDataOwnerRoleID'))]",
-        "principalId": "[reference(concat('Microsoft.Synapse/workspaces/', parameters('workspaceName')), '2019-06-01-preview', 'Full').identity.principalId]",
+        "principalId": "[reference(concat('Microsoft.Synapse/workspaces/', variables('workspaceName')), '2019-06-01-preview', 'Full').identity.principalId]",
         "principalType": "ServicePrincipal"
       }
     },
     {
         "type": "Microsoft.Synapse/workspaces/sqlPools",
         "apiVersion": "2019-06-01-preview",
-        "name": "[concat(parameters('workspaceName'), '/', parameters('sqlDatabaseName'))]",
+        "name": "[concat(variables('workspaceName'), '/', variables('sqlDatabaseName'))]",
         "location": "[variables('location')]",
         "sku": {
           "name": "[variables('sqlSKU')]"
         },
         "dependsOn": [
-          "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
+          "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
         ],
         "properties": {
           "createMode": "Default",
