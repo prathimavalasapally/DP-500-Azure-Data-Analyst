@@ -416,10 +416,17 @@ The external data source makes it easier to access the files in the data lake, b
     );
     GO
     ```
+    ![Screenshot showing the steps](../images/DP500-1-43.png)
+    
+1. Refresh and expand the **External tables** folder in the **Data** pane and confirm that a table named **dbo.orders** has been created in the **Sales** database.
 
-2. Refresh and expand the **External tables** folder in the **Data** pane and confirm that a table named **dbo.orders** has been created in the **Sales** database.
-3. In the **...** menu for the **dbo.orders** table, select **New SQL script** > **Select TOP 100 rows**.
-4. Run the SELECT script that has been generated, and verify that it retrieves the first 100 rows of data from the table, which in turn references the files in the data lake.
+   ![Screenshot showing the steps](../images/DP500-1-44.png)
+
+4. In the **...** menu for the **dbo.orders** table, select **New SQL script** > **Select TOP 100 rows**.
+
+   ![Screenshot showing the steps](../images/DP500-1-45.png)
+   
+6. Run the SELECT script that has been generated, and verify that it retrieves the first 100 rows of data from the table, which in turn references the files in the data lake.
 
 ## Visualize query results
 
