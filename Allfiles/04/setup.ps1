@@ -14,7 +14,7 @@ $sqlPassword = "Dp500@12345"
 #Rg creation
 #[string]$suffix =  -join ((48..57) + (97..122) | Get-Random -Count 7 | % {[char]$_})
 #$resourceGroupName = "dp500-$suffix"
-$resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab01-rg*" }).ResourceGroupName
+$resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab04-rg*" }).ResourceGroupName
 $DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["DeploymentId"]
 #New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
 
@@ -25,7 +25,7 @@ $dataLakeAccountName = "datalake$DeploymentID"
 $sparkPoolName = "sparkpool$DeploymentID"
 $sqlDatabaseName = "sqldb$DeploymentID"
 
-(Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json"
+(Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\04\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\04\parameters.json"
 
 write-host "Creating $synapseWorkspace Synapse Analytics workspace in $resourceGroupName resource group..."
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile ".\setup.json" -TemplateParameterFile ".\parameters.json"
