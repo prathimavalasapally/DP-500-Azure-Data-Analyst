@@ -14,7 +14,7 @@ $sqlPassword = "Dp500@12345"
 #Rg creation
 #[string]$suffix =  -join ((48..57) + (97..122) | Get-Random -Count 7 | % {[char]$_})
 #$resourceGroupName = "dp500-$suffix"
-$resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab01-rg*" }).ResourceGroupName
+$resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab02-rg*" }).ResourceGroupName
 $DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["DeploymentId"]
 #New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
 
