@@ -50,6 +50,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 1. Right-click any of the files and select **Preview** to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
 
    ![Screenshot showing the PREVIEW selection ](../images/DP500-1-9.png)
+   
    ![Screenshot showing the closing of PREVIEW selection ](../images/DP500-1-10.png)
    
 1. Close the preview by clicking on **OK**, and then use the **&#8593;** button to navigate back to the **sales** folder.
@@ -62,12 +63,21 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 
 1. Return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
 
-### Use SQL to query CSV files
+### Task-2: Use SQL to query CSV files
 
 1. Select the **csv** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
-2. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder.
-3. In the **Properties** pane for **SQL Script 1** that is created, change the name to **Sales CSV query**, and change the result settings to show **All rows**. Then in the toolbar, select **Publish** to save the script and use the **Properties** button (which looks similar to **&#128463;.**) on the right end of the toolbar to hide the **Properties** pane.
-4. Review the SQL code that has been generated, which should be similar to this:
+
+   ![Screenshot showing the steps ](../images/DP500-1-11.png)
+   
+1. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder.
+
+   ![Screenshot showing the steps ](../images/DP500-1-12.png)
+   
+1. In the **Properties** pane for **SQL Script 1** that is created, change the name to **Sales CSV query**, and change the result settings to show **All rows**. Then in the toolbar, select **Publish** to save the script and use the **Properties** button (which looks similar to **&#128463;.**) on the right end of the toolbar to hide the **Properties** pane.
+
+   ![Screenshot showing the steps](../images/DP500-1-13.png)
+   
+1. Review the SQL code that has been generated, which should be similar to this:
 
     ```SQL
     -- This is auto-generated code
@@ -83,15 +93,20 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 
     This code uses the OPENROWSET to read data from the CSV files in the sales folder and retrieves the first 100 rows of data.
 
-5. In the **Connect to** list, ensure **Built-in** is selected - this represents the built-in SQL Pool that was created with your workspace.
-6. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
+1. In the **Connect to** list, ensure **Built-in** is selected - this represents the built-in SQL Pool that was created with your workspace.
+
+   ![Screenshot showing the steps](../images/DP500-1-14.png)
+   
+1. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
 
     | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- |
     | SO45347 | 1 | 2020-01-01 | Clarence Raji | clarence35@adventure-works.com |Road-650 Black, 52 | 1 | 699.0982 | 55.9279 |
     | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+    
+    ![Screenshot showing the steps](../images/DP500-1-15.png)
 
-7. Note the results consist of columns named C1, C2, and so on. In this example, the CSV files do not include the column headers. While it's possible to work with the data using the generic column names that have been assigned, or by ordinal position, it will be easier to understand the data if you define a tabular schema. To accomplish this, add a WITH clause to the OPENROWSET function as shown here (replacing *datalakexxxxxxx* with the name of your data lake storage account), and then rerun the query:
+1. Note the results consist of columns named C1, C2, and so on. In this example, the CSV files do not include the column headers. While it's possible to work with the data using the generic column names that have been assigned, or by ordinal position, it will be easier to understand the data if you define a tabular schema. To accomplish this, add a WITH clause to the OPENROWSET function as shown here (replacing *datalakexxxxxxx* with the name of your data lake storage account), and then rerun the query:
 
     ```SQL
     SELECT
@@ -114,6 +129,8 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
             TaxAmount DECIMAL (18,2)
         ) AS [result]
     ```
+    
+    ![Screenshot showing the steps](../images/DP500-1-16.png)
 
     Now the results look like this:
 
@@ -121,8 +138,13 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
     | -- | -- | -- | -- | -- | -- | -- | -- | -- |
     | SO45347 | 1 | 2020-01-01 | Clarence Raji | clarence35@adventure-works.com |Road-650 Black, 52 | 1 | 699.10 | 55.93 |
     | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+    
+    
+    ![Screenshot showing the steps](../images/DP500-1-17.png)
 
 8. Publish the changes to your script, and then close the script pane.
+    
+    ![Screenshot showing the steps](../images/DP500-1-18.png)
 
 ### Use SQL to query parquet files
 
