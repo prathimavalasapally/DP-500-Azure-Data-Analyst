@@ -254,7 +254,7 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 3. When prompted to confirm the deletion, select **Yes**.
 
-	![](../images/DP500-M6.png)
+	![](../images/DP500M6.png)
 
 	*Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.*
 
