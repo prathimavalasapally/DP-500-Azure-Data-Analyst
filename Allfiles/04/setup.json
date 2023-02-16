@@ -16,7 +16,7 @@
       "storageBlobDataOwnerRoleID": "b7e6dc6d-f1e8-4753-8033-0f276bb0955b",
       "defaultDataLakeStorageAccountUrl": "[concat('https://', variables('adlsStorageAccountName'), '.dfs.core.windows.net')]",
       "workspaceName": "[concat('workspace',parameters('DeploymentID'))]",
-       "sqlDatabaseName": "[concat('sqldb',parameters('DeploymentID'))]",
+      "sqlDatabaseName": "[concat('sqldb',parameters('DeploymentID'))]",
       "sparkAutoScaleEnabled": "true",
       "sparkMinNodeCount": "3",
       "sparkMaxNodeCount": "4",
