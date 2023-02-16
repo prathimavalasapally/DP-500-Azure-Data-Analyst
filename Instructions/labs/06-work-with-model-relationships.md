@@ -57,13 +57,13 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-work-with-model-relationships-image1.png)
 
-2. In File Explorer, go to the **D:\DP500\Allfiles\06\Starter** folder.
+2. In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Work with model relationships.pbix** file.
 
 4. To save the file, on the **File** ribbon tab, select **Save as**.
 
-5. In the **Save As** window, go to the **D:\DP500\Allfiles\06\MySolution** folder.
+5. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\MySolution** folder.
 
 6. Select **Save**.
 
@@ -205,7 +205,7 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 2. In the formula bar (located beneath the ribbon), replace the text with the following measure definition, and then press **Enter**.
 
-	*Tip: All formulas are available to copy and paste from the **D:\DP500\Allfiles\06\Assets\Snippets.txt**.*
+	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Assets\Snippets.txt**.*
 
 	```
 	Sales Shipped =
@@ -252,9 +252,9 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 	![](../images/dp500-work-with-model-relationships-image27.png)
 
-3. When prompted to confirm the deletion, select **OK**.
+3. When prompted to confirm the deletion, select **Yes**.
 
-	![](../images/dp500-work-with-model-relationships-image28.png)
+	![](../images/DP500-M6.png)
 
 	*Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.*
 
