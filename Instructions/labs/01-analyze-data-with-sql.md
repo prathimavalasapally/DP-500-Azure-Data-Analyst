@@ -428,13 +428,17 @@ The external data source makes it easier to access the files in the data lake, b
    
 6. Run the SELECT script that has been generated, and verify that it retrieves the first 100 rows of data from the table, which in turn references the files in the data lake.
 
-## Visualize query results
+## Task-7: Visualize query results
 
 Now that you've explored various ways to query files in the data lake by using SQL queries, you can analyze the results of these queries to gain insights into the data. Often, insights are easier to uncover by visualizing the query results in a chart; which you can easily do by using the integrated charting functionality in the Synapse Studio query editor.
 
 1. On the **Develop** page, create a new empty SQL query.
-2. Ensure that the script is connected to the **Built-in** SQL pool and the **Sales** database.
-3. Enter and run the following SQL code:
+
+   ![Screenshot showing the steps](../images/DP500-1-46.png)
+   
+1. Ensure that the script is connected to the **Built-in** SQL pool and the **Sales** database.
+   
+1. Enter and run the following SQL code:
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -443,16 +447,20 @@ Now that you've explored various ways to query files in the data lake by using S
     GROUP BY YEAR(OrderDate)
     ORDER BY OrderYear;
     ```
-4. In the **Results** pane, select **Chart** and view the chart that is created for you; which should be a line chart.
-5. Change the **Category column** to **OrderYear** so that the line chart shows the revenue trend over the three year period from 2019 to 2021:
+    
+    ![Screenshot showing the steps](../images/DP500-1-47.png)
+    
+1. In the **Results** pane, select **Chart** and view the chart that is created for you; which should be a line chart.
 
-    ![A line chart showing revenue by year](../images/yearly-sales-line.png)
+1. Change the **Category column** to **OrderYear** so that the line chart shows the revenue trend over the three year period from 2019 to 2021:
 
-6. Switch the **Chart type** to **Column** to see the yearly revenue as a column chart:
+    ![Screenshot showing the steps](../images/DP500-1-48.png)
 
-    ![A column chart showing revenue by year](../images/yearly-sales-column.png)
+1. Switch the **Chart type** to **Column** to see the yearly revenue as a column chart:
 
-7. Experiment with the charting functionality in the query editor. It offers some basic charting capabilities that you can use while interactively exploring data, and you can save charts as images to include in reports. However, functionality is limited compared to enterprise data visualization tools such as Microsoft Power BI.
+    ![Screenshot showing the steps](../images/DP500-1-49.png)
+
+1. Experiment with the charting functionality in the query editor. It offers some basic charting capabilities that you can use while interactively exploring data, and you can save charts as images to include in reports. However, functionality is limited compared to enterprise data visualization tools such as Microsoft Power BI.
 
 ## Delete Azure resources
 
