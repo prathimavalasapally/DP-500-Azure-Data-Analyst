@@ -14,7 +14,7 @@
       "storageBlobDataOwnerRoleID": "b7e6dc6d-f1e8-4753-8033-0f276bb0955b",
       "defaultDataLakeStorageAccountUrl": "[concat('https://', variables('dataLakeAccountName'), '.dfs.core.windows.net')]",
       "workspaceName": "[concat('workspace',parameters('DeploymentID'))]",
-	  "dataLakeAccountName": "[concat('datalake',parameters('DeploymentID'))]",
+      "dataLakeAccountName": "[concat('datalake',parameters('DeploymentID'))]",
       "sqlDatabaseName": "[concat('sqldb',parameters('DeploymentID'))]",
     },
     "resources": [
