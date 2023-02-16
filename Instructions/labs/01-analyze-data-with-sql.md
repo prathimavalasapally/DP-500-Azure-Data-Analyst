@@ -302,12 +302,15 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
 So far, you've used the OPENROWSET function in a SELECT query to retrieve data from files in a data lake. The queries have been run in the context of the **master** database in your serverless SQL pool. This approach is fine for an initial exploration of the data, but if you plan to create more complex queries it may be more effective to use the *PolyBase* capability of Synapse SQL to create objects in a database that reference the external data location.
 
-### Create an external data source
+### Task-5: Create an external data source
 
 By defining an external data source in a database, you can use it to reference the data lake location where the files are stored.
 
 1. In Synapse Studio, on the **Develop** page, in the **+** menu, select **SQL script**.
-2. In the new script pane, add the following code (replacing *datalakexxxxxxx* with the name of your data lake storage account) to create a new database and add an external data source to it.
+
+   ![Screenshot showing the steps](../images/DP500-1-34.png)
+   
+1. In the new script pane, add the following code (replacing *datalakexxxxxxx* with the name of your data lake storage account) to create a new database and add an external data source to it.
 
     ```sql
     CREATE DATABASE Sales
@@ -323,11 +326,27 @@ By defining an external data source in a database, you can use it to reference t
     GO;
     ```
 
-3. Modify the script properties to change its name to **Create Sales DB**, and publish it.
-4. Ensure that the script is connected to the **Built-in** SQL pool and the **master** database, and then run it.
-5. Switch back to the **Data** page and use the **&#8635;** button at the top right of Synapse Studio to refresh the page. Then view the **Workspace** tab in the **Data** pane, where a **SQL database** list is now displayed. Expand this list to verify that the **Sales** database has been created.
-6. Expand the **Sales** database, its **External Resources** folder, and the **External data sources** folder under that to see the **sales_data** external data source you created.
-7. In the **...** menu for the **Sales** database, select **New SQL script** > **Empty script**. Then in the new script pane, enter and run the following query:
+1. Modify the script properties to change its name to **Create Sales DB**, and publish it.
+
+   ![Screenshot showing the steps](../images/DP500-1-35.png)
+   
+1. Ensure that the script is connected to the **Built-in** SQL pool and the **master** database, and then run it.
+
+   ![Screenshot showing the steps](../images/DP500-1-36.png)
+
+1. Switch back to the **Data** page and use the **&#8635;** button at the top right of Synapse Studio to refresh the page. Then view the **Workspace** tab in the **Data** pane, where a **SQL database** list is now displayed. Expand this list to verify that the **Sales** database has been created.
+
+   ![Screenshot showing the steps](../images/DP500-1-37.png)
+   
+1. Expand the **Sales** database, its **External Resources** folder, and the **External data sources** folder under that to see the **sales_data** external data source you created.
+
+   ![Screenshot showing the steps](../images/DP500-1-38.png)
+   
+1. In the **...** menu for the **Sales** database, select **New SQL script** > **Empty script**.
+
+    ![Screenshot showing the steps](../images/DP500-1-39.png)
+    
+3.  Then in the new script pane, enter and run the following query:
 
     ```sql
     SELECT *
@@ -339,10 +358,14 @@ By defining an external data source in a database, you can use it to reference t
             PARSER_VERSION = '2.0'
         ) AS orders
     ```
-
+   
+    ![Screenshot showing the steps](../images/DP500-1-40.png)
+    
     The query uses the external data source to connect to the data lake, and the OPENROWSET function now only need to reference the relative path to the .csv files.
+    
+     ![Screenshot showing the steps](../images/DP500-1-41.png)
 
-8. Modify the code as follows to query the parquet files using the data source.
+8. Modify the code as follows to query the parquet files using the data source and run the query.
 
     ```sql
     SELECT *
@@ -354,8 +377,9 @@ By defining an external data source in a database, you can use it to reference t
         ) AS orders
     WHERE orders.filepath(1) = '2019'
     ```
-
-### Create an external table
+   ![Screenshot showing the steps](../images/DP500-1-42.png)
+   
+### Task-6: Create an external table
 
 The external data source makes it easier to access the files in the data lake, but most data analysts using SQL are used to working with tables in a database. Fortunately, you can also define external file formats and external tables that encapsulate rowsets from files in database tables.
 
