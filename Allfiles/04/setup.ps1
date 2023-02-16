@@ -23,6 +23,7 @@ $DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["Deployment
 $synapseWorkspace = "workspace$DeploymentID"
 $dataLakeAccountName = "datalake$DeploymentID"
 $sparkPoolName = "sparkpool$DeploymentID"
+$sqlDatabaseName = "sqldb$DeploymentID"
 
 (Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\01\parameters.json"
 
