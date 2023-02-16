@@ -1,74 +1,66 @@
----
-lab:
-    title: 'Query files using a serverless SQL pool'
-    module: 'Model, query, and explore data in Azure Synapse'
----
-
 # Query files using a serverless SQL pool
 
 SQL is probably the most used language for working with data in the world. Most data analysts are proficient in using SQL queries to retrieve, filter, and aggregate data - most commonly in relational databases. As organizations increasingly take advantage of scalable file storage to create data lakes, SQL is often still the preferred choice for querying the data. Azure Synapse Analytics provides serverless SQL pools that enable you to decouple the SQL query engine from the data storage and run queries against data files in common file formats such as delimited text and Parquet.
 
 This lab will take approximately **40** minutes to complete.
 
-## Before you start
-
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
-
-## Provision an Azure Synapse Analytics workspace
-
-You'll need an Azure Synapse Analytics workspace with access to data lake storage. You can use the built-in serverless SQL pool to query files in the data lake.
-
-In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
-
-1. Sign into the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
-2. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
-
-    ![Azure portal with a cloud shell pane](../images/cloud-shell.png)
-
-    > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
-
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
-
-4. In the PowerShell pane, manually enter the following commands to clone this repo:
-
-    ```
-    rm -r dp500 -f
-    git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst dp500
-    ```
-
-5. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.ps1** script it contains:
-
-    ```
-    cd dp500/Allfiles/01
-    ./setup.ps1
-    ```
-
-6. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
-7. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
-
-    > **Note**: Be sure to remember this password!
-
-8. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Serverless SQL pool in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) article in the Azure Synapse Analytics documentation.
 
 ## Query data in files
 
-The script provisions an Azure Synapse Analytics workspace and an Azure Storage account to host the data lake, then uploads some data files to the data lake.
+This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage account to host the data lake, and also uploaded some data files to the data lake to perform the below tasks.
 
-### View files in the data lake
+### Task-1: View files in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **dp500-*xxxxxxx*** resource group that it created, and select your Synapse workspace.
-2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
-3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
-4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
-5. Expand your storage account and verify that it contains a file system container named **files**.
-6. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
-7. Open the **sales** folder and the **csv** folder it contains, and observe that this folder contains .csv files for three years of sales data.
-8. Right-click any of the files and select **Preview** to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
-9. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
-10. In the **sales** folder, open the **json** folder and observe that it contains some sample sales orders in .json files. Preview any of these files to see the JSON format used for a sales order.
-11. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
-12. In the **sales** folder, open the **parquet** folder and observe that it contains a subfolder for each year (2019-2021), in each of which a file named **orders.snappy.parquet** contains the order data for that year. 
-13. Return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
+1. In the Azure portal, Click on Show Portal Menu and select **Resource groups**
+
+   ![Screenshot showing the selection of Resource groups ](../images/DP500-1-1.png)
+   
+1. Inside the Resource groups,select **lab01-rg-<inject key="DeploymentID" enableCopy="false"/>**
+ 
+   ![Screenshot showing the selection of lab01 Resource groups ](../images/DP500-1-2.png)
+   
+1. Select the Synapse workspace titled **workspace<inject key="DeploymentID" enableCopy="false"/>** 
+
+   ![Screenshot showing the selection of Synapse workspace ](../images/DP500-1-3.png)
+   
+1. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card in getting started, select **Open** to open Synapse Studio in a new browser tab and do the  sign in if prompted with the credientials provided in the Environment details tab.
+
+   ![Screenshot showing the selection of open button to navigate to synapse studio ](../images/DP500-1-4.png)
+   
+1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+
+1. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **workspace<inject key="DeploymentID" enableCopy="false"/>** (Primary - **datalakeinject key="DeploymentID" enableCopy="false"/>**)**.
+
+   ![Screenshot showing the Linked storage account with synapse ](../images/DP500-1-5.png) 
+   
+1. Expand your storage account and verify that it contains a file system container named **files** inside **workspace<inject key="DeploymentID" enableCopy="false"/>**
+
+1. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
+
+   ![Screenshot showing the Linked storage account with synapse ](../images/DP500-1-6.png)
+   
+1. Open the **sales** folder,you can see the three sub folders titled **csv**.**json** and **parquet** folders.
+
+   ![Screenshot showing the subfolders in the sales folder ](../images/DP500-1-7.png)
+   
+1. In the **sales** folder, open the **csv** folder, and observe that this folder contains .csv files for three years of sales data.
+
+   ![Screenshot showing the files in the CSV folder ](../images/DP500-1-8.png)
+   
+1. Right-click any of the files and select **Preview** to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
+
+   ![Screenshot showing the PREVIEW selection ](../images/DP500-1-9.png)
+   ![Screenshot showing the closing of PREVIEW selection ](../images/DP500-1-10.png)
+   
+1. Close the preview by clicking on **OK**, and then use the **&#8593;** button to navigate back to the **sales** folder.
+
+1. In the **sales** folder, open the **json** folder and observe that it contains some sample sales orders in .json files. Preview any of these files to see the JSON format used for a sales order.
+
+1. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
+
+1. In the **sales** folder, open the **parquet** folder and observe that it contains a subfolder for each year (2019-2021), in each of which a file named **orders.snappy.parquet** contains the order data for that year. 
+
+1. Return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
 
 ### Use SQL to query CSV files
 
