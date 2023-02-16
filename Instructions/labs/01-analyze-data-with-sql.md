@@ -219,7 +219,7 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
     ![Screenshot showing the steps](../images/DP500-1-26.png)
 
-1. Name your script **Sales Parquet query** by opening Properties tab icon, and publish it. Then close the script pane.
+1. Name your script **Sales Parquet query** by clicking the Properties tab icon, and publish it. Then close the script pane.
 
      ![Screenshot showing the steps](../images/DP500-1-27.png)
 
@@ -228,8 +228,16 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 JSON is another popular data format, so it;s useful to be able to query .json files in a serverless SQL pool.
 
 1. In the **files** tab containing the file system for your data lake, return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
-2. Select the **json** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
-3. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
+
+1. Select the **json** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+
+   ![Screenshot showing the steps](../images/DP500-1-28.png)
+   
+1. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder.
+
+    ![Screenshot showing the steps](../images/DP500-1-29.png)
+    
+1.  The script should look similar to this:
 
     ```sql
     -- This is auto-generated code
@@ -242,10 +250,12 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
             PARSER_VERSION = '2.0'
         ) AS [result]
     ```
-
+    
+    ![Screenshot showing the steps](../images/DP500-1-30.png)
+    
     The script is designed to query comma-delimited (CSV) data rather then JSON, so you need to make a few modifications before it will work successfully.
 
-4. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) to:
+1. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) to:
     - Remove the parser version parameter.
     - Add parameters for field terminator, quoted fields, and row terminators with the character code *0x0b*.
     - Format the results as a single field containing the JSON row of data as an NVARCHAR(MAX) string.
@@ -262,10 +272,13 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
             ROWTERMINATOR = '0x0b'
         ) WITH (Doc NVARCHAR(MAX)) as rows
     ```
+   ![Screenshot showing the steps](../images/DP500-1-31.png)
+   
+1. Run the modified code and observe that the results include a JSON document for each order.
 
-5. Run the modified code and observe that the results include a JSON document for each order.
+   ![Screenshot showing the steps](../images/DP500-1-32.png)
 
-6. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) so that it uses the JSON_VALUE function to extract individual field values from the JSON data.
+6. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) so that it uses the JSON_VALUE function to extract individual field values from the JSON data.View the result by running the query after modifying as below.
 
     ```sql
     SELECT JSON_VALUE(Doc, '$.SalesOrderNumber') AS OrderNumber,
@@ -281,7 +294,9 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
         ) WITH (Doc NVARCHAR(MAX)) as rows
     ```
 
-7. Name your script **Sales JSON query**, and publish it. Then close the script pane.
+7. Name your script **Sales JSON query** by clicking the properties tab icon, and publish it. Then close the script pane.
+
+   ![Screenshot showing the steps](../images/DP500-1-33.png)
 
 ## Access external data in a database
 
