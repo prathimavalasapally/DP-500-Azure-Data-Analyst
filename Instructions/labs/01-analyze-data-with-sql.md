@@ -146,13 +146,21 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
     
     ![Screenshot showing the steps](../images/DP500-1-18.png)
 
-### Use SQL to query parquet files
+### Task-3: Use SQL to query parquet files
 
 While CSV is an easy format to use, it's common in big data processing scenarios to use file formats that are optimized for compression, indexing, and partitioning. One of the most common of these formats is *parquet*.
 
 1. In the **files** tab contaning the file system for your data lake, return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
-2. Select the **parquet** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
-3. In the **File type** list, select **Parquet format**, and then apply the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
+
+1. Select the **parquet** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+
+   ![Screenshot showing the steps](../images/DP500-1-19.png)
+   
+1. In the **File type** list, select **Parquet format**, and then apply the settings to open a new SQL script that queries the data in the folder.
+
+   ![Screenshot showing the steps](../images/DP500-1-20.png)
+   
+1. The script should look similar to this:
 
     ```SQL
     -- This is auto-generated code
@@ -164,9 +172,13 @@ While CSV is an easy format to use, it's common in big data processing scenarios
             FORMAT = 'PARQUET'
         ) AS [result]
     ```
+    ![Screenshot showing the steps](../images/DP500-1-21.png)
+    
+1. Run the code, and note that it returns sales order data in the same schema as the CSV files you explored earlier. The schema information is embedded in the parquet file, so the appropriate column names are shown in the results.
 
-4. Run the code, and note that it returns sales order data in the same schema as the CSV files you explored earlier. The schema information is embedded in the parquet file, so the appropriate column names are shown in the results.
-5. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
+    ![Screenshot showing the steps](../images/DP500-1-22.png)
+    
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -179,12 +191,15 @@ While CSV is an easy format to use, it's common in big data processing scenarios
     GROUP BY YEAR(OrderDate)
     ORDER BY OrderYear
     ```
+    ![Screenshot showing the steps](../images/DP500-1-23.png)
+    
+1. Note that the results include order counts for all three years - the wildcard used in the BULK path causes the query to return data from all subfolders.
 
-6. Note that the results include order counts for all three years - the wildcard used in the BULK path causes the query to return data from all subfolders.
+    ![Screenshot showing the steps](../images/DP500-1-24.png)
 
     The subfolders reflect *partitions* in the parquet data, which is a technique often used to optimize performance for systems that can process multiple partitions of data in parallel. You can also use partitions to filter the data.
 
-7. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -198,12 +213,17 @@ While CSV is an easy format to use, it's common in big data processing scenarios
     GROUP BY YEAR(OrderDate)
     ORDER BY OrderYear
     ```
+    ![Screenshot showing the steps](../images/DP500-1-25.png)
+    
+1. Review the results and note that they include only the sales counts for 2019 and 2020. This filtering is achieved by inclusing a wildcard for the partition folder value in the BULK path (*year=\**) and a WHERE clause based on the *filepath* property of the results returned by OPENROWSET (which in this case has the alias *[result]*).
 
-8. Review the results and note that they include only the sales counts for 2019 and 2020. This filtering is achieved by inclusing a wildcard for the partition folder value in the BULK path (*year=\**) and a WHERE clause based on the *filepath* property of the results returned by OPENROWSET (which in this case has the alias *[result]*).
+    ![Screenshot showing the steps](../images/DP500-1-26.png)
 
-7. Name your script **Sales Parquet query**, and publish it. Then close the script pane.
+1. Name your script **Sales Parquet query** by opening Properties tab icon, and publish it. Then close the script pane.
 
-### Use SQL to query JSON files
+     ![Screenshot showing the steps](../images/DP500-1-27.png)
+
+### Task-4: Use SQL to query JSON files
 
 JSON is another popular data format, so it;s useful to be able to query .json files in a serverless SQL pool.
 
