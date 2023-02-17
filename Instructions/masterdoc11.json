@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "DP-500-Azure-Data-Analyst",
+    "Language": "English",
+    "Files": [
+	    {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/11-improve-query-performance-with-dual-storage-mode.md",
+        "Order": 1
+      }
+    ]
+  }
+]
