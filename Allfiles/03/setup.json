@@ -18,17 +18,6 @@
       "sqlDatabaseName": "[concat('sqldb',parameters('DeploymentID'))]"
     },
     "resources": [
-      {
-        "type": "Microsoft.Resources/tags",
-        "name": "default",
-        "apiVersion": "2019-10-01",
-        "dependsOn": [],
-        "properties": {
-            "tags": {
-                "DeploymentId": "[variables('workspaceName')]"
-            }
-        }
-    },
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2019-06-01",
