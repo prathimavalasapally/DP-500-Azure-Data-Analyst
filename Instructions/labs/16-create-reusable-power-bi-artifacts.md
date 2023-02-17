@@ -49,7 +49,7 @@ In this task, you will set up Power BI.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
-### Create a workspace in the Power BI Service
+### Task-2: Create a workspace in the Power BI Service
 
 In this task, you will create a workspace.
 
@@ -68,7 +68,7 @@ In this task, you will create a workspace.
 
 	*Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
 
-### Open the starter file in Power BI Desktop
+### Task-3: Open the starter file in Power BI Desktop
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
@@ -82,7 +82,7 @@ In this task, you will create a workspace.
 
 	![](../images/DP500-16-6.png)
 
-### Review the data model
+### Task-4: Review the data model
 
 In this task, you will review the data model.
 
@@ -96,7 +96,7 @@ In this task, you will review the data model.
 
 	*The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design.*
 
-### Publish the data model
+### Task-5: Publish the data model
 
 In this task, you will publish the data model.
 
@@ -122,11 +122,11 @@ In this task, you will publish the data model.
 
 	![](../images/DP500-16-19.png)
 
-## Create a specialized dataset
+## Excercise-2: Create a specialized dataset
 
 In this exercise, you will create a specialized dataset to allow the analysis of US sales per capita. Because the core dataset doesn't contain population values, you will add a new table to extend the model.
 
-### Create a live connection
+### Task-1 Create a live connection
 
 In this task, you will create a new report that uses a live connection to the **Sales Analysis - Create reusable Power BI artifacts** dataset, which you published in the previous exercise.
 
@@ -182,7 +182,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 	![](../images/DP500-16-25.png)
 
-### Create a local DirectQuery model
+### Task-2: Create a local DirectQuery model
 
 In this task, you will create a local DirectQuery model.
 
@@ -203,7 +203,7 @@ In this task, you will create a local DirectQuery model.
 
 	![](../images/DP500-16-28.png)
 
-### Design the report layout
+### Task-3: Design the report layout
 
 In this task, you will design the report layout to analyze US state sales.
 
@@ -243,7 +243,7 @@ In this task, you will design the report layout to analyze US state sales.
 
 	*This report layout now provides basic detail about US state sales. However, an additional requirement is to show sales per capita and sort states by descending order of that measure.*
 
-### Add a table
+### Task-4: Add a table
 
 In this task, you will add a table of US population data sourced from a web page.
 
@@ -341,7 +341,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	*The table doesn't need to be visible to report authors.*
 
-### Add a measure
+### Task-5: Add a measure
 
 In this task, you will add a measure to calculate sales per capita.
 
@@ -379,7 +379,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 	![](../images/DP500-16-52.png)
 
-### Publish the solution
+### Task-6: Publish the solution
 
 In this task, you will publish the solution, which comprises a specialized data model and a report.
 
@@ -405,7 +405,7 @@ In this task, you will publish the solution, which comprises a specialized data 
 
 	![](../images/DP500-16-19.png)
 
-### Review the specialized dataset
+### Task-7: Review the specialized dataset
 
 In this task, you will review the specialized dataset in the Power BI service.
 
