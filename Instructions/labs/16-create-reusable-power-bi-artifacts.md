@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Create reusable Power BI assets'
-    module: 'Manage the analytics development lifecycle'
----
-
 # Create reusable Power BI assets
 
 ## Overview
@@ -20,34 +14,7 @@ In this lab, you learn how to:
 
 - Use lineage view to discover dependent Power BI assets.
 
-## Get started
-
-In this exercise, you will prepare your environment.
-
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
-### Set up Power BI
+### Task-1: Set up Power BI
 
 In this task, you will set up Power BI.
 
@@ -57,12 +24,14 @@ In this task, you will set up Power BI.
 
 2. Select **X** located at the top-right of the getting started window.
 
-	![](../images/dp500-create-a-star-schema-model-image2.png)
+	![](../images/DP500-16-2.png)
 
-3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
+3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
 	![](../images/dp500-create-a-star-schema-model-image3.png)
 4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+
+       >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
 
 	![](../images/dp500-create-a-star-schema-model-image3b.png)
 
@@ -89,9 +58,7 @@ In this task, you will create a workspace.
 	![](../images/dp500-create-reusable-power-bi-artifacts-image3.png)
 
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace.
-
-	*The workspace name must be unique within the tenant.*
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **workspace<inject key="Deployment ID" enableCopy="false" />**
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image4.png)
 
@@ -107,7 +74,7 @@ In this task, you will create a workspace.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image6.png)
 
-2. Go to the **D:\DP500\Allfiles\16\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Create reusable Power BI artifacts.pbix** file.
 
@@ -139,7 +106,7 @@ In this task, you will publish the data model.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image10.png)
 
-2. In the **Publish to Power BI** window, select your workspace (not the personal workspace), and then select **Select**.
+2. In the **Publish to Power BI** window, select the workspace named "**workspace<inject key="Deployment ID" enableCopy="false" />**", and then select **Select**.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image11.png)
 
@@ -173,7 +140,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 3. To save the file, on the **File** ribbon, select **Save as**.
 
-4. In the **Save As** window, go to the **D:\DP500\Allfiles\16\MySolution** folder.
+4. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\MySolution** folder.
 
 5. In the **File name** box, enter **US Sales Analysis**.
 
@@ -181,17 +148,17 @@ In this task, you will create a new report that uses a live connection to the **
 
 6. Select **Save**.
 
-7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets**.
+7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets** in Data hub drawdown.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image17.png)
+	![](../images/DP500-16-3.png)
 
 8. In the **Select a dataset to create a report** window, select the **Sales Analysis - Create reusable Power BI artifacts** dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image18.png)
+	![](../images/DP500-16-5.png)
 
-9. Select **Create**.
+9. Select **Connect**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image19.png)
+	![](../images/DP500-16-4.png)
 
 10. At the bottom left, in the status bar, notice that the report connects live to the dataset.
 
@@ -226,7 +193,7 @@ In this task, you will create a local DirectQuery model.
 	*Note: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
 	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect. 
 
-2. When prompted, read the dialog window message, and then select **Add a local model**.
+2. Now,after changing the settings,you can able to view and select **Make changes to this model** and then select **Add a local model**.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image26.png)
 
@@ -244,7 +211,7 @@ In this task, you will design the report layout to analyze US state sales.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image28.png)
 
-2. In the **Fields** pane (located at the right), expand open the **Reseller** table.
+2. In the **Data** pane (located at the right), expand open the **Reseller** table.
 
 3. Right-click the **Country-Region** field, and then select **Add to filters** > **Report-level filters**.
 
@@ -288,11 +255,11 @@ In this task, you will add a table of US population data sourced from a web page
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image36.png)
 
-3. In the **URL** box, enter the following file path: **D:\DP500\Allfiles\16\Assets\us-resident-population-estimates-2020.html**
+3. In the **URL** box, enter the following file path: **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\us-resident-population-estimates-2020.html**
 
 	*For the purposes of this lab, Power BI Desktop will access the web page from the file system.*
 
-	*Tip: The file path is available to copy and paste from the **D:\DP500\Allfiles\16\Assets\Snippets.txt** file.*
+	*Tip: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
 4. Select **OK**.
 
@@ -382,13 +349,13 @@ In this task, you will add a measure to calculate sales per capita.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image53.png)
 
-2. In the **Fields** pane, right-click the **Sales** table, and then select **New measure**.
+2. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image54.png)
 
 3. In the formula bar, enter the following measure definition.
 
-	*Tip: The measure definition is available to copy and paste from the **D:\DP500\Allfiles\16\Assets\Snippets.txt** file.*
+	*Tip: The measure definition is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
 	```
 	Sales per Capita =
@@ -424,7 +391,7 @@ In this task, you will publish the solution, which comprises a specialized data 
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image58.png)
 
-3. In the **Publish to Power BI** window, select your workspace, and then select **Select**.
+3. In the **Publish to Power BI** window, select your workspace named **workspace<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
 
 	![](../images/dp500-create-reusable-power-bi-artifacts-image59.png)
 
