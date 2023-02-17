@@ -6,8 +6,8 @@ Install-Module -Name Az.Synapse -Force
 Install-Module -Name SqlServer
 
 # Setting Sql usn&pwd
-$sqlUser = "SQLUser"
-$sqlPassword = "Dp500@12345"
+$sqlUser = "adminuser"
+$sqlPassword = "Password.1!!"
 
 # Choose a random region
 #$Region = "westus"
