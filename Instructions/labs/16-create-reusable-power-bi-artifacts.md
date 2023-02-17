@@ -14,6 +14,10 @@ In this lab, you learn how to:
 
 - Use lineage view to discover dependent Power BI assets.
 
+## Excercise-1: Publishing Data Model in Power BI
+ 
+In this exercise, you will Publish a data Module in Power BI.
+
 ### Task-1: Set up Power BI
 
 In this task, you will set up Power BI.
