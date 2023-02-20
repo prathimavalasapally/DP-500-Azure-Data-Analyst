@@ -164,7 +164,7 @@ In this task, you will open BPA and review the results of the checks.
 
 6. In the Expression Editor, modify the DAX formula to use the more efficient (and safe) [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function, as follows.
 
-	*Tip: All formulas are available to copy and paste from the **D:\DP500\Allfiles\13\Assets\Snippets.txt**.*
+	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\13\Assets\Snippets.txt**.*
 
 	```
 	DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
@@ -172,7 +172,7 @@ In this task, you will open BPA and review the results of the checks.
 
 7. To save the model changes, on the toolbar, select the **Save changes to the connected database** command (or press **Ctrl+S**).
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image23.png)
+	![](../images/DP500-13-15.png)
 
 	*Saving changes pushes modifications to the Power BI Desktop data model.*
 
@@ -182,11 +182,11 @@ In this task, you will open BPA and review the results of the checks.
 
 10. Scroll down the list of issues to locate the **Provide format string for "Date" columns** category.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image24.png)
+	![](../images/DP500-13-17.png)
 
 11. Right-click the **'Date'[Date]** issue, and then select **Generate fix script**.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image25.png)
+	![](../images/DP500-13-16.png)
 
 	*This command generates a C# script and copies it to the clipboard. You can also use the **Apply fix** command to generate and run the script, however it might be safer to review (and modify) the script before you run it.*
 
@@ -196,21 +196,21 @@ In this task, you will open BPA and review the results of the checks.
 
 	*Note: This may be called the Advanced Scripting tab in older versions of Tabular editor.*
 	
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
+	![](../images/DP500-13-18.png)
 
 14. To paste the fix script, right-click inside the pane, and then press **Ctrl+V**.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image27.png)
+	![](../images/DP500-13-19.png)
 
 	*You can choose to make a change to the format string.*
 
 15. To run the script, on the toolbar, select the **Run script** command.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image14.png)
+	![](../images/DP500-13-20.png)
 
 16. Save the model changes.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image23.png)
+	![](../images/DP500-13-15.png)
 
 17. To close Tabular Editor, on the menu, select **File** > **Exit**.
 
@@ -236,23 +236,23 @@ Download and install DAX studio to optimize DAX queries.
 
     ```https://daxstudio.org/downloads/```
     
-1. Select **DAX Studio v.2.x.x (installer)** - this will initiate the file install.
+1. Select **DAX Studio v.3.x.x (installer)** - this will initiate the file install.
     *note: The version of DAX studio will change slightly over time. Download the latest release.*
 
 1. Upon completion, select **Open file** to run the installer.
 
-    ![Graphical user interface, application Description automatically generated](../images/dp500-use-tools-to-optimize-power-bi-performance-image31b.png)
+    ![Graphical user interface, application Description automatically generated](../images/DP500-13-21.png)
 
 1.  In the DAX Studio installer window, select **Install for all users (recommended)**.
 
 1. In the User Account Control window, select Yes to allow the app to make changes to the device if prompted.
 
-    ![Graphical user interface, application Description automatically generated](../images/dp500-use-tools-to-optimize-power-bi-performance-image31c.png)
+    ![Graphical user interface, application Description automatically generated](../images/DP500-13-22.png)
 
 1.  At the **License Agreement** step, if you accept the license terms, select **I accept the agreement**, and then select **Next**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500-use-tools-to-optimize-power-bi-performance-image31d.png)
+    generated](../images/DP500-13-23.png)
 
 1. Select **Next** to use the default destination location.
 1. Select **Next** to select the default components to install.
@@ -260,24 +260,24 @@ Download and install DAX studio to optimize DAX queries.
 1. Select **Create a desktop shortcut** and select next.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500-use-tools-to-optimize-power-bi-performance-image31e.png)
+    generated](../images/DP500-13-24.png)
 1. Select **Install**.
 
 1. Upon completion, with **Launch DAX Studio** selected, select **Finish**. This will open DAX Studio.
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500-use-tools-to-optimize-power-bi-performance-image31f.png)
+    generated](../images/DP500-13-25.png)
 
 1. In the **Connect** window, select the **PBI / SSDT Model** option.
 
 1. In the corresponding dropdown list, ensure the **Sales Analysis - Use tools to optimize Power BI performance** model is selected.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image30.png)
+	![](../images/DP500-13-26.png)
 
     *If you do not have the **Sales Analysis - Use tools to optimize Power BI performance** starter file open, you will not be able to connect. Be sure the file is open.*
 
 1. Select **Connect**.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image31.png)
+	![](../images/DP500-13-27.png)
 
 1. If necessary, maximize the DAX Studio window.
 
@@ -297,7 +297,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
 4. Select **Open**.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image33.png)
+	![](../images/DP500-13-28.png)
 
 5. Read the comments at the top of the file, and then review the query that follows.
 
@@ -307,11 +307,11 @@ In this task, you will optimize a query by using an improved measure formula.
 
 6. To run a server trace to record detailed timing information for performance profiling, on the **Home** ribbon tab, from inside the **Traces** group, select **Server Timings**.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image34.png)
+	![](../images/DP500-13-29.png)
 
 7. To run the script, on the **Home** ribbon tab, from inside the **Query** group, select the **Run** icon.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image35.png)
+	![](../images/DP500-13-30.png)
 
 8. In the lower pane, review the query result.
 
@@ -323,7 +323,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
 10. Review the statistics available at the left side.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image37.png)
+	![](../images/DP500-13-31.png)
 
 	*From top left to bottom right, the statistics tell you how many milliseconds it took to run the query, and the duration the storage engine (SE) CPU took. In this case (your results will differ), the formula engine (FE) took 73.5% of the time, while the SE took the remaining 26.5% of the time. There were 34 individual SE queries and 21 cache hits.*
 
@@ -331,21 +331,21 @@ In this task, you will optimize a query by using an improved measure formula.
 
 	*That's because the results were cached for reuse. Sometimes in your testing, you may want to clear the cache. In that case, on the **Home** ribbon tab, by selecting the down arrow for the **Run** command.*
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image38.png)
+	![](../images/DP500-13-32.png)
 
 	*The second measure definition provides a more efficient result. You will now update the query to use the second measure.*
 
 12. At line 72 in the script, replace the word **Bad** with **Better** 
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image39.png)
+	![](../images/DP500-13-33.png)
 
 13. Run the query, and then review the server timing statistics.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image40.png)
+	![](../images/DP500-13-34.png)
 
 14. Run it a second time to result in full cache hits.
 
-	![](../images/dp500-use-tools-to-optimize-power-bi-performance-image41.png)
+	![](../images/DP500-13-35.png)
 
 	*In this case, you can determine that the "better" query, which uses variables and a time intelligence function, performs better-almost a 50% reduction in query execution time.*
 
