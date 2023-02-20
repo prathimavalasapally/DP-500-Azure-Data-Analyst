@@ -53,7 +53,7 @@ In this task, you will review the data model.
 
 2. Use the model diagram to review the model design.
 
-	![](../images/DP500-13-5.png)
+	![](../images/DP500-13-42.png)
 
 	*The model comprises eight dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design that includes snowflake dimension tables (**Category** > **Subcategory** > **Product**) for the product dimension.*
 
