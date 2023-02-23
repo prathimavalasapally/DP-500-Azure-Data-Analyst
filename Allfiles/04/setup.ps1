@@ -5,8 +5,8 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-Module -Name Az.Synapse -Force
 
 # Setting Sql usn&pwd
-$sqlUser = "SQLUser"
-$sqlPassword = "Dp500@12345"
+$sqlUser = "adminuser"
+$sqlPassword = "Password.1!!"
 
 # Choose a random region
 #$Region = "westus"
@@ -32,7 +32,7 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFil
 
 # Create database
 write-host "Creating the $sqlDatabaseName database..."
-sqlcmd -S "$synapseWorkspace.sql.azuresynapse.net" -U $sqlUser -P $sqlPassword -d $sqlDatabaseName -I -i setup.sql
+Invoke-Sqlcmd -ServerInstance "$synapseWorkspace.sql.azuresynapse.net" -Username $sqlUser -Password $sqlPassword -Database $sqlDatabaseName -InputFile setup.sql
 
 # Load data
 write-host "Loading data..."
