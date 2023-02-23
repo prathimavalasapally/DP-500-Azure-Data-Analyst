@@ -162,7 +162,7 @@
       {
           "type": "Microsoft.Synapse/workspaces/sqlPools",
           "apiVersion": "2019-06-01-preview",
-          "name": "[variables('sqlDatabaseName')]",
+          "name": "[concat(variables('workspaceName'), '/', variables('sqlDatabaseName'))]",
           "location": "[variables('location')]",
           "sku": {
             "name": "[variables('sqlSKU')]"
