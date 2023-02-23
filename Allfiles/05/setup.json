@@ -162,7 +162,7 @@
       {
           "type": "Microsoft.Synapse/workspaces/sqlPools",
           "apiVersion": "2019-06-01-preview",
-          "name": "[variables('sqlDatabaseName')]",
+          "name": "[concat(variables('workspaceName'), '/', variables('sqlDatabaseName'))]",
           "location": "[variables('location')]",
           "sku": {
             "name": "[variables('sqlSKU')]"
@@ -178,7 +178,7 @@
       {
         "type": "Microsoft.Synapse/workspaces/bigDataPools",
         "apiVersion": "2019-06-01-preview",
-        "name": "[variables('sparkPoolName')]",
+        "name": "[concat(parameters('workspaceName'), '/', variables('sparkPoolName'))]",
         "location": "[variables('location')]",
         "dependsOn": [
           "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]"
