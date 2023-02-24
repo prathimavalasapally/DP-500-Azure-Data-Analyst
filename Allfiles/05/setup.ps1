@@ -35,6 +35,8 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFil
 write-host "Creating the $sqlDatabaseName database..."
 Invoke-Sqlcmd -ServerInstance "$synapseWorkspace.sql.azuresynapse.net" -Username $sqlUser -Password $sqlPassword -Database $sqlDatabaseName -InputFile setup.sql
 
+CD C:\Labfiles\DP-500-Azure-Data-Analyst\Allfiles\04
+
 # Load data
 write-host "Loading data..."
 Get-ChildItem "./data/*.txt" -File | Foreach-Object {
