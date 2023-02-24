@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Create calculation groups'
-    module: 'Design and build tabular models'
----
 # Create calculation groups
 
 ## Overview
@@ -19,104 +14,20 @@ In this lab, you learn how to:
 -   Set calculation group precedence.
 -   Configure visuals to use calculation groups.
 
-## Get started
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
-## Prepare your environment
-
-Prepare your lab environment by installing Tabular Editor 2, setting up Power BI desktop, reviewing the data model, and creating measures.
-
-### Download and Install Tabular Editor 2
-
-Download and install Tabular Editor 2 to enable the creation of calculation groups.
-
-**Important:** *If you have already installed Tabular Editor 2 in your VM
-environment, continue to the next task.*
-
-*Tabular Editor is an editor alternative tool for authoring tabular models for
-Analysis Services and Power BI. Tabular Editor 2 is an open source project that
-can edit a BIM file without accessing any data in the model.*
-
-1.  Ensure Power BI Desktop is closed.
-
-1.  In Microsoft Edge, navigate to the Tabular Editor Release page.
-
-    ```https://github.com/TabularEditor/TabularEditor/releases```
-    
-1. Scroll down to the **Assets** section and select the **TabularEditor.Installer.msi** file. This will initiate the file install.
-
-1. Upon completion, select **Open file** to run the installer.
-
-    ![Graphical user interface, application Description automatically generated](../images/calculationgroups-downloadTE.png)
-
-1.  In the Tabular Editor installer window, select **Next**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/image2.png)
-
-1.  At the **License Agreement** step, if you agree, select **I agree**, and then select **Next**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/image3.png)
-
-1.  At the **Select Installation Folder** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1.  At the **Application Shortcuts** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1. At the **Confirm Installation** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1. If you get a **User Account Control** popup window, select **Yes.**
-
-1. When the installation is complete, select **Close**.
-
-    ![A picture containing shape Description automatically
-    generated](../images/image5.png)
-
-    *Tabular Editor is now installed and registered as a Power BI Desktop
-    external tool.*
+#### Note: In this lab session, PowerBI Desktop and Tabular Editor have already been installed for the ease of execution.
 
 ### Set up Power BI Desktop
 
 Now you'll open a pre-developed Power BI Desktop solution.
 
-1.  In File Explorer, go to the **D:\\DP500\\Allfiles\\07\\Starter** folder.
+1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
 2.  To open a pre-developed Power BI Desktop file, double-click the **Sales
     Analysis - Create calculation groups.pbix** file.
 
 3.  To save the file, on the **File** ribbon tab, select **Save as**.
 
-4.  In the **Save As** window, go to the **D:\\DP500\\Allfiles\\07\\MySolution** folder.
+4.  In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\MySolution** folder.
 
 5.  Select **Save**.
 
@@ -185,7 +96,7 @@ Create three sales-related measures in preparation for the creation of your calc
     following measure definition, and then press **Enter**.
 
     Tip: All formulas are available to copy and paste from the
-    **D:\\DP500\\Allfiles\\07\\Assets\\Snippets.txt**.
+    **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt**.
 
     DAX
 
@@ -239,7 +150,7 @@ Use Tabular Editor to create the **Time Intelligence** calculation group. It wil
 *Power BI Desktop does not support the creation or management of calculation
 groups.*
 
-   > **Tip**: All syntax is available to copy and paste from the D:\DP500\Allfiles\07\Assets\Snippets.txt.
+   > **Tip**: All syntax is available to copy and paste from the C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt
 
 1.  On the **External Tools** ribbon, select **Tabular Editor**.
 
@@ -343,8 +254,8 @@ groups.*
     "0.00%;-0.00%;0.00%"
     ```
 
-    Tip: The format string expression is available to copy and paste from the
-    **D:\\DP500\\Allfiles\\07\\Assets\\Snippets.txt**.
+    **Tip**: The format string expression is available to copy and paste from the
+    **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt**.
 
     ![Graphical user interface, text, application Description automatically
     generated](../images/image24.png)
@@ -476,7 +387,7 @@ currency. It will also apply appropriate formatting for the selected currency.
     formatting is dynamically driven by the data in the **Currency** dimension
     table.
 
-9.  Save the changes to the Power BI Desktop model.
+9.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
 
 10. Switch to Power BI desktop and refresh the changes.
 
@@ -552,7 +463,7 @@ calculation groups.
     *These configurations will ensure the **Time Intelligence** calculations
     happen later.*
 
-5.  Save the changes to the Power BI Desktop model.
+5.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
 
 6.  Switch to Power BI Desktop.
 
