@@ -4,8 +4,12 @@
     "Language": "English",
     "Files": [
 	    {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/14-monitor-data-in-real-time.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/0-GettingStarted.md",
         "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/14-monitor-data-in-real-time.md",
+        "Order": 2
       }
     ]
   }
