@@ -19,7 +19,7 @@ In this task, you will set up Power BI Desktop.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-    [](../images/dp500-create-a-dataflow-image1.png)
+    [](../images/mod5-explorer.png)
 
 1. Go to the **D:\DP500\Allfiles\05\Starter** folder.
 
@@ -27,7 +27,7 @@ In this task, you will set up Power BI Desktop.
 
 1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-	![](../images/dp500-create-a-dataflow-image2.png)
+    ![](../images/dp500-create-a-dataflow-image2.png)
 
 1. To save the file, on the **File** ribbon, select **Save as**.
 
@@ -37,7 +37,7 @@ In this task, you will set up Power BI Desktop.
 
 	*You will update the Power BI Desktop solution to use a dataflow to source date dimension data.*
 
-### Sign in to the Power BI service
+### Task 2: Sign in to the Power BI service
 
 In this task, you will sign in to the Power BI service, start a trial license, and create a workspace.
 
