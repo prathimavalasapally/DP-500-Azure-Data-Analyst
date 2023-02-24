@@ -28,7 +28,7 @@ In this lab, the data warehouse is hosted in a dedicated SQL pool in Azure Synap
    
 1. Under the Resource groups, select the **lab03-rg** name.
 
-   ![](../images/mod2-lab3rg.png)
+   ![](../images/mod3-lab3rg.png)
    
 1. Now, serach for **synapse** and select the synapse workspace named **workspace-<inject key="Deployment ID" enableCopy="false" />**.
 
@@ -44,7 +44,7 @@ In this lab, the data warehouse is hosted in a dedicated SQL pool in Azure Synap
 
    ![](../images/mod2-icon.png)
 
-1. On the **Manage** page, ensure the **SQL pools** tab is selected and then select the **sql*xxxxxxx*** dedicated SQL pool and use its **&#9655;** icon to start it; confirming that you want to resume it when prompted.
+1. On the **Manage** page, ensure the **SQL pools** tab is selected and then select the **sqldb-<inject key="Deployment ID" enableCopy="false" />** dedicated SQL pool and use its **&#9655;** icon to start it, if not started already; confirming that you want to resume it when prompted.
 
    ![](../images/mod3-sqlpool.png)
 
@@ -56,27 +56,27 @@ In this lab, the data warehouse is hosted in a dedicated SQL pool in Azure Synap
 
     ![](../images/mod3-data.png)
 
-1. Expand **SQL database**, the **sql*xxxxxxx*** pool, and its **Tables** folder to see the tables in the database.
+1. Expand **SQL database**, the **sqldb-<inject key="Deployment ID" enableCopy="false" />** pool, and its **Tables** folder to see the tables in the database.
 
     ![](../images/mod3-table.png)
 
->**Note**: A relational data warehouse is typically based on a schema that consists of *fact* and *dimension* tables. The tables are optimized for analytical queries in which numeric metrics in the fact tables are aggregated by attributes of the entities represented by the dimension tables - for example, enabling you to aggregate Internet sales revenue by product, customer, date, and so on.
+    A relational data warehouse is typically based on a schema that consists of *fact* and *dimension* tables. The tables are optimized for analytical queries in which numeric metrics in the fact tables are aggregated by attributes of the entities represented by the dimension tables - for example, enabling you to aggregate Internet sales revenue by product, customer, date, and so on.
     
 1. Expand the **dbo.FactInternetSales** table and its **Columns** folder to see the columns in this table. Note that many of the columns are *keys* that reference rows in the dimension tables. Others are numeric values (*measures*) for analysis.
     
- The keys are used to relate a fact table to one or more dimension tables, often in a *star* schema; in which the fact table is directly related to each dimension table (forming a multi-pointed "star" with the fact table at the center).
+   The keys are used to relate a fact table to one or more dimension tables, often in a *star* schema; in which the fact table is directly related to each dimension table (forming a multi-pointed "star" with the fact table at the center).
 
 1. View the columns for the **dbo.DimPromotion** table, and note that it has a unique **PromotionKey** that uniquely identifies each row in the table. It also has an **AlternateKey**.
 
-    Usually, data in a data warehouse has been imported from one or more transactional sources. The *alternate* key reflects the business identifier for the instance of this entity in the source, but a unique numeric *surrogate* key is usually generated to uniquely identify each row in the data warehouse dimension table. One of the benefits of this approach is that it enables the data warehouse to contain multiple instances of the same entity at different points in time (for example, records for the same customer reflecting their address at the time an order was placed).
+   Usually, data in a data warehouse has been imported from one or more transactional sources. The *alternate* key reflects the business identifier for the instance of this entity in the source, but a unique numeric *surrogate* key is usually generated to uniquely identify each row in the data warehouse dimension table. One of the benefits of this approach is that it enables the data warehouse to contain multiple instances of the same entity at different points in time (for example, records for the same customer reflecting their address at the time an order was placed).
 
 1. View the columns for the **dbo.DimProduct**, and note that it contains a **ProductSubcategoryKey** column, which references the **dbo.DimProductSubcategory** table, which in turn contains a **ProductCategoryKey** column that references the  **dbo.DimProductCategory** table.
 
-    In some cases, dimensions are partially normalized into multiple related tables to allow for different levels of granularity - such as products that can be grouped into subcategories and categories. This results in a simple star being extended to a *snowflake* schema, in which the central fact table is related to a dimension table, which is turn related to further dimension tables.
+   In some cases, dimensions are partially normalized into multiple related tables to allow for different levels of granularity - such as products that can be grouped into subcategories and categories. This results in a simple star being extended to a *snowflake* schema, in which the central fact table is related to a dimension table, which is turn related to further dimension tables.
 
 1. View the columns for the **dbo.DimDate** table, and note that it contains multiple columns that reflect different temporal attributes of a date - including the day of week, day of month, month, year, day name, month name, and so on.
 
-    Time dimensions in a data warehouse are usually implemented as a dimension table containing a row for each of the smallest temporal units of granularity (often called the *grain* of the dimension) by which you want to aggregate the measures in the fact tables. In this case, the lowest grain at which measures can be aggregated is an individual date, and the table contains a row for each date from the first to the last date referenced in the data. The attributes in the **DimDate** table enable analysts to aggregate measures based on any date key in the fact table, using a consistent set of temporal attributes (for example, viewing orders by month based on the order date). The **FactInternetSales** table contains three keys that relate to the **DimDate** table: **OrderDateKey**, **DueDateKey**, and **ShipDateKey**.
+   Time dimensions in a data warehouse are usually implemented as a dimension table containing a row for each of the smallest temporal units of granularity (often called the *grain* of the dimension) by which you want to aggregate the measures in the fact tables. In this case, the lowest grain at which measures can be aggregated is an individual date, and the table contains a row for each date from the first to the last date referenced in the data. The attributes in the **DimDate** table enable analysts to aggregate measures based on any date key in the fact table, using a consistent set of temporal attributes (for example, viewing orders by month based on the order date). The **FactInternetSales** table contains three keys that relate to the **DimDate** table: **OrderDateKey**, **DueDateKey**, and **ShipDateKey**.
 
 ## Excercise 2: Query the data warehouse tables
 
@@ -105,11 +105,11 @@ Numeric values in a relational data warehouse are stored in fact tables with rel
     ORDER BY Year;
     ```
 
-  ![](../images/mod3-script1.png)
+    ![](../images/mod3-script1.png)
 
 1. Use the **&#9655; Run** button to run the script, and review the results, which should show the Internet sales totals for each year. This query joins the fact table for Internet sales to a time dimension table based on the order date, and aggregates the sales amount measure in the fact table by the calendar month attribute of the dimension table.
 
-  ![](../images/mod3-script2.png)
+    ![](../images/mod3-script2.png)
 
 1. Modify the query as follows to add the month attribute from the time dimension, and then run the modified query.
 
