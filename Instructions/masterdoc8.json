@@ -4,8 +4,12 @@
     "Language": "English",
     "Files": [
 	    {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/08-create-a-composite-model.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/0-GettingStarted.md",
         "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-500-Azure-Data-Analyst/stage/Instructions/labs/08-create-a-composite-model.md",
+        "Order": 2
       }
     ]
   }
