@@ -61,7 +61,6 @@ In this task, you will sign in to the Power BI service, start a trial license, a
 
     *Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
-  
 
 ### Task 3: Create a workspace
 
@@ -73,7 +72,7 @@ In this task, you will create a workspace.
 
 1. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500workspace-<inject key="Deployment ID" enableCopy="false" />**.
 
-	*The workspace name must be unique within the tenant.*
+    *The workspace name must be unique within the tenant.*
 
     ![](../images/mod5-workspace-name.png)
 
@@ -81,35 +80,13 @@ In this task, you will create a workspace.
 
     ![](../images/mod5-save.png)
 
-	*Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.*
+    *Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.*
 
-### Start the SQL pool
-
-In this task, you will start the SQL pool.
-
-1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
-
-1. Use the lab credentials to complete the sign in process.
-
-1. Use the search bar to locate Azure Synapse Analytics. 
-
-1. Select the Azure Synapse Analytics instance.
-    ![](../images/synapse-instance.png)
-
-1. Locate and select the dedicated SQL pool.
-    ![](../images/dedicated-sql-pool.png)
-
-1. Resume the dedicated SQL pool.
-
-	![](../images/resume-sql-pool.png)
-
-	*Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.*
-
-## Develop a dataflow
+## Excercise 2: Develop a dataflow
 
 In this exercise, you will develop a dataflow to support Power BI model development. It will provide a consistent representation of the data warehouse date dimension table.
 
-### Review the data model
+### Task 1: Review the data model
 
 In this task, you will review the data model developed in Power BI Desktop.
 
@@ -117,37 +94,33 @@ In this task, you will review the data model developed in Power BI Desktop.
 
 1. At the left, switch to **Model** view.
 
-	![](../images/dp500-create-a-dataflow-image8.png)
+    ![](../images/mod5-modelview.png)
 
 1. In the model diagram, notice the **Date** table.
 
-	![](../images/dp500-create-a-dataflow-image9.png)
+    ![](../images/mod5-datetable.png)
 
-	*The **Date** table was created by the business analyst. It doesn't represent a consistent definition of date-related data, and it does not include helpful offset columns to support relative date filters. In a later exercise, you will replace this table with a new table sourced from a dataflow.*
+    *The **Date** table was created by the business analyst. It doesn't represent a consistent definition of date-related data, and it does not include helpful offset columns to support relative date filters. In a later exercise, you will replace this table with a new table sourced from a dataflow.*
 
-### Create a dataflow
+### Task 2: Create a dataflow
 
 In this task, you will create a dataflow that represents a consistent definition of date-related data.
 
-1. In the Power BI service, select **New**, **Dataflow**.
+1. Switch back to the Power BI service, select **New**, **Dataflow**.
 
-	![](../images/dp500-create-a-dataflow-image10.png)
-
-1. To create a dataflow, select the **Dataflows** tile.
-
-	![](../images/dp500-create-a-dataflow-image11.png)
+     ![](../images/mod5-dataflow.png)
 
 1. In the **Define new tables** tile, select **Add new tables**.
 
-	![](../images/dp500-create-a-dataflow-image12.png)
+     ![](../images/mod5-newtable.png)
 
-	*Adding new tables involves using Power Query Online to define queries.*
+     *Adding new tables involves using Power Query Online to define queries.*
 
-1. To choose a data source, select **Azure Synapse Analytics (SQL DW)**.
+1. To choose a data source, search for the **Azure Synapse Analytics (SQL DW)** and select it.
 
-	![](../images/dp500-create-a-dataflow-image13.png)
+      ![](../images/mod5-sqldw.png)
 
-	*Tip: You can use the Search box (located at the top-right) to help find the data source.*
+      *Tip: You can use the Search box (located at the top-right) to help find the data source.*
 
 1. Enter the Synapse Connection settings.
 
