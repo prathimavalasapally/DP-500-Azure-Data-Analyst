@@ -19,19 +19,19 @@ In this task, you will set up Power BI Desktop.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-    [](../images/mod5-explorer.png)
+   ![](../images/mod5-explorer.png)
 
-1. Go to the **D:\DP500\Allfiles\05\Starter** folder.
+1. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Starter** folder.
 
 1. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Create a dataflow.pbix** file.
 
 1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-    ![](../images/dp500-create-a-dataflow-image2.png)
+    ![](../images/mod5-signin.png)
 
 1. To save the file, on the **File** ribbon, select **Save as**.
 
-1. In the **Save As** window, go to the **D:\DP500\Allfiles\05\MySolution** folder.
+1. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\MySolution** folder.
 
 1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **Save**.
 
@@ -47,40 +47,39 @@ In this task, you will sign in to the Power BI service, start a trial license, a
 
 1. Use the lab credentials to complete the sign in process.
 
-	*Important: You must use the same credentials used to sign in from Power BI Desktop.*
+    Important: You must use the same credentials used to sign in from Power BI Desktop.*
 
 1. At the top-right, select the profile icon, and then select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image3.png)
+    ![](../images/mod5-trial.png)
 
 1. When prompted, select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image4.png)
+    ![](../images/mod5-starttrail.png)
 
 1. Do any remaining tasks to complete the trial setup.
 
-	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
+    *Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
   
 
-### Create a workspace
+### Task 3: Create a workspace
 
 In this task, you will create a workspace.
 
 1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces**, and then select **Create workspace**.
 
-	![](../images/dp500-create-a-dataflow-image5.png)
+    ![](../images/mod5-workspace.png)
 
-
-1. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace.
+1. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500workspace-<inject key="Deployment ID" enableCopy="false" />**.
 
 	*The workspace name must be unique within the tenant.*
 
-	![](../images/dp500-create-a-dataflow-image6.png)
+    ![](../images/mod5-workspace-name.png)
 
 1. Select **Save**.
 
-	![](../images/dp500-create-a-dataflow-image7.png)
+    ![](../images/mod5-save.png)
 
 	*Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.*
 
