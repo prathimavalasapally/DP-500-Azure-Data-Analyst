@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Work with model relationships'
-    module: 'Design and build tabular models'
----
-
 # Work with model relationships
 
 ## Overview
@@ -24,31 +18,6 @@ In this lab, you learn how to:
 
 In this exercise, you will open a pre-developed Power BI Desktop solution to learn about the data model. You will then explore the behavior of active model relationships.
 
-## Get started
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-   
-    ![](../images/command-prompt.png)
-
-2. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-   
-    ![](../images/command-prompt-2.png)
-
-
-3. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
 ### Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
@@ -57,13 +26,13 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-work-with-model-relationships-image1.png)
 
-2. In File Explorer, go to the **D:\DP500\Allfiles\06\Starter** folder.
+2. In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Work with model relationships.pbix** file.
 
 4. To save the file, on the **File** ribbon tab, select **Save as**.
 
-5. In the **Save As** window, go to the **D:\DP500\Allfiles\06\MySolution** folder.
+5. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\MySolution** folder.
 
 6. Select **Save**.
 
@@ -109,7 +78,7 @@ In this task, you will visualize sales data by date and switch the active status
 
 	![](../images/dp500-work-with-model-relationships-image6.png)
 
-3. To add columns to the table visual, in the **Fields** pane (located at the right), first expand the **Date** table.
+3. To add columns to the table visual, in the **Data** pane (located at the right), first expand the **Date** table.
 
 	![](../images/dp500-work-with-model-relationships-image7.png)
 
@@ -199,7 +168,7 @@ In this exercise, you will learn how to make a relationship active in a DAX form
 
 In this task, you will use the USERELATIONSHIP function to make an inactive relationship active.
 
-1. In the **Fields** pane, right-click the **Sales** table, and then select **New measure**.
+1. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
 	![](../images/dp500-work-with-model-relationships-image21.png)
 
@@ -376,7 +345,7 @@ In this exercise, you will work with other DAX relationship functions.
 
 In this task, you will work with the CROSSFILTER and TREATAS functions to modify relationship behavior during calculations.
 
-1. In the **Fields** pane, from inside the **Sales** table, select the **Sales Shipped** measure.
+1. In the **Data** pane, from inside the **Sales** table, select the **Sales Shipped** measure.
 
 	![](../images/dp500-work-with-model-relationships-image45.png)
 
