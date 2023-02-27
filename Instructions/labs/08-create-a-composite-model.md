@@ -14,7 +14,7 @@ In this lab, you learn how to:
 
 - Create measures.
 
-### Set up Power BI Desktop
+### Task-1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI template file.
 
@@ -50,7 +50,7 @@ In this task, you will open a pre-developed Power BI template file.
 
 1. Select **Save**.
 
-### Review the report
+### Task-2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -72,7 +72,7 @@ In this task, you will review the pre-developed report.
 
     *It's important to understand that slicer selections change the filters applied to the column chart visual. Power BI refreshes the column chart visual. That involves retrieving data from the source database. That way, the column chart visual shows the latest source data. (Some report-level caching may occur, meaning the report may reuse previously queried data.)*
 
-### Review the data model
+### Task-3: Review the data model
 
 In this task, you will review the pre-developed data model.
 
@@ -94,7 +94,7 @@ In this exercise, you will add an import table that will convert the DirectQuery
 
 *A composite model comprises more than one source group.*
 
-### Add a table
+### Task-4: Add a table
 
 In this task, you will add a table that stores sales targets sourced from an Excel workbook.
 
@@ -154,7 +154,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
     *The absence of a bar indicates the table belongs to the import source group.*
 
-### Create model relationships
+### Task-5: Create model relationships
 
 In this task, you will create two model relationships.
 
@@ -196,7 +196,7 @@ In this task, you will create two model relationships.
 
     ![](../images/dp500-6-2.png)
 
-### Set model properties
+### Task-6: Set model properties
 
 In this task, you will set model properties of the new table.
 
@@ -214,7 +214,7 @@ In this task, you will set model properties of the new table.
 
     ![](../images/dp500-8-21.png)
 
-### Add measures
+### Task-7: Add measures
 
 In this task, you will add two measures to allow the analysis of sales target variance.
 
@@ -268,13 +268,13 @@ In this task, you will add two measures to allow the analysis of sales target va
 
     ![](../images/dp500-8-3.png)
 
-### Update the report layout
+### Task-8: Update the report layout
 
 In this task, you will update the report to use the new measures.
 
 1. In the report, select the column chart visual.
 
-1. From the **Data** pane, drag the **Target Amount** field into the **Visualizations** pane, inside the **Values** well, directly beneath the **Sales Amount** field.
+1. From the **Data** pane, drag the **Target Amount** field into the **Visualizations** pane, inside the **Y-Axis** cell, directly beneath the **Sales Amount** field.
 
     ![](../images/dp500-8-2.png)
 
@@ -290,7 +290,7 @@ In this task, you will update the report to use the new measures.
 
     *You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.*
 
-### Finish up
+### Task-9: Finish up
 
 In this task, you will finish up.
 
