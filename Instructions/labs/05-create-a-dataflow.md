@@ -126,47 +126,46 @@ In this task, you will create a dataflow that represents a consistent definition
 
      - Enter the Server name from the Azure Portal
      
-     ![](../images/synapse-sql-pool-connection-string.png)
+     ![](../images1/mod5-synapse.png)
      
       The Server name should look similar to:
       
       synapsewsxxxxx.sql.azuresynapse.net
       
      - Ensure the Authentication kind is **Organizational account**. If you are prompted to sign in, use the lab provided credentials.
-     ![](../images/synapse-sql-pool-sign-in.png)
+     ![](../images1/mod5-connection.png)
 
 1. At the bottom-right, select **Next**.
 
-	![](../images/dp500-create-a-dataflow-image14.png)
+     ![](../images1/mod5-next.png)
 
 1. In the Power Query navigation pane, expand the sqldw and select (do not check) the **DimDate** table.
 
-	![](../images/dp500-create-a-dataflow-image15.png)
+     ![](../images1/mod5-create-a-dataflow.png)
 
 1. Notice the preview of table data.
 
 1. To create a query, check the **DimDate** table.
 
-	![](../images/dp500-create-a-dataflow-image16.png)
+      ![](../images1/mod5-query.png)
 
 1. At the bottom-right, select **Transform data**.
 
-	![](../images/dp500-create-a-dataflow-image17.png)
+      ![](../images1/mod5-transform-data.png)
 
 	*Power Query Online will now be used to apply transformations to the table. It provides an almost-identical experience to the Power Query Editor in Power BI Desktop.*
 
 1. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Date**, and then press **Enter**.
 
-	![](../images/dp500-create-a-dataflow-image18.png)
+	![](../images1/dimdate-name.png)
 
 1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
-	![](../images/dp500-create-a-dataflow-image19.png)
+	![](../images1/mod5-choose-column.png)
 
 1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
 
-	![](../images/dp500-create-a-dataflow-image20.png)
-
+      ![](../images1/mod5-uncheck.png)
 
 1. Check the following five columns.
 
@@ -180,16 +179,16 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	- FiscalYear
 
-	![](../images/dp500-create-a-dataflow-image21.png)
+	![](../images1/mod5-choose-table.png)
 
 1. Select **OK**.
 
-	![](../images/dp500-create-a-dataflow-image22.png)
+	![](../images1/mod5-ok.png)
 
   
 1. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
 
-	![](../images/dp500-create-a-dataflow-image23.png)
+	![](../images1/mod5-applied-steps.png)
 
 	*Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.*
 
@@ -197,23 +196,22 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. Replace the text with **Date**, and then press **Enter**.
 
-	![](../images/dp500-create-a-dataflow-image24.png)
+	![](../images1/mod5-date.png)
 
 1. To add a calculated column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
 
-	![](../images/dp500-create-a-dataflow-image25.png)
-
-   
+	![](../images1/mod5-custom-column.png)
+ 
 
 1. In the **Custom column** window, in the **New column name** box, replace the text with **Year**.
 
 1. In the **Data type** dropdown list, select **Text**.
 
-	![](../images/dp500-create-a-dataflow-image26.png)
+	![](../images1/mod5-custom-column1.png)
 
 1. In the **Custom column formula** box, enter the following formula:
 
-	*Tip: All formulas are available to copy and paste from the **D:\DP500\Allfiles\05\Assets\Snippets.txt**.*
+	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Assets\Snippets.txt**.*
 
 
 	```
@@ -266,11 +264,11 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	*This formula transposes the numeric offset to a friendly text format.*
 
-	*Tip: All formulas are available to copy and paste from the **D:\DP500\Allfiles\05\Assets\Snippets.txt**.*
+	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Assets\Snippets.txt**.*
 
 1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
-	![](../images/dp500-create-a-dataflow-image27.png)
+	![](../images1/mod5-choose-column.png)
 
 1. In the **Choose Columns** window, to uncheck the following columns:
 
@@ -280,25 +278,25 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	- FiscalYear
 
-	![](../images/dp500-create-a-dataflow-image28.png)
+	![](../images1/mod5-uncheck1.png)
 
 1. Select **OK**.
 
 1. At the bottom-right, select **Save &amp; close**.
 
-	![](../images/dp500-create-a-dataflow-image29.png)
+	![](../images1/mod5-save-close.png)
 
 1. In the **Save your dataflow** window, in the **Name** box, enter **Corporate Date**.
 
 1. In the **Description** box, enter: **Consistent date definition for use in all Adventure Works datasets**
 
-1. Tip: The description is available to copy and paste from the **D:\DP500\Allfiles\05\Assets\Snippets.txt**.
+1. Tip: The description is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Assets\Snippets.txt**.
 
-	![](../images/dp500-create-a-dataflow-image30.png)
+	![](../images1/mod5-save-dataflow.png)
 
 1. Select **Save**.
 
-	![](../images/dp500-create-a-dataflow-image31.png)
+	![](../images1/mod5-save-dataflow1.png)
 
 1. In the Power BI service, in the **Navigation** pane, select your workspace name.
 
@@ -306,27 +304,26 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. To refresh the dataflow, hover the cursor over the **Corporate Date** dataflow, and then select the **Refresh now** icon.
 
-	![](../images/dp500-create-a-dataflow-image32.png)
+	![](../images1/mod5-refresh.png)
 
   
-
 1. To go to the dataflow settings, hover the cursor over the **Corporate Date** dataflow, select the ellipsis, and then select **Settings**.
 
-	![](../images/dp500-create-a-dataflow-image33.png)
+	![](../images1/mod5-settings.png)
 
 1. Notice the configuration options.
 
-	![](../images/dp500-create-a-dataflow-image34.png)
+	![](../images1/mod5-configuration.png)
 
 	*There are two settings that should be configured. First, scheduled refresh should be configured to update the dataflow data every day. That way, the month offsets will be calculated using the current date. Second, the dataflow should be endorsed as certified (by an authorized reviewer). A certified dataflow declares to others that it meets quality standards and can be regarded as reliable and authoritative.*
 
 	*In addition to configuring settings, permission should be granted to all content creators to consume the dataflow.*
 
-## Consume a dataflow
+## Excercise 3: Consume a dataflow
 
 In this exercise, in the Power BI Desktop solution, you will replace the existing **Date** table with a new table that sources its data from the dataflow.
 
-### Remove the original Date table
+### Task 1: Remove the original Date table
 
 In this task, you will remove the original **Date** table.
 
@@ -334,36 +331,33 @@ In this task, you will remove the original **Date** table.
 
 1. In the model diagram, right-click the **Date** table, and then select **Delete from model**.
 
-	![](../images/dp500-create-a-dataflow-image35.png)
+	![](../images1/mod5-delete.png)
 
 1. When prompted to delete the table, select **OK**.
 
-	![](../images/dp500-create-a-dataflow-image36.png)
-
-  
+	![](../images1/mod5-click-ok.png)
 
 
-### Add a new Date table
+### Tsk 2: Add a new Date table
 
 In this task, you will add a new **Date** table that sources its data from the dataflow.
 
 1. On the **Home** ribbon, from inside the **Data** group, select the **Get data** icon.
 
-	![](../images/dp500-create-a-dataflow-image37.png)
+	![](../images1/mod5-getdata.png)
 
 1. In the **Get Data** window, at the left, select **Power Platform**, and then select **Power BI dataflows**.
 
-	![](../images/dp500-create-a-dataflow-image38.png)
+	![](../images1/mod5-powerbi.png)
 
 1. Select **Connect**.
 
-	![](../images/dp500-create-a-dataflow-image39.png)
+	![](../images1/mod5-connect.png)
 
-  
 
 1. In the **Power BI dataflows** window, select **Sign in**.
 
-	![](../images/dp500-create-a-dataflow-image40.png)
+	![](../images1/mod5-powerbi-signin.png)
 
 1. Use the lab credentials to complete the sign in process.
 
@@ -371,63 +365,60 @@ In this task, you will add a new **Date** table that sources its data from the d
 
 1. Select **Connect**.
 
-	![](../images/dp500-create-a-dataflow-image41.png)
+	![](../images1/mod5-connect.png)
 
 1. In the **Navigator** window, in the left pane, expand your workspace folder, and then expand the **Corporate Date** dataflow folder.
 
-	![](../images/dp500-create-a-dataflow-image42.png)
+	![](../images1/mod5-navigation.png)
 
 
 1. Check the **Date** table.
 
-	![](../images/dp500-create-a-dataflow-image43.png)
+	![](../images1/mod5-check-date.png)
 
 1. Select **Load**.
 
-	![](../images/dp500-create-a-dataflow-image44.png)
+	![](../images1/mod5-load.png)
 
 	*It is possible to transform the data using the Power Query Editor.*
 
 1. When the new table is added to the model, create a relationship by dragging the **DateKey** column from the **Date** table to the **OrderDateKey** column of the **Sales** table.
 
-	![](../images/dp500-create-a-dataflow-image45.png)
+	![](../images1/mod5-datekey.png)
 
 	*There are many other model configurations, like hiding columns or creating a hierarchy, that can be done.*
 
-### Validate the model
+### Tsk 3: Validate the model
 
 In this task, you will test the model by creating a simple report layout.
 
 1. At the left, switch to **Report** view.
 
-	![](../images/dp500-create-a-dataflow-image46.png)
+	![](../images1/mod5-report-view.png)
 
-1. To add a visual to the page, in the **Visualizations** pane, select the stack bar chart visual.
+1. To add a visual to the page, in the **Visualizations** pane, select the **stack bar chart** visual.
 
-	![](../images/dp500-create-a-dataflow-image47.png)
+	![](../images1/mod5-chart.png)
 
 1. Resize the visual to fill the report page.
 
-  
-
 1. In the **Fields** pane, expand the **Date** table, and then drag the **Month Offset Filter** field into the bar chart visual.
 
-	![](../images/dp500-create-a-dataflow-image48.png)
+	![](../images1/mod5-offset.png)
 
 1. In the **Fields** pane, expand the **Sales** table, and then drag the **Sales Amount** field into the bar chart visual.
 
-	![](../images/dp500-create-a-dataflow-image49.png)
-
+	![](../images1/mod5-sales-amount.png)
 
 1. To sort the vertical axis, at the top-right of the visual, select the ellipsis, and then select **Sort axis** > **Month Offset Filter**.
 
-	![](../images/dp500-create-a-dataflow-image50.png)
+	![](../images1/mod5-sort.png)
 
 1. To ensure the month offset filter values sort chronologically, in the **Fields** pane, select the **Month Offset Filter** field.
 
 1. On the **Column Tools** ribbon tab, from inside the **Sort** group, select **Sort**, and then select **Month Offset**.
 
-	![](../images/dp500-create-a-dataflow-image51.png)
+	![](../images1/mod5-sort1.png)
 
 1. Review the updated bar chart visual that now sorts chronologically.
 
@@ -436,13 +427,3 @@ In this task, you will test the model by creating a simple report layout.
 1. Save the Power BI Desktop file.
 
 1. Close Power BI Desktop.
-
-### Pause the SQL pool
-
-In this task, you will stop the SQL pool.
-
-1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
-
-1. Locate the SQL pool.
-
-1. Pause the SQL pool.
