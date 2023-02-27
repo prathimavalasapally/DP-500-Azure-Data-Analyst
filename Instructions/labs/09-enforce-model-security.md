@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Enforce model security'
-    module: 'Design and build tabular models'
----
-
 # Enforce model security
 
 ## Overview
@@ -22,81 +16,38 @@ In this lab, you learn how to:
 
 - Map security principals to dataset roles.
 
-## Get started
+## Set up Power BI
 
-In this exercise, you will prepare your environment.
+In this task, you will set up Power BI.
 
-### Clone the repository for this course
+1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
 
-1. On the start menu, open the Command Prompt
+	![](../images/dp500-create-a-star-schema-model-image1.png)
 
-    ![](../images/command-prompt.png)
+2. Select **X** located at the top-right of the getting started window.
 
-1. In the command prompt window, navigate to the D drive by typing:
+	![](../images/dp500-create-a-star-schema-model-image2.png)
 
-    `d:` 
+3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-   Press enter.
+	![](../images/dp500-create-a-star-schema-model-image3.png)
+4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
 
-    ![](../images/command-prompt-2.png)
+	![](../images/dp500-create-a-star-schema-model-image3b.png)
 
+5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
+1. At the top-right, select the profile icon, and then select **Start trial**.
 
-### Set up Power BI Desktop
+	![](../images/dp500-create-a-dataflow-image3.png)
 
-In this task, you will set up Power BI Desktop.
+1. When prompted, select **Start trial**.
 
-1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
+	![](../images/dp500-create-a-dataflow-image4.png)
 
-	![](../images/dp500-enforce-model-security-image1.png)
-
-2. Go to the **D:\DP500\Allfiles\09\Starter** folder.
-
-3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
-
-4. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
-
-	![](../images/dp500-enforce-model-security-image2.png)
-
-5. To save the file, on the **File** ribbon, select **Save as**.
-
-6. In the **Save As** window, go to the **D:\DP500\Allfiles\09\MySolution** folder.
-
-7. Select **Save**.
-
-	*You will update the Power BI Desktop solution to enforce row-level security.*
-
-### Sign in to the Power BI service
-
-In this task, you will sign in to the Power BI service, start a trial license, and create a workspace.
-
-*Important: If you have already setup Power BI in your VM environment, continue to the next task.*
-
-1. In a web browser, go to [https://powerbi.com](https://powerbi.com/).
-
-2. Use the lab credentials to complete the sign in process.
-
-	*Important: You must use the same credentials used to sign in from Power BI Desktop.*
-
-3. At the top-right, select the profile icon, and then select **Start trial**.
-
-	![](../images/dp500-enforce-model-security-image3.png)
-
-4. When prompted, select **Start trial**.
-
-	![](../images/dp500-enforce-model-security-image4.png)
-
-5. Do any remaining tasks to complete the trial setup.
+1. Do any remaining tasks to complete the trial setup.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
-
 
 ### Create a workspace
 
@@ -122,6 +73,10 @@ In this task, you will create a workspace.
 ### Review the data model
 
 In this task, you will review the data model.
+
+1. Navigate back to Power BI Desktop. If you see **Sign in** in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
+
+    <img width="80" alt="image" src="https://user-images.githubusercontent.com/77289548/166337862-538a1900-ec67-44d1-905f-d404c5b0a58a.png">
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
@@ -249,7 +204,7 @@ In this task, you will publish the report.
 
 	![](../images/dp500-enforce-model-security-image30.png)
 
-### Configure row-level security (*optional*)
+### Configure row-level security (*Read-only*)
 
 In this task, you will see how to configure row-level security in the Power BI service. 
 
@@ -296,43 +251,6 @@ This task relies on the existence of a **Salespeople_Australia** security group 
 
 8. To return to the workspace landing page, in the **Navigation** pane, select the workspace.
 
-
-### Clean up the solution
-
-In this task, you will clean up the solution by removing the dataset and the model roles.
-
-1. To remove the dataset, hover the cursor over the dataset, and when the ellipsis appears, select the ellipsis, and then select **Delete**.
-
-	![](../images/dp500-enforce-model-security-image37.png)
-
-	*You will republish a revised dataset in the next exercise.*
-
-2. When prompted to confirm the deletion, select **Delete**.
-
-	![](../images/dp500-enforce-model-security-image38.png)
-
-3. Switch to Power BI Desktop.
- 
-
-4. To remove the security roles, on the **Modeling** ribbon tab, from inside the **Security** group, select **Manage roles**.
-
-	![](../images/dp500-enforce-model-security-image39.png)
-
-5. In the **Manage roles** window, to remove the first role, select **Delete**.
-
-	![](../images/dp500-enforce-model-security-image40.png)
-
-6. When prompted to confirm the deletion, press **Yes, delete**.
-
-	![](../images/dp500-enforce-model-security-image41.png)
-
-7. Also remove the second role.
-
-8. Select **Save**.
-
-	![](../images/dp500-enforce-model-security-image42.png)
-
-
 ## Create a dynamic role
 
 In this exercise, you will add a table to the model, create and validate a dynamic role, and then map a security principal to the dataset role.
@@ -345,52 +263,68 @@ In this task, you will add the **Salesperson** table to the model.
 
 	![](../images/dp500-enforce-model-security-image43.png)
 
-2. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
+1. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
 
 	![](../images/dp500-enforce-model-security-image44.png)
+	
+1. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
+
+	![](../images/dp500-6-6.png) 
+
+	*If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.*
+
+	![](../images/dp500-6-31.png)
+
+	*Select **Connect***
+
+	 ![](../images/dp500-6-32.png)
+	 
+	*If you are prompted for Encryption Support, click on **OK**
+	
+	 ![](../images/dp500-6-4.png)
 
 
-3. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Customer** query, and then select **Duplicate**.
+1. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Customer** query, and then select **Duplicate**.
 
 	![](../images/dp500-enforce-model-security-image45.png)
 
 	*Because the **Customer** query already includes steps to connect the data warehouse, duplicating it is an efficient way to commence the development of a new query.*
 
-4. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**.
+1. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**.
 
 	![](../images/dp500-enforce-model-security-image46.png)
 
 
-5. In the **Applied Steps** list, right-click the **Removed Other Columns** step (third step), and then select **Delete Until End**.
+1. In the **Applied Steps** list, right-click the **Removed Other Columns** step (third step), and then select **Delete Until End**.
 
 	![](../images/dp500-enforce-model-security-image47.png)
 
-6. When prompted to confirm deletion of the step, select **Delete**.
+1. When prompted to confirm deletion of the step, select **Delete**.
 
 	![](../images/dp500-enforce-model-security-image48.png)
 
-7. To source data from a different data warehouse table, in the **Applied Steps** list, in the **Navigation** step (second step), select the gear icon (located at the right).
+1. To source data from a different data warehouse table, in the **Applied Steps** list, in the **Navigation** step (second step), select the gear icon (located at the right).
 
 	![](../images/dp500-enforce-model-security-image49.png)
 
-8. In the **Navigation** window, select the **DimEmployee** table.
+1. In the **Navigation** window, select the **DimEmployee** table.
 
 	![](../images/dp500-enforce-model-security-image50.png)
 
 
-9. Select **OK**.
+1. Select **OK**.
 
 	![](../images/dp500-enforce-model-security-image51.png)
 
-10. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
 	![](../images/dp500-enforce-model-security-image52.png)
 
-11. In the **Choose Columns** window, uncheck the **(Select All Columns)** item.
+1. In the **Choose Columns** window, uncheck the **(Select All Columns)** item.
 
 	![](../images/dp500-enforce-model-security-image53.png)
 
-12. Check the following three columns:
+1. Check the following three columns:
 
 	- EmployeeKey
 
@@ -398,23 +332,23 @@ In this task, you will add the **Salesperson** table to the model.
 
 	- EmailAddress
 
-13. Select **OK**.
+1. Select **OK**.
 
 	![](../images/dp500-enforce-model-security-image54.png)
 
-14. To rename the **EmailAddress** column, double-click the **EmailAddress** column header.
+1. To rename the **EmailAddress** column, double-click the **EmailAddress** column header.
 
-15. Replace the text with **UPN**, and then press **Enter**.
+1. Replace the text with **UPN**, and then press **Enter**.
 
 	*UPN is an acronym for User Principal Name. The values in this column match the Azure AD account names.*
 
 	![](../images/dp500-enforce-model-security-image55.png)
 
-16. To load the table to the model, on the **Home** ribbon tab, select the **Close &amp; Apply** icon.
+1. To load the table to the model, on the **Home** ribbon tab, select the **Close &amp; Apply** icon.
 
 	![](../images/dp500-enforce-model-security-image56.png)
 
-17. When the table has added to the model, notice that a relationship to the **Sales Territory** table was automatically created.
+1. When the table has added to the model, notice that a relationship to the **Sales Territory** table was automatically created.
 
 ### Configure the relationship
 
@@ -518,7 +452,7 @@ In this task, you will validate the dynamic role.
 
 	![](../images/dp500-enforce-model-security-image74.png)
 
-### Finalize the design
+### Finalize the design (*Read-only*)
 
 In this task, you will finalize the design by publishing the report and mapping a security group to the role.
 
