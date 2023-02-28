@@ -144,7 +144,7 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 6. When Storage mode dialog box is prompted, select **OK**.
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 	*The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables.*
 
