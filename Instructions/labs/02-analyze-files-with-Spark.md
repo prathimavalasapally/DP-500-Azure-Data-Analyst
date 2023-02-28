@@ -30,7 +30,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
    ![](../images/mod2-lab02rg.png)
    
-1. Now, serach for **synapse** and select the synapse workspace named **workspace-<inject key="Deployment ID" enableCopy="false" />**.
+1. Now, serach for **synapse** and select the synapse workspace named **workspace<inject key="Deployment ID" enableCopy="false" />**.
 
    ![](../images/mod2-synapse.png)
 
@@ -44,25 +44,25 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
    ![](../images/mod2-icon.png)
 
-1. On the **Manage (1)** page, select the **Apache Spark pools (2)** tab and note that a Spark pool with a name similar to **sparkpool-<inject key="Deployment ID" enableCopy="false" /> (3)** has been provisioned in the workspace. Later you will use this Spark pool to load and analyze data from files in the data lake storage for the workspace.
+1. On the **Manage (1)** page, select the **Apache Spark pools (2)** tab and note that a Spark pool with a name similar to **sparkpool<inject key="Deployment ID" enableCopy="false" /> (3)** has been provisioned in the workspace. Later you will use this Spark pool to load and analyze data from files in the data lake storage for the workspace.
 
-   ![](../images/mod2-sparkpool.png)
+   ![](../images1/Mod2-Ex1-Task1-Step7.png)
 
-1. On the **Data (1)** page, view the **Linked** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (2)** storage account, which should have a name similar to **workspace-<inject key="Deployment ID" enableCopy="false" /> (Primary - datalake*xxxxxxx*) (3)**.
+1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **workspace<inject key="Deployment ID" enableCopy="false" /> (Primary - datalake*xxxxxxx*) (4)**.
 
-   ![](../images/mod2-data.png)
+   ![](../images1/Mod2-Ex1-Task1-Step8.png)
 
 1. Expand your storage account and verify that it contains a file system container named **files**.
 
-   ![](../images/mod2-files.png)
+   ![](../images1/Mod2-Ex1-Task1-Step9.png)
 
 1. Select the **files (1)** container, and note that it contains folders named **sales** and **synapse** (2). The **synapse** folder is used by Azure Synapse, and the **sales** folder contains the data files you are going to query.
 
-   ![](../images/mod2-files1.png)
+   ![](../images1/Mod2-Ex1-Task1-Step10.png)
 
 1. Double click on the **sales** folder to open and the **orders** folder it contains, and observe that the **orders** folder contains **.csv** files for three years of sales data.
 
-   ![](../images/mod2-order.png)
+   ![](../images1/Mod2-Ex1-Task1-Step11.png)
 
 1. Right-click any of the files and select **Preview** to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
 
@@ -70,11 +70,11 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 1. Select any of the files in the **orders** folder, and then in the **New notebook** list on the toolbar, select **Load to DataFrame**. A dataframe is a structure in Spark that represents a tabular dataset.
 
-   ![](../images/mod2-dataframes.png)
+   ![](../images1/Mod2-Ex2-Task2-Step1.png)
 
-1. In the new **Notebook 1 (1)** tab that opens, Select the **... (2)** icon to open the **Attach to** list, select your Spark pool  (3)****sparkpool-<inject key="Deployment ID" enableCopy="false" /> (3)**. Then use the **&#9655; Run all** button to run all of the cells in the notebook (there's currently only one!).
+1. In the new **Notebook 1 (1)** tab that opens, Select the **... (2)** icon to open the **Attach to** list, select your Spark pool  **sparkpool<inject key="Deployment ID" enableCopy="false" /> (3)**. Then use the **&#9655; Run all (4)** button to run all of the cells in the notebook (there's currently only one!).
  
-   ![](../images/mod2-sparkpool1.png)
+   ![](../images1/Mod2-Ex2-Task2-Step2a.png)
 
     >**Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can     take a few minutes. Subsequent runs will be quicker.
   
@@ -132,7 +132,8 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
     ```Python
     df.printSchema()
     ```
-   ![](../images/mod2-code.png)
+    
+   ![](../images1/Mod2-Ex2-Task2-Step8.png)
 
 1. Run the new cell and verify that the dataframe schema matches the **orderSchema** you defined. The **printSchema** function can be useful when using a dataframe with an automatically inferred schema.
 
