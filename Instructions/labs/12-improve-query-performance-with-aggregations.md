@@ -26,7 +26,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 3. Click on **File Menu** and click on **Browse reports**
 
-4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
+4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\Starter** and select the existing file and click on **Open**
 
 	![](../images/dp500-11-54.png)
 	
@@ -40,7 +40,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 7. If prompted for Encryption Support,click on **OK**
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 8. If prompted to approve running a Native Database Query, select **Run**.
 
@@ -48,7 +48,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 9. To save the file, on the **File** ribbon tab, select **Save as**.
 
-10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
+10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
 
 11. Select **Save**.
 
@@ -220,7 +220,7 @@ In this task, you will set model properties for the new table.
 
 7. When Storage mode dialog box is prompted , select **OK**.
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 	*The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables. It also informs you that it's an irreversible action. It's not possible to change an import storage mode table back to a DirectQuery storage mode table (unless you restore from an earlier version of the Power BI Desktop file).*
 
@@ -256,7 +256,7 @@ In this task, you will create two model relationships.
 
 3. Select **OK**.
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 4. In the model diagram, notice that a relationship now exists between the **Order Date** and **Sales Agg** tables.
 
@@ -266,7 +266,7 @@ In this task, you will create two model relationships.
 
 6. In the **Create relationship** window, select **OK**.
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 	*The tasks you completed in this lab have added an import table to the model, and related it to other model tables. However, it's not yet an aggregation that Power BI can transparently use to improve query performance. You will set up the aggregation in the next task.*
 
