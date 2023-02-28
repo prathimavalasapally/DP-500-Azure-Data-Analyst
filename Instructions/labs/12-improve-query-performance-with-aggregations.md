@@ -16,23 +16,41 @@ In this lab, you learn how to:
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
-1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
+1. To open PowerBI, on the taskbar, select the **PowerBI** shortcut.
 
-	![](../images/DP500-16-13.png)
+	![](../images/DP500-11-50.png)
 
-2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\Starter** folder.
+2. Close the Pop-up Windows.
 
-3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve query performance with aggregations.pbix** file.
+	![](../images/dp500-11-51.png)
 
-    *If you receive a Potential security risk warning, **select OK***.
-    
-    *If prompted to approve running a Native Database Query, **select Run**.
+3. Click on **File Menu** and click on **Browse reports**
 
-4. To save the file, on the **File** ribbon tab, select **Save as**.
+4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
 
-5. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
+	![](../images/dp500-11-54.png)
+	
+5. If prompted about a potential security risk, read the message, and then select **OK**
 
-6. Select **Save**.
+	![](../images/dp500-6-6.png)
+	
+6. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+
+	![](../images/dp500-11-60.png)
+
+7. If prompted for Encryption Support,click on **OK**
+
+	![](../images/dp500-6-6.png)
+
+8. If prompted to approve running a Native Database Query, select **Run**.
+
+        ![](../images/dp500-11-13.png)
+
+9. To save the file, on the **File** ribbon tab, select **Save as**.
+
+10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
+
+11. Select **Save**.
 
 ### Review the report
 
