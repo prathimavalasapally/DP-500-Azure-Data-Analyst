@@ -14,7 +14,7 @@ Install-Module -Name Az.Resources -Force -Verbose:$false -WarningAction 'Silentl
 $resourceGroupName = (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -like "lab10-rg*" }).ResourceGroupName
 $DeploymentID =  (Get-AzResourceGroup -Name $resourceGroupName).Tags["DeploymentId"]
 
-$Location = Get-AzResourceGroup -Name $ResourceGroupName | Select-Object -ExpandProperty location
+$Location = Get-AzResourceGroup -Name $resourceGroupName | Select-Object -ExpandProperty location
 $storageName = "dp500strg$DeploymentID"
 $ServerName = "server$DeploymentID"
 $FolderName = "C:\LabFiles\DP-500-Azure-Data-Analyst"
