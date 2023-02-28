@@ -25,6 +25,7 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 	![](../images1/dp500_14-01.png)
 
 2. In the **Connect to Server** window, ensure that the **Server name** is set to **localhost**, and that the Authentication dropdown list is set to **Windows Authentication**.
+	
 	![](../images1/dp500_14-02.png)
 
 3. Select **Connect**.
