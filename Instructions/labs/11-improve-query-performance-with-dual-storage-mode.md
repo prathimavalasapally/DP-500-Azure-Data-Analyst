@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Improve query performance with dual storage mode'
-    module: 'Optimize enterprise-scale tabular models'
----
-
 # Improve query performance with dual storage mode
 
 ## Overview
@@ -38,7 +32,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 	
 5. If prompted about a potential security risk, read the message, and then select **OK**
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 	
 6. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
 
@@ -46,7 +40,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 7. If prompted for Encryption Support,click on **OK**
 
-	![](../images/dp500-6-6.png)
+	![](../images/dp500-6-2.png)
 
 8. If prompted to approve running a Native Database Query, select **Run**.
 
