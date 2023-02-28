@@ -12,7 +12,7 @@ In this lab, you learn how to:
 
 - Use Performance analyzer to review refresh activities.
 
-### Set up Power BI Desktop
+### Task-1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
@@ -52,7 +52,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 11. Select **Save**.
 
-### Review the report
+### Task-2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -68,7 +68,7 @@ In this task, you will review the pre-developed report.
 
 	*This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales and target amounts. You will improve the performance of the report by setting some tables to use dual storage mode.*
 
-### Review the data model
+### Task-3: Review the data model
 
 In this task, you will review the pre-developed data model.
 
@@ -90,7 +90,7 @@ In this exercise, you will set up dual storage mode.
 
 *A model table that uses dual storage mode uses both import and DirectQuery storage mode at the same time. Power BI determines the most efficient storage mode to use on a query by query basis, striving to use import mode whenever possible because it's faster.*
 
-### Use Performance analyzer
+### Task-4: Use Performance analyzer
 
 In this task, you will open Performance analyzer and use it to inspect refresh events.
 
@@ -124,7 +124,7 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
 	*You always set up a slicer visual by using one or more fields from the same table. It isn't possible to use fields from different tables to set up a slicer. What's more, a slicer almost always uses fields from a dimension table. So, to improve query performance of slicer visuals, ensure they store imported data. In this case, because the dimension tables use DirectQuery storage mode, you can set them to dual storage mode. Because dimension tables store few rows (relative to fact tables), it shouldn't result in an excessively large model cache.*
 
-### Set up dual storage mode
+### Task-5 Set up dual storage mode
 
 In this task, you will set all dimension tables to use dual storage mode.
 
@@ -154,7 +154,7 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 	*A striped bar indicates dual storage mode.*
 
-### Review the report
+### Task-6: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -198,7 +198,7 @@ In this task, you will review the pre-developed report.
 
 	*You could further optimize the model to improve query performance by adding aggregations. However, that enhancement will be the learning objective of a different lab.*
 
-### Finish up
+### Task-7: Finish up
 
 In this task, you will finish up.
 
