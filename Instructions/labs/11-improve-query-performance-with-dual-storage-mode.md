@@ -182,7 +182,7 @@ In this task, you will review the pre-developed report.
 
 6. Select the column chart visuals, and then in the **Visualizations** pane, from inside the **Values** well, remove the **Sales Amount** field.
 
-	![](../images/dp500-11-12.png)
+	![](../images/dp500-11-20.png)
 
 7. Also remove the two fields from the **Tooltips** well.
 
