@@ -28,7 +28,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\Starter** and select the existing file and click on **Open**
 
-	![](../images/dp500-11-54.png)
+	![](../images/dp500-11-70.png)
 	
 5. If prompted about a potential security risk, read the message, and then select **OK**
 
