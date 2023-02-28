@@ -106,7 +106,7 @@ In this task, you will review the data model developed in Power BI Desktop.
 
 In this task, you will create a dataflow that represents a consistent definition of date-related data.
 
-1. Switch back to the Power BI service, select **New**, **Dataflow**.
+1. Switch back to the Power BI service, select **New** and then **Dataflow**.
 
      ![](../images/mod5-dataflow.png)
 
@@ -122,15 +122,16 @@ In this task, you will create a dataflow that represents a consistent definition
 
       *Tip: You can use the Search box (located at the top-right) to help find the data source.*
 
-1. Enter the Synapse Connection settings.
-
-     - Enter the Server name from the Azure Portal
-     
+1. Enter the following Synapse **Connection settings** details: 
+    
+    - **Server**:  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net** 
+         
      ![](../images1/mod5-synapse.png)
      
-      The Server name should look similar to:
+     >**Note**: We can also fetch the server name by signing into the azure portal and navigating to **Connection Strings** under the dedicated sql pool resource present in lab05-rg, which is well explained in the below screenshots.
+      >**Note**: The Server name should look similar to: *synapsewsxxxxx.sql.azuresynapse.net*
       
-      synapsewsxxxxx.sql.azuresynapse.net
+      
       
      - Ensure the Authentication kind is **Organizational account**. If you are prompted to sign in, use the lab provided credentials.
      ![](../images1/mod5-connection.png)
@@ -139,7 +140,7 @@ In this task, you will create a dataflow that represents a consistent definition
 
      ![](../images1/mod5-next.png)
 
-1. In the Power Query navigation pane, expand the sqldw and select (do not check) the **DimDate** table.
+1. In the Power Query navigation pane, expand the **sqldb<inject key="DeploymentID" enableCopy="false"/>** and select (do not check) the **DimDate** table.
 
      ![](../images1/mod5-create-a-dataflow.png)
 
