@@ -44,13 +44,13 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 8. If prompted to approve running a Native Database Query, select **Run**.
 
-        ![](../images/dp500-11-13.png)
+	![](../images/dp500-11-13.png)       
 
 9. To save the file, on the **File** ribbon tab, select **Save as**.
 
-7. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
+10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
 
-8. Select **Save**.
+11. Select **Save**.
 
 ### Review the report
 
