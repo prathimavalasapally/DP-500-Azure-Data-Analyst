@@ -5,7 +5,6 @@ $ErrorActionPreference = 'Stop'
 #Installing required packages
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Register-PSRepository -Default -Verbose -ErrorAction 'SilentlyContinue'
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted -ErrorAction 'SilentlyContinue'
 Install-Module -Name Az.Sql -Force -Verbose:$false -WarningAction 'SilentlyContinue'
