@@ -16,7 +16,7 @@ In this lab, you learn how to:
 
 ## Get started
 
-### Set up the database
+### Task 1: Set up the database
 
 In this task, you will use SQL Server Management Studio (SSMS) to setup the database by running two scripts.
 
@@ -64,7 +64,7 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 13. Run the script, and leave it running until the end of the lab.
 
-### Set up Power BI Desktop
+### Task 2: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
@@ -82,7 +82,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 6. Select **Save**.
 
-### Review the report
+### Task 3: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -118,7 +118,7 @@ In this exercise, you will set up automatic page refresh and experiment by using
 
 *Automatic page refresh requires at least one model table that's set to use DirectQuery storage mode.*
 
-### Set up automatic page refresh
+### Task 1: Set up automatic page refresh
 
 In this task, you will set up automatic page refresh.
 
@@ -152,7 +152,7 @@ In this task, you will set up automatic page refresh.
 
 	*Once published to the Power BI service, refresh intervals less than 30 minutes require that you save the report to a workspace assigned to Premium capacity. Also, a capacity admin must enable and set up the capacity to allow such frequent intervals. For more information, see [Automatic page refresh in Power BI](https://docs.microsoft.com/power-bi/create-reports/desktop-automatic-page-refresh).*
 
-### Set up change detection
+### Task 2: Set up change detection
 
 In this task, you will set up change detection.
 
