@@ -28,6 +28,26 @@ In this task, you will set up Power BI Desktop.
 1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
     ![](../images/mod5-signin.png)
+    
+4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+
+	![](../images/dp500-create-a-star-schema-model-image3b.png)
+	
+	>**Note**: If not redirected, go to [https://powerbi.com](https://powerbi.com/) and use the lab credentials to complete the sign in process.
+
+5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+
+1. At the top-right, select the profile icon, and then select **Start trial**.
+
+	![](../images/dp500-create-a-dataflow-image3.png)
+
+1. When prompted, select **Start trial**.
+
+	![](../images/dp500-create-a-dataflow-image4.png)
+
+1. Do any remaining tasks to complete the trial setup.
+
+	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
 1. To save the file, on the **File** ribbon, select **Save as**.
 
@@ -37,32 +57,7 @@ In this task, you will set up Power BI Desktop.
 
 	*You will update the Power BI Desktop solution to use a dataflow to source date dimension data.*
 
-### Task 2: Sign in to the Power BI service
-
-In this task, you will sign in to the Power BI service, start a trial license, and create a workspace.
-
-*Important: If you have already setup Power BI in your VM environment, continue to the next task.*
-
-1. In a web browser, go to [https://powerbi.com](https://powerbi.com/).
-
-1. Use the lab credentials to complete the sign in process.
-
-    Important: You must use the same credentials used to sign in from Power BI Desktop.*
-
-1. At the top-right, select the profile icon, and then select **Start trial**.
-
-    ![](../images/mod5-trial.png)
-
-1. When prompted, select **Start trial**.
-
-    ![](../images/mod5-starttrail.png)
-
-1. Do any remaining tasks to complete the trial setup.
-
-    *Tip: The Power BI web browser experience is known as the **Power BI service**.*
-
-
-### Task 3: Create a workspace
+### Task 2: Create a workspace
 
 In this task, you will create a workspace.
 
@@ -90,7 +85,9 @@ In this exercise, you will develop a dataflow to support Power BI model developm
 
 In this task, you will review the data model developed in Power BI Desktop.
 
-1. Switch to the Power BI Desktop solution.
+1. Navigate back to Power BI Desktop. If you see **Sign in** in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
+
+    <img width="80" alt="image" src="https://user-images.githubusercontent.com/77289548/166337862-538a1900-ec67-44d1-905f-d404c5b0a58a.png">
 
 1. At the left, switch to **Model** view.
 
@@ -125,16 +122,16 @@ In this task, you will create a dataflow that represents a consistent definition
 1. Enter the following Synapse **Connection settings** details: 
     
     - **Server**:  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net** 
+  
+    - Ensure the Authentication kind is **Organizational account**. If you are prompted to sign in, use the lab provided credentials.
+
+     ![](../images1/dp500_05-connectionSettings.png)
          
-     ![](../images1/mod5-synapse.png)
+     >**Note**: We can also fetch the server name by signing into the azure portal and navigating to **Connection Strings** under the dedicated sql pool resource present in lab05-rg, which is well explained in the below screenshot.
+    
+     ![](../images1/dp500_05-connectionString.png)
      
-     >**Note**: We can also fetch the server name by signing into the azure portal and navigating to **Connection Strings** under the dedicated sql pool resource present in lab05-rg, which is well explained in the below screenshots.
-      >**Note**: The Server name should look similar to: *synapsewsxxxxx.sql.azuresynapse.net*
-      
-      
-      
-     - Ensure the Authentication kind is **Organizational account**. If you are prompted to sign in, use the lab provided credentials.
-     ![](../images1/mod5-connection.png)
+     >**Note**: The Server name should look similar to: *synapsewsxxxxx.sql.azuresynapse.net*
 
 1. At the bottom-right, select **Next**.
 
@@ -203,7 +200,6 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	![](../images1/mod5-custom-column.png)
  
-
 1. In the **Custom column** window, in the **New column name** box, replace the text with **Year**.
 
 1. In the **Data type** dropdown list, select **Text**.
@@ -214,26 +210,21 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Assets\Snippets.txt**.*
 
-
 	```
 	"FY" & Number.ToText([FiscalYear])
 	```
-
-
+	
 1. Select **OK**.
 
 	*You will now add four more custom columns.*
 
 1. Add another custom column named **Quarter** with the **Text** data type, using the following formula:
 
-
 	```
 	[Year] & " Q" & Number.ToText([FiscalQuarter])
 	```
-
-
+	
 1. Add another custom column named **Month** with the **Text** data type, using the following formula:
-
 
 	```
 	Date.ToText([Date], "yyyy-MM")
@@ -241,28 +232,20 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. Add another custom column named **Month Offset** (include a space between the words) with the **Whole number** data type, using the following formula:
 
-
 	```
 	((Date.Year([Date]) * 12) + Date.Month([Date])) - ((Date.Year(DateTime.LocalNow()) * 12) + Date.Month(DateTime.LocalNow()))
 	```
 
-
 	*This formula determines the number of months from the current month. The current month is zero, past months are negative, and future months are positive. For example, last month has a value of -1.*
-
-   
 
 1. Add another custom column named **Month Offset Filter** (include spaces between the words) with the **Text** data type, using the following formula:
 
-
 	```
 	if [Month Offset] > 0 then Number.ToText([Month Offset]) & " month(s) future"
-
 	else if [Month Offset] = 0 then "Current month"
-
 	else Number.ToText(-[Month Offset]) & " month(s) ago"
 	```
-
-
+	
 	*This formula transposes the numeric offset to a friendly text format.*
 
 	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\Assets\Snippets.txt**.*
@@ -336,10 +319,10 @@ In this task, you will remove the original **Date** table.
 
 1. When prompted to delete the table, select **OK**.
 
-	![](../images1/mod5-click-ok.png)
+	![](../images1/dp500_05-deleteTable.png)
 
 
-### Tsk 2: Add a new Date table
+### Task 2: Add a new Date table
 
 In this task, you will add a new **Date** table that sources its data from the dataflow.
 
@@ -349,7 +332,7 @@ In this task, you will add a new **Date** table that sources its data from the d
 
 1. In the **Get Data** window, at the left, select **Power Platform**, and then select **Power BI dataflows**.
 
-	![](../images1/mod5-powerbi.png)
+	![](../images1/dp500_05-pbiDataflows.png)
 
 1. Select **Connect**.
 
@@ -389,7 +372,7 @@ In this task, you will add a new **Date** table that sources its data from the d
 
 	*There are many other model configurations, like hiding columns or creating a hierarchy, that can be done.*
 
-### Tsk 3: Validate the model
+### Task 3: Validate the model
 
 In this task, you will test the model by creating a simple report layout.
 
@@ -403,11 +386,11 @@ In this task, you will test the model by creating a simple report layout.
 
 1. Resize the visual to fill the report page.
 
-1. In the **Fields** pane, expand the **Date** table, and then drag the **Month Offset Filter** field into the bar chart visual.
+1. In the **Data** pane, expand the **Date** table, and then drag the **Month Offset Filter** field into the bar chart visual.
 
-	![](../images1/mod5-offset.png)
+	![](../images1/dp500_05-data.png)
 
-1. In the **Fields** pane, expand the **Sales** table, and then drag the **Sales Amount** field into the bar chart visual.
+1. In the **Data** pane, expand the **Sales** table, and then drag the **Sales Amount** field into the bar chart visual.
 
 	![](../images1/mod5-sales-amount.png)
 
@@ -415,7 +398,7 @@ In this task, you will test the model by creating a simple report layout.
 
 	![](../images1/mod5-sort.png)
 
-1. To ensure the month offset filter values sort chronologically, in the **Fields** pane, select the **Month Offset Filter** field.
+1. To ensure the month offset filter values sort chronologically, in the **Data** pane, select the **Month Offset Filter** field.
 
 1. On the **Column Tools** ribbon tab, from inside the **Sort** group, select **Sort**, and then select **Month Offset**.
 
