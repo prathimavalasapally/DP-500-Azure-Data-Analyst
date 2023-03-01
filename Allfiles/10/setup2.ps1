@@ -20,7 +20,7 @@ $storageName = "dp500strg$DeploymentID"
 $ServerName = "server$DeploymentID"
 $FolderName = "C:\LabFiles\DP-500-Azure-Data-Analyst"
 
-(Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\parameters.json"
+#(Get-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\parameters.json") | ForEach-Object {$_ -Replace "GET-DEPLOYMENT-ID", "$DeploymentID"} | Set-Content -Path "C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\parameters.json"
 
 #Create storage accountadmin
 
