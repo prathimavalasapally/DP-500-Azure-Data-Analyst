@@ -1,4 +1,4 @@
-# Excercise 1: Create a dataflow
+# Exercise 1: Create a dataflow
 
 ## Overview
 
@@ -77,7 +77,7 @@ In this task, you will create a workspace.
 
     *Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.*
 
-## Excercise 2: Develop a dataflow
+## Exercise 2: Develop a dataflow
 
 In this exercise, you will develop a dataflow to support Power BI model development. It will provide a consistent representation of the data warehouse date dimension table.
 
@@ -303,7 +303,7 @@ In this task, you will create a dataflow that represents a consistent definition
 
 	*In addition to configuring settings, permission should be granted to all content creators to consume the dataflow.*
 
-## Excercise 3: Consume a dataflow
+## Exercise 3: Consume a dataflow
 
 In this exercise, in the Power BI Desktop solution, you will replace the existing **Date** table with a new table that sources its data from the dataflow.
 
