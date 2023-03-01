@@ -7,6 +7,7 @@ $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 Register-PSRepository -Default -Verbose -ErrorAction 'SilentlyContinue'
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted -ErrorAction 'SilentlyContinue'
+Install-Module -Name Az.Accounts
 Install-Module -Name Az.Sql -Force -Verbose:$false -WarningAction 'SilentlyContinue'
 Install-Module -Name Az.Storage -Force -Verbose:$false -WarningAction 'SilentlyContinue'
 Install-Module -Name Az.Resources -Force -Verbose:$false -WarningAction 'SilentlyContinue'
