@@ -122,41 +122,41 @@ In this task, you will create a workspace.
 
 	*Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.*
 
-### Set up Power BI Desktop
+### Task 4: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution, set the data source settings and permissions, and then refresh the data model.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image13.png)
+	![](../images1/dp500-create-a-dataflow-image1.png)
 
-2. Go to the **D:\DP500\Allfiles\10\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve performance with hybrid tables.pbix** file.
 
-4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** dropdown, and then select **Data source settings**.
+4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1)** dropdown, and then select **Data source settings (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image14.png)
 
 5. In the **Data source settings** window, select **Change Source**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image15.png)
 
 6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image15a.png)
+    ![](../images1/dp500-improve-performance-with-hybrid-tables-image15a.png)
 
 7. Select **OK**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 8. Select **Edit Permissions**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image17.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image17.png)
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image18.png)
 
 10. In the **SQL Server database** window, enter the SQL Server database username and password and save. 
 
@@ -164,54 +164,52 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
     Password: `P@ssw0rd01`
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
+     ![](../images1/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
 11.  Select **OK**.
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image19.png)
+    
+      ![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 12. In the **Data source settings** window, select **Close**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image20.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image20.png)
 
 13. On the **Home** ribbon tab, from inside the **Queries** group, select **Refresh**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image21.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image21.png)
 
 14. Wait until the data refresh completes.
 
 15. To save the file, on the **File** ribbon tab, select **Save as**.
 
-16. In the **Save As** window, go to the **D:\DP500\Allfiles\10\MySolution** folder.
+16. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\MySolution** folder.
 
 17. Select **Save**.
 
-18. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
+>**Note**: If it ask for a replace, please select ok to save.
 
-	*Important: You must use the same credentials used to sign in to the Power BI service.*
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image22.png)
-
-### Review the report
+### Task 5: Review the report
 
 In this task, you will review the pre-developed report.
 
 1. In Power BI Desktop, review the report design.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image23.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image23.png)
 
 	*The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.*
 
-### Review the data model
+### Task 6: Review the data model
 
 In this task, you will review the pre-developed data model.
 
 1. Switch to **Model** view.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image24.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image24.png)
 
 2. Use the model diagram to review the model design.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image25.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image25.png)
 
 	*The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.*
 
@@ -223,17 +221,17 @@ In this exercise, you will set up incremental refresh.
 
 *Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.*
 
-### Add parameters
+### Task 1: Add parameters
 
 In this task, you will add two parameters.
 
 1. To open the Power Query Editor window, on the **Home** ribbon tab, from inside the **Queries** group, click the **Transform data** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image26.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image26.png)
 
 2. In the Power Query Editor window, from inside the **Queries** pane, select the **Sales** query.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image27.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image27.png)
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
