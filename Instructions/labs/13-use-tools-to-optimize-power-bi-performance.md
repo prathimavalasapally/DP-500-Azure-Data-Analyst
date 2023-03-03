@@ -222,50 +222,11 @@ In this task, you will open BPA and review the results of the checks.
 
 ## Excercise-2: Use DAX Studio
 
-Download and install DAX Studio.
-
 *According to its website, DAX Studio is "the ultimate tool for executing and analyzing DAX queries against Microsoft Tabular models." It's a feature-rich tool for DAX authoring, diagnosis, performance tuning, and analysis. Features include object browsing, integrated tracing, query execution breakdowns with detailed statistics, DAX syntax highlighting and formatting.*
 
-### Download DAX Studio
+### Task-1: Use DAX Studio
 
-In this task, you will download DAX Studio.
-
-Download and install DAX studio to optimize DAX queries.
-
-1.  In Microsoft Edge, navigate to the DAX Studio downloads page.
-
-    ```https://daxstudio.org/downloads/```
-    
-1. Select **DAX Studio v.3.x.x (installer)** - this will initiate the file install.
-    *note: The version of DAX studio will change slightly over time. Download the latest release.*
-
-1. Upon completion, select **Open file** to run the installer.
-
-    ![Graphical user interface, application Description automatically generated](../images/DP500-13-21.png)
-
-1.  In the DAX Studio installer window, select **Install for all users (recommended)**.
-
-1. In the User Account Control window, select Yes to allow the app to make changes to the device if prompted.
-
-    ![Graphical user interface, application Description automatically generated](../images/DP500-13-22.png)
-
-1.  At the **License Agreement** step, if you accept the license terms, select **I accept the agreement**, and then select **Next**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/DP500-13-23.png)
-
-1. Select **Next** to use the default destination location.
-1. Select **Next** to select the default components to install.
-1. Select **Next** to place the shortcut on the default start menu folder.
-1. Select **Create a desktop shortcut** and select next.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/DP500-13-24.png)
-1. Select **Install**.
-
-1. Upon completion, with **Launch DAX Studio** selected, select **Finish**. This will open DAX Studio.
-    ![Graphical user interface, application Description automatically
-    generated](../images/DP500-13-25.png)
+1. Open **DAX Studio** shortcut icon in the Desktop.
 
 1. In the **Connect** window, select the **PBI / SSDT Model** option.
 
@@ -281,7 +242,7 @@ Download and install DAX studio to optimize DAX queries.
 
 1. If necessary, maximize the DAX Studio window.
 
-### Use DAX studio to optimize a query
+### Task-2: Use DAX studio to optimize a query
 
 In this task, you will optimize a query by using an improved measure formula.
 
@@ -349,7 +310,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
 	*In this case, you can determine that the "better" query, which uses variables and a time intelligence function, performs better-almost a 50% reduction in query execution time.*
 
-### Finish up
+### Task-3: Finish up
 
 In this task, you will finish up.
 
