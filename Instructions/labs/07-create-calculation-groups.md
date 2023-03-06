@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Create calculation groups'
-    module: 'Design and build tabular models'
----
 # Create calculation groups
 
 ## Overview
@@ -19,116 +14,32 @@ In this lab, you learn how to:
 -   Set calculation group precedence.
 -   Configure visuals to use calculation groups.
 
-## Get started
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
-## Prepare your environment
-
-Prepare your lab environment by installing Tabular Editor 2, setting up Power BI desktop, reviewing the data model, and creating measures.
-
-### Download and Install Tabular Editor 2
-
-Download and install Tabular Editor 2 to enable the creation of calculation groups.
-
-**Important:** *If you have already installed Tabular Editor 2 in your VM
-environment, continue to the next task.*
-
-*Tabular Editor is an editor alternative tool for authoring tabular models for
-Analysis Services and Power BI. Tabular Editor 2 is an open source project that
-can edit a BIM file without accessing any data in the model.*
-
-1.  Ensure Power BI Desktop is closed.
-
-1.  In Microsoft Edge, navigate to the Tabular Editor Release page.
-
-    ```https://github.com/TabularEditor/TabularEditor/releases```
-    
-1. Scroll down to the **Assets** section and select the **TabularEditor.Installer.msi** file. This will initiate the file install.
-
-1. Upon completion, select **Open file** to run the installer.
-
-    ![Graphical user interface, application Description automatically generated](../images/calculationgroups-downloadTE.png)
-
-1.  In the Tabular Editor installer window, select **Next**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/image2.png)
-
-1.  At the **License Agreement** step, if you agree, select **I agree**, and then select **Next**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/image3.png)
-
-1.  At the **Select Installation Folder** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1.  At the **Application Shortcuts** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1. At the **Confirm Installation** step, select **Next**.
-
-    ![Shape Description automatically generated with medium
-    confidence](../images/image4.png)
-
-1. If you get a **User Account Control** popup window, select **Yes.**
-
-1. When the installation is complete, select **Close**.
-
-    ![A picture containing shape Description automatically
-    generated](../images/image5.png)
-
-    *Tabular Editor is now installed and registered as a Power BI Desktop
-    external tool.*
+#### Note: In this lab session, PowerBI Desktop and Tabular Editor have already been installed for the ease of execution.
 
 ### Set up Power BI Desktop
 
 Now you'll open a pre-developed Power BI Desktop solution.
 
-1.  In File Explorer, go to the **D:\\DP500\\Allfiles\\07\\Starter** folder.
+1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
 2.  To open a pre-developed Power BI Desktop file, double-click the **Sales
     Analysis - Create calculation groups.pbix** file.
 
 3.  To save the file, on the **File** ribbon tab, select **Save as**.
 
-4.  In the **Save As** window, go to the **D:\\DP500\\Allfiles\\07\\MySolution** folder.
+4.  In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\MySolution** folder.
 
 5.  Select **Save**.
 
 6.  Select the **External Tools** ribbon tab.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image7.png)
+    generated](../images/dp500_07-01.png)
 
 7.  Notice that it’s possible to launch Tabular Editor from this ribbon tab.
 
     ![Text Description automatically generated with low
-    confidence](../images/image8.png)
+    confidence](../images/dp500_07-02.png)
 
     *In the next exercise, you will use Tabular Editor to create calculation
     groups.*
@@ -139,12 +50,12 @@ Review the data model to understand how calculation groups will apply to this mo
 
 1.  In Power BI Desktop, at the left, switch to **Model** view.
 
-    ![](../images/image9.png)
+    ![](../images/dp500_07-03.png)
 
 2.  Use the model diagram to review the model design.
 
     ![Graphical user interface, diagram Description automatically
-    generated](../images/image10.png)
+    generated](../images/dp500_07-04.png)
 
     *The model comprises seven dimension tables and two fact tables. The
     **Sales** fact table stores sales order details. The **Currency Rate** fact
@@ -153,13 +64,13 @@ Review the data model to understand how calculation groups will apply to this mo
 
 3.  Switch to **Report** view.
 
-    ![](../images/image11.png)
+    ![](../images/dp500_07-05.png)
 
 4.  In the **Fields** pane (located at the right), expand the **Sales** table to
     review the fields.
 
     ![Text Description automatically generated with low
-    confidence](../images/image12.png)
+    confidence](../images/dp500_07-06.png)
 
 5.  Notice that the two **Sales** table fields are decorated with the sigma
     symbol (∑).
@@ -179,13 +90,13 @@ Create three sales-related measures in preparation for the creation of your calc
     **New measure**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image13.png)
+    generated](../images/dp500_07-07.png)
 
 2.  In the formula bar (located beneath the ribbon), replace the text with the
     following measure definition, and then press **Enter**.
 
     Tip: All formulas are available to copy and paste from the
-    **D:\\DP500\\Allfiles\\07\\Assets\\Snippets.txt**.
+    **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt**.
 
     DAX
 
@@ -195,7 +106,7 @@ Create three sales-related measures in preparation for the creation of your calc
     group, set the decimals places to **2**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image14.png)
+    generated](../images/dp500_07-08.png)
 
 4.  Create and similarly format a second measure named **Cost** by using the
     following definition:
@@ -215,7 +126,7 @@ Create three sales-related measures in preparation for the creation of your calc
     select **Hide**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image15.png)
+    generated](../images/dp500_07-09.png)
 
 7.  Also hide the **Total Product Cost** field.
 
@@ -223,7 +134,7 @@ Create three sales-related measures in preparation for the creation of your calc
     and it is decorated with a multi-calculator icon.
 
     ![Application Description automatically generated with low
-    confidence](../images/image16.png)
+    confidence](../images/dp500_07-10.png)
 
     *When a table comprises only visible measures, it’s presented at the top of the pane. This way, it behaves like a measure group (an object of a multidimensional model). Do not confuse this cosmetic representation of a
     tabular model with DAX calculation groups.*
@@ -239,12 +150,12 @@ Use Tabular Editor to create the **Time Intelligence** calculation group. It wil
 *Power BI Desktop does not support the creation or management of calculation
 groups.*
 
-   > **Tip**: All syntax is available to copy and paste from the D:\DP500\Allfiles\07\Assets\Snippets.txt.
+   > **Tip**: All syntax is available to copy and paste from the C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt
 
 1.  On the **External Tools** ribbon, select **Tabular Editor**.
 
     ![Text Description automatically generated with low
-    confidence](../images/image17.png)
+    confidence](../images/dp500_07-11.png)
 
     *Tabular Editor opens in a new window and connects live to the data model
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
@@ -254,7 +165,7 @@ groups.*
     folder, and then select **Create New** \> **Calculation Group**.
 
     ![Graphical user interface, text, application, table Description
-    automatically generated](../images/image18.png)
+    automatically generated](../images/dp500_07-12.png)
 
 3.  In the left pane, replace the default name with **Time Intelligence**, and
     then press **Enter**.
@@ -264,7 +175,7 @@ groups.*
 5.  Select the **Name** column.
 
     ![Graphical user interface Description automatically generated with low
-    confidence](../images/image19.png)
+    confidence](../images/dp500_07-13.png)
 
     *The calculation group comprises this single column, while rows of data
     define the group of calculations. It’s a good practice to rename the column
@@ -274,13 +185,13 @@ groups.*
     **Name** property, and rename as **Time Calculation**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image20.png)
+    generated](../images/dp500_07-14.png)
 
 7.  To create a calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image21.png)
+    generated](../images/dp500_07-15.png)
 
 8.  In the left pane, replace the default name with **Current**, and then press
     **Enter**.
@@ -293,7 +204,7 @@ groups.*
     ```SELECTEDMEASURE ()```
 
     ![Graphical user interface, text, application, Word Description
-    automatically generated](../images/image22.png)
+    automatically generated](../images/dp500_07-16.png)
 
     *The SELECTEDMEASURE function returns a reference to the measure that is
     currently in context when the calculation item is evaluated.*
@@ -301,7 +212,7 @@ groups.*
 10. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
 
-    ![](../images/image23.png)
+    ![](../images/dp500_07-17.png)
 
 11. Create a second calculation item named **PY** by using the following
     formula:
@@ -343,22 +254,22 @@ groups.*
     "0.00%;-0.00%;0.00%"
     ```
 
-    Tip: The format string expression is available to copy and paste from the
-    **D:\\DP500\\Allfiles\\07\\Assets\\Snippets.txt**.
+    **Tip**: The format string expression is available to copy and paste from the
+    **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt**.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/image24.png)
+    generated](../images/dp500_07-18.png)
 
 15. Verify that the **Time Intelligence** calculation group has four calculation items.
 
     ![Text Description automatically
-    generated](../images/image25.png)
+    generated](../images/dp500_07-19.png)
 
 16. To save the changes to the Power BI Desktop model, on the **File** menu,
     select **Save**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image26.png)
+    generated](../images/dp500_07-20.png)
 
     **Tip:** *It’s also possible to select the toolbar button or press **Ctrl+S**.*
 
@@ -366,18 +277,18 @@ groups.*
 
 18. Above the report designer, notice the yellow banner.
 
-    ![](../images/image27.png)
+    ![](../images/dp500_07-21.png)
 
 19. At the right of the banner, select **Refresh now**.
 
-    ![](../images/image28.png)
+    ![](../images/dp500_07-22.png)
 
     *Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.*
 
 20. In the **Fields** pane, expand open the **Time Intelligence** table.
 
     ![Text Description automatically generated with medium
-    confidence](../images/image29.png)
+    confidence](../images/dp500_07-23.png)
 
 ### Update the matrix visual
 
@@ -390,25 +301,25 @@ column.
     remove the **Sales Amount** field.
 
     ![Graphical user interface, text, application, email Description
-    automatically generated](../images/image30.png)
+    automatically generated](../images/dp500_07-24.png)
 
 3.  From the **Fields** pane, from inside the **Sales** table, drag the
     **Sales** field into the **Values** well.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image31.png)
+    generated](../images/dp500_07-25.png)
 
 4.  From the **Fields** pane, from inside the **Time Intelligence** table, drag
     the **Time Calculation** field into the **Columns** well.
 
     ![Graphical user interface, application, Word Description automatically
-    generated](../images/image32.png)
+    generated](../images/dp500_07-26.png)
 
 5.  Verify that the matrix visual shows a grid of time-related **Sales** measure
     values grouped by month.
 
     ![Graphical user interface, application, table, Excel Description
-    automatically generated](../images/image33.png)
+    automatically generated](../images/dp500_07-27.png)
 
     *The format of the values is derived from the selected measures. However,
     recall that you set the format string expression for the **YoY %** measure
@@ -422,7 +333,7 @@ currency. It will also apply appropriate formatting for the selected currency.
 
 1.  In Power BI Desktop, switch to **Data** view.
 
-    ![Data view.](../images/image34.png)
+    ![Data view.](../images/dp500_07-28.png)
 
 2.  In the **Fields** pane, select the **Currency** table.
 
@@ -430,7 +341,7 @@ currency. It will also apply appropriate formatting for the selected currency.
     expressions was column values.
 
     ![Graphical user interface Description automatically generated with low
-    confidence](../images/image35.png)
+    confidence](../images/dp500_07-29.png)
 
     *You will use a DAX expression to apply the format string of the selected
     currency.*
@@ -443,12 +354,12 @@ currency. It will also apply appropriate formatting for the selected currency.
     necessary, you can refer to the steps in the first task of this exercise.*
 
     ![Text Description automatically
-    generated](../images/image36.png)
+    generated](../images/dp500_07-30.png)
 
 6.  Rename the **Name** column as **Converted Currency**.
 
     ![Text Description automatically generated with low
-    confidence](../images/image37.png)
+    confidence](../images/dp500_07-31.png)
 
 7.  Create a calculation item named **Currency Conversion** by using the
     following formula:
@@ -476,15 +387,15 @@ currency. It will also apply appropriate formatting for the selected currency.
     formatting is dynamically driven by the data in the **Currency** dimension
     table.
 
-9.  Save the changes to the Power BI Desktop model.
+9.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
 
 10. Switch to Power BI desktop and refresh the changes.
 
-    ![](../images/image28.png)
+    ![](../images/dp500_07-32.png)
 
 11. Switch to **Report** view.
 
-    ![](../images/image38.png)
+    ![](../images/dp500_07-33.png)
 
 12. Select the matrix visual.
 
@@ -493,17 +404,17 @@ currency. It will also apply appropriate formatting for the selected currency.
     **Filter on this visual** group.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/image39.png)
+    generated](../images/dp500_07-34.png)
 
 14. In the filter card, check the **Currency Conversion** value.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/image40.png)
+    generated](../images/dp500_07-35.png)
 
 15. Notice that the value formats update to clearly describe US dollar amounts.
 
     ![Text Description automatically
-    generated](../images/image41.png)
+    generated](../images/dp500_07-36.png)
 
 16. In the **Currency** slicer, select a different currency, and then in the
     matrix visual, notice the updated values and formatting.
@@ -511,7 +422,7 @@ currency. It will also apply appropriate formatting for the selected currency.
 17. Revert the **Currency** slicer back to **US Dollar**.
 
     ![Graphical user interface, application, Teams Description automatically
-    generated](../images/image42.png)
+    generated](../images/dp500_07-37.png)
 
 18. Notice, however, that the **YoY %** values are no longer percentages.
 
@@ -532,13 +443,13 @@ calculation groups.
 2.  In the left pane, select the **Time Intelligence** calculation group.
 
     ![Text Description automatically
-    generated](../images/image43.png)
+    generated](../images/dp500_07-38.png)
 
 3.  In the **Properties** pane, set the **Calculation Group Precedence**
     property to **20**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/image44.png)
+    generated](../images/dp500_07-39.png)
 
     *The higher the value the higher the precedence of application. So, the
     calculation group with the higher precedence is applied first.*
@@ -547,19 +458,19 @@ calculation groups.
     calculation group to **10**.
 
     ![Graphical user interface, application, table Description automatically
-    generated](../images/image45.png)
+    generated](../images/dp500_07-40.png)
 
     *These configurations will ensure the **Time Intelligence** calculations
     happen later.*
 
-5.  Save the changes to the Power BI Desktop model.
+5.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
 
 6.  Switch to Power BI Desktop.
 
 7.  Notice that the **YoY %** values are now percentages.
 
     ![Graphical user interface, text Description automatically
-    generated](../images/image46.png)
+    generated](../images/dp500_07-41.png)
 
 ### Finish up
 
@@ -567,7 +478,7 @@ In this task, you'll finish up.
 
 1.  Save the Power BI Desktop file.
 
-    ![](../images/image47.png)
+    ![](../images/dp500_07-42.png)
 
 2.  Close Power BI Desktop.
 

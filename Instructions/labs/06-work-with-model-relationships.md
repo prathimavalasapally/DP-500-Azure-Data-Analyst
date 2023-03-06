@@ -174,7 +174,7 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 2. In the formula bar (located beneath the ribbon), replace the text with the following measure definition, and then press **Enter**.
 
-	*Tip: All formulas are available to copy and paste from the **D:\DP500\Allfiles\06\Assets\Snippets.txt**.*
+	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Assets\Snippets.txt**.*
 
 	```
 	Sales Shipped =
@@ -221,7 +221,7 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 	![](../images/dp500-6-27.png)
 
-3. When prompted to confirm the deletion, select **OK**.
+3. When prompted to confirm the deletion, select **Yes**.
 
 	![](../images/dp500-6-2.png)
 

@@ -1,4 +1,5 @@
-# Improve query performance with dual storage mode
+
+# Excercise 1: Improve query performance with dual storage mode
 
 ## Overview
 
@@ -12,45 +13,33 @@ In this lab, you learn how to:
 
 - Use Performance analyzer to review refresh activities.
 
-### Task-1: Set up Power BI Desktop
+### Task 1: Set up Power BI Desktop
 
-In this task, you will open a pre-developed Power BI Desktop solution.
-
-1. To open PowerBI, on the taskbar, select the **PowerBI** shortcut.
-
-	![](../images/DP500-11-50.png)
-
-2. Close the Pop-up Windows.
-
-	![](../images/dp500-11-51.png)
-
-3. Click on **File Menu** and click on **Browse reports**
-
-4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
+1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
 
 	![](../images/dp500-11-54.png)
 	
-5. If prompted about a potential security risk, read the message, and then select **OK**
+1. If prompted about a potential security risk, read the message, and then select **OK**
 
 	![](../images/dp500-6-2.png)
 	
-6. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+1. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
 
 	![](../images/dp500-11-60.png)
 
-7. If prompted for Encryption Support,click on **OK**
+1. If prompted for Encryption Support,click on **OK**
 
 	![](../images/dp500-6-2.png)
 
-8. If prompted to approve running a Native Database Query, select **Run**.
+1. If prompted to approve running a Native Database Query, select **Run**.
 
 	![](../images/dp500-11-13.png)       
 
-9. To save the file, on the **File** ribbon tab, select **Save as**.
+1. To save the file, on the **File** ribbon tab, select **Save as**.
 
-10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
+1. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
 
-11. Select **Save**.
+1. Select **Save**.
 
 ### Task-2: Review the report
 
