@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Monitor data in real time'
-    module: 'Implement advanced data visualization techniques by using Power BI'
----
-
 # Monitor data in real time
 
 ## Overview
@@ -22,57 +16,33 @@ In this lab, you learn how to:
 
 ## Get started
 
-In this exercise, you will prepare your environment.
-
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
-### Set up the database
+### Task 1: Set up the database
 
 In this task, you will use SQL Server Management Studio (SSMS) to setup the database by running two scripts.
 
 1. To open SSMS, on the taskbar, select the **SSMS** shortcut.
 
-	![](../images/dp500-monitor-data-in-real-time-image1.png)
+	![](../images1/dp500_14-01.png)
 
-2. In the **Connect to Server** window, ensure that the **Server name** dropdown list is set to **localhost**, and that the Authentication dropdown list is set to **Windows Authentication**.
-	![](../images/dp500-monitor-data-in-real-time-image2.png)
+2. In the **Connect to Server** window, ensure that the **Server name** is set to **localhost**, and that the Authentication dropdown list is set to **Windows Authentication**.
+	
+	![](../images1/dp500_14-02.png)
 
 3. Select **Connect**.
 	
-	![](../images/dp500-monitor-data-in-real-time-image3.png)
+	![](../images1/dp500_14-03.png)
 
 4. To open a script file, on the **File** menu, select **Open** > **File**.
 
-5. In the **Open File** window, go to the **D:\DP500\Allfiles\14\Assets** folder.
+5. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Assets** folder.
 
-6. Select the **1-Setup.sql** file.
+6. Select the **1-Setup** sql file.
 
-	![](../images/dp500-monitor-data-in-real-time-image4.png)
+	![](../images1/dp500_14-04.png)
 
 7. Select **Open**.
 
-	![](../images/dp500-monitor-data-in-real-time-image5.png)
+	![](../images1/dp500_14-05.png)
 
 8. Review the script.
 
@@ -80,13 +50,13 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 9. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
-	![](../images/dp500-monitor-data-in-real-time-image6.png)
+	![](../images1/dp500_14-06.png)
 
 10. To close the file, on the **File** menu, select **Close**.
 
-11. Open the **2-InsertOrders.sql** file.
+11. **Ctrl+O** to access the **Open File** window. Select and open the **2-InsertOrders** sql file.
 
-	![](../images/dp500-monitor-data-in-real-time-image7.png)
+	![](../images1/dp500_14-07.png)
 
 12. Review this script also.
 
@@ -94,47 +64,47 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 13. Run the script, and leave it running until the end of the lab.
 
-### Set up Power BI Desktop
+### Task 2: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-monitor-data-in-real-time-image8.png)
+	![](../images1/dp500_14-08.png)
 
-2. Go to the **D:\DP500\Allfiles\14\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Internet Sales - Monitor data in real time.pbix** file.
 
 4. To save the file, on the **File** ribbon tab, select **Save as**.
 
-5. In the **Save As** window, go to the **D:\DP500\Allfiles\14\MySolution** folder.
+5. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\MySolution** folder.
 
 6. Select **Save**.
 
-### Review the report
+### Task 3: Review the report
 
 In this task, you will review the pre-developed report.
 
 1. In Power BI Desktop, review the report page.
 
-	![](../images/dp500-monitor-data-in-real-time-image9.png)
+	![](../images1/dp500_14-09.png)
 
 	*This report page has a title and two visuals. The card visual displays the number of sales orders, while the bar chart visual displays the sales amount for each bike subcategory.*
 
 2. To refresh the report, on the **View** ribbon tab, from inside the **Show** panes group, select **Performance analyzer**.
 
-	![](../images/dp500-monitor-data-in-real-time-image10.png)
+	![](../images1/dp500_14-10.png)
 
 3. In the **Performance analyzer** pane (located to the right of the **Visualizations** pane), select **Start recording**.
 
-	![](../images/dp500-monitor-data-in-real-time-image11.png)
+	![](../images1/dp500_14-11.png)
 
 	*Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).*
 
 4. Select **Refresh visuals**.
 
-	![](../images/dp500-monitor-data-in-real-time-image12.png)
+	![](../images1/dp500_14-12.png)
 
 5. Notice that the report visuals update to show the latest internet sales results.
 
@@ -148,19 +118,19 @@ In this exercise, you will set up automatic page refresh and experiment by using
 
 *Automatic page refresh requires at least one model table that's set to use DirectQuery storage mode.*
 
-### Set up automatic page refresh
+### Task 1: Set up automatic page refresh
 
 In this task, you will set up automatic page refresh.
 
-1. To select the report page, first select an empty area of the report page.
+1. To select the report page, first select an empty area of the report page (below the graph).
 
 2. In the **Visualizations** pane, select the format icon (paint brush).
 
-	![](../images/dp500-monitor-data-in-real-time-image13.png)
+	![](../images1/dp500_14-13.png)
 
 3. Switch the **Page refresh** setting (last in the list) to **On**.
 
-	![](../images/dp500-monitor-data-in-real-time-image14.png)
+	![](../images1/dp500_14-14.png)
 
 	*Automatic page refresh is a page-level setting. You can enable it for specific pages in the report.*
 
@@ -168,13 +138,13 @@ In this task, you will set up automatic page refresh.
 
 5. In the **Visualizations** pane, expand open the **Page refresh** settings.
 
-	![](../images/dp500-monitor-data-in-real-time-image15.png)
+	![](../images1/dp500_14-15.png)
 
 6. Notice that by default the page will refresh every 30 minutes.
 
 7. Modify the settings to refresh the page every 5 seconds.
 
-	![](../images/dp500-monitor-data-in-real-time-image16.png)
+	![](../images1/dp500_14-16.png)
 
 	*Important: This frequent refresh interval will help you efficiently work through this lab. But take care, because setting such a frequent refresh interval could seriously impact on the performance of the source database and other users viewing the report.*
 
@@ -182,43 +152,43 @@ In this task, you will set up automatic page refresh.
 
 	*Once published to the Power BI service, refresh intervals less than 30 minutes require that you save the report to a workspace assigned to Premium capacity. Also, a capacity admin must enable and set up the capacity to allow such frequent intervals. For more information, see [Automatic page refresh in Power BI](https://docs.microsoft.com/power-bi/create-reports/desktop-automatic-page-refresh).*
 
-### Set up change detection
+### Task 2: Set up change detection
 
 In this task, you will set up change detection.
 
 1. In the **Page refresh** settings, set the **Refresh type** dropdown list to **Change detection**.
 
-	![](../images/dp500-monitor-data-in-real-time-image17.png)
+	![](../images1/dp500_14-17.png)
 
 2. To create a change detection measure, select the **Add change detection** link.
 
-	![](../images/dp500-monitor-data-in-real-time-image18.png)
+	![](../images1/dp500_14-18.png)
 
 3. In the **Change detection** window, notice that the default set up is to create a new measure.
 
-	![](../images/dp500-monitor-data-in-real-time-image19.png)
+	![](../images1/dp500_14-19.png)
 
 4. In the **Choose a calculation** dropdown list, select **Count (Distinct)**.
 
-	![](../images/dp500-monitor-data-in-real-time-image20.png)
+	![](../images1/dp500_14-20.png)
 
 5. In the **Fields** pane (located at the right, inside the window), scroll down to locate the **Internet Sales** table.
 
 6. Select the **Sales Order** field, and notice that the window added it to the **Choose a field to apply it to** box.
 
-	![](../images/dp500-monitor-data-in-real-time-image21.png)
+	![](../images1/dp500_14-21.png)
 
 7. For the **Check for changes every** setting, set it to 5 seconds.
 
-	![](../images/dp500-monitor-data-in-real-time-image22.png)
+	![](../images1/dp500_14-22.png)
 
 8. Select **Apply**.
 
-	![](../images/dp500-monitor-data-in-real-time-image23.png)
+	![](../images1/dp500_14-23.png)
 
 9. In the **Fields** pane, inside the **Internet Sales** table, notice the addition of a change detection measure.
 
-	![](../images/dp500-monitor-data-in-real-time-image24.png)
+	![](../images1/dp500_14-24.png)
 
 	*Power BI now uses the change detection measure to query the source database every five seconds. Each time, Power BI stores the result so it can compare it the next time it's used. When the results differ, it means the data has changed (in this case, the database inserted new internet sales orders). In this case, Power BI refreshes all report page visuals.*
 
@@ -226,7 +196,7 @@ In this task, you will set up change detection.
 
 10. In the **Performance analyzer** pane, select **Clear**.
 
-	![](../images/dp500-monitor-data-in-real-time-image25.png)
+	![](../images1/dp500_14-25.png)
 
 11. Notice that Performance analyzer displays change detection queries.
 
@@ -240,19 +210,19 @@ In this task, you will finish up.
 
 1. Save the Power BI Desktop file.
 
-	![](../images/dp500-monitor-data-in-real-time-image26.png)
+	![](../images1/dp500_14-26.png)
 
 2. Close Power BI Desktop.
 
 3. In SSMS, to stop running the script, on the toolbar, select **Stop** (or press **Alt+Break**).
 
-	![](../images/dp500-monitor-data-in-real-time-image27.png)
+	![](../images1/dp500_14-27.png)
 
 4. Close the script file.
 
 5. Open the **3-Cleanup.sql** file.
 
-	![](../images/dp500-monitor-data-in-real-time-image28.png)
+	![](../images1/dp500_14-28.png)
 
 	*This script removes the **FactInternetSalesRealTime** table.*
 
