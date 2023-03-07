@@ -73,11 +73,11 @@ In this task, you will start the SQL pool.
 
 1. Select **Azure Synapse Analytics** from Azure services. Select your Synapse workspace.
 
-   ![](../images/dp500_04-synapseanalytics.png)
+   ![](../images1/dp500_04-synapseanalytics.png)
 
 1. Scroll down on the Synapse workspace page, locate and select the dedicated SQL pool.
 
-   ![](../images/dp500_04-sqlpool.png)
+   ![](../images1/dp500_04-sqlpool.png)
 
 1. Resume the SQL pool.
 
