@@ -66,11 +66,11 @@ Review the data model to understand how calculation groups will apply to this mo
 
     ![](../images/dp500_07-05.png)
 
-4.  In the **Fields** pane (located at the right), expand the **Sales** table to
+4.  In the **Data** pane (located at the right), expand the **Sales** table to
     review the fields.
 
     ![Text Description automatically generated with low
-    confidence](../images/dp500_07-06.png)
+    confidence](../images1/dp500_07-06.png)
 
 5.  Notice that the two **Sales** table fields are decorated with the sigma
     symbol (∑).
@@ -86,7 +86,7 @@ Review the data model to understand how calculation groups will apply to this mo
 
 Create three sales-related measures in preparation for the creation of your calculation groups.
 
-1.  In the **Fields** pane, right-click the **Sales** table, and then select
+1.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**.
 
     ![Graphical user interface, application Description automatically
@@ -122,7 +122,7 @@ Create three sales-related measures in preparation for the creation of your calc
 
     ```Profit = [Sales] - [Cost]```
 
-6.  In the **Fields** pane, right-click the **Sales Amount** field, and then
+6.  In the **Data** pane, right-click the **Sales Amount** field, and then
     select **Hide**.
 
     ![Graphical user interface, application Description automatically
@@ -285,7 +285,7 @@ groups.*
 
     *Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.*
 
-20. In the **Fields** pane, expand open the **Time Intelligence** table.
+20. In the **Data** pane, expand open the **Time Intelligence** table.
 
     ![Text Description automatically generated with medium
     confidence](../images/dp500_07-23.png)
@@ -295,7 +295,7 @@ groups.*
 Now you'll modify the matrix visual to use the **Time Calculation**
 column.
 
-1.  In the report, select the matrix visual.
+1.  In the report View, select the matrix visual.
 
 2.  In the **Visualizations** pane, in the **Values** well, select **X** to
     remove the **Sales Amount** field.
@@ -303,13 +303,13 @@ column.
     ![Graphical user interface, text, application, email Description
     automatically generated](../images/dp500_07-24.png)
 
-3.  From the **Fields** pane, from inside the **Sales** table, drag the
+3.  From the **Data** pane, from inside the **Sales** table, drag the
     **Sales** field into the **Values** well.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-25.png)
+    generated](../images1/dp500_07-25.png)
 
-4.  From the **Fields** pane, from inside the **Time Intelligence** table, drag
+4.  From the **Data** pane, from inside the **Time Intelligence** table, drag
     the **Time Calculation** field into the **Columns** well.
 
     ![Graphical user interface, application, Word Description automatically
@@ -335,7 +335,7 @@ currency. It will also apply appropriate formatting for the selected currency.
 
     ![Data view.](../images/dp500_07-28.png)
 
-2.  In the **Fields** pane, select the **Currency** table.
+2.  In the **Data** pane, select the **Currency** table.
 
 3.  Notice the **FormatString** hidden column that contains format string
     expressions was column values.
@@ -399,12 +399,12 @@ currency. It will also apply appropriate formatting for the selected currency.
 
 12. Select the matrix visual.
 
-13. From the **Fields** pane, from within the **Currency Conversion** table,
+13. From the **Data** pane, from within the **Currency Conversion** table,
     drag the **Converted Currency** field into the **Filters** pane, into the
     **Filter on this visual** group.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/dp500_07-34.png)
+    generated](../images1/dp500_07-34.png)
 
 14. In the filter card, check the **Currency Conversion** value.
 
