@@ -61,10 +61,29 @@ In this task, you will set up Power BI.
 
 1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **OK**. Close Power BI Desktop. Do not save your file.
 
-	*You will open Power BI Desktop again in the next exercise.*
+	*You will open Power BI Desktop again in the upcoming exercises.*
 
-#### Note: In this lab, we have made sure to keep the SQL pool in an active state for seamless lab execution for the users. 
-#### Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
+### Start the SQL pool
+
+In this task, you will start the SQL pool.
+
+1. In a Microsoft Edge, go to [https://portal.azure.com](https://portal.azure.com/).
+
+1. Use the lab credentials to complete the sign in process.
+
+1. Select **Azure Synapse Analytics** from Azure services. Select your Synapse workspace.
+
+   ![](../images/dp500_04-synapseanalytics.png)
+
+1. Scroll down on the Synapse workspace page, locate and select the dedicated SQL pool.
+
+   ![](../images/dp500_04-sqlpool.png)
+
+1. Resume the SQL pool.
+
+	![](../images/dp500-create-a-star-schema-model-image3e.png)
+
+	*Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.*
 
 ### Link your Power BI workspace to Azure Synapse Analytics
 
