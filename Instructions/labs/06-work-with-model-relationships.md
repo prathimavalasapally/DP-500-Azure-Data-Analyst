@@ -223,7 +223,7 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 3. When prompted to confirm the deletion, select **Yes**.
 
-	![](../images/dp500-6-2.png)
+	![](../images1/dp500-6-66.png)
 
 	*Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.*
 
@@ -265,7 +265,7 @@ In this task, you will create a query to add another date table to the model.
 
 	 ![](../images/dp500-6-32.png)
 	 
-	*If you are prompted for Encryption Support, click on **OK**
+	*If prompted for Encryption Support, click on **OK**
 	
 	 ![](../images/dp500-6-4.png)
  
