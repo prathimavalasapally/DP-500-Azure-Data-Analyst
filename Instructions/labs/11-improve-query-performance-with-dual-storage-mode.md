@@ -143,7 +143,7 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 	*The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables.*
 	
-7. If Pending changes window Pops-up, click on close and click on **Apply changes** on the top of the model view and repeat from the 4th steps.
+7. If Pending changes window Pops-up, click on **close** and click on **Apply changes** on the top of the model view and repeat from the 4th steps.
 
 	![](../images1/dp500-11-72.png)
 
