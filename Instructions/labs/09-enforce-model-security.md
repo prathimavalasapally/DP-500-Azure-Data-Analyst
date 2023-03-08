@@ -24,7 +24,7 @@ In this task, you will set up Power BI Desktop.
 
 	![](../images/dp500-enforce-model-security-image1.png)
 
-2. Go to the **D:\DP500\Allfiles\09\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
