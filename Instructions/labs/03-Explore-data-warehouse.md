@@ -92,7 +92,7 @@ Numeric values in a relational data warehouse are stored in fact tables with rel
 
 1. When a new **SQL Script 1** tab opens, in its **Properties** pane, change the name of the script to **Analyze Internet Sales** and change the **Result settings per query** to return all rows. Then use the **Publish** button on the toolbar to save the script, and use the **Properties** button (which looks similar to **&#128463;.**) on the right end of the toolbar to close the **Properties** pane so you can see the script pane.
 
-   ![](../images1/mod3-ex1-task2-step2a.png)
+   ![](../images1/dp500_03-propertiespane.png)
 
 1. In the empty script, add the following code:
 

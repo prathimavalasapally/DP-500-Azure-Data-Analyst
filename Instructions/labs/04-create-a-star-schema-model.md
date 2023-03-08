@@ -61,10 +61,29 @@ In this task, you will set up Power BI.
 
 1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **OK**. Close Power BI Desktop. Do not save your file.
 
-	*You will open Power BI Desktop again in the next exercise.*
+	*You will open Power BI Desktop again in the upcoming exercises.*
 
-#### Note: In this lab, we have made sure to keep the SQL pool in an active state for seamless lab execution for the users. 
-#### Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
+### Start the SQL pool
+
+In this task, you will start the SQL pool.
+
+1. In a Microsoft Edge, go to [https://portal.azure.com](https://portal.azure.com/).
+
+1. Use the lab credentials to complete the sign in process.
+
+1. Select **Azure Synapse Analytics** from Azure services. Select your Synapse workspace.
+
+   ![](../images1/dp500_04-synapseanalytics.png)
+
+1. Scroll down on the Synapse workspace page, locate and select the dedicated SQL pool.
+
+   ![](../images1/dp500_04-sqlpool.png)
+
+1. Resume the SQL pool.
+
+	![](../images/dp500-create-a-star-schema-model-image3e.png)
+
+	*Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.*
 
 ### Link your Power BI workspace to Azure Synapse Analytics
 
@@ -281,7 +300,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	*Note: We are merging queries to get the product details, category and sub category. This will be used in the Product dimension.*
 
-1. Select the **DimProductSubcategory** table and select the **ProductCategoryKey** Column in each table. Select **OK**.
+1. Select the **DimProductSubcategory** table from the drop down and select the **ProductCategoryKey** Column in each table. Select **OK**.
 
 	![](../images/dp500-40.png)
 
@@ -316,7 +335,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. On the home tab of the ribbon, in the Combine group, select **Merge Queries.** 
 
-1. Select the **Product Details** table and select the **ProductSubcategoryKey** column in both the Product table and the Product details table.
+1. Select the **Product Details** table from the drop down and select the **ProductSubcategoryKey** column in both the Product table and the Product details table.
 
     ![](../images/dp500-44.png)
 
@@ -519,7 +538,7 @@ In this task, you will organize the model diagram to easily understand the star 
 
 6. Optionally, to save the solution, at the top-left, select the disk icon.
 
-7. In the **Save As** window, go to the **D:\DP500\Allfiles\04\MySolution** folder.
+7. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\04\MySolution** folder.
 
 8. In the **File name** box, enter **Sales Analysis**.
 
