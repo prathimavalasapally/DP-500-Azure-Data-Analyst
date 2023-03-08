@@ -33,9 +33,10 @@ In this task, you will set up Power BI.
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
 	![](../images/DP500-16-6.png)
+	
 4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
 
-       >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
+    >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
 
 	![](../images/DP500-16-7.png)
 
