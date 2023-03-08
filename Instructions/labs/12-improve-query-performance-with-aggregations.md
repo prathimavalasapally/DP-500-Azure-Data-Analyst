@@ -38,13 +38,13 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-11-60.png)
 
-7. If prompted for Encryption Support,click on **OK**
+7. If prompted for Encryption Support, click on **OK**
 
 	![](../images/dp500-6-2.png)
 
 8. If prompted to approve running a Native Database Query, select **Run**.
 
-        ![](../images/dp500-11-13.png)
+      ![](../images1/dp500-run.png)
 
 9. To save the file, on the **File** ribbon tab, select **Save as**.
 
@@ -360,7 +360,7 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 	![](../images/dp500-12-28.png)
 
-        >**Tip: Use Ctrl+C and Ctrl+V to copy and paste.
+      >**Tip:** Use **Ctrl+C** and **Ctrl+V** to copy and paste.
      
 8. Position the new slicer directly beneath the original slicer.
 
