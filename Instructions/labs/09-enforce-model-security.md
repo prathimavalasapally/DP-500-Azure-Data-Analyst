@@ -58,7 +58,7 @@ In this task, you will create a workspace.
 	![](../images/dp500-create-a-star-schema-model-image2a.png)
 
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace and select **Save**.
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
 
 	*The workspace name must be unique within the tenant. If you are getting an error, update the workspace name.*
 
