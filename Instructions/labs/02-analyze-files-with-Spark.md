@@ -44,7 +44,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
    ![](../images1/Mod2-Ex1-Task1-Step7.png)
 
-1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **workspace<inject key="Deployment ID" enableCopy="false" /> (Primary - datalake*xxxxxxx*) (4)**.
+1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **workspace<inject key="Deployment ID" enableCopy="false" /> (Primary - datalake<inject key="DeploymentID" enableCopy="false"/>) (4)**.
 
    ![](../images1/Mod2-Ex1-Task1-Step8.png)
 
@@ -72,7 +72,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
  
    ![](../images1/Mod2-Ex2-Task2-Step2a.png)
 
-    >**Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can     take a few minutes. Subsequent runs will be quicker.
+    >**Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a few minutes. Subsequent runs will be quicker.
   
 1. While you are waiting for the Spark session to initialize, review the code that was generated; which looks similar to this:
 
@@ -87,7 +87,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 1. When the code has finished running, review the output beneath the cell in the notebook. It shows the first ten rows in the file you selected, with automatic column names in the form **_c0**, **_c1**, **_c2**, and so on.
 
-1. Modify the code so that the **spark.read.load** function reads data from <u>all</u> of the CSV files in the folder, and the **display** function shows the first 100 rows. Your code should look like this (with *datalakexxxxxxx* matching the name of your data lake store):
+1. Modify the code so that the **spark.read.load** function reads data from <u>all</u> of the CSV files in the folder, and the **display** function shows the first 100 rows. Your code should look like this (with *datalakexxxxxxx* matching the name of your data lake store as **datalake<inject key="DeploymentID" enableCopy="false"/>**):
 
     ```Python
     %%pyspark
@@ -98,9 +98,9 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 1. Use the **&#9655;** button to the left of the code cell to run just that cell, and review the results.
 
-   The dataframe now includes data from all of the files, but the column names are not useful. Spark uses a "schema-on-read" approach to try to determine appropriate      data types for the columns based on the data they contain, and if a header row is present in a text file it can be used to identify the column names (by specifying    a **header=True** parameter in the **load** function). Alternatively, you can define an explicit schema for the dataframe.
+   The dataframe now includes data from all of the files, but the column names are not useful. Spark uses a "schema-on-read" approach to try to determine appropriate    data types for the columns based on the data they contain, and if a header row is present in a text file it can be used to identify the column names (by specifying    a **header=True** parameter in the **load** function). Alternatively, you can define an explicit schema for the dataframe.
 
-1. Modify the code as follows (replacing *datalakexxxxxxx*), to define an explicit schema for the dataframe that includes the column names and data types. Rerun the code in the cell.
+1. Modify the code as follows (replacing *datalakexxxxxxx* as **datalake<inject key="DeploymentID" enableCopy="false"/>**), to define an explicit schema for the dataframe that includes the column names and data types. Rerun the code in the cell.
 
     ```Python
     %%pyspark
