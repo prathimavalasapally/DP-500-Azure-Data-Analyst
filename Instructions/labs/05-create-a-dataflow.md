@@ -12,6 +12,28 @@ In this lab, you learn how to:
 
 - Use Power BI Desktop to consume a dataflow.
 
+### prerequisite Task: Start the SQL pool
+
+In this task, you will start the SQL pool.
+
+1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
+
+1. Use the lab credentials to complete the sign in process.
+
+1. Use the search bar to locate Azure Synapse Analytics. 
+
+1. Select the Azure Synapse Analytics instance.
+    ![](../images1/dp-500_05-workspace.png)
+
+1. Locate and select the dedicated SQL pool.
+   ![](../images1/dp-500_05-sql.png)
+
+1. Resume the dedicated SQL pool.
+
+	![](../images/resume-sql-pool.png)
+
+	*Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.*
+
 
 ### Task 1: Set up Power BI Desktop
 
@@ -49,11 +71,11 @@ In this task, you will set up Power BI Desktop.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
-1. To save the file, on the **File** ribbon, select **Save as**.
+1. Switch back to **Power BI Desktop**, To save the file, on the **File** ribbon, select **Save as**.
 
 1. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\05\MySolution** folder.
 
-1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **Save**.
+1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **Ok**.
 
 	*You will update the Power BI Desktop solution to use a dataflow to source date dimension data.*
 
@@ -411,3 +433,13 @@ In this task, you will test the model by creating a simple report layout.
 1. Save the Power BI Desktop file.
 
 1. Close Power BI Desktop.
+
+### Pause the SQL pool
+
+In this task, you will stop the SQL pool.
+
+1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
+
+1. Locate the SQL pool.
+
+1. Pause the SQL pool.
