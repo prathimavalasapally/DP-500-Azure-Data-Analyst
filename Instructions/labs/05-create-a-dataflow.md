@@ -23,9 +23,11 @@ In this task, you will start the SQL pool.
 1. Use the search bar to locate Azure Synapse Analytics. 
 
 1. Select the Azure Synapse Analytics instance.
-    ![](../images1/dp-500_05-workspace.png)
+   
+   ![](../images1/dp-500_05-workspace.png)
 
-1. Locate and select the dedicated SQL pool.
+1. Locate and select the dedicated SQL pool named **sqldb<inject key="DeploymentID" enableCopy="false"/>**.
+   
    ![](../images1/dp-500_05-sql.png)
 
 1. Resume the dedicated SQL pool.
@@ -440,6 +442,6 @@ In this task, you will stop the SQL pool.
 
 1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
 
-1. Locate the SQL pool.
+1.  Go to resource group and locate the SQL pool named **sqldb<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Pause the SQL pool.
