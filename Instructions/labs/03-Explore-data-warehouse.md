@@ -86,7 +86,7 @@ Now that you have explored some of the more important aspects of the data wareho
 
 Numeric values in a relational data warehouse are stored in fact tables with related dimension tables that you can use to aggregate the data across multiple attributes. This design means that most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
 
-1. On the **Data (1)** page, select the **sqldb<inject key="Deployment ID" enableCopy="false" />  SQL pool and in its **...** menu, select **New SQL script** > **Empty script (3)**.
+1. On the **Data (1)** page, select the **sqldb<inject key="Deployment ID" enableCopy="false" />**  SQL pool and in its **...** menu, select **New SQL script > **Empty script (3)**.
 
     ![](../images1/mod3-ex2-task1-step1.png)
 
@@ -289,7 +289,7 @@ When exploring very large volumes of data, queries can take significant time and
 
 ## Excercise 3: Challenge - Analyze reseller sales
 
-1. Create a new empty script for the **sql*xxxxxxx*** SQL pool, and save it with the name **Analyze Reseller Sales**.
+1. Create a new empty script for the **sqldb<inject key="DeploymentID" enableCopy="false"/>** SQL pool, and save it with the name **Analyze Reseller Sales**.
 
 1. Create SQL queries in the script to find the following information based on the **FactResellerSales** fact table and the dimension tables to which it is related:
     - The total quantity of items sold per fiscal year and quarter.
@@ -302,4 +302,4 @@ When exploring very large volumes of data, queries can take significant time and
 
 1. Experiment with queries to explore the rest of the tables in the data warehouse schema as your leisure.
 
-1. When you're done, on the **Manage** page, pause the **sql*xxxxxxx*** dedicated SQL pool.
+1. When you're done, on the **Manage** page, pause the **sqldb<inject key="DeploymentID" enableCopy="false"/>** dedicated SQL pool.
