@@ -26,37 +26,39 @@ In this task, you will set up Power BI.
 
 	![](../images1/DP500-16-63.png)
 
-2. Select **X** located at the top-right of the getting started window.
+1. Select **X** located at the top-right of the getting started window.
 
 	![](../images/DP500-16-2.png)
 
-3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
+1. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
 	![](../images/DP500-16-6.png)
 	
-4. Enter the Lab username in the **Enter your email address** and click on **Continue**
+1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
 	![](../images1/DP500-16-56.png)
 	
-5. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
+1. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
 	![](../images1/DP500-16-57.png)
 	
 	![](../images1/DP500-16-58.png)	
 	
-4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
+1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
 
-    >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
+   
+   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
+	
 	![](../images1/DP500-16-59.png)
 	
-5. Enter the Password provided in the Environment Details tab and click on **Signin**
+1. Enter the Password provided in the Environment Details tab and click on **Signin**
 	
 	![](../images1/DP500-16-60.png)	
 	
-6. If stay signed in window Pops-up, select **No**
+1. If stay signed in window Pops-up, select **No**
 
-7. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+1. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
 	![](../images1/DP500-16-61.png)
 
@@ -81,7 +83,7 @@ In this task, you will create a workspace.
 	![](../images/DP500-16-10.png)
 
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **workspace<inject key="Deployment ID" enableCopy="false" />**
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**
 
 	![](../images/DP500-16-11.png)
 
