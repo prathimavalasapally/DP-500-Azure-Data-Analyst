@@ -100,7 +100,7 @@ In this task, you will create a workspace.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image3.png)
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace.
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**.
 
 	*The workspace name must be unique within the tenant.*
 
