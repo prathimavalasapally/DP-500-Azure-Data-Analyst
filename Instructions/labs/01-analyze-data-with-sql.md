@@ -29,7 +29,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
    
 1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-1. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **workspace<inject key="DeploymentID" enableCopy="false"/>** (Primary - **datalakeinject key="DeploymentID" enableCopy="false"/>**)**.
+1. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **workspace<inject key="DeploymentID" enableCopy="false"/>** (Primary - **datalake<inject key="DeploymentID" enableCopy="false"/>**)**.
 
    ![Screenshot showing the Linked storage account with synapse ](../images/DP500-1-5.png) 
    
@@ -178,7 +178,7 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
     ![Screenshot showing the steps](../images/DP500-1-22.png)
     
-1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -199,7 +199,7 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
     The subfolders reflect *partitions* in the parquet data, which is a technique often used to optimize performance for systems that can process multiple partitions of data in parallel. You can also use partitions to filter the data.
 
-1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and then run it.
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -255,7 +255,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
     
     The script is designed to query comma-delimited (CSV) data rather then JSON, so you need to make a few modifications before it will work successfully.
 
-1. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) to:
+1. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** to:
     - Remove the parser version parameter.
     - Add parameters for field terminator, quoted fields, and row terminators with the character code *0x0b*.
     - Format the results as a single field containing the JSON row of data as an NVARCHAR(MAX) string.
@@ -278,7 +278,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
    ![Screenshot showing the steps](../images/DP500-1-32.png)
 
-6. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) so that it uses the JSON_VALUE function to extract individual field values from the JSON data.View the result by running the query after modifying as below.
+1. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** so that it uses the JSON_VALUE function to extract individual field values from the JSON data.View the result by running the query after modifying as below.
 
     ```sql
     SELECT JSON_VALUE(Doc, '$.SalesOrderNumber') AS OrderNumber,
@@ -294,7 +294,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
         ) WITH (Doc NVARCHAR(MAX)) as rows
     ```
 
-7. Name your script **Sales JSON query** by clicking the properties tab icon, and publish it. Then close the script pane.
+1. Name your script **Sales JSON query** by clicking the properties tab icon, and publish it. Then close the script pane.
 
    ![Screenshot showing the steps](../images/DP500-1-33.png)
 
@@ -310,7 +310,7 @@ By defining an external data source in a database, you can use it to reference t
 
    ![Screenshot showing the steps](../images/DP500-1-34.png)
    
-1. In the new script pane, add the following code (replacing *datalakexxxxxxx* with the name of your data lake storage account) to create a new database and add an external data source to it.
+1. In the new script pane, add the following code (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) to create a new database and add an external data source to it.
 
     ```sql
     CREATE DATABASE Sales
