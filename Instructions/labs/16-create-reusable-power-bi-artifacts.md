@@ -22,9 +22,9 @@ In this exercise, you will Publish a data Module in Power BI.
 
 In this task, you will set up Power BI.
 
-1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
+1. To open Power BI Desktop, select the **Power BI Desktop** shortcut on desktop page.
 
-	![](../images/DP500-16-1.png)
+	![](../images1/DP500-16-63.png)
 
 2. Select **X** located at the top-right of the getting started window.
 
@@ -33,13 +33,32 @@ In this task, you will set up Power BI.
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
 	![](../images/DP500-16-6.png)
-4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+	
+4. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-       >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
+	![](../images1/DP500-16-56.png)
+	
+5. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
-	![](../images/DP500-16-7.png)
+	![](../images1/DP500-16-57.png)
+	
+	![](../images1/DP500-16-58.png)	
+	
+4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
 
-5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+    >**Note**:On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page
+
+	![](../images1/DP500-16-59.png)
+	
+5. Enter the Password provided in the Environment Details tab and click on **Signin**
+	
+	![](../images1/DP500-16-60.png)	
+	
+6. If stay signed in window Pops-up, select **No**
+
+7. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+
+	![](../images1/DP500-16-61.png)
 
 1. At the top-right, select the profile icon, and then select **Start trial**.
 
@@ -82,6 +101,8 @@ In this task, you will create a workspace.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Create reusable Power BI artifacts.pbix** file.
 
+4. If **Get the most out of Power BI** window pops-up, close it.
+
 4. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
 	![](../images/DP500-16-6.png)
@@ -110,7 +131,7 @@ In this task, you will publish the data model.
 
 	![](../images/DP500-16-16.png)
 
-2. In the **Publish to Power BI** window, select the workspace named "**workspace<inject key="Deployment ID" enableCopy="false" />**", and then select **Select**.
+2. In the **Publish to Power BI** window, select the workspace named **workspace<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
 
 	![](../images/DP500-16-17.png)
 
@@ -136,7 +157,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
 
-	![](../images/DP500-16-1.png)
+	![](../images1/DP500-16-63.png)
 
 2. Select **X** located at the top-right of the getting started window.
 
@@ -151,6 +172,8 @@ In this task, you will create a new report that uses a live connection to the **
 	![](../images/DP500-16-20.png)
 
 6. Select **Save**.
+
+7. Complete the signin process,if not signed in to PowerBI desktop and continue with the next step.
 
 7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets** in Data hub drawdown.
 
@@ -195,7 +218,7 @@ In this task, you will create a local DirectQuery model.
 	![](../images/DP500-16-26.png)
 
 	*Note: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
-	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect. 
+	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect.(you can save and close and reopen the file if still the changes are not shownup) 
 
 2. Now,after changing the settings,you can able to view and select **Make changes to this model** and then select **Add a local model**.
 
@@ -203,7 +226,9 @@ In this task, you will create a local DirectQuery model.
 
 	*The model is now a DirectQuery model. It's now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It's even possible to extend the model with new tables of data that are sourced from other data sources. You will add a table to add US population data to the model.*
 
-3. Hover the cursor over any table header to reveal a tooltip, and notice that the table storage mode is set to **DirectQuery**.
+3. Select **Submit** in the Connect to data popup-window.
+	
+4. Hover the cursor over any table header to reveal a tooltip, and notice that the table storage mode is set to **DirectQuery**.
 
 	![](../images/DP500-16-28.png)
 
@@ -375,7 +400,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 	![](../images/DP500-16-51.png)
 
-5. To add the measure to the matrix visual, in the **Fields** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
+5. To add the measure to the matrix visual, in the **Data** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
 
 	*The measure evaluates the result by combining data sourced from a remote model in the Power BI service with data from the imported table that is local to your new model.*
 

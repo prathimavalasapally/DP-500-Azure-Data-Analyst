@@ -18,10 +18,6 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 ### Task 1: View files in the data lake
 
-1.  If you are not logged in already, click on Azure portal shortcut that is available on the desktop and log in with below Azure credentials or skip to **step 2**.
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
-
 1. Select the **Resource groups** under **Navigate**.
 
    ![](../images/mod2-rg.png)
@@ -129,12 +125,12 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 1. Under the results, use the **+ Code** button to add a new code cell to the notebook. Then in the new cell, add the following code to display the dataframe's schema:
 
+   ![](../images1/Mod2-Ex2-Task2-Step8.png)
+   
     ```Python
     df.printSchema()
     ```
     
-   ![](../images1/Mod2-Ex2-Task2-Step8.png)
-
 1. Run the new cell and verify that the dataframe schema matches the **orderSchema** you defined. The **printSchema** function can be useful when using a dataframe with an automatically inferred schema.
 
 ## Excercise 2: Analyze data in a dataframe
