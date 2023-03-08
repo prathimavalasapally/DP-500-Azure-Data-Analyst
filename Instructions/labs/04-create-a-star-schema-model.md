@@ -49,7 +49,7 @@ In this task, you will set up Power BI.
     
     ![](../images/dp500-create-a-star-schema-model-image2a.png)
 
-1. Create a workspace named DP500 labs and select **Save**.
+1. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
 
     *Note: The workspace name must be unique. If you're getting an error, update the workspace name.*
 
@@ -133,7 +133,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 	![](../images/dp500-19.png)
 
-6. Select your SQL pool, **sqldw**, and then select **Continue**.
+6. Select your SQL pool, **sqldb<inject key="DeploymentID" enableCopy="false"/>**, and then select **Continue**.
 
 	![](../images/dp500-20.png)
 
@@ -554,7 +554,7 @@ In this task, you will stop the SQL pool.
 
 1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
 
-2. Locate the SQL pool.
+2. Go to resource group and locate the SQL pool named **sqldb<inject key="DeploymentID" enableCopy="false"/>**.
 
 3. Pause the SQL pool.
 
