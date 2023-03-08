@@ -15,6 +15,12 @@ In this lab, you learn how to:
 
 ### Task 1: Set up Power BI Desktop
 
+1. Open the PowerBI desktop, by clicking on PowerBI desktop Shortcut Provided in the Desktop.
+
+	![](../images/DP500-16-1.png)
+	
+1. Click on file menu and select open reports and then click **Browse Reports**	
+
 1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
 
 	![](../images/dp500-11-54.png)
@@ -136,8 +142,12 @@ In this task, you will set all dimension tables to use dual storage mode.
 	![](../images/dp500-6-2.png)
 
 	*The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables.*
+	
+7. If Pending changes window Pops-up, click on **close** and click on **Apply changes** on the top of the model view and repeat from the 4th steps.
 
-7. In the model diagram, notice the striped bar across the top of each dimension table.
+	![](../images1/dp500-11-72.png)
+
+8. In the model diagram, notice the striped bar across the top of each dimension table.
 
 	![](../images/dp500-11-23.png)
 

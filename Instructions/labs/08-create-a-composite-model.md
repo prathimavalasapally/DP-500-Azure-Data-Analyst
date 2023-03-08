@@ -233,6 +233,7 @@ In this task, you will add two measures to allow the analysis of sales target va
 
     ```
     Variance = SUM ( 'Sales'[Sales Amount] ) - SUM ( 'Targets'[Target Amount] )
+    
     ```
 
 
@@ -255,6 +256,7 @@ In this task, you will add two measures to allow the analysis of sales target va
     SUM ( 'Targets'[Target Amount] )
 
     )
+    
     ```
 
 
