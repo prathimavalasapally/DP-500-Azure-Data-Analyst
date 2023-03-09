@@ -16,18 +16,17 @@ In this lab, you learn how to:
 
 - Map security principals to dataset roles.
 
-## Set up Power BI
+## Set up Power BI Desktop
 
-In this task, you will set up Power BI.
+In this task, you will set up Power BI Desktop.
 
-1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
+1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-create-a-star-schema-model-image1.png)
+	![](../images/dp500-enforce-model-security-image1.png)
 
-2. Select **X** located at the top-right of the getting started window.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
-	![](../images/dp500-create-a-star-schema-model-image2.png)
-
+3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
 	![](../images/dp500-create-a-star-schema-model-image3.png)
