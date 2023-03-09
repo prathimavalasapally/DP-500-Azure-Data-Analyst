@@ -123,6 +123,8 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
     display(df.limit(100))
     ```
 
+    >**Note**: Click on **publish** to publish the changes you have made.
+
 1. Under the results, use the **+ Code** button to add a new code cell to the notebook. Then in the new cell, add the following code to display the dataframe's schema:
 
    ![](../images1/Mod2-Ex2-Task2-Step8.png)
@@ -426,6 +428,8 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
     ```
 
 1. Run the code to view the yearly revenue as a line chart.
+
+1. Click on **Publish all** button at the top to publish the changes.
 
 >**Note**: To learn more about plotting with seaborn, see the [seaborn documentation](https://seaborn.pydata.org/index.html).
 
