@@ -68,6 +68,6 @@ Start-Sleep -s 5
 
 New-AzSqlDatabaseImport -ResourceGroupName $resourceGroupName -ServerName $ServerName -DatabaseName "AdventureWorksDW2022-DP500" -DatabaseMaxSizeBytes 5368709120  -StorageKeyType "StorageAccessKey" -StorageKey $(Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -StorageAccountName $storageName).Value[0] -StorageUri "https://$($storageName).blob.core.windows.net/dp500/AdventureWorksDW2022-DP500.bacpac" -Edition "Standard" -ServiceObjectiveName "S2" -AdministratorLogin "sqladmin" -AdministratorLoginPassword $(ConvertTo-SecureString -String 'P@ssw0rd01' -AsPlainText -Force)
 
-Start-Sleep -s 420
+Start-Sleep -s 5
 
 Write-Host "Finishing setup script at $(Get-Date)"
