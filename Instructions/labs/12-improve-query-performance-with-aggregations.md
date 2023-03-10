@@ -30,21 +30,19 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-11-70.png)
 	
-5. If prompted about a potential security risk, read the message, and then select **OK**
+5. If prompted to approve running a Native Database Query, select **Run**.
 
-	![](../images/dp500-6-6.png)
+      ![](../images1/dp500-run.png)
 	
-6. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+6. If prompted about a potential security risk, read the message, and then select **OK**
+	
+7. If prompted for sqlserver database connection, change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
 
 	![](../images/dp500-11-60.png)
 
-7. If prompted for Encryption Support, click on **OK**
+8. If prompted for Encryption Support, click on **OK**
 
 	![](../images/dp500-6-2.png)
-
-8. If prompted to approve running a Native Database Query, select **Run**.
-
-      ![](../images1/dp500-run.png)
 
 9. To save the file, on the **File** ribbon tab, select **Save as**.
 
@@ -218,7 +216,7 @@ In this task, you will set model properties for the new table.
 
 	![](../images/dp500-12-19.png)
 
-7. When Storage mode dialog box is prompted , select **OK**.
+7. When **Storage mode** dialog box is prompted , select **OK**.
 
 	![](../images/dp500-6-2.png)
 
@@ -238,7 +236,7 @@ In this task, you will set model properties for the new table.
 
 	*To manage the aggregation (later in this exercise), the data type must match that of the **Sales Amount** column in the **Sales** table.*
 
-11. When Data type change dialog box is prompted, select **Yes**.
+11. When **Data type change** dialog box is prompted, select **Yes**.
 
 	![](../images/dp500-12-21.png)
 
