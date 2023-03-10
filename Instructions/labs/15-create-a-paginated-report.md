@@ -28,7 +28,7 @@ In this lab, you learn how to:
 
 In this exercise, you will open Power BI Report Builder to create and then save a report.
 
-### Create the report
+### Task 1: Create the report
 
 In this task, you will open Power BI Report Builder to create and then save a report.
 
@@ -47,7 +47,7 @@ In this task, you will open Power BI Report Builder to create and then save a re
 
 	![](../images1/dp500_15-04.png)
 
-4. In the **Save As Report** window, navigate to the **D:\DP500\Allfiles\15\MySolution** folder.
+4. In the **Save As Report** window, navigate to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\15\MySolution** folder.
 
 5. In the **Name** box, enter **Sales Order Report**.
 
@@ -57,7 +57,7 @@ In this task, you will open Power BI Report Builder to create and then save a re
 
 In this exercise, you will develop the report layout, and then explore the final report design.
 
-### Configure the report header
+### Task 2: Configure the report header
 
 In this task, you will configure the report header.
 
@@ -120,7 +120,7 @@ In this task, you will configure the report header.
 
 	![](../images1/dp500_15-12.png)
 
-15. In the **Open** window, navigate to the **D:\DP500\Allfiles\15\Assets** folder, and then select the **AdventureWorksLogo.jpg** file.
+15. In the **Open** window, navigate to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\15\Assets** folder, and then select the **AdventureWorksLogo.jpg** file.
 
 16. Select **Open**.
 
@@ -158,7 +158,7 @@ In this task, you will configure the report header.
 	*You are now ready to configure the report to retrieve a database query result.*
 
 
-### Retrieve data
+### Task 3: Retrieve data
 
 In this task, you will create a data source and dataset to retrieve a query result from the **AdventureWorksDW2022-DP500** SQL Server database.
 
@@ -204,7 +204,7 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 	![](../images1/dp500_15-19.png)
 
-13. In the **Import Query** window, navigate to the **D:\DP500\Allfiles\15\Assets** folder, and then select the **SalesOrder.sql** file.
+13. In the **Import Query** window, navigate to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\15\Assets** folder, and then select the **SalesOrder.sql** file.
 
 14. Select **Open**.
 
@@ -230,7 +230,7 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 19. Save the report.
 
-### Configure the report parameter
+### Task 4: Configure the report parameter
 
 In this task, you will configure the report parameter with a default value.
 
@@ -267,7 +267,7 @@ In this task, you will configure the report parameter with a default value.
 
 	*You will now complete the report header region design by adding textboxes to describe the sales order.*
 
-### Finalize the report header layout
+### Task 5: Finalize the report header layout
 
 In this task, you will finalize the report header region design by adding textboxes.
 
@@ -408,7 +408,7 @@ In this task, you will finalize the report header region design by adding textbo
 
 	*You will now add a table to the report body to display a formatted layout of the sales order lines.*
 
-### Add a table data region
+### Task 6: Add a table data region
 
 In this task, you will add a table data region to the report body.
 
@@ -486,7 +486,7 @@ In this task, you will add a table data region to the report body.
 	- *Add and format a total row for the table*
 
 
-### Format the table data region
+### Task 7: Format the table data region
 
 In this task, you will format the table data region.
 
@@ -587,7 +587,7 @@ In this task, you will format the table data region.
 
 	*In the next task, you will improve the footer text by appending the page number.*
 
-### Finalize the report design
+### Task 8: Finalize the report design
 
 In this task, you will finalize the report design by ensuring multi-page reports render appropriately.
 
@@ -663,7 +663,7 @@ In this task, you will finalize the report design by ensuring multi-page reports
 
   
 
-### Explore the completed report
+### Task 9: Explore the completed report
 
 In this task, you will view the report in print layout mode.
 
