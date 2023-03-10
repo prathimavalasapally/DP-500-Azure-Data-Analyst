@@ -66,10 +66,6 @@ In this task, you will set up Power BI Desktop.
 
     *Note: this will likely take you to the Power BI service to complete the sign-up process.*
 
-1. To save the file, on the **File** ribbon, select **Save as**.
-
-1. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\MySolution** folder.
-
 #### Task 2.2: Set up Power BI Premium trial
 
 In this task, you will sign in to the Power BI service and start a trial license.
@@ -168,7 +164,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 11.  Select **OK**.
     
-      ![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
+      ![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 12. In the **Data source settings** window, select **Close**.
 
@@ -221,7 +217,7 @@ In this exercise, you will set up incremental refresh.
 
 *Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.*
 
-### Task 1: Add parameters
+### Task 7: Add parameters
 
 In this task, you will add two parameters.
 
@@ -277,7 +273,7 @@ In this task, you will add two parameters.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-### Filter the query
+### Task 8: Filter the query
 
 In this task, you will add filters to the **Sales** query.
 
@@ -321,7 +317,7 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### Set up incremental refresh
+### Task 9: Set up incremental refresh
 
 In this task, you will set up the incremental refresh policy for the **Sales** table.
 
@@ -359,7 +355,7 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### Publish the dataset
+### Task 10: Publish the dataset
 
 In this task, you will publish the dataset.
 
@@ -381,7 +377,7 @@ In this task, you will publish the dataset.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
-### Set up the dataset
+### Task 11: Set up the dataset
 
 In this task, you will set up the data source credentials and refresh the dataset.
 
@@ -449,7 +445,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
 
-### Review the table partitions
+### Task 12: Review the table partitions
 
 In this task, you will use SSMS to review the table partitions.
 
@@ -495,7 +491,7 @@ In this task, you will use SSMS to review the table partitions.
 
 In this exercise, you will open the report, add a sales order, and then see the report data update.
 
-### Open the report
+### Task 13: Open the report
 
 In this task, you will open the report.
 
@@ -511,7 +507,7 @@ In this task, you will open the report.
 
     *Note that August 2022 onwards is not in FY 2022, which is the default for the slicer.*
 
-### Add an order to the database
+### Task 14: Add an order to the database
 
 In this task, you will add an order to the database.
 
@@ -519,7 +515,7 @@ In this task, you will add an order to the database.
 
 2. To open a script file, on the **File** menu, select **Open** > **File**.
 
-3. In the **Open File** window, go to the **D:\DP500\Allfiles\10\Assets** folder.
+3. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Assets** folder.
 
 4. Select the **1-InsertOrder.sql** file and select **Open**.
 
@@ -538,14 +534,18 @@ In this task, you will add an order to the database.
 9. Review the script.
 
 	*This script inserts a single order into the **FactInternetSales** table using today as the order date.*
+	
+10. Select **AdventureWorksDW2022-DP500** from the **Available Databases** dropdown list.
 
-10. To run a script, on the toolbar, select **Execute** (or press **F5**).
+	![](../images1/dp500_10-availableDbs.png)
+
+11. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
 
-11. To close the file, on the **File** menu, select **Close**.
+12. To close the file, on the **File** menu, select **Close**.
 
-### Refresh the report
+### Task 15: Refresh the report
 
 In this task, you will refresh the report.
 
@@ -562,17 +562,4 @@ In this task, you will refresh the report.
 	*When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.*
 
 	*Tip: Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.*
-
-### Finish up
-
-In this task, you will finish up. Open SSMS and ensure you're connected to the database, AdventureWorksDW2022-DP500.
-
-1. In SSMS, open the **2-Cleanup.sql** file.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image74.png)
-
-	This script removes the order that you inserted.
-
-2. Run the script.
-
-3. Close SSMS.
+	
