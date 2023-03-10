@@ -220,12 +220,4 @@ In this task, you will finish up.
 
 4. Close the script file.
 
-5. Open the **3-Cleanup.sql** file.
-
-	![](../images1/dp500_14-28.png)
-
-	*This script removes the **FactInternetSalesRealTime** table.*
-
-6. Run the script.
-
-7. Close SSMS.
+5. Close SSMS.
