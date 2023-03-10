@@ -12,7 +12,7 @@ In this lab, you learn how to:
 
 - Use Performance analyzer to determine whether Power BI uses an aggregation.
 
-### Task-1: Set up Power BI Desktop
+### Task 1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
@@ -50,7 +50,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 11. Select **Save**.
 
-### Task-2: Review the report
+### Task 2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -66,7 +66,7 @@ In this task, you will review the pre-developed report.
 
 	*This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales and target amounts. In this lab, you will improve the performance of the report by adding an aggregation.*
 
-### Task-3: Review the data model
+### Task 3: Review the data model
 
 In this task, you will review the pre-developed data model.
 
@@ -84,7 +84,7 @@ In this task, you will review the pre-developed data model.
 
 	*In this lab, you will add an aggregation to improve the performance of specific **Sales** table queries.*
 
-### Task-4: Use Performance analyzer
+### Task 4: Use Performance analyzer
 
 In this task, you will open Performance analyzer and use it to inspect refresh events.
 
@@ -124,7 +124,7 @@ In this exercise, you will set up an aggregation.
 
 *Aggregations in Power BI can improve query performance over exceptionally large DirectQuery tables. By using aggregations, the data model caches data at an aggregated level in-memory. Power BI automatically uses the aggregation whenever it can.*
 
-### Task-5 Add an aggregation table
+### Task 5: Add an aggregation table
 
 In this task, you will add an aggregation table to model.
 
@@ -190,7 +190,7 @@ In this task, you will add an aggregation table to model.
 
 	![](../images/DP500-16-25.png)
 
-### Task-6: Set model properties
+### Task 6: Set model properties
 
 In this task, you will set model properties for the new table.
 
@@ -240,7 +240,7 @@ In this task, you will set model properties for the new table.
 
 	![](../images/dp500-12-21.png)
 
-### Task-7: Create model relationships
+### Task 7: Create model relationships
 
 In this task, you will create two model relationships.
 
@@ -272,7 +272,7 @@ In this task, you will create two model relationships.
 
 	![](../images/dp500-12-38.png)
 
-### Task-8: Set up an aggregation
+### Task 8: Set up an aggregation
 
 In this task, you will setup an aggregation.
 
@@ -326,7 +326,7 @@ In this task, you will setup an aggregation.
 
 	*Now, whenever a visual queries the **Sales** table for the sum of the **Sales Amount** column, grouping by any column of the **Order Date** or **Sales Territory** tables, Power BI will use the aggregation instead.*
 
-### Task-9: Test the aggregation
+### Task 9: Test the aggregation
 
 In this task, you will test the aggregation and determine whether Power BI uses it.
 
@@ -390,7 +390,7 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 	*You have now improved the performance of specific queries by allowing Power BI to retrieve data from the model cache. The key takeaway is that aggregations can accelerate the performance of fact table queries, especially for specific measure and high-level groupings. Also, dual storage mode and aggregations work well together, providing opportunities for Power BI to avoid using expensive DirectQuery connections to source data.*
 
-### Task-10 Finish up
+### Task 10: Finish up
 
 In this task, you will finish up.
 
