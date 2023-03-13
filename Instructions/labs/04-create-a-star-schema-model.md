@@ -182,7 +182,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 3. Sign in using the lab Azure credentials provided.
 
-4. From the drop down please select the option as shown below workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>
+4. From the drop down please select the option  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>** as shown below.
 
    ![](../images1/updated-001.png)
    
