@@ -71,7 +71,7 @@ In this task, you will start the SQL pool.
 
 1. Use the lab credentials to complete the sign in process.
 
-1. Select **Azure Synapse Analytics** from Azure services. Select your Synapse workspace.
+1. Search  **Azure Synapse Analytics** from search bar. Select your Synapse workspace.
 
    ![](../images1/dp500_04-synapseanalytics.png)
 
