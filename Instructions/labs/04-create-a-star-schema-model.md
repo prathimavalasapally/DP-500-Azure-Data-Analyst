@@ -27,39 +27,62 @@ In this task, you will set up Power BI.
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
 	![](../images/dp500-create-a-star-schema-model-image3.png)
-4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+	
+4. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images/dp500-create-a-star-schema-model-image3b.png)
+	![](../images1/DP500-16-56.png)
+	
+5. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
-5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+	![](../images1/DP500-16-57.png)
+	
+	![](../images1/DP500-16-58.png)	
+	
+6. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
 
-1. At the top-right, select the profile icon, and then select **Start trial**.
+   
+   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
+
+	
+	![](../images1/DP500-16-59.png)
+	
+7. Enter the Password provided in the Environment Details tab and click on **Signin**
+	
+	![](../images1/DP500-16-60.png)	
+	
+8. If stay signed in window Pops-up, select **No**
+
+9. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+
+	![](../images1/DP500-16-61.png)
+
+10. At the top-right, select the profile icon, and then select **Start trial**.
 
 	![](../images/dp500-create-a-dataflow-image3.png)
 
-1. When prompted, select **Start trial**.
+11. When prompted, select **Start trial**.
 
 	![](../images/dp500-create-a-dataflow-image4.png)
 
-1. Do any remaining tasks to complete the trial setup.
+12. Do any remaining tasks to complete the trial setup.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 	
-1. Select Workspaces and **Create a Workspace**.
+13. Select Workspaces and **Create a Workspace**.
     
     ![](../images/dp500-create-a-star-schema-model-image2a.png)
 
-1. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
+14. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
 
     *Note: The workspace name must be unique. If you're getting an error, update the workspace name.*
 
     ![](../images/dp500-create-a-star-schema-model-image2b.png)
 
-1. Navigate back to Power BI Desktop. If you see **Sign in** in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
+15. Navigate back to Power BI Desktop. If you see **Sign in** in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
 
     <img width="80" alt="image" src="https://user-images.githubusercontent.com/77289548/166337862-538a1900-ec67-44d1-905f-d404c5b0a58a.png">
 
-1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **OK**. Close Power BI Desktop. Do not save your file.
+16. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **OK**. Close Power BI Desktop. Do not save your file.
 
 	*You will open Power BI Desktop again in the upcoming exercises.*
 
@@ -71,7 +94,7 @@ In this task, you will start the SQL pool.
 
 1. Use the lab credentials to complete the sign in process.
 
-1. Select **Azure Synapse Analytics** from Azure services. Select your Synapse workspace.
+1. Search  **Azure Synapse Analytics** from search bar. Select your Synapse workspace.
 
    ![](../images1/dp500_04-synapseanalytics.png)
 
@@ -101,7 +124,7 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
 
     ![](../images/dp500-create-a-star-schema-model-image3h.png)
 
-1. Navigate to **Manage** and select **Publish all** to ensure changes are published.
+1. Navigate to **Manage**, select **Publish all** and then click on **Publish** to ensure changes are published.
 
 ## Develop a data model
 
@@ -159,6 +182,10 @@ In this task, you will create five Power Query queries that will each load as a 
 
 3. Sign in using the lab Azure credentials provided.
 
+4. From the drop down please select the option as shown below workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>
+
+   ![](../images1/updated-001.png)
+   
 4. Select **Connect**.
 
 	![](../images/dp500-23.png)
