@@ -15,7 +15,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 
    ![Screenshot showing the selection of Resource groups ](../images/DP500-1-1.png)
    
-1. Inside the Resource groups,select **lab01-rg-<inject key="DeploymentID" enableCopy="false"/>**
+1. Inside the Resource groups,select **lab01-rg**
  
    ![Screenshot showing the selection of lab01 Resource groups ](../images/DP500-1-2.png)
    
