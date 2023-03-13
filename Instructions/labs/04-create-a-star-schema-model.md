@@ -101,7 +101,7 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
 
     ![](../images/dp500-create-a-star-schema-model-image3h.png)
 
-1. Navigate to **Manage** and select **Publish all** to ensure changes are published.
+1. Navigate to **Manage**, select **Publish all** and then click on **Publish** to ensure changes are published.
 
 ## Develop a data model
 
