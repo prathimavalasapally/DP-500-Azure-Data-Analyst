@@ -15,13 +15,11 @@ In this lab, you learn how to:
 
 ### Task 1: Set up Power BI Desktop
 
-1. Open the PowerBI desktop, by clicking on PowerBI desktop Shortcut Provided in the Desktop.
+1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/DP500-16-1.png)
-	
-1. Click on file menu and select open reports and then click **Browse Reports**	
+	![](../images/DP500-16-13.png)
 
-1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and select the existing file and click on **Open**
+1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and **Double Click** on the the existing file to Open the file.
 
 	![](../images/dp500-11-54.png)
 	
@@ -32,14 +30,14 @@ In this lab, you learn how to:
 1. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
 
 	![](../images/dp500-11-60.png)
+	
+1. If prompted to approve running a Native Database Query, select **Run**.
+
+	![](../images/dp500-11-13.png) 
 
 1. If prompted for Encryption Support,click on **OK**
 
 	![](../images/dp500-6-2.png)
-
-1. If prompted to approve running a Native Database Query, select **Run**.
-
-	![](../images/dp500-11-13.png)       
 
 1. To save the file, on the **File** ribbon tab, select **Save as**.
 
