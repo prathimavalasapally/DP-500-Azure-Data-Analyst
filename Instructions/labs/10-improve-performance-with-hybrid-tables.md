@@ -521,9 +521,9 @@ In this task, you will add an order to the database.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. In the **Connect to Database Engine** window, in **Server name** box enter **server<DID>.database.windows.net**.
+5. In the **Connect to Database Engine** window, in **Server name** box enter **serverDID.database.windows.net**.
 
-    >**Note :** Replace <DID> with **<inject key="DeploymentID" enableCopy="true" />**
+    >**Note :** Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
