@@ -521,11 +521,13 @@ In this task, you will add an order to the database.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. In the **Connect to Database Engine** window, ensure that the **Server name** dropdown list is set to the lab Azure SQL Database server.
+5. In the **Connect to Database Engine** window, in **Server name** box enter **server<DID>.database.windows.net**.
+
+    >**Note :** Replace <DID> with **<inject key="DeploymentID" enableCopy="true" />**
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
-7. Enter the user name **sqladmin** and password.
+7. Enter the user name **sqladmin** and password `P@ssw0rd01`.
 
 8. Select **Connect**.
 
