@@ -27,24 +27,36 @@ In this task, you will set up Power BI Desktop.
 2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
-3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
+
+4. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
 	![](../images/dp500-create-a-star-schema-model-image3.png)
-4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+	
+5. Enter the Lab username in the **Enter your email address** and click on **Continue**
+
+	![](../images1/DP500-16-56.png)
+	
+6. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
+
+	![](../images1/DP500-16-57.png)
+	
+	![](../images1/DP500-16-58.png)	
+
+7. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
 
 	![](../images/dp500-create-a-star-schema-model-image3b.png)
 
-5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+8. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
-1. At the top-right, select the profile icon, and then select **Start trial**.
+9. At the top-right, select the profile icon, and then select **Start trial**.
 
 	![](../images/dp500-create-a-dataflow-image3.png)
 
-1. When prompted, select **Start trial**.
+10. When prompted, select **Start trial**.
 
 	![](../images/dp500-create-a-dataflow-image4.png)
 
-1. Do any remaining tasks to complete the trial setup.
+11. Do any remaining tasks to complete the trial setup.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
@@ -256,7 +268,7 @@ In this task, you will add the **Salesperson** table to the model.
 
 	![](../images1/dp500_09-38.png)
 
-1. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
+2. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
 
 	![](../images1/dp500_09-39.png)
 
@@ -273,47 +285,47 @@ In this task, you will add the **Salesperson** table to the model.
 	 ![](../images1/dp500_09-42.png)
 
 
-1. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Customer** query, and then select **Duplicate**.
+3. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Customer** query, and then select **Duplicate**.
 
 	![](../images1/dp500_09-43.png)
 
 	*Because the **Customer** query already includes steps to connect the data warehouse, duplicating it is an efficient way to commence the development of a new query.*
 
-1. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**.
+4. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**.
 
 	![](../images1/dp500_09-44.png)
 
 
-1. In the **Applied Steps** list, right-click the **Removed Other Columns** step (third step), and then select **Delete Until End**.
+5. In the **Applied Steps** list, right-click the **Removed Other Columns** step (third step), and then select **Delete Until End**.
 
 	![](../images1/dp500_09-45.png)
 
-1. When prompted to confirm deletion of the step, select **Delete**.
+6. When prompted to confirm deletion of the step, select **Delete**.
 
 	![](../images1/dp500_09-46.png)
 
-1. To source data from a different data warehouse table, in the **Applied Steps** list, in the **Navigation** step (second step), select the gear icon (located at the right).
+7. To source data from a different data warehouse table, in the **Applied Steps** list, in the **Navigation** step (second step), select the gear icon (located at the right).
 
 	![](../images1/dp500_09-47.png)
 
-1. In the **Navigation** window, select the **DimEmployee** table.
+8. In the **Navigation** window, select the **DimEmployee** table.
 
 	![](../images1/dp500_09-48.png)
 
 
-1. Select **OK**.
+9. Select **OK**.
 
 	![](../images1/dp500_09-49.png)
 
-1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+10. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
 	![](../images1/dp500_09-50.png)
 
-1. In the **Choose Columns** window, uncheck the **(Select All Columns)** item.
+11. In the **Choose Columns** window, uncheck the **(Select All Columns)** item.
 
 	![](../images1/dp500_09-51.png)
 
-1. Check the following three columns:
+12. Check the following three columns:
 
 	- EmployeeKey
 
@@ -321,23 +333,23 @@ In this task, you will add the **Salesperson** table to the model.
 
 	- EmailAddress
 
-1. Select **OK**.
+13. Select **OK**.
 
 	![](../images1/dp500_09-52.png)
 
-1. To rename the **EmailAddress** column, double-click the **EmailAddress** column header.
+14. To rename the **EmailAddress** column, double-click the **EmailAddress** column header.
 
-1. Replace the text with **UPN**, and then press **Enter**.
+15. Replace the text with **UPN**, and then press **Enter**.
 
 	*UPN is an acronym for User Principal Name. The values in this column match the Azure AD account names.*
 
 	![](../images1/dp500_09-53.png)
 
-1. To load the table to the model, on the **Home** ribbon tab, select the **Close &amp; Apply** icon.
+16. To load the table to the model, on the **Home** ribbon tab, select the **Close &amp; Apply** icon.
 
 	![](../images1/dp500_09-54.png)
 
-1. When the table has added to the model, notice that a relationship to the **Sales Territory** table was automatically created.
+17. When the table has added to the model, notice that a relationship to the **Sales Territory** table was automatically created.
 
 ### Configure the relationship
 
@@ -355,6 +367,12 @@ In this task, you will configure properties of the new relationship.
 	![](../images1/dp500_09-56.png)
 
 	*Because there' a one-to-many relationship from the **Sales Territory** table to the **Salesperson** table, filters propagate only from the **Sales Territory** table to the **Salesperson** table. To force propagation in the other direction, the cross filter direction must be set to both.*
+	
+	> **Note**: In case you encounter this error: `Table 'Sales Territory' is configured for row-level security, introducing constraints on how security filters are specified.` Uncheck the **Apply security filter in both directions** box and continue.
+
+	![](../images1/dp500-m09-note10a.png)
+	
+	![](../images1/dp500-m09-note11.png)
 
 4. Select **OK**.
 
