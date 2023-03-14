@@ -1,6 +1,11 @@
 # Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
+1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. 
+If you see a powershell script running in the background, minimize the tab and click the **close** button for the signup pop-up like below.
+   
+    ![](../images1/sign_in.png "Lab Environment")
+
+1. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
    ![](../images1/vmscreen1.png "Lab Environment")
 
