@@ -92,6 +92,7 @@ In this task, you will create a workspace.
 	![](../images/DP500-16-12.png)
 
 	*Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
+	> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Task-3: Open the starter file in Power BI Desktop
 
@@ -458,3 +459,4 @@ In this task, you will review the specialized dataset in the Power BI service.
 	![](../images/DP500-16-55.png)
 
 	*When Power BI datasets relate to other datasets, it's known as chaining. In this lab, the **US Sales Analysis** dataset is chained to the **Sales Analysis - Create reusable Power BI artifacts** dataset, enabling its reuse for a specialized purpose.*
+	> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
