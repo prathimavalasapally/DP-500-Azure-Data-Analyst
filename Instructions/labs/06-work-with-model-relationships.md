@@ -412,7 +412,7 @@ In this task, you will create a measure to show the unshipped sales amount.
 
 	![](../images/dp500-6-48.png)
 	
-	> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+	> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Task-3: Finish up
 
