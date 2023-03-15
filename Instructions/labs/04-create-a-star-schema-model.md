@@ -535,6 +535,8 @@ In this task, you will create five Power Query queries that will each load as a 
 64. In Power BI Desktop, when the queries have been applied, at the bottom-left corner in the status bar, notice that the model storage mode is DirectQuery.
 
 	![](../images/dp500-57.png)
+	
+	> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Organize the model diagram
 
@@ -574,6 +576,8 @@ In this task, you will organize the model diagram to easily understand the star 
 9. Select **Save**.
 
 10. Close Power BI Desktop.
+
+	> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Pause the SQL pool
 
