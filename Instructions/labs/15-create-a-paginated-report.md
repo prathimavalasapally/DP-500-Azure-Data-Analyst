@@ -142,7 +142,7 @@ In this task, you will configure the report header.
 
 21. In the **Properties** pane, set the **position** > **Size** **Height** property to **1**.
 
-        ![](../images1/DP500-15-1.png)
+	![](../images1/DP500-15-1.png)
 
 22. Verify that the report header region contains a single textbox and image, and looks like the following:
 
