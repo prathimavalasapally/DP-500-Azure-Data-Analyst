@@ -135,7 +135,12 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
     
 1. Run the new cell and verify that the dataframe schema matches the **orderSchema** you defined. The **printSchema** function can be useful when using a dataframe with an automatically inferred schema.
 
-   > **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Excercise 2: Analyze data in a dataframe
 
