@@ -122,6 +122,8 @@ In this task, you will review the data model developed in Power BI Desktop.
     ![](../images/mod5-datetable.png)
 
     *The **Date** table was created by the business analyst. It doesn't represent a consistent definition of date-related data, and it does not include helpful offset columns to support relative date filters. In a later exercise, you will replace this table with a new table sourced from a dataflow.*
+    
+    > **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Task 2: Create a dataflow
 
@@ -326,6 +328,8 @@ In this task, you will create a dataflow that represents a consistent definition
 	*There are two settings that should be configured. First, scheduled refresh should be configured to update the dataflow data every day. That way, the month offsets will be calculated using the current date. Second, the dataflow should be endorsed as certified (by an authorized reviewer). A certified dataflow declares to others that it meets quality standards and can be regarded as reliable and authoritative.*
 
 	*In addition to configuring settings, permission should be granted to all content creators to consume the dataflow.*
+	
+	> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ## Exercise 3: Consume a dataflow
 

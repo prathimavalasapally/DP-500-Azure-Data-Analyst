@@ -411,7 +411,7 @@ In this task, you will create a measure to show the unshipped sales amount.
 6. Verify that the final report page layout looks like the following.
 
 	![](../images/dp500-6-48.png)
-
+	
 ### Task-3: Finish up
 
 In this task, you will finish up.
@@ -419,5 +419,7 @@ In this task, you will finish up.
 1. Save the Power BI Desktop file.
 
 	![](../images/DP500-16-25.png)
+	
+	> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 2. Close Power BI Desktop.
