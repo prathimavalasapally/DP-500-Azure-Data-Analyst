@@ -472,7 +472,6 @@ calculation groups.
     ![Graphical user interface, text Description automatically
     generated](../images/dp500_07-41.png)
     
-    > **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Finish up
 
@@ -481,6 +480,8 @@ In this task, you'll finish up.
 1.  Save the Power BI Desktop file.
 
     ![](../images/dp500_07-42.png)
+    
+    > **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 2.  Close Power BI Desktop.
 
