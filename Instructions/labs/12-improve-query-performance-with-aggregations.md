@@ -399,3 +399,5 @@ In this task, you will finish up.
 	![](../images/DP500-16-25.png)
 
 2. Close Power BI Desktop.
+
+> **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
