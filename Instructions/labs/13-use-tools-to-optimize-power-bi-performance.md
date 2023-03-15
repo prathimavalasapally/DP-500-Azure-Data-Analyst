@@ -317,3 +317,5 @@ In this task, you will finish up.
 1. To close DAX Studio, on the **File** ribbon tab, select **Exit**.
 
 2. Close Power BI Desktop.
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.

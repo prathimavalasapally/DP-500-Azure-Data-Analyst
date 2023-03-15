@@ -680,3 +680,4 @@ In this task, you will view the report in print layout mode.
 4. Navigate to pages 2 and 3.
 
 	*In this lab, you won't publish the report. Note that paginated reports can only be rendered in the Power BI service when they are stored in a workspace that has its license mode set to **Premium per user** or **Premium per capacity**, and when that capacity has the paginated reports workload enabled.*
+	> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.

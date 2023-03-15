@@ -221,3 +221,5 @@ In this task, you will finish up.
 4. Close the script file.
 
 5. Close SSMS.
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
