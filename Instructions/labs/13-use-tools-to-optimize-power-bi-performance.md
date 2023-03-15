@@ -158,7 +158,7 @@ In this task, you will open BPA and review the results of the checks.
 
 5. Further down the list, in the **Use the DIVIDE function for division** category, right-click **[Profit Margin]**, and then select **Go to object**.
 
-	![](../images/DP500-13-14.png)
+	![](../images1/DP500-13-555.png)
 
 	*This command switches to Tabular Editor and focuses on the object. It makes it easy to apply a fix to the issue.*
 
