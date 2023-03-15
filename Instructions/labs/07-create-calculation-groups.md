@@ -471,6 +471,8 @@ calculation groups.
 
     ![Graphical user interface, text Description automatically
     generated](../images/dp500_07-41.png)
+    
+    > **Note**: **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 ### Finish up
 
