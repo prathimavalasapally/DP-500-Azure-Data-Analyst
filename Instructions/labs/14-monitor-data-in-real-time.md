@@ -186,9 +186,9 @@ In this task, you will set up change detection.
 
 	![](../images1/dp500_14-23.png)
 
-9. In the **Fields** pane, inside the **Internet Sales** table, notice the addition of a change detection measure.
+9. In the **Data** pane, inside the **Internet Sales** table, notice the addition of a change detection measure.
 
-	![](../images1/dp500_14-24.png)
+	![](../images1/data-lab14.png)
 
 	*Power BI now uses the change detection measure to query the source database every five seconds. Each time, Power BI stores the result so it can compare it the next time it's used. When the results differ, it means the data has changed (in this case, the database inserted new internet sales orders). In this case, Power BI refreshes all report page visuals.*
 
