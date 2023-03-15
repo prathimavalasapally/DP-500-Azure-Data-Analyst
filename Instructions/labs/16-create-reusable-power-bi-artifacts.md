@@ -140,7 +140,7 @@ In this task, you will publish the data model.
 
 	![](../images/DP500-16-16.png)
 
-2. In the **Publish to Power BI** window, select the workspace named **workspace<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
+2. In the **Publish to Power BI** window, select the workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
 
 	![](../images/DP500-16-17.png)
 
@@ -391,7 +391,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 	![](../images/DP500-16-50.png)
 
-3. In the formula bar, enter the following measure definition.
+3. In the formula bar, Replace and enter the following measure definition.
 
 	*Tip: The measure definition is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
@@ -429,7 +429,7 @@ In this task, you will publish the solution, which comprises a specialized data 
 
 	![](../images/DP500-16-16.png)
 
-3. In the **Publish to Power BI** window, select your workspace named **workspace<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
+3. In the **Publish to Power BI** window, select your workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
 
 	![](../images/DP500-16-17.png)
 
