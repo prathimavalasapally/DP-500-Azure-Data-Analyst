@@ -128,8 +128,6 @@ In this task, you will configure the report header.
 
 18. In the report designer, notice that the image was added, and is in focus.
 
- 
-
 19. To position and resize the image, in the **Properties** pane, configure the following properties:
 
 	|  **Property** | **Value** |
@@ -140,10 +138,11 @@ In this task, you will configure the report header.
 	|  Position > Size > Height| 1 |
 
 
-
 20. To resize the report header region, first set focus to the region by selecting a blank area within it.
 
-21. In the **Properties** pane, set the **General** > **Height** property to **1**.
+21. In the **Properties** pane, set the **position** > **Size** **Height** property to **1**.
+
+        ![](../images1/DP500-15-1.png)
 
 22. Verify that the report header region contains a single textbox and image, and looks like the following:
 
@@ -202,7 +201,7 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 12. To import a pre-defined query, select **Import**.
 
-	![](../images1/dp500_15-19.png)
+	![](../images1/DP500-15-2.png)
 
 13. In the **Import Query** window, navigate to the **D:\DP500\Allfiles\15\Assets** folder, and then select the **SalesOrder.sql** file.
 
@@ -304,7 +303,7 @@ In this task, you will finalize the report header region design by adding textbo
 
 10. In the **Placeholder Properties** window, select **OK**.
 
-11. Select a blank area of the report header region, and then select the new textbox.
+11. Select a blank area of the report header region, and then select the Sales Order textbox.
 
 12. In the **Properties** pane, configure the following position properties:
 
@@ -335,7 +334,7 @@ In this task, you will finalize the report header region design by adding textbo
 
 	![](../images1/dp500_15-34.png)
 
-18. Base the expression value on **First(Reseller)** value.
+18. Base the expression value on **First(Reseller)** value.(Ensure double-click to add the value to the expression)
 
 19. In the **Properties** pane, configure the following position properties:
 
@@ -424,10 +423,6 @@ In this task, you will add a table data region to the report body.
 	| --- | --- |
 	|  Position > Location > Left| 0 |
 	|  Position > Location > Top| 0 |
-
-
-	*The table will display five columns. By default, the table template includes only three columns.*
-
 
 4. To add a column to the table, right-click inside any cell of the last column, and then select **Insert Column** > **Right**.
 
@@ -523,7 +518,7 @@ In this task, you will format the table data region.
 
 8. Select the **Quantity** column guide, and then while pressing the **Ctrl** key, select also the last two column header guides (**Unit Price** and **Amount**).
 
-9. In the **Properties** pane (or ribbon), set the **Alignment** > **TextAlign** property to **Right**.
+9. In the **Properties** pane (or ribbon), set the **Alignment** > **TextAlign** property to **Right** and also set the **Position** > **Size** > **Width** property to **1**.
 
 10. Set the **Line** detail textbox to left align.
 
@@ -559,7 +554,7 @@ In this task, you will format the table data region.
 
 19. Save the report
 
-20. Preview the report.
+20. Preview the report.(Click on Run button)
 
 21. Verify that the rendered report looks like the following:
 
