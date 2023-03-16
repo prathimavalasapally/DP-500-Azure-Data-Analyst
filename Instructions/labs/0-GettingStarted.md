@@ -1,13 +1,16 @@
 # Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. 
-If you see a powershell script running in the background please wait until the script is completed before proceeding with any actions.
 
-1. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
+> **Note**:  If you see a powershell script running in the background please wait until the script is completed and once completed please click on the close button of the pop-up.
+
+   ![](../images1/sign_in.png "Close Sign_up")
+
+2. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
    ![](../images1/vmscreen1.png "Lab Environment")
 
-1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can also open the Lab Guide on separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
+3. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. You can also open the Lab Guide on separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
    ![](../images1/envdetails2.png "Lab Environment")
 
