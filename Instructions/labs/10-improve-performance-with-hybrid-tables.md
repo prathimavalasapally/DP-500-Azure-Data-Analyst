@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Improve performance with hybrid tables'
-    module: 'Optimize enterprise-scale tabular models'
----
-
 # Improve performance with hybrid tables
 
 ## Overview
@@ -18,147 +12,75 @@ In this lab, you learn how to:
 
 - Review table partitions.
 
-## Get started
+### Task 1: Set up the Azure SQL Database
 
-In this exercise, you will prepare your environment.
+In this task, you will set up the Azure SQL Database to allow connections from your virtual machine's (VM's) IP address.
 
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt.
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, open the D drive in the file explorer to ensure the files have been downloaded. **Close the Command Prompt** window.
-
-### Deploy an Azure SQL Database 
-
-In this task, you'll create an Azure SQL database that you'll use as a data source for Power BI. Running the setup script will create the Azure SQL database server and load the AdventureWorksDW2022 database.
-
-1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image13.png)
-
-2. Go to the **D:\DP500\Allfiles\10** folder.
-
-3. Double click to open the **setup2.ps1** file script.
-    - Read through the script in notepad if you're interested in understanding what resources the script is setting up. The lines beginning with # denote what the script is doing.
-    - Close the script.
-
-5. In the search box on the taskbar, type `PowerShell`.  
-   
-   When the search results appear, select **Run as administrator**
-    
-	![](../images/run-powershell-admin.png)
-	
-	*If prompted, select Yes to allow this app to make changes to your device.*
-1. In PowerShell, enter the following 2 lines of text to run the script. 
-	
-	` cd D:\DP500\Allfiles\10`
-
-	Press **Enter**.
-
-	`.\setup2.ps1`
-	
-	Press **Enter**
-
-    ![](../images/powershell-script.png)
-
-2. When prompted, enter your **Azure account username**, **password**, and **resource group name**. Press **Enter**. 
-
-    ![](../images/powershell-enter-account-info.png)
-
-	The script will take approximately 10-15 minutes to run.
-
-    *Note: This lab requires a resource group to create an Azure SQL database. If you are performing this lab in a hosted lab environment, you may need to log into the [Azure Portal](portal.azure.com) to obtain the resource group name. If you do not have a resource group provided in a hosted lab environment, [create a resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) in your Azure subscription.*
-
-3. After the script has completed, close the PowerShell window.
-
-### Set up the Azure SQL Database
-
-In this task, you will set up the Azure SQL Database to allow connections from your virtual machine's (VM's) IP address. This script will take about 10 minutes to run after you enter your username, password, and resource group.
-
-1. In a web browser, go to [https://portal.azure.com](https://portal.azure.com/).
+1.  If you are not logged in already, click on Azure portal shortcut that is available on the desktop and log in with below Azure credentials or skip to **step 3**.
+    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
+    * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
 2. If prompted to take a tour, select **Maybe later**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image8.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image8.png)
 
 3. Select the **SQL databases** tile.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image9.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image9.png)
 
 4. In the list of SQL databases, select the **AdventureWorksDW2022-DP500** database.
 
 5. In the action bar on the Overview tab, select **Set server firewall**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image10.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image10.png)
 
-6. On the public access tab, select Selected networks.
+6. On the public access tab, review that **Selected networks** is selected, if not please select it.
 
 7. Select **Add your client IPv4 address**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image11.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image11.png)
 
 7. Select **Save**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image12.png)
 
 8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
 
-### Set up Power BI
+### Task 2: Set up Power BI
 
-#### Set up a Power BI account in Power BI Desktop
+#### Task 2.1: Set up a Power BI account in Power BI Desktop
 
 In this task, you will set up Power BI Desktop.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-create-a-dataflow-image1.png)
+	![](../images1/dp500-create-a-dataflow-image1.png)
 
-1. Go to the **D:\DP500\Allfiles\10\Starter** folder.
+1. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Starter** folder.
 
 1. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve performance with hybrid tables** file.
 
 1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-	![](../images/dp500-create-a-dataflow-image2.png)
+	![](../images1/dp500-create-a-dataflow-image2.png)
 
     *Note: this will likely take you to the Power BI service to complete the sign-up process.*
 
-1. To save the file, on the **File** ribbon, select **Save as**.
-
-1. In the **Save As** window, go to the **D:\DP500\Allfiles\10\MySolution** folder.
-
-#### Set up Power BI Premium trial
+#### Task 2.2: Set up Power BI Premium trial
 
 In this task, you will sign in to the Power BI service and start a trial license.
 
-*Important: If you have already setup Power BI in your VM environment, continue to the next task.*
-
-1. In a web browser, go to [https://powerbi.com](https://powerbi.com/).
+1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) incase it is not opened.
 
 2. Use the lab credentials to complete the sign in process.
 
-3. At the top-right, select the profile icon, and then select **Start trial**.
+3. At the top-right, select the **profile icon (1)**, and then select **Start trial (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image1.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image1.png)
 
-4. When prompted, select **Start trial**.
+4. When prompted, again select **Start trial**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image2.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image2.png)
 
 	*You require a Power BI Premium per User (PPU) license to complete this lab. A trial license is sufficient.*
 
@@ -166,71 +88,71 @@ In this task, you will sign in to the Power BI service and start a trial license
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
-### Create a workspace
+### Task 3: Create a workspace
 
 In this task, you will create a workspace.
 
-1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces**, and then select **Create workspace**.
+1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces (1)**, and then select **Create workspace (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image3.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image3.png)
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace.
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**.
 
 	*The workspace name must be unique within the tenant.*
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image4.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image4.png)
 
-3. Beneath the **Description** box, expand open the **Advanced** section.
+3. Beneath the **Description** box, expand and open the **Advanced** section.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image5.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image5.png)
 
 4. Set the **License mode** option to **Premium per user**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image6.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image6.png)
 
 	*Power BI only supports incremental refresh and hybrid tables in Premium workspaces.*
 
 5. Select **Save**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image7.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image7.png)
 
 	*Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.*
 
-### Set up Power BI Desktop
+### Task 4: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution, set the data source settings and permissions, and then refresh the data model.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image13.png)
+	![](../images1/dp500-create-a-dataflow-image1.png)
 
-2. Go to the **D:\DP500\Allfiles\10\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve performance with hybrid tables.pbix** file.
 
-4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** dropdown, and then select **Data source settings**.
+4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1)** dropdown, and then select **Data source settings (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image14.png)
 
 5. In the **Data source settings** window, select **Change Source**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image15.png)
 
 6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image15a.png)
+    ![](../images1/dp500-improve-performance-with-hybrid-tables-image15a.png)
 
 7. Select **OK**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 8. Select **Edit Permissions**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image17.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image17.png)
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image18.png)
 
 10. In the **SQL Server database** window, enter the SQL Server database username and password and save. 
 
@@ -238,58 +160,63 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
     Password: `P@ssw0rd01`
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
+     ![](../images1/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
 11.  Select **OK**.
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image19.png)
+    
+      ![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 12. In the **Data source settings** window, select **Close**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image20.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image20.png)
 
 13. On the **Home** ribbon tab, from inside the **Queries** group, select **Refresh**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image21.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image21.png)
 
 14. Wait until the data refresh completes.
 
 15. To save the file, on the **File** ribbon tab, select **Save as**.
 
-16. In the **Save As** window, go to the **D:\DP500\Allfiles\10\MySolution** folder.
+16. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\MySolution** folder.
 
 17. Select **Save**.
 
-18. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
+>**Note**: If it ask for a replace, please select ok to save.
 
-	*Important: You must use the same credentials used to sign in to the Power BI service.*
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image22.png)
-
-### Review the report
+### Task 5: Review the report
 
 In this task, you will review the pre-developed report.
 
 1. In Power BI Desktop, review the report design.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image23.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image23.png)
 
 	*The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.*
 
-### Review the data model
+### Task 6: Review the data model
 
 In this task, you will review the pre-developed data model.
 
 1. Switch to **Model** view.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image24.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image24.png)
 
 2. Use the model diagram to review the model design.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image25.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image25.png)
 
 	*The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.*
 
 	*In this lab, you will set up the **Sales** table to use incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.*
+
+3. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Set up incremental refresh
 
@@ -297,17 +224,17 @@ In this exercise, you will set up incremental refresh.
 
 *Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.*
 
-### Add parameters
+### Task 7: Add parameters
 
 In this task, you will add two parameters.
 
 1. To open the Power Query Editor window, on the **Home** ribbon tab, from inside the **Queries** group, click the **Transform data** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image26.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image26.png)
 
 2. In the Power Query Editor window, from inside the **Queries** pane, select the **Sales** query.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image27.png)
+	![](../images1/dp500-improve-performance-with-hybrid-tables-image27.png)
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
@@ -353,7 +280,7 @@ In this task, you will add two parameters.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-### Filter the query
+### Task 8: Filter the query
 
 In this task, you will add filters to the **Sales** query.
 
@@ -397,7 +324,7 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### Set up incremental refresh
+### Task 9: Set up incremental refresh
 
 In this task, you will set up the incremental refresh policy for the **Sales** table.
 
@@ -435,7 +362,7 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### Publish the dataset
+### Task 10: Publish the dataset
 
 In this task, you will publish the dataset.
 
@@ -457,7 +384,7 @@ In this task, you will publish the dataset.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
-### Set up the dataset
+### Task 11: Set up the dataset
 
 In this task, you will set up the data source credentials and refresh the dataset.
 
@@ -525,7 +452,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
 
-### Review the table partitions
+### Task 12: Review the table partitions
 
 In this task, you will use SSMS to review the table partitions.
 
@@ -571,7 +498,7 @@ In this task, you will use SSMS to review the table partitions.
 
 In this exercise, you will open the report, add a sales order, and then see the report data update.
 
-### Open the report
+### Task 13: Open the report
 
 In this task, you will open the report.
 
@@ -587,7 +514,7 @@ In this task, you will open the report.
 
     *Note that August 2022 onwards is not in FY 2022, which is the default for the slicer.*
 
-### Add an order to the database
+### Task 14: Add an order to the database
 
 In this task, you will add an order to the database.
 
@@ -595,17 +522,19 @@ In this task, you will add an order to the database.
 
 2. To open a script file, on the **File** menu, select **Open** > **File**.
 
-3. In the **Open File** window, go to the **D:\DP500\Allfiles\10\Assets** folder.
+3. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Assets** folder.
 
 4. Select the **1-InsertOrder.sql** file and select **Open**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. In the **Connect to Database Engine** window, ensure that the **Server name** dropdown list is set to the lab Azure SQL Database server.
+5. In the **Connect to Database Engine** window, in **Server name** box enter **serverDID.database.windows.net**.
+
+    >**Note :** Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
-7. Enter the user name **sqladmin** and password.
+7. Enter the user name **sqladmin** and password `P@ssw0rd01`.
 
 8. Select **Connect**.
 
@@ -614,14 +543,18 @@ In this task, you will add an order to the database.
 9. Review the script.
 
 	*This script inserts a single order into the **FactInternetSales** table using today as the order date.*
+	
+10. Select **AdventureWorksDW2022-DP500** from the **Available Databases** dropdown list.
 
-10. To run a script, on the toolbar, select **Execute** (or press **F5**).
+	![](../images1/dp500_10-availableDbs.png)
+
+11. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
 
-11. To close the file, on the **File** menu, select **Close**.
+12. To close the file, on the **File** menu, select **Close**.
 
-### Refresh the report
+### Task 15: Refresh the report
 
 In this task, you will refresh the report.
 
@@ -638,17 +571,11 @@ In this task, you will refresh the report.
 	*When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.*
 
 	*Tip: Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.*
+	
+5. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-### Finish up
-
-In this task, you will finish up. Open SSMS and ensure you're connected to the database, AdventureWorksDW2022-DP500.
-
-1. In SSMS, open the **2-Cleanup.sql** file.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image74.png)
-
-	This script removes the order that you inserted.
-
-2. Run the script.
-
-3. Close SSMS.
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+	

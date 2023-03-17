@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Create reusable Power BI assets'
-    module: 'Manage the analytics development lifecycle'
----
-
 # Create reusable Power BI assets
 
 ## Overview
@@ -20,116 +14,123 @@ In this lab, you learn how to:
 
 - Use lineage view to discover dependent Power BI assets.
 
-## Get started
+## Excercise-1: Publishing Data Model in Power BI
+ 
+In this exercise, you will Publish a data Module in Power BI.
 
-In this exercise, you will prepare your environment.
-
-### Clone the repository for this course
-
-1. On the start menu, open the Command Prompt
-
-    ![](../images/command-prompt.png)
-
-1. In the command prompt window, navigate to the D drive by typing:
-
-    `d:` 
-
-   Press enter.
-
-    ![](../images/command-prompt-2.png)
-
-
-1. In the command prompt window, enter the following command to download the course files and save them to a folder called DP500.
-    
-	`git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
-   
-1. When the repository has been cloned, close the command prompt window. 
-   
-1. Open the D drive in the file explorer to ensure the files have been downloaded.
-
-### Set up Power BI
+### Task-1: Set up Power BI
 
 In this task, you will set up Power BI.
 
-1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
+1. To open Power BI Desktop, select the **Power BI Desktop** shortcut on desktop page.
 
-	![](../images/dp500-create-a-star-schema-model-image1.png)
+	![](../images1/DP500-16-63.png)
 
-2. Select **X** located at the top-right of the getting started window.
+1. Select **X** located at the top-right of the getting started window.
 
-	![](../images/dp500-create-a-star-schema-model-image2.png)
+	![](../images/DP500-16-2.png)
 
-3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
+1. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
-	![](../images/dp500-create-a-star-schema-model-image3.png)
-4. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+	![](../images/DP500-16-6.png)
+	
+1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images/dp500-create-a-star-schema-model-image3b.png)
+	![](../images1/DP500-16-56.png)
+	
+1. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
-5. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+	![](../images1/DP500-16-57.png)
+	
+	![](../images1/DP500-16-58.png)	
+	
+1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
+
+   
+   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
+
+	
+	![](../images1/DP500-16-59.png)
+	
+1. Enter the Password provided in the Environment Details tab and click on **Signin**
+	
+	![](../images1/DP500-16-60.png)	
+	
+1. If stay signed in window Pops-up, select **No**
+
+1. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+
+	![](../images1/DP500-16-61.png)
 
 1. At the top-right, select the profile icon, and then select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image3.png)
+	![](../images/DP500-16-8.png)
 
 1. When prompted, select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image4.png)
+	![](../images/DP500-16-9.png)
 
 1. Do any remaining tasks to complete the trial setup.
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
-### Create a workspace in the Power BI Service
+### Task-2: Create a workspace in the Power BI Service
 
 In this task, you will create a workspace.
 
 1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces**, and then select **Create workspace**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image3.png)
+	![](../images/DP500-16-10.png)
 
 
-2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace.
+2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**
 
-	*The workspace name must be unique within the tenant.*
-
-	![](../images/dp500-create-reusable-power-bi-artifacts-image4.png)
+	![](../images/DP500-16-11.png)
 
 3. Select **Save**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image5.png)
+	![](../images/DP500-16-12.png)
 
 	*Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
 
-### Open the starter file in Power BI Desktop
+4. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
+### Task-3: Open the starter file in Power BI Desktop
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image6.png)
+	![](../images/DP500-16-13.png)
 
-2. Go to the **D:\DP500\Allfiles\16\Starter** folder.
+2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Create reusable Power BI artifacts.pbix** file.
 
+4. If **Get the most out of Power BI** window pops-up, close it.
+
 4. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image7.png)
+	![](../images/DP500-16-6.png)
 
-### Review the data model
+### Task-4: Review the data model
 
 In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image8.png)
+	![](../images/DP500-16-14.png)
 
 2. Use the model diagram to review the model design.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image9.png)
+	![](../images/DP500-16-15.png)
 
 	*The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design.*
 
-### Publish the data model
+### Task-5: Publish the data model
 
 In this task, you will publish the data model.
 
@@ -137,15 +138,15 @@ In this task, you will publish the data model.
 
     *If prompted to save changes, select **Save.***
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image10.png)
+	![](../images/DP500-16-16.png)
 
-2. In the **Publish to Power BI** window, select your workspace (not the personal workspace), and then select **Select**.
+2. In the **Publish to Power BI** window, select the workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image11.png)
+	![](../images/DP500-16-17.png)
 
 3. When the publishing succeeds, select **Got it**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image12.png)
+	![](../images/DP500-16-18.png)
 
 	*Once published, the model becomes a Power BI dataset. In this lab, this dataset is a core dataset that a business analyst can extend to create a specialized dataset. In the next exercise, you will create a specialized dataset to solve a specific business requirement.*
 
@@ -153,164 +154,168 @@ In this task, you will publish the data model.
 
 5. If prompted to save changes, select **Don't save**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image13.png)
+	![](../images/DP500-16-19.png)
 
-## Create a specialized dataset
+## Excercise-2: Create a specialized dataset
 
 In this exercise, you will create a specialized dataset to allow the analysis of US sales per capita. Because the core dataset doesn't contain population values, you will add a new table to extend the model.
 
-### Create a live connection
+### Task-1 Create a live connection
 
 In this task, you will create a new report that uses a live connection to the **Sales Analysis - Create reusable Power BI artifacts** dataset, which you published in the previous exercise.
 
 1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image14.png)
+	![](../images1/DP500-16-63.png)
 
 2. Select **X** located at the top-right of the getting started window.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image15.png)
+	![](../images/DP500-16-2.png)
 
 3. To save the file, on the **File** ribbon, select **Save as**.
 
-4. In the **Save As** window, go to the **D:\DP500\Allfiles\16\MySolution** folder.
+4. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\MySolution** folder.
 
 5. In the **File name** box, enter **US Sales Analysis**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image16.png)
+	![](../images/DP500-16-20.png)
 
 6. Select **Save**.
 
-7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets**.
+7. Complete the signin process,if not signed in to PowerBI desktop and continue with the next step.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image17.png)
+7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets** in Data hub drawdown.
+
+	![](../images/DP500-16-3.png)
 
 8. In the **Select a dataset to create a report** window, select the **Sales Analysis - Create reusable Power BI artifacts** dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image18.png)
+	![](../images/DP500-16-5.png)
 
-9. Select **Create**.
+9. Select **Connect**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image19.png)
+	![](../images/DP500-16-4.png)
 
 10. At the bottom left, in the status bar, notice that the report connects live to the dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image20.png)
+	![](../images/DP500-16-21.png)
 
 11. Switch to **Model** view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image21.png)
+	![](../images/DP500-16-22.png)
 
 12. If necessary, to fit the model diagram to your screen, at the bottom right, select **Fit to screen**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image22.png)
+	![](../images/DP500-16-23.png)
 
 13. Hover the cursor over any table header to reveal a tooltip, and notice that the data source type is SQL Server Analysis Services, the server refers to your workspace, and the database is the dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image23.png)
+	![](../images/DP500-16-24.png)
 
 	*These properties indicate that a remote model hosts the table. In the next task, you will make changes to the model to extend it. That process will create a local DirectQuery model that you can modify in many different ways.*
 
 14. Save the Power BI Desktop file.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image24.png)
+	![](../images/DP500-16-25.png)
 
-### Create a local DirectQuery model
+### Task-2: Create a local DirectQuery model
 
 In this task, you will create a local DirectQuery model.
 
 1. On the **Home** ribbon tab, from inside the **Modeling** group, select **Make changes to this model**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image25.png)
+	![](../images/DP500-16-26.png)
 
 	*Note: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
-	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect. 
+	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect.(you can save and close and reopen the file if still the changes are not shownup) 
 
-2. When prompted, read the dialog window message, and then select **Add a local model**.
+2. Now,after changing the settings,you can able to view and select **Make changes to this model** and then select **Add a local model**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image26.png)
+	![](../images/DP500-16-27.png)
 
 	*The model is now a DirectQuery model. It's now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It's even possible to extend the model with new tables of data that are sourced from other data sources. You will add a table to add US population data to the model.*
 
-3. Hover the cursor over any table header to reveal a tooltip, and notice that the table storage mode is set to **DirectQuery**.
+3. Select **Submit** in the Connect to data popup-window.
+	
+4. Hover the cursor over any table header to reveal a tooltip, and notice that the table storage mode is set to **DirectQuery**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image27.png)
+	![](../images/DP500-16-28.png)
 
-### Design the report layout
+### Task-3: Design the report layout
 
 In this task, you will design the report layout to analyze US state sales.
 
 1. Switch to **Report** view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image28.png)
+	![](../images/DP500-16-29.png)
 
-2. In the **Fields** pane (located at the right), expand open the **Reseller** table.
+2. In the **Data** pane (located at the right), expand open the **Reseller** table.
 
 3. Right-click the **Country-Region** field, and then select **Add to filters** > **Report-level filters**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image29.png)
+	![](../images/DP500-16-30.png)
 
 4. Expand open the **Filters** pane (located at the left of the **Visualizations** pane).
 
 5. In the **Filters** pane, in the **Filters on all pages** section, in the **Country-Region** card, select **United States**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image30.png)
+	![](../images/DP500-16-31.png)
 
 6. To add a table visual, in the **Visualizations** pane, select the table visual icon.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image31.png)
+	![](../images/DP500-16-32.png)
 
 7. Reposition and resize the table so that it fills the entire page.
 
-8. In the **Fields** pane, from inside the **Reseller** table, drag the **State-Province** field and drop it into the table visual.
+8. In the **Data** pane, from inside the **Reseller** table, drag the **State-Province** field and drop it into the table visual.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image32.png)
+	![](../images/DP500-16-33.png)
 
-9. In the **Fields** pane, expand the **Sales** table, and then add the **Sales Amount** field to the table visual.
+9. In the **Data** pane, expand the **Sales** table, and then add the **Sales Amount** field to the table visual.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image33.png)
+	![](../images/DP500-16-34.png)
 
 10. To sort the states by descending order of sales amount, select the **Sales Amount** header.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image34.png)
+	![](../images/DP500-16-35.png)
 
 	*This report layout now provides basic detail about US state sales. However, an additional requirement is to show sales per capita and sort states by descending order of that measure.*
 
-### Add a table
+### Task-4: Add a table
 
 In this task, you will add a table of US population data sourced from a web page.
 
 1. Switch to **Model** view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image35.png)
+	![](../images/DP500-16-22.png)
 
 2. On the **Home** ribbon tab, from inside the **Data** group, select **Get data**, and then select **Web**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image36.png)
+	![](../images/DP500-16-36.png)
 
-3. In the **URL** box, enter the following file path: **D:\DP500\Allfiles\16\Assets\us-resident-population-estimates-2020.html**
+3. In the **URL** box, enter the following file path: **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\us-resident-population-estimates-2020.html**
 
 	*For the purposes of this lab, Power BI Desktop will access the web page from the file system.*
 
-	*Tip: The file path is available to copy and paste from the **D:\DP500\Allfiles\16\Assets\Snippets.txt** file.*
+	*Tip: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
 4. Select **OK**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image37.png)
+	![](../images/DP500-16-37.png)
 
 5. In the **Navigator** window, at the right, switch to **Web View**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image38.png)
+	![](../images/DP500-16-38.png)
 
 	*The web page presents US resident population estimates sourced from the April 2020 census.*
 
 6. Switch back to Table view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image39.png)
+	![](../images/DP500-16-39.png)
 
 7. At the left, select **Table 2**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image40.png)
+	![](../images/DP500-16-40.png)
 
 8. Notice the table view preview.
 
@@ -318,37 +323,37 @@ In this task, you will add a table of US population data sourced from a web page
 
 9. To prepare the data, select **Transform Data**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image41.png)
+	![](../images/DP500-16-41.png)
 
 10. In the Power Query Editor window, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **US Population**, and then press **Enter**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image42.png)
+	![](../images/DP500-16-42.png)
 
 11. To remove the **United States** row, in the **STATE** column header, select the down-arrow, and then unselect the **United States** item (scroll to the bottom of the list).
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image43.png)
+	![](../images/DP500-16-43.png)
 
 12. Select **OK**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image44.png)
+	![](../images/DP500-16-37.png)
 
 13. To remove the **RANK** column, right-click the column header, and then select **Remove**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image45.png)
+	![](../images/DP500-16-44.png)
 
 14. To rename the **STATE** column, double-click the column header, replace the text with **State**, and then press **Enter**.
 
 15. Rename the **NUMBER** column as **Population**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image46.png)
+	![](../images/DP500-16-45.png)
 
 16. To apply the query, on the **Home** ribbon tab, from inside the **Close** group, select the **Close & Apply** icon.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image47.png)
+	![](../images/DP500-16-46.png)
 
 17. When prompted about a potential security risk, read the notification, and then select **OK**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image48.png)
+	![](../images/DP500-16-37.png)
 
 	*Power BI Desktop applies the query to create a model table. It adds a new table that imports population data to the model.*
 
@@ -356,39 +361,39 @@ In this task, you will add a table of US population data sourced from a web page
 
 19. To create a model relationship, from the **US Population** table, drag the **State** column and drop it on the **State-Province** column of the **Reseller** table.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image49.png)
+	![](../images/DP500-16-47.png)
 
 20. In the **Create Relationship** window, in the **Cross Filter Direction** dropdown list, select **Both**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image50.png)
+	![](../images/DP500-16-48.png)
 
 	*Each row of the **Reseller** table stores a reseller, so the values found in the **State-Province** column will contain duplicate values (for example, there are many resellers in the state of California). When you create the relationship, Power BI Desktop automatically determines column cardinalities and discovered that it's a many-to-one relationship. To ensure filters propagate from the **Reseller** table to the **US Population** table, the relationship must cross filter in both directions.*
 
 21. Select **OK**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image51.png)
+	![](../images/DP500-16-37.png)
 
 22. To hide the new table, in the header of the **US Population** table, select the visibility icon.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image52.png)
+	![](../images/DP500-16-49.png)
 
 	*The table doesn't need to be visible to report authors.*
 
-### Add a measure
+### Task-5: Add a measure
 
 In this task, you will add a measure to calculate sales per capita.
 
 1. Switch to **Report** view.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image53.png)
+	![](../images/DP500-16-29.png)
 
-2. In the **Fields** pane, right-click the **Sales** table, and then select **New measure**.
+2. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image54.png)
+	![](../images/DP500-16-50.png)
 
-3. In the formula bar, enter the following measure definition.
+3. In the formula bar, Replace and enter the following measure definition.
 
-	*Tip: The measure definition is available to copy and paste from the **D:\DP500\Allfiles\16\Assets\Snippets.txt** file.*
+	*Tip: The measure definition is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
 	```
 	Sales per Capita =
@@ -402,43 +407,43 @@ In this task, you will add a measure to calculate sales per capita.
 
 4. On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the decimal places box, enter **4**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image55.png)
+	![](../images/DP500-16-51.png)
 
-5. To add the measure to the matrix visual, in the **Fields** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
+5. To add the measure to the matrix visual, in the **Data** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
 
 	*The measure evaluates the result by combining data sourced from a remote model in the Power BI service with data from the imported table that is local to your new model.*
 
 6. To sort the states by descending sales per capita value, select the **Sales per Capita** column header.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image56.png)
+	![](../images/DP500-16-52.png)
 
-### Publish the solution
+### Task-6: Publish the solution
 
 In this task, you will publish the solution, which comprises a specialized data model and a report.
 
 1. Save the Power BI Desktop file.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image57.png)
+	![](../images/DP500-16-25.png)
 
 2. To publish the solution, on the **Home** ribbon tab, select **Publish**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image58.png)
+	![](../images/DP500-16-16.png)
 
-3. In the **Publish to Power BI** window, select your workspace, and then select **Select**.
+3. In the **Publish to Power BI** window, select your workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image59.png)
+	![](../images/DP500-16-17.png)
 
 4. When the publishing succeeds, select **Got it**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image60.png)
+	![](../images/DP500-16-18.png)
 
 5. Close Power BI Desktop.
 
 6. If prompted to save changes, select **Don't save**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image61.png)
+	![](../images/DP500-16-19.png)
 
-### Review the specialized dataset
+### Task-7: Review the specialized dataset
 
 In this task, you will review the specialized dataset in the Power BI service.
 
@@ -446,17 +451,24 @@ In this task, you will review the specialized dataset in the Power BI service.
 
 2. In the workspace landing page, notice the **US Sales Analysis** report and **US Sales Analysis** dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image62.png)
+	![](../images/DP500-16-53.png)
 
 
 3. Hover the cursor over the **US Sales Analysis** dataset, and when the ellipsis appears, select the ellipsis, and then select **View lineage**.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image63.png)
+	![](../images/DP500-16-54.png)
 
 	*The **View lineage** option supports finding out dependencies between Power BI assets. That's important, for example, if you are going to publish changes to a core dataset. Lineage view will tell you the dependent datasets that might require testing.*
 
 4. In lineage view, notice the connection between the report, the **US Sales Analysis** dataset, and the **Sales Analysis - Create reusable Power BI artifacts** dataset.
 
-	![](../images/dp500-create-reusable-power-bi-artifacts-image64.png)
+	![](../images/DP500-16-55.png)
 
 	*When Power BI datasets relate to other datasets, it's known as chaining. In this lab, the **US Sales Analysis** dataset is chained to the **Sales Analysis - Create reusable Power BI artifacts** dataset, enabling its reuse for a specialized purpose.*
+
+5. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
