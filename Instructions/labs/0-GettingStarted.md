@@ -2,9 +2,9 @@
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. 
 
-> **Note**:  If you see a powershell script running in the background please wait until the script is completed and once completed please click on the close button of the pop-up.
+> **Note**:  If you see a powershell script running in the background please minimize and continue with the next instructions.
 
-   ![](../images1/sign_in.png "Close Sign_up")
+   ![](../images1/minimize.png "Close Sign_up")
 
 2. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
 
