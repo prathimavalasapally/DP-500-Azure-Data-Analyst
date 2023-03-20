@@ -187,7 +187,7 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Date**, and then press **Enter**.
 
-	![](../images1/dimdate-name.png)
+      ![](../images1/mod5-dimdate-name.png)
 
 1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
