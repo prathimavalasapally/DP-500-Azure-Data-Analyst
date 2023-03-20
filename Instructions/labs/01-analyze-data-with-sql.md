@@ -99,12 +99,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
    
 1. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
 
-    | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 |
-    | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-    | SO45347 | 1 | 2020-01-01 | Clarence Raji | clarence35@adventure-works.com |Road-650 Black, 52 | 1 | 699.0982 | 55.9279 |
-    | ... | ... | ... | ... | ... | ... | ... | ... | ... |
-    
-    ![Screenshot showing the steps](../images/DP500-1-15.png)
+   ![Screenshot showing the steps](../images/DP500-1-15.png)
 
 1. Note the results consist of columns named C1, C2, and so on. In this example, the CSV files do not include the column headers. While it's possible to work with the data using the generic column names that have been assigned, or by ordinal position, it will be easier to understand the data if you define a tabular schema. To accomplish this, add a WITH clause to the OPENROWSET function as shown here (replacing *datalakexxxxxxx* with the name of your data lake storage account), and then rerun the query:
 
@@ -133,13 +128,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
     ![Screenshot showing the steps](../images/DP500-1-16.png)
 
     Now the results look like this:
-
-    | SalesOrderNumber | SalesOrderLineNumber | OrderDate | CustomerName | EmailAddress | Item | Quantity | UnitPrice | TaxAmount |
-    | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-    | SO45347 | 1 | 2020-01-01 | Clarence Raji | clarence35@adventure-works.com |Road-650 Black, 52 | 1 | 699.10 | 55.93 |
-    | ... | ... | ... | ... | ... | ... | ... | ... | ... |
-    
-    
+  
     ![Screenshot showing the steps](../images/DP500-1-17.png)
 
 8. Publish the changes to your script, and then close the script pane.
