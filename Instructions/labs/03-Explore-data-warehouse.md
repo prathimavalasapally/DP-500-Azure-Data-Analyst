@@ -86,7 +86,7 @@ Now that you have explored some of the more important aspects of the data wareho
 
 Numeric values in a relational data warehouse are stored in fact tables with related dimension tables that you can use to aggregate the data across multiple attributes. This design means that most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
 
-1. On the **Data (1)** page, select the **sqldb<inject key="Deployment ID" enableCopy="false" />**  SQL pool and in its **...** menu, select **New SQL script > **Empty script (3)**.
+1. On the **Data (1)** page, select the **sqldb<inject key="Deployment ID" enableCopy="false" />**  SQL pool and in its **...** menu, select **New SQL script** >**Empty script (3)**.
 
     ![](../images1/mod3-ex2-task1-step1.png)
 
