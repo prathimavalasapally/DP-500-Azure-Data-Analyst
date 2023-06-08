@@ -355,7 +355,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Select the **Product Details** table from the drop down and select the **ProductSubcategoryKey** column in both the Product table and the Product details table1 and select **OK**.
 
-     ![](../images1/dp-lab4-38.png)
+     ![](../images1/dp-lab4-39.png)
 
 1. Expand the Product Details column and select the **EnglishProductSubcategoryName** and the **EnglishProductCategoryName** columns. 
 
@@ -365,7 +365,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 2.  To filter the query, in the **FinishedGoodsFlag** column header, open the dropdown menu, uncheck **FALSE** and Select **OK**.
 
-     ![](../images1/dp-lab4-38.png)
+     ![](../images1/dp-lab4-41.png)
 
 31. Remove all columns, except:
 
@@ -475,7 +475,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 56. To add a calculated column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
 
-	42
+	 ![](../images1/dp-lab4-42.png)
 
 
 57. In the **Custom Column** window, in the **New Column Name** box, replace the text with **Revenue**.
@@ -493,7 +493,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 60. To modify the column data type, in the **Revenue** column header, select **ABC123**, and then select **Decimal Number**.
 
-	43
+	 ![](../images1/dp-lab4-43.png)
 
 61. Review the native query, noticing the **Revenue** column calculation logic.
 
@@ -503,7 +503,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Right-click on the **Product Details** table and de-select **Enable load**. This will disable the load of the Product Details table to the data model, and it will not appear in the report.
 
-	44
+	 ![](../images1/dp-lab4-44.png)
 
 1. Repeat this step, de-selecting Enable load, for the **DimProductSubcategory** table.
 
@@ -530,11 +530,12 @@ In this task, you will organize the model diagram to easily understand the star 
 
 1. In Power BI Desktop, at the left, select **Model** view.
 
-	45
+	 ![](../images1/dp-lab4-45.png)
 
 2. To resize the model diagram to fit to screen, at the bottom-right, select the **Fit to screen** icon.
 
-	46
+	 ![](../images1/dp-lab4-46.png)
+	 
 3. Drag the tables into position so that the **Sales** fact table is located at the middle of the diagram, and the remaining tables, which are dimension tables, are located around the fact table.
 
 4. If any of the dimension tables aren't related to the fact table, use the following instructions to create a relationship:
