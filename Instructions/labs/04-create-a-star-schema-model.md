@@ -327,7 +327,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 2. Expand the **DimProductSubcategory** column. Select the **ProductSubcategoryKey** and the **EnglishProductSubcategoryName** columns. De-select **Use original column name as prefix** and select **OK**.
 
-	 ![](../images1/dp-lab4-36.png)
+	 ![](../images1/dp-lab4-(36).png)
 
 	*The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.*
 
