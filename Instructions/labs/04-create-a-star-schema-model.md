@@ -20,7 +20,7 @@ In this task, you will set up Power BI.
 
 2. Select **X** located at the top-right of the getting started window.
 
-	![](../images/dp500-create-a-star-schema-model-image2.png)
+	![](../images/dp-lab4-1-1.png)
 
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
@@ -28,7 +28,7 @@ In this task, you will set up Power BI.
 	
 4. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1/DP500-16-56.png)
+	![](../images1dp-lab4-1.png)
 	
 5. If Prompted Select **work or school** account and click contiune on Let's get you signed in page.
 
