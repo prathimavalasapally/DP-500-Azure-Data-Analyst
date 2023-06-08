@@ -56,9 +56,9 @@ In this lab, the data warehouse is hosted in a dedicated SQL pool in Azure Synap
 
     ![](../images1/mod3-ex1-task2-step1.png)
 
-1. Expand **SQL database**, the **sqldb<inject key="Deployment ID" enableCopy="false" />** pool, and its **Tables** folder to see the tables in the database.
+1. Expand **SQL database (1)**, the **sqldb<inject key="Deployment ID" enableCopy="false" /> (2)** pool, and its **Tables (3)** folder to see the tables in the database.
 
-![](../images1/mod3-ex1-task2-step2.png)
+   ![](../images1/mod3-ex1-task2-step2a.png)
 
    A relational data warehouse is typically based on a schema that consists of *fact* and *dimension* tables. The tables are optimized for analytical queries in which    numeric metrics in the fact tables are aggregated by attributes of the entities represented by the dimension tables - for example, enabling you to aggregate          Internet sales revenue by product, customer, date, and so on.
     
