@@ -16,9 +16,7 @@ In this lab, you learn how to:
 
 In this task, you will set up Power BI.
 
-1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
-
-	![](../images/dp500-create-a-star-schema-model-image1.png)
+1. To open Power BI Desktop, on the Desktop, select the **Power BI Desktop** shortcut.
 
 2. Select **X** located at the top-right of the getting started window.
 
@@ -32,37 +30,38 @@ In this task, you will set up Power BI.
 
 	![](../images1/DP500-16-56.png)
 	
-5. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
+5. If Prompted Select **work or school** account and click contiune on Let's get you signed in page.
 
-	![](../images1/DP500-16-57.png)
+    dp-lab4-2.png
+
+
+7. Complete the sign up process by providing username and password
+
 	
-	![](../images1/DP500-16-58.png)	
-	
-6. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
+6. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
 
    
    >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
-	
-	![](../images1/DP500-16-59.png)
+	![](../images1/dp-lab4-3.png)
 	
 7. Enter the Password provided in the Environment Details tab and click on **Signin**
-	
-	![](../images1/DP500-16-60.png)	
 	
 8. If stay signed in window Pops-up, select **No**
 
 9. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
-	![](../images1/DP500-16-61.png)
+	![](../images1/dp-lab4-4.png)
+	
+	![](../images1/dp-lab4-5.png)
 
 10. At the top-right, select the profile icon, and then select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image3.png)
+	![](../images/dp-lab4-6.png)
 
 11. When prompted, select **Start trial**.
 
-	![](../images/dp500-create-a-dataflow-image4.png)
+	![](../images/dp-lab4-7.png)
 
 12. Do any remaining tasks to complete the trial setup.
 
@@ -70,13 +69,13 @@ In this task, you will set up Power BI.
 	
 13. Select Workspaces and **Create a Workspace**.
     
-    ![](../images/dp500-create-a-star-schema-model-image2a.png)
+    ![](../images/dp-lab4-8.png)
 
-14. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
+14. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Apply**.
 
     *Note: The workspace name must be unique. If you're getting an error, update the workspace name.*
 
-    ![](../images/dp500-create-a-star-schema-model-image2b.png)
+    ![](../images/dp-lab4-9.png)
 
 15. Navigate back to Power BI Desktop. If you see **Sign in** in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
 
@@ -94,9 +93,11 @@ In this task, you will start the SQL pool.
 
 1. Use the lab credentials to complete the sign in process.
 
-1. Search  **Azure Synapse Analytics** from search bar. Select your Synapse workspace.
+1. Search  **Azure Synapse Analytics** from search bar. 
+ 
+1. Select your Synapse workspace.
 
-   ![](../images1/dp500_04-synapseanalytics.png)
+   ![](../images1/dp-lab4-10.png)
 
 1. Scroll down on the Synapse workspace page, locate and select the dedicated SQL pool.
 
