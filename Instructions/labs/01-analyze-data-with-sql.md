@@ -29,17 +29,17 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
    
 1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-1. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **workspace<inject key="DeploymentID" enableCopy="false"/>** (Primary - **datalake<inject key="DeploymentID" enableCopy="false"/>**)**.
+1. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **workspace<inject key="DeploymentID" enableCopy="false"/>** **(Primary - **datalake<inject key="DeploymentID" enableCopy="false"/>**)**.
 
-   ![Screenshot showing the Linked storage account with synapse ](../images/DP500-1-5.png) 
+   ![Screenshot showing the Linked storage account with synapse ](../images/DP500-synapse01.png) 
    
-1. Expand your storage account and verify that it contains a file system container named **files** inside **workspace<inject key="DeploymentID" enableCopy="false"/>**
+1. Expand your storage account and verify that it contains a file system container named **files** inside **workspace<inject key="DeploymentID" enableCopy="false"/>** **(Primary - **datalake<inject key="DeploymentID" enableCopy="false"/>**)**.
 
 1. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
 
    ![Screenshot showing the Linked storage account with synapse ](../images/DP500-1-6.png)
    
-1. Open the **sales** folder,you can see the three sub folders titled **csv**.**json** and **parquet** folders.
+1. Open the **sales** folder,you can see the three sub folders titled **csv**, **json**, and **parquet** folders.
 
    ![Screenshot showing the subfolders in the sales folder ](../images/DP500-1-7.png)
    
@@ -101,7 +101,7 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 
    ![Screenshot showing the steps](../images/DP500-1-15.png)
 
-1. Note the results consist of columns named C1, C2, and so on. In this example, the CSV files do not include the column headers. While it's possible to work with the data using the generic column names that have been assigned, or by ordinal position, it will be easier to understand the data if you define a tabular schema. To accomplish this, add a WITH clause to the OPENROWSET function as shown here (replacing *datalakexxxxxxx* with the name of your data lake storage account), and then rerun the query:
+1. Note the results consist of columns named C1, C2, and so on. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) and then run it. In this example, the CSV files do not include the column headers. While it's possible to work with the data using the generic column names that have been assigned, or by ordinal position, it will be easier to understand the data if you define a tabular schema. To accomplish this, add a WITH clause to the OPENROWSET function as shown here (replacing *datalakexxxxxxx* with the name of your data lake storage account), and then rerun the query:
 
     ```SQL
     SELECT
@@ -167,7 +167,7 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
     ![Screenshot showing the steps](../images/DP500-1-22.png)
     
-1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** and then run it.
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -188,7 +188,7 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
     The subfolders reflect *partitions* in the parquet data, which is a technique often used to optimize performance for systems that can process multiple partitions of data in parallel. You can also use partitions to filter the data.
 
-1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** and then run it.
+1. Modify the code as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) and then run it.
 
     ```sql
     SELECT YEAR(OrderDate) AS OrderYear,
@@ -244,7 +244,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
     
     The script is designed to query comma-delimited (CSV) data rather then JSON, so you need to make a few modifications before it will work successfully.
 
-1. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** to:
+1. Modify the script as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) to:
     - Remove the parser version parameter.
     - Add parameters for field terminator, quoted fields, and row terminators with the character code *0x0b*.
     - Format the results as a single field containing the JSON row of data as an NVARCHAR(MAX) string.
@@ -267,7 +267,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
    ![Screenshot showing the steps](../images/DP500-1-32.png)
 
-1. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>** so that it uses the JSON_VALUE function to extract individual field values from the JSON data.View the result by running the query after modifying as below.
+1. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account as **datalake<inject key="DeploymentID" enableCopy="false"/>**) so that it uses the JSON_VALUE function to extract individual field values from the JSON data.View the result by running the query after modifying as below.
 
     ```sql
     SELECT JSON_VALUE(Doc, '$.SalesOrderNumber') AS OrderNumber,
@@ -324,6 +324,8 @@ By defining an external data source in a database, you can use it to reference t
    ![Screenshot showing the steps](../images/DP500-1-36.png)
 
 1. Switch back to the **Data** page and use the **&#8635;** button at the top right of Synapse Studio to refresh the page. Then view the **Workspace** tab in the **Data** pane, where a **SQL database** list is now displayed. Expand this list to verify that the **Sales** database has been created.
+
+    >**Note:** if the pop come after refreshing the page, select **Refresh**.
 
    ![Screenshot showing the steps](../images/DP500-1-37.png)
    
@@ -409,6 +411,8 @@ The external data source makes it easier to access the files in the data lake, b
     
 1. Refresh and expand the **External tables** folder in the **Data** pane and confirm that a table named **dbo.orders** has been created in the **Sales** database.
 
+    >**Note:** if the pop come after refreshing the page, select **Refresh**.
+
    ![Screenshot showing the steps](../images/DP500-1-44.png)
 
 4. In the **...** menu for the **dbo.orders** table, select **New SQL script** > **Select TOP 100 rows**.
@@ -439,7 +443,7 @@ Now that you've explored various ways to query files in the data lake by using S
     
     ![Screenshot showing the steps](../images/DP500-1-47.png)
     
-1. In the **Results** pane, select **Chart** and view the chart that is created for you; which should be a line chart.
+1. In the **Results** pane, select **Chart** and view the chart that is created for you, which should be a line chart.
 
 1. Change the **Category column** to **OrderYear** so that the line chart shows the revenue trend over the three year period from 2019 to 2021:
 
@@ -451,11 +455,8 @@ Now that you've explored various ways to query files in the data lake by using S
 
 1. Experiment with the charting functionality in the query editor. It offers some basic charting capabilities that you can use while interactively exploring data, and you can save charts as images to include in reports. However, functionality is limited compared to enterprise data visualization tools such as Microsoft Power BI.
 
-   > **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
-
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+1. > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.
+    > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
