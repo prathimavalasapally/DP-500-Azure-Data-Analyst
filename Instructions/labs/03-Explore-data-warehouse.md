@@ -125,7 +125,7 @@ Numeric values in a relational data warehouse are stored in fact tables with rel
 
     Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
-1. Modify the query as follows to remove the month and add a second dimension to the aggregation, and then run it to view the results (which show yearly Internet sales totals for each region):
+1. Modify the query as follows to remove the month and add a second dimension to the aggregation, and then **&#9655; Run** it to view the results (which show yearly Internet sales totals for each region):
 
     ```sql
     SELECT  d.CalendarYear AS Year,
@@ -141,7 +141,7 @@ Numeric values in a relational data warehouse are stored in fact tables with rel
 
     Note that geography is a *snowflake* dimension that is related to the Internet sales fact table through the customer dimension. You therefore need two joins in the query to aggregate Internet sales by geography.
 
-1. Modify and re-run the query to add another snowflake dimension and aggregate the yearly regional sales by product category:
+1. Modify and **re-run** the query to add another snowflake dimension and aggregate the yearly regional sales by product category:
 
     ```sql
     SELECT  d.CalendarYear AS Year,
@@ -161,7 +161,9 @@ Numeric values in a relational data warehouse are stored in fact tables with rel
 
     This time, the snowflake dimension for product category requires three joins to reflect the hierarchical relationship between products, subcategories, and categories.
 
-1. Publish the script to save it.
+1. **Publish** the script to save it.
+
+     ![](../images1/publish.png)
 
 ### Task 2: Use ranking functions
 
@@ -268,7 +270,7 @@ When exploring very large volumes of data, queries can take significant time and
     - On the **Results** tab under the query, view the order counts for each year.
     - On the **Messages** tab, view the total execution time for the query.
 
-1. Modify the query as follows, to return an approximate count for each year. Then re-run the query.
+1. Modify the query as follows, to return an approximate count for each year. Then **re-run** the query.
 
     ```sql
     SELECT d.CalendarYear AS CalendarYear,
@@ -287,13 +289,12 @@ When exploring very large volumes of data, queries can take significant time and
 
    > **Tip**: See the [APPROX_COUNT_DISTINCT](https://docs.microsoft.com/sql/t-sql/functions/approx-count-distinct-transact-sql) function documentation for more details.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.
+    > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+  
 ## Excercise 3: Challenge - Analyze reseller sales
 
 1. Create a new empty script for the **sqldb<inject key="DeploymentID" enableCopy="false"/>** SQL pool, and save it with the name **Analyze Reseller Sales**.
