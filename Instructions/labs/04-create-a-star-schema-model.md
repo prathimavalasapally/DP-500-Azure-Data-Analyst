@@ -20,7 +20,7 @@ In this task, you will set up Power BI.
 
 2. Select **X** located at the top-right of the getting started window.
 
-	![](../images/dp-lab4-1-1.png)
+	![](../images1/dp-lab4-1-1.png)
 
 3. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
@@ -28,11 +28,11 @@ In this task, you will set up Power BI.
 	
 4. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1dp-lab4-1.png)
+	![](../images1/dp-lab4-(1).png)
 	
 5. If Prompted Select **work or school** account and click contiune on Let's get you signed in page.
 
-    dp-lab4-2.png
+    ![](../images1/dp-lab4-2.png)
 
 
 7. Complete the sign up process by providing username and password
@@ -128,7 +128,7 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
 
 1. Navigate to **Manage**, select **Publish all** and then click on **Publish** to ensure changes are published.
 
-    ![](../images1/dp-lab4-16.png)
+    ![](../images1/dp-lab4-(16).png)
     
     ![](../images1/dp-lab4-17.png)
 
@@ -146,33 +146,32 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 2. At the left, select the **Develop** hub.
 
-	![](../images/dp500-16.png)
+    ![](../images1/dp-lab4-18.png)
 
 3. In the **Develop** pane, expand **Power BI**, then expand the workspace, and then select **Power BI datasets**. If not present, Click **Publish all** to publish Workspace and refresh the browser.
 
-	![](../images/dp500-17.png)
+    ![](../images1/dp-lab4-19-1.png)
 
 	*Note: If you don't see any data here, confirm that your dedicated SQL pool is running and that your Power BI workspace is linked to your Synapse workspace.*
 
 4. In the **Power BI Datasets** pane, select **New Power BI Dataset**.
 
-	![](../images/dp500-18.png)
+     ![](../images1/dp-lab4-19.png)
+
 
 5. In the left pane, at the bottom, select **Start**.
-
-	![](../images/dp500-19.png)
-
+	
 6. Select your SQL pool, **sqldb<inject key="DeploymentID" enableCopy="false"/>**, and then select **Continue**.
 
-	![](../images/dp500-20.png)
+    ![](../images1/dp-lab4-20.png)
 
 7. To download the .pbids file, select **Download**.
 
-	![](../images/dp500-21.png)
+    ![](../images1/dp-lab4-21.png)
 
 	*A .pbids file contains a connection to your SQL pool. It's a convenient way to start your project. When opened, it will create a new Power BI Desktop solution that already stores the connection details to your SQL pool.*
 
-8. When the .pbids file has downloaded, open it.
+8. When the .pbids file has downloaded, **open it**.
 
 	*When the file opens, it will prompt you to create queries using the connection. You will define those queries in the next task.*
 
@@ -182,26 +181,22 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. In Power BI Desktop, in the **SQL Server Database** window, at the left, select **Microsoft Account**.
 
-	![](../images/dp500-22.png)
-
+	![](../images1/dp-lab4-22.png)
+	
 2. Select **Sign In**.
 
 3. Sign in using the lab Azure credentials provided.
 
-4. From the drop down please select the option  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>** as shown below.
+4. From the drop down please select the option  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>** **(1)** as shown below and click Select **Connect (2)**.
 
-   ![](../images1/updated-001.png)
+   ![](../images1/dp-lab4-23.png)
    
-4. Select **Connect**.
-
-	![](../images/dp500-23.png)
-
 5. In the **Navigator** window, select (don't check) the **DimDate** table.
 
 6. In the right pane, notice the preview result, which shows a subset of the table rows.
 
-	![](../images/dp500-24.png)
-
+    ![](../images1/dp-lab4-24.png)
+    
 7. To create queries (which will become model tables), check the following seven tables:
 
 	- DimDate
@@ -220,47 +215,44 @@ In this task, you will create five Power Query queries that will each load as a 
 
 8. To apply transformations to the queries, at the bottom-right, select **Transform Data**.
 
-	![](../images/dp500-25.png)
+     ![](../images1/dp-lab4-25.png)
 
 	*Transforming the data allows you to define what data will be available in your model.*
 
 
-9. In the **Connection Settings** window, select the **DirectQuery** option.
+9. In the **Connection Settings** window, select the **DirectQuery** option and click **OK**.
 
-	![](../images/dp500-26.png)
+     ![](../images1/dp-lab4-26.png)
 
 	*This decision is important. DirectQuery is a storage mode. A model table that uses DirectQuery storage mode doesn't store data. So, when a Power BI report visual queries a DirectQuery table, Power BI sends a native query to the data source. This storage mode can be used for large data stores like Azure Synapse Analytics (because it could be impractical or uneconomic to import large data volumes) or when near real-time results are required.*
 
-10. Select **OK**.
-
-	![](../images/dp500-27.png)
-
-
 11. In the **Power Query Editor** window, in the **Queries** pane (located at the left), notice there is one query for each table you checked.
 
-	![](../images/dp500-28.png)
+     ![](../images1/dp-lab4-27.png)
+
 
 	*You will now revise the definition of each query. Each query will become a model table when it's applied to the model. You will now rename the queries, so they're described in more friendly and concise ways, and apply transformations to deliver the columns required by the known reporting requirements.*
 
 12. Select the **DimDate** query.
 
-	![](../images/dp500-29.png)
+      ![](../images1/dp-lab4-28.png)
+
 
 13. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Date**, and then press **Enter**.
 
-	![](../images/dp500-30.png)
+      ![](../images1/dp-lab4-29.png)
 
 
 14. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
-	![](../images/dp500-31.png)
+     ![](../images1/dp-lab4-29-1.png)
 
 15. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
 
 	![](../images/dp500-32.png)
 
 
-16. Check the following five columns.
+16. Check the following five columns and select **OK**.
 
 	- DateKey
 
@@ -272,29 +264,26 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- FiscalYear
 
-	![](../images/dp500-33.png)
+	 ![](../images1/dp-lab4-30.png)
 
-	*This selection of columns determine what will be available in your model.*
+	>**Note**:This selection of columns determine what will be available in your model.*
 
-17. Select **OK**.
-
-	![](../images/dp500-34.png)
 
 18. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
 
-	![](../images/dp500-35.png)
-
-	*Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.*
+     ![](../images1/dp-lab4-31.png)
+     
+     *Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.*
 
 19. To rename the **FullDateAlternateKey** column, double-click the **FullDateAlternateKey** column header.
 
 20. Replace the text with **Date**, and then press **Enter**.
 
-	![](../images/dp500-36.png)
+     ![](../images1/dp-lab4-32.png)
 
 21. Notice that a new applied step is added to the query.
 
-	![](../images/dp500-37.png)
+     ![](../images1/dp-lab4-33.png)
 
 22. Rename the following columns:
 
@@ -314,16 +303,13 @@ In this task, you will create five Power Query queries that will each load as a 
 
 24. In the **Applied Steps** pane, right-click the last step, and then select **View Native Query**.
 
-	![](../images/dp500-38.png)
+	 ![](../images1/dp-lab4-34.png)
 
 25. In the **Native Query** window, review the SELECT statement that reflects the query design.
 
 	*This concept is important. A native query is what Power BI uses to query the data source. To ensure best performance, the database developer should ensure this query is optimized by creating appropriate indexes, etc.*
 
 26. To close the **Native Query** window, select **OK**.
-
-	![](../images/dp500-39.png)
-
 
 27. Select the **DimProductCategory** table. 
     
@@ -335,20 +321,18 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Select the **DimProductSubcategory** table from the drop down and select the **ProductCategoryKey** Column in each table. Select **OK**.
 
-	![](../images/dp500-40.png)
+	 ![](../images1/dp-lab4-35.png)
 
-	
 	*Note: Use the default join for this merge, which is a left outer join.*
 
-2. Expand the **DimProductSubcategory** column. Select the **ProductSubcategoryKey** and the **EnglishProductSubcategoryName** columns. De-select **Use original column name as prefix**.
+2. Expand the **DimProductSubcategory** column. Select the **ProductSubcategoryKey** and the **EnglishProductSubcategoryName** columns. De-select **Use original column name as prefix** and select **OK**.
 
-	![](../images/dp500-41.png)
+	 ![](../images1/dp-lab4-36.png)
 
 	*The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.*
 
-1. Select **OK**.
    
-2. Remove all columns, except:
+1. Remove all columns, except:
 
    - ProductSubcategoryKey
    
@@ -357,22 +341,21 @@ In this task, you will create five Power Query queries that will each load as a 
    - EnglishProductSubcategoryName
 
    You should now have three columns with 37 rows.
+   
+   >**Note**: To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
 3.  Select the **DimProduct** query.
 
-	![](../images/dp500-42.png)
+      ![](../images1/dp-lab4-37.png)
 
-28. Rename the query as **Product**.
+28. In the **Query Settings** pane (located at the right), to rename the query, in the **Name** box, replace the text with **Product**, and then press **Enter**.
 
-	![](../images/dp500-43.png)
 
 1. On the home tab of the ribbon, in the Combine group, select **Merge Queries.** 
 
-1. Select the **Product Details** table from the drop down and select the **ProductSubcategoryKey** column in both the Product table and the Product details table.
+1. Select the **Product Details** table from the drop down and select the **ProductSubcategoryKey** column in both the Product table and the Product details table1 and select **OK**.
 
-    ![](../images/dp500-44.png)
-
-1. Select **OK**.
+     ![](../images1/dp-lab4-38.png)
 
 1. Expand the Product Details column and select the **EnglishProductSubcategoryName** and the **EnglishProductCategoryName** columns. 
 
@@ -380,11 +363,9 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Select **OK**.
 
-2.  To filter the query, in the **FinishedGoodsFlag** column header, open the dropdown menu, uncheck **FALSE**.
+2.  To filter the query, in the **FinishedGoodsFlag** column header, open the dropdown menu, uncheck **FALSE** and Select **OK**.
 
-	![](../images/dp500-46.png)
-
-30. Select **OK**.
+     ![](../images1/dp-lab4-38.png)
 
 31. Remove all columns, except:
 
@@ -408,8 +389,6 @@ In this task, you will create five Power Query queries that will each load as a 
 
 38. In the **Applied Steps** pane, right-click the last step, and then select **View Native Query**.
 
-	![](../images/dp500-47.png)
-
 39. In the **Native Query** window, review the SELECT statement that reflects the query design.
 
 40. To close the **Native Query** window, select **OK**.
@@ -419,8 +398,6 @@ In this task, you will create five Power Query queries that will each load as a 
 	*The design of the **Product** query is now complete.*
 
 42. Select the **DimReseller** query.
-
-	![](../images/dp500-48.png)
 
 43. Rename the query as **Reseller**.
 
@@ -472,8 +449,6 @@ In this task, you will create five Power Query queries that will each load as a 
 
 52. Select the **FactResellerSales** query.
 
-	![](../images/dp500-50.png)
-
 53. Rename the query as **Sales**.
 
 54. Remove all columns, except:
@@ -500,7 +475,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 56. To add a calculated column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
 
-	![](../images/dp500-52.png)
+	42
 
 
 57. In the **Custom Column** window, in the **New Column Name** box, replace the text with **Revenue**.
@@ -518,7 +493,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 60. To modify the column data type, in the **Revenue** column header, select **ABC123**, and then select **Decimal Number**.
 
-	![](../images/dp500-54.png)
+	43
 
 61. Review the native query, noticing the **Revenue** column calculation logic.
 
@@ -528,7 +503,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Right-click on the **Product Details** table and de-select **Enable load**. This will disable the load of the Product Details table to the data model, and it will not appear in the report.
 
-	![](../images/dp500-55.png)
+	44
 
 1. Repeat this step, de-selecting Enable load, for the **DimProductSubcategory** table.
 
@@ -555,12 +530,11 @@ In this task, you will organize the model diagram to easily understand the star 
 
 1. In Power BI Desktop, at the left, select **Model** view.
 
-	![](../images/dp500-58.png)
+	45
 
 2. To resize the model diagram to fit to screen, at the bottom-right, select the **Fit to screen** icon.
 
-	![](../images/dp500-59.png)
-
+	46
 3. Drag the tables into position so that the **Sales** fact table is located at the middle of the diagram, and the remaining tables, which are dimension tables, are located around the fact table.
 
 4. If any of the dimension tables aren't related to the fact table, use the following instructions to create a relationship:
