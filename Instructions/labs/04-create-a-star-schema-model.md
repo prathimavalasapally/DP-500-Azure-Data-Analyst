@@ -480,14 +480,11 @@ In this task, you will create five Power Query queries that will each load as a 
 
 57. In the **Custom Column** window, in the **New Column Name** box, replace the text with **Revenue**.
 
-	![](../images/dp500-53.png)
-
 58. In the **Custom Column Formula** box, enter the following formula:
 
 	```
 	[Quantity] * [Price]
 	```
-
 
 59. Select **OK**.
 
@@ -509,7 +506,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 63. To apply the queries, on the **Home** ribbon tab, from inside the **Close** group, select the **Close &amp; Apply** icon.
 
-	![](../images/dp500-56.png)
+	![](../images1/dp-lab4-56.png)
 
 	*Each query is applied to create a model table. Because the data connection is using DirectQuery storage mode, only the model structure is created. No data is imported. The model now consists of one table for each query.*
 
@@ -557,7 +554,7 @@ In this task, you will organize the model diagram to easily understand the star 
 
 8. In the **File name** box, enter **Sales Analysis**.
 
-	![](../images/dp500-61.png)
+	![](../images1/dp-lab4-61.png)
 
 9. Select **Save**.
 
