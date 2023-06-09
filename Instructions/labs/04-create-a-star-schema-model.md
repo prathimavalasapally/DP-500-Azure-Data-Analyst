@@ -331,8 +331,11 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	*The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.*
 
-   
-1. Remove all columns, except:
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+
+1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+
+1. Check the following columns and click **ok**.
 
    - ProductSubcategoryKey
    
@@ -342,8 +345,6 @@ In this task, you will create five Power Query queries that will each load as a 
 
    You should now have three columns with 37 rows.
    
-   >**Note**: To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
-
 3.  Select the **DimProduct** query.
 
       ![](../images1/dp-lab4-37.png)
@@ -366,8 +367,12 @@ In this task, you will create five Power Query queries that will each load as a 
 2.  To filter the query, in the **FinishedGoodsFlag** column header, open the dropdown menu, uncheck **FALSE** and Select **OK**.
 
      ![](../images1/dp-lab4-41.png)
+     
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
-31. Remove all columns, except:
+1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+
+1. Check the following columns and click **ok**.
 
 	- ProductKey
 
@@ -401,7 +406,11 @@ In this task, you will create five Power Query queries that will each load as a 
 
 43. Rename the query as **Reseller**.
 
-44. Remove all columns, except:
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+
+1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+
+1. Check the following columns and click **ok**.
 
 	- ResellerKey
 
@@ -425,7 +434,11 @@ In this task, you will create five Power Query queries that will each load as a 
 
 48. Rename the query as **Territory**.
 
-49. Remove all columns, except:
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+
+1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+
+1. Check the following columns and click **ok**.
 
 	- SalesTerritoryKey
 
@@ -451,7 +464,11 @@ In this task, you will create five Power Query queries that will each load as a 
 
 53. Rename the query as **Sales**.
 
-54. Remove all columns, except:
+1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+
+1. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
+
+1. Check the following columns and click **ok**.
 
 	- ResellerKey
 
