@@ -490,9 +490,8 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- UnitPrice
 
-	![](../images/dp500-51.png)
 	
-	>**Note**:This selection of columns determine what will be available in your model.
+    >**Note**:This selection of columns determine what will be available in your model.
 
 
 55. Rename the following columns:
