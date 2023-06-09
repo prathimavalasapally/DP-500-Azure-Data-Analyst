@@ -108,7 +108,7 @@ Create three sales-related measures in preparation for the creation of your calc
     ![Graphical user interface, application Description automatically
     generated](../images1/dp-500-lab7-6-1.png)
 
-4.  1. In the **Data** pane, right-click the **Sales** table, and then select
+4.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**, Create and similarly format a second measure named **Cost** by using the
     following definition:
 
@@ -116,7 +116,7 @@ Create three sales-related measures in preparation for the creation of your calc
 
     ```Cost = SUM ( 'Sales'[Total Product Cost] )```
 
-5.  1.  In the **Data** pane, right-click the **Sales** table, and then select
+5.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**, create and similarly format a third measure named **Profit** by using the
     following definition:
 
@@ -159,8 +159,8 @@ groups.*
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
     aren’t propagated to Power BI Desktop until you save them.*
 
-2.  In the Tabular Editor window, in the left pane, right-click the **Tables**
-    folder, and then select **Create New** \> **Calculation Group**.
+2.  In the Tabular Editor window, in the left pane, right-click the **Tables (1)**
+    folder, and then select **Create New (2)** \> **Calculation Group (3)**.
 
     ![Graphical user interface, text, application, table Description
     automatically generated](../images1/dp-500-lab7-8.png)
@@ -181,12 +181,12 @@ groups.*
 
      ![](../images1/dp-500-lab7-12.png)
 
-7.  To create a **calculation item**, right-click the **Time Intelligence** table,
-    and then select **Create New** \> **Calculation Item**.
+7.  To create a **calculation item**, right-click the **Time Intelligence (1)** table,
+    and then select **Create New (2)** \> **Calculation Item (3)**.
 
      ![](../images1/dp-500-lab7-13.png)
 
-8.  In the left pane, replace the default **New Calculation** name with **Current**, and then press
+8.  In the left pane, replace the default  name with **Current**, and then press
     **Enter**.
 
 9.  In the **Expression Editor** pane (located above the **Properties** pane),
@@ -204,13 +204,13 @@ groups.*
 10. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
 
-    ![](../images/dp500_07-17.png)
+    ![](../images1/dp-500-lab7-15.png)
  
- 1. To create a calculation item, right-click the **Time Intelligence** table,
+ 1. To Create a second calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default  **New Calculation** name with  **PY**, and then press
-    **Enter**.
+ 1.  In the left pane, replace the default name with  **PY**, and then press
+    **Enter**. 
     
 11. In the **Expression Editor**, run the following formula:
 
@@ -224,10 +224,10 @@ groups.*
 10. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
     
- 1. To create a thrid calculation item, right-click the **Time Intelligence** table,
+ 1. To create a third calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default  **New Calculation** name with  **YoY**, and then press
+ 1.  In the left pane, replace the default name with  **YoY**, and then press
     **Enter**.
 
 12. In the **Expression Editor**, run the following formula:
@@ -248,9 +248,8 @@ groups.*
  1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default **New Calculation** name with  **YoY %**, and then press
+ 1.  In the left pane, replace the default name with  **YoY %**, and then press
     **Enter**.
-
 
 13. In the **Expression Editor**, run the following formula:
 
@@ -266,11 +265,10 @@ groups.*
  1. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
     
-    
     *The year-over-year percentage (YoY %) formula calculates the percentage
     change of the selected measure over the prior year.*
 
-14. In the **Properties** pane, set the **Format String Expression** property
+14. In the **Properties** pane (located at the bottom-right), set the **Format String Expression** property
     to: 
     ```
     "0.00%;-0.00%;0.00%"
@@ -280,18 +278,15 @@ groups.*
     **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt**.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/dp500_07-18.png)
+    generated](../images1/dp-500-lab7-t1.png)
 
 15. Verify that the **Time Intelligence** calculation group has four calculation items.
 
     ![Text Description automatically
-    generated](../images/dp500_07-19.png)
+    generated](../images1/dp-500-lab7-t2.png)
 
 16. To save the changes to the Power BI Desktop model, on the **File** menu,
     select **Save**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-20.png)
 
     **Tip:** *It’s also possible to select the toolbar button or press **Ctrl+S**.*
 
@@ -322,7 +317,7 @@ column.
 2.  In the **Visualizations** pane, in the **Values** well, select **X** to
     remove the **Sales Amount** field.
 
-     ![](../images/dp500_07-19.png) 
+     ![](../images1/dp-500-lab7-19.png) 
 
 3.  From the **Data** pane, from inside the **Sales** table, drag the
     **Sales** field into the **Values** well.
@@ -373,12 +368,12 @@ currency. It will also apply appropriate formatting for the selected currency.
     necessary, you can refer to the steps in the first task of this exercise.*
 
     ![Text Description automatically
-    generated](../images/dp500_07-30.png)
+    generated](../images1/dp-500-lab7-t3.png)
 
-6.  Rename the **Name** column as **Converted Currency**.
+6.  Rename the default Name column as **Converted Currency**.
 
     ![Text Description automatically generated with low
-    confidence](../images/dp500_07-31.png)
+    confidence](../images1/dp-500-lab7-t4.png)
 
 7.  Create a calculation item named **Currency Conversion** by using the
     following formula:
@@ -414,8 +409,8 @@ currency. It will also apply appropriate formatting for the selected currency.
 
 11. Switch to **Report** view.
 
-    ![](../images/dp500_07-33.png)
-
+    ![](../images1/dp-500-lab7-5.png)
+    
 12. Select the matrix visual.
 
 13. From the **Data** pane, from within the **Currency Conversion** table,
@@ -428,7 +423,7 @@ currency. It will also apply appropriate formatting for the selected currency.
 14. In the filter card, check the **Currency Conversion** value.
 
     ![Graphical user interface, text, application Description automatically
-    generated](../images/dp500_07-35.png)
+    generated](../images1/dp-500-lab7-t5.png)
 
 15. Notice that the value formats update to clearly describe US dollar amounts.
 
@@ -462,13 +457,13 @@ calculation groups.
 2.  In the left pane, select the **Time Intelligence** calculation group.
 
     ![Text Description automatically
-    generated](../images/dp500_07-38.png)
+    generated](../images1/dp-500-lab7-t6.png)
 
 3.  In the **Properties** pane, set the **Calculation Group Precedence**
     property to **20**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-39.png)
+    generated](../images1/dp-500-lab7-t7.png)
 
     *The higher the value the higher the precedence of application. So, the
     calculation group with the higher precedence is applied first.*
@@ -489,7 +484,7 @@ calculation groups.
 7.  Notice that the **YoY %** values are now percentages.
 
     ![Graphical user interface, text Description automatically
-    generated](../images/dp500_07-41.png)
+    generated](../images1/dp-500-lab7-t8.png)
     
 
 ### Finish up
