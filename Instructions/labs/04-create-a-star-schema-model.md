@@ -161,7 +161,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 5. In the left pane, at the bottom, select **Start**.
 	
-6. Select your SQL pool, **sqldb<inject key="DeploymentID" enableCopy="false"/>**, and then select **Continue**.
+6. Select your SQL pool, **sqldb-<inject key="Deployment ID" enableCopy="false" />**, and then select **Continue**.
 
     ![](../images1/dp-lab4-20.png)
 
