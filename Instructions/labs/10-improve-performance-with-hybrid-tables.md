@@ -73,6 +73,12 @@ You will sign in to the Power BI service and start a trial license in this task.
 
 1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) in case it is not opened.
 
+![](../images1/logintopowerbi.png)
+![](../images1/logintopowerbi1.png)
+![](../images1/logintopowerbi2.png)
+![](../images1/logintopowerbi3.png)
+![](../images1/logintopowerbi4.png)
+
 2. Use the lab credentials to complete the sign-in process.
 
 3. At the top-right, select the **profile icon (1) **, and then select **Start trial (2)**.
