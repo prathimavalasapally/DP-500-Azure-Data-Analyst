@@ -102,7 +102,7 @@ In this task, you will load BPA rules.
 
 6. To reopen Tabular Editor, in Power BI Desktop, on the **External Tools** ribbon, select **Tabular Editor**.
 
-	![](../images/DP500-13-6.png)
+	![](../images/(../images1/dp-500-lab7-2.png))
 
 ### Task-4: Review the BPA rules
 
