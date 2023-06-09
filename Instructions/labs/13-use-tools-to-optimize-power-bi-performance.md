@@ -55,7 +55,7 @@ In this task, you will review the data model.
 
 2. Use the model diagram to review the model design.
 
-	![](../images/DP500-13-42.png)
+	![](../images1/dp-500-lab13-(1).png)
 
 	*The model comprises eight dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design that includes snowflake dimension tables (**Category** > **Subcategory** > **Product**) for the product dimension.*
 
@@ -77,7 +77,7 @@ In this task, you will load BPA rules.
 
 	*Note: This may be called the Advanced Scripting tab in older versions of Tabular Editor.*
 
-	![](../images/DP500-13-7.png)
+	![](../images1/dp-500-lab13-(2).png)
 
 3. Paste in the following script.
 
@@ -94,7 +94,7 @@ In this task, you will load BPA rules.
 
 4. To run the script, on the toolbar, select the **Run script** command.
 
-	![](../images/DP500-13-8.png)
+    ![](../images1/dp-500-lab13-(3).png)
 
 	*To use the BPA rules, you must close and then reopen Tabular Editor.*
 
@@ -102,7 +102,7 @@ In this task, you will load BPA rules.
 
 6. To reopen Tabular Editor, in Power BI Desktop, on the **External Tools** ribbon, select **Tabular Editor**.
 
-	![](../images/(../images1/dp-500-lab7-2.png))
+	![](../images1/dp-500-lab7-2.png)
 
 ### Task-4: Review the BPA rules
 
@@ -110,12 +110,12 @@ In this task, you will review the BPA rules that you loaded in the previous task
 
 1. In Tabular Editor, on the menu, select **Tools** > **Manage BPA Rules**.
 
-	![](../images/DP500-13-9.png)
-
+	![](../images1/dp-500-lab13-(4).png)
+	
 2. In the **Manage Best Practice Rules** window, in the **Rule collections** list, select **Rules for the local user**.
 
-	![](../images/DP500-13-10.png)
-
+	![](../images1/dp-500-lab13-(5).png)
+	
 3. In the **Rules in collection** list, scroll down the list of rules.
 
 	*Tip: You can drag the bottom right corner to enlarge the window.*
@@ -130,15 +130,11 @@ In this task, you will review the BPA rules that you loaded in the previous task
 
 	*The higher the number, the more important the rule.*
 
-6. Scroll to the bottom of the list, and then uncheck the **Set IsAvailableInMdx to false on non-attribute columns** rule,if it was checked.
+6. Scroll to the bottom of the list, and then uncheck the **Set IsAvailableInMdx to false on non-attribute columns** rule,if it was checked and select **OK**.
 
-	![](../images/DP500-13-11.png)
+	![](../images1/dp-500-lab13-(6).png)
 
 	*You can disable individual rules or entire categories of rules. BPA won't check disabled rules against your model. The removal of this specific rule is to show you how to disable a rule.*
-
-7. Select **OK**.
-
-	![](../images/DP500-16-37.png)
 
 ### Task-5 Address BPA issues
 
@@ -146,7 +142,7 @@ In this task, you will open BPA and review the results of the checks.
 
 1. On the menu, select **Tools** > **Best Practice Analyzer** (or press **F10**).
 
-	![](../images/DP500-13-12.png)
+	![](../images1/dp-500-lab13-(7).png)
 
 2. In the **Best Practice Analyzer** window, if necessary, maximize the window.
 
@@ -154,13 +150,13 @@ In this task, you will open BPA and review the results of the checks.
 
 4. In the first category, right-click the **'Product'** table, and then select **Ignore item**.
 
-	![](../images/DP500-13-13.png)
+    ![](../images1/dp-500-lab13-(8).png)
 
 	*When an issue isn't really an issue, you can ignore that item. You can always reveal ignored items by using the **Show ignored** command on the toolbar.*
 
 5. Further down the list, in the **Use the DIVIDE function for division** category, right-click **[Profit Margin]**, and then select **Go to object**.
 
-	![](../images1/DP500-13-555.png)
+     ![](../images1/dp-500-lab13-(9).png)
 
 	*This command switches to Tabular Editor and focuses on the object. It makes it easy to apply a fix to the issue.*
 
@@ -172,9 +168,13 @@ In this task, you will open BPA and review the results of the checks.
 	DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
 	```
 
+
+    ![](../images1/dp-500-lab13-(10).png)
+    
+    
 7. To save the model changes, on the toolbar, select the **Save changes to the connected database** command (or press **Ctrl+S**).
 
-	![](../images/DP500-13-15.png)
+    ![](../images1/dp-500-lab13-(11).png)
 
 	*Saving changes pushes modifications to the Power BI Desktop data model.*
 
@@ -184,11 +184,11 @@ In this task, you will open BPA and review the results of the checks.
 
 10. Scroll down the list of issues to locate the **Provide format string for "Date" columns** category.
 
-	![](../images/DP500-13-17.png)
+     ![](../images/DP500-13-17.png)
 
 11. Right-click the **'Date'[Date]** issue, and then select **Generate fix script**.
 
-	![](../images/DP500-13-16.png)
+     ![](../images1/dp-500-lab13-(12).png)
 
 	*This command generates a C# script and copies it to the clipboard. You can also use the **Apply fix** command to generate and run the script, however it might be safer to review (and modify) the script before you run it.*
 
@@ -198,21 +198,21 @@ In this task, you will open BPA and review the results of the checks.
 
 	*Note: This may be called the Advanced Scripting tab in older versions of Tabular editor.*
 	
-	![](../images/DP500-13-18.png)
+     ![](../images1/dp-500-lab13-(2).png)
 
 14. To paste the fix script, right-click inside the pane, and then press **Ctrl+V**.
 
-	![](../images/DP500-13-19.png)
+     ![](../images/DP500-13-19.png)
 
 	*You can choose to make a change to the format string.*
 
 15. To run the script, on the toolbar, select the **Run script** command.
 
-	![](../images/DP500-13-20.png)
+     ![](../images1/dp-500-lab13-(3).png)
 
 16. Save the model changes.
 
-	![](../images/DP500-13-15.png)
+     ![](../images1/dp-500-lab13-(11).png)
 
 17. To close Tabular Editor, on the menu, select **File** > **Exit**.
 
@@ -230,17 +230,11 @@ In this task, you will open BPA and review the results of the checks.
 
 1. Open **DAX Studio** shortcut icon in the Desktop.
 
-1. In the **Connect** window, select the **PBI / SSDT Model** option.
+1. In the **Connect** window, select the **PBI / SSDT Model** option, and in the corresponding dropdown list, ensure the **Sales Analysis - Use tools to optimize Power BI performance** model is selected and select **Connect**.
 
-1. In the corresponding dropdown list, ensure the **Sales Analysis - Use tools to optimize Power BI performance** model is selected.
-
-	![](../images/DP500-13-26.png)
+	![](../images1/dp-500-lab13-(13).png)
 
     *If you do not have the **Sales Analysis - Use tools to optimize Power BI performance** starter file open, you will not be able to connect. Be sure the file is open.*
-
-1. Select **Connect**.
-
-	![](../images/DP500-13-27.png)
 
 1. If necessary, maximize the DAX Studio window.
 
@@ -250,17 +244,15 @@ In this task, you will optimize a query by using an improved measure formula.
 
 *Note that it's difficult to optimize a query when the data model volumes are small. This exercise focuses on using DAX Studio rather than optimizing DAX queries.*
 
-1. On the **File** ribbon tab, select **Browse**.
+1. DAX studio, click on the **File** ribbon tab, select **Browse**.
 
-	![](../images/DP500-13-1.png)
-
+	![](../images1/dp-500-lab13-(14).png)
+	
 2. In the **Open** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\13\Assets** folder.
 
 3. Select **Monthly Profit Growth.dax**.
 
 4. Select **Open**.
-
-	![](../images/DP500-13-28.png)
 
 5. Read the comments at the top of the file, and then review the query that follows.
 
@@ -270,11 +262,11 @@ In this task, you will optimize a query by using an improved measure formula.
 
 6. To run a server trace to record detailed timing information for performance profiling, on the **Home** ribbon tab, from inside the **Traces** group, select **Server Timings**.
 
-	![](../images/DP500-13-29.png)
+    ![](../images1/dp-500-lab13-(15).png)
 
 7. To run the script, on the **Home** ribbon tab, from inside the **Query** group, select the **Run** icon.
 
-	![](../images/DP500-13-30.png)
+    ![](../images1/dp-500-lab13-(16).png)
 
 8. In the lower pane, review the query result.
 
@@ -300,8 +292,8 @@ In this task, you will optimize a query by using an improved measure formula.
 
 12. At line 72 in the script, replace the word **Bad** with **Better** 
 
-	![](../images/DP500-13-33.png)
-
+	![](../images1/dp-500-lab13-(17).png)
+	
 13. Run the query, and then review the server timing statistics.
 
 	![](../images/DP500-13-34.png)
