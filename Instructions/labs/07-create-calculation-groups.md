@@ -88,10 +88,7 @@ Create three sales-related measures in preparation for the creation of your calc
 
 1.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-07.png)
-
+    
 2.  In the formula bar (located beneath the ribbon), replace the text with the
     following measure definition, and then press **Enter**.
 
@@ -124,9 +121,6 @@ Create three sales-related measures in preparation for the creation of your calc
 
 6.  In the **Data** pane, right-click the **Sales Amount** field, and then
     select **Hide**.
-
-    ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-09.png)
 
 7.  Also hide the **Total Product Cost** field.
 
