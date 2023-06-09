@@ -34,12 +34,12 @@ Now you'll open a pre-developed Power BI Desktop solution.
 6.  Select the **External Tools** ribbon tab.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-01.png)
+    generated](../images1/dp-500-lab7-(1).png)
 
 7.  Notice that it’s possible to launch Tabular Editor from this ribbon tab.
 
     ![Text Description automatically generated with low
-    confidence](../images/dp500_07-02.png)
+    confidence](../images1/dp-500-lab7-2.png)
 
     *In the next exercise, you will use Tabular Editor to create calculation
     groups.*
@@ -50,12 +50,12 @@ Review the data model to understand how calculation groups will apply to this mo
 
 1.  In Power BI Desktop, at the left, switch to **Model** view.
 
-    ![](../images/dp500_07-03.png)
+    ![](../images1/dp-500-lab7-3.png)
 
 2.  Use the model diagram to review the model design.
 
     ![Graphical user interface, diagram Description automatically
-    generated](../images/dp500_07-04.png)
+    generated](../images1/dp-500-lab7-4.png)
 
     *The model comprises seven dimension tables and two fact tables. The
     **Sales** fact table stores sales order details. The **Currency Rate** fact
@@ -64,7 +64,7 @@ Review the data model to understand how calculation groups will apply to this mo
 
 3.  Switch to **Report** view.
 
-    ![](../images/dp500_07-05.png)
+    ![](../images1/dp-500-lab7-5.png)
 
 4.  In the **Data** pane (located at the right), expand the **Sales** table to
     review the fields.
