@@ -266,7 +266,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	 ![](../images1/dp-lab4-30.png)
 
-	>**Note**:This selection of columns determine what will be available in your model.*
+	>**Note**:This selection of columns determine what will be available in your model.
 
 
 18. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
@@ -345,6 +345,8 @@ In this task, you will create five Power Query queries that will each load as a 
 
    You should now have three columns with 37 rows.
    
+   >**Note**:This selection of columns determine what will be available in your model.
+   
 3.  Select the **DimProduct** query.
 
       ![](../images1/dp-lab4-37.png)
@@ -384,6 +386,8 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- EnglishProductCategoryName
 
+    >**Note**:This selection of columns determine what will be available in your model.
+
 37. Rename the following columns:
 
 	- **EnglishProductName** as **Product**
@@ -418,6 +422,8 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- ResellerName
 
+    >**Note**:This selection of columns determine what will be available in your model.
+
 45. Rename the following columns:
 
 	- **BusinessType** as **Business Type** (separate with a space)
@@ -447,6 +453,8 @@ In this task, you will create five Power Query queries that will each load as a 
 	- SalesTerritoryCountry
 
 	- SalesTerritoryGroup
+
+    >**Note**:This selection of columns determine what will be available in your model.
 
 50. Rename the following columns:
 
@@ -483,6 +491,9 @@ In this task, you will create five Power Query queries that will each load as a 
 	- UnitPrice
 
 	![](../images/dp500-51.png)
+	
+	>**Note**:This selection of columns determine what will be available in your model.
+
 
 55. Rename the following columns:
 
