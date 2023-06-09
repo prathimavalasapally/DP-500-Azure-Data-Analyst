@@ -106,7 +106,7 @@ Create three sales-related measures in preparation for the creation of your calc
     group, set the decimals places to **2**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp-500-lab7-6-1.png)
+    generated](../images1/dp-500-lab7-6-1.png)
 
 4.  1. In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**, Create and similarly format a second measure named **Cost** by using the
@@ -153,7 +153,7 @@ groups.*
 1.  On the **External Tools** ribbon, select **Tabular Editor**.
 
     ![Text Description automatically generated with low
-    confidence](../images/dp500_07-11.png)
+    confidence](../images1/dp-500-lab7-2.png)
 
     *Tabular Editor opens in a new window and connects live to the data model
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
@@ -186,7 +186,7 @@ groups.*
 
      ![](../images1/dp-500-lab7-13.png)
 
-8.  In the left pane, replace the default **Name** with **Current**, and then press
+8.  In the left pane, replace the default **New Calculation** name with **Current**, and then press
     **Enter**.
 
 9.  In the **Expression Editor** pane (located above the **Properties** pane),
@@ -209,7 +209,7 @@ groups.*
  1. To create a calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default **Name** with  **PY**, and then press
+ 1.  In the left pane, replace the default  **New Calculation** name with  **PY**, and then press
     **Enter**.
     
 11. In the **Expression Editor**, run the following formula:
@@ -227,7 +227,7 @@ groups.*
  1. To create a thrid calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default **Name** with  **YoY**, and then press
+ 1.  In the left pane, replace the default  **New Calculation** name with  **YoY**, and then press
     **Enter**.
 
 12. In the **Expression Editor**, run the following formula:
@@ -248,7 +248,7 @@ groups.*
  1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default **Name** with  **YoY %**, and then press
+ 1.  In the left pane, replace the default **New Calculation** name with  **YoY %**, and then press
     **Enter**.
 
 
