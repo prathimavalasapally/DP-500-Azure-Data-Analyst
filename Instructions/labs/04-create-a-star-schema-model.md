@@ -35,7 +35,11 @@ In this task, you will set up Power BI.
     ![](../images1/dp-lab4-2.png)
 
 
-7. Complete the sign up process by providing username and password
+7. Complete the sign up process by providing username and password:
+
+     * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+     * Password: <inject key="AzureAdUserPassword"></inject>
 
 	
 6. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
@@ -45,15 +49,21 @@ In this task, you will set up Power BI.
 
 	![](../images1/dp-lab4-3.png)
 	
-7. Enter the Password provided in the Environment Details tab and click on **Signin**
+7. If prompted **Signin** with following Username and Password.
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    * Password: <inject key="AzureAdUserPassword"></inject>
 	
 8. If stay signed in window Pops-up, select **No**
 
-9. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+9. Select your **Country/Region (1)** and enter a 10 digit **phone number (2)** and select **Get started (3)**.
+    ![](../images1/dp-lab4-4.png)
 
-	![](../images1/dp-lab4-4.png)
-	
-	![](../images1/dp-lab4-5.png)
+10. Select **Get started** once more. You will be redirected to Power BI.
+
+
+    ![](../images1/dp-lab4-5.png)
 
 10. At the top-right, select the profile icon, and then select **Start trial**.
 
