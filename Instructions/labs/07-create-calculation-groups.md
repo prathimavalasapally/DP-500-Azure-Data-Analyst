@@ -98,29 +98,33 @@ Create three sales-related measures in preparation for the creation of your calc
     DAX
 
     ```Sales = SUM ( 'Sales'[Sales Amount] )```
+    
+    
+      ![](../images1/dp-500-lab7-6.png)
 
 3.  On the **Measure tools** contextual ribbon, from inside the **Formatting**
     group, set the decimals places to **2**.
 
     ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-08.png)
+    generated](../images/dp-500-lab7-6-1.png)
 
-4.  Create and similarly format a second measure named **Cost** by using the
+4.  1. In the **Data** pane, right-click the **Sales** table, and then select
+    **New measure**, Create and similarly format a second measure named **Cost** by using the
     following definition:
 
     DAX
 
     ```Cost = SUM ( 'Sales'[Total Product Cost] )```
 
-5.  Create and similarly format a third measure named **Profit** by using the
+5.  1.  In the **Data** pane, right-click the **Sales** table, and then select
+    **New measure**, create and similarly format a third measure named **Profit** by using the
     following definition:
 
     DAX
 
     ```Profit = [Sales] - [Cost]```
 
-6.  In the **Data** pane, right-click the **Sales Amount** field, and then
-    select **Hide**.
+6.  In the **Data** pane, right-click the **Sales Amount** field, and then select **Hide**.
 
 7.  Also hide the **Total Product Cost** field.
 
@@ -128,7 +132,7 @@ Create three sales-related measures in preparation for the creation of your calc
     and it is decorated with a multi-calculator icon.
 
     ![Application Description automatically generated with low
-    confidence](../images/dp500_07-10.png)
+    confidence](../images1/dp-500-lab7-7.png)
 
     *When a table comprises only visible measures, it’s presented at the top of the pane. This way, it behaves like a measure group (an object of a multidimensional model). Do not confuse this cosmetic representation of a
     tabular model with DAX calculation groups.*
@@ -159,35 +163,30 @@ groups.*
     folder, and then select **Create New** \> **Calculation Group**.
 
     ![Graphical user interface, text, application, table Description
-    automatically generated](../images/dp500_07-12.png)
+    automatically generated](../images1/dp-500-lab7-8.png)
 
-3.  In the left pane, replace the default name with **Time Intelligence**, and
+3.  In the left pane, replace the default **New calculater name** with **Time Intelligence**, and
     then press **Enter**.
+    
+    ![](../images1/dp-500-lab7-10.png)
 
-4.  Expand open the **Time Intelligence** table.
-
-5.  Select the **Name** column.
-
-    ![Graphical user interface Description automatically generated with low
-    confidence](../images/dp500_07-13.png)
-
+4.  Expand open the **Time Intelligence** table. 
+    
     *The calculation group comprises this single column, while rows of data
     define the group of calculations. It’s a good practice to rename the column
     to reflect the subject of the calculations.*
 
-6.  In the **Properties** pane (located at the bottom-right), select the
-    **Name** property, and rename as **Time Calculation**.
+6.  select the **Name (1)** column and in the **Properties** pane (located at the bottom-right), select the
+    **Name** property, and rename as **Time Calculation (2)**.
 
-    ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-14.png)
+     ![](../images1/dp-500-lab7-12.png)
 
-7.  To create a calculation item, right-click the **Time Intelligence** table,
+7.  To create a **calculation item**, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
 
-    ![Graphical user interface, application Description automatically
-    generated](../images/dp500_07-15.png)
+     ![](../images1/dp-500-lab7-13.png)
 
-8.  In the left pane, replace the default name with **Current**, and then press
+8.  In the left pane, replace the default **Name** with **Current**, and then press
     **Enter**.
 
 9.  In the **Expression Editor** pane (located above the **Properties** pane),
@@ -197,8 +196,7 @@ groups.*
 
     ```SELECTEDMEASURE ()```
 
-    ![Graphical user interface, text, application, Word Description
-    automatically generated](../images/dp500_07-16.png)
+     ![](../images1/dp-500-lab7-14.png)
 
     *The SELECTEDMEASURE function returns a reference to the measure that is
     currently in context when the calculation item is evaluated.*
@@ -207,30 +205,55 @@ groups.*
     changes.
 
     ![](../images/dp500_07-17.png)
-
-11. Create a second calculation item named **PY** by using the following
-    formula:
+ 
+ 1. To create a calculation item, right-click the **Time Intelligence** table,
+    and then select **Create New** \> **Calculation Item**.
+    
+ 1.  In the left pane, replace the default **Name** with  **PY**, and then press
+    **Enter**.
+    
+11. In the **Expression Editor**, run the following formula:
 
     DAX
 
     ```CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )```
 
     *The prior year (PY) formula calculates the value for the selected measure in the prior year.*
+    
+    
+10. In the **Expression Editor** pane toolbar, select the first button to accept
+    changes.
+    
+ 1. To create a thrid calculation item, right-click the **Time Intelligence** table,
+    and then select **Create New** \> **Calculation Item**.
+    
+ 1.  In the left pane, replace the default **Name** with  **YoY**, and then press
+    **Enter**.
 
-12. Create a third calculation item named **YoY** by using the following
-    formula:
+12. In the **Expression Editor**, run the following formula:
+
 
     DAX
     ```
     SELECTEDMEASURE () 
         - CALCULATE ( SELECTEDMEASURE (), 'Time Intelligence'[Time Calculation] = "PY" )
     ```
+    
+10. In the **Expression Editor** pane toolbar, select the first button to accept
+    changes.
 
     *The year-over-year (YoY) formula calculates the difference of the selected
     measure of the current year to the prior year.*
 
-13. Create a fourth calculation item named **YoY %** by using the following
-    formula:
+ 1. To create a fourth calculation item, right-click the **Time Intelligence** table,
+    and then select **Create New** \> **Calculation Item**.
+    
+ 1.  In the left pane, replace the default **Name** with  **YoY %**, and then press
+    **Enter**.
+
+
+13. In the **Expression Editor**, run the following formula:
+
 
     DAX
     ```
@@ -239,6 +262,11 @@ groups.*
         CALCULATE ( SELECTEDMEASURE (), 'Time Intelligence'[Time Calculation] = "PY" )
     )
     ```
+    
+ 1. In the **Expression Editor** pane toolbar, select the first button to accept
+    changes.
+    
+    
     *The year-over-year percentage (YoY %) formula calculates the percentage
     change of the selected measure over the prior year.*
 
@@ -294,8 +322,7 @@ column.
 2.  In the **Visualizations** pane, in the **Values** well, select **X** to
     remove the **Sales Amount** field.
 
-    ![Graphical user interface, text, application, email Description
-    automatically generated](../images/dp500_07-24.png)
+     ![](../images/dp500_07-19.png) 
 
 3.  From the **Data** pane, from inside the **Sales** table, drag the
     **Sales** field into the **Values** well.
@@ -306,8 +333,7 @@ column.
 4.  From the **Data** pane, from inside the **Time Intelligence** table, drag
     the **Time Calculation** field into the **Columns** well.
 
-    ![Graphical user interface, application, Word Description automatically
-    generated](../images/dp500_07-26.png)
+     ![](../images1/dp-500-lab7-20.png)
 
 5.  Verify that the matrix visual shows a grid of time-related **Sales** measure
     values grouped by month.
@@ -327,16 +353,15 @@ currency. It will also apply appropriate formatting for the selected currency.
 
 1.  In Power BI Desktop, switch to **Data** view.
 
-    ![Data view.](../images/dp500_07-28.png)
-
+     ![](../images/dp500_07-21.png)
+     
 2.  In the **Data** pane, select the **Currency** table.
 
 3.  Notice the **FormatString** hidden column that contains format string
     expressions was column values.
 
-    ![Graphical user interface Description automatically generated with low
-    confidence](../images/dp500_07-29.png)
-
+      ![](../images/dp500_07-22.png)
+      
     *You will use a DAX expression to apply the format string of the selected
     currency.*
 
