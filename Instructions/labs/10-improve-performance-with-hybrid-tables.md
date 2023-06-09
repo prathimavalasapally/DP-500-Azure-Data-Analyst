@@ -42,7 +42,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 7. Select **Save**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image12.png)
+     ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
 
 8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
 
@@ -68,13 +68,13 @@ In this task, you will set up Power BI Desktop.
 
 #### Task 2.2: Set up Power BI Premium trial
 
-In this task, you will sign in to the Power BI service and start a trial license.
+You will sign in to the Power BI service and start a trial license in this task.
 
-1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) incase it is not opened.
+1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) in case it is not opened.
 
-2. Use the lab credentials to complete the sign in process.
+2. Use the lab credentials to complete the sign-in process.
 
-3. At the top-right, select the **profile icon (1)**, and then select **Start trial (2)**.
+3. At the top-right, select the **profile icon (1) **, and then select **Start trial (2)**.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image1.png)
 
@@ -82,7 +82,7 @@ In this task, you will sign in to the Power BI service and start a trial license
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image2.png)
 
-	*You require a Power BI Premium per User (PPU) license to complete this lab. A trial license is sufficient.*
+	*You require a Power BI Premium per User (PPU) license to complete this lab. A trial license is sufficient. *
 
 5. Do any remaining tasks to complete the trial setup.
 
@@ -128,9 +128,9 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Starter** folder.
 
-3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve performance with hybrid tables.pbix** file.
+3. Double-click the **Sales Analysis - Improve performance with hybrid tables.pbix** file to open a pre-developed Power BI Desktop file.
 
-4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1)** dropdown, and then select **Data source settings (2)**.
+4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1) ** dropdown, and then select **Data source settings (2)**.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image14.png)
 
@@ -182,7 +182,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 17. Select **Save**.
 
->**Note**: If it ask for a replace, please select ok to save.
+>**Note**: If it asks for a replacement, please select ok to save.
 
 
 ### Task 5: Review the report
@@ -209,16 +209,14 @@ In this task, you will review the pre-developed data model.
 
 	*The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.*
 
-	*In this lab, you will set up the **Sales** table to use incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.*
+	*In this lab, you will set up the **Sales** table to use an incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.*
 
-3. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-
-## Set up incremental refresh
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We## Set up incremental refresh
 
 In this exercise, you will set up incremental refresh.
 
@@ -240,7 +238,7 @@ In this task, you will add two parameters.
 
 	*Incremental refresh requires that the table contain a date column of date/time or integer data type with the value formatted as yyyymmdd.*
 
-	*To setup incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.*
+	*To set up incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.*
 
 4. To create a parameter, on the **Home** ribbon tab, select the **Manager Parameters** icon.
 
@@ -534,7 +532,7 @@ In this task, you will add an order to the database.
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
-7. Enter the user name **sqladmin** and password `P@ssw0rd01`.
+7. Enter the username **sqladmin** and password `P@ssw0rd01`.
 
 8. Select **Connect**.
 
@@ -572,10 +570,11 @@ In this task, you will refresh the report.
 
 	*Tip: Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.*
 	
-5. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 	
