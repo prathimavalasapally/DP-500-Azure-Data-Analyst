@@ -167,7 +167,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 7. To download the .pbids file, select **Download**.
 
-    ![](../images1/dp-lab4-21.png)
+    ![](../images1/dp-lab4-(21).png)
 
 	*A .pbids file contains a connection to your SQL pool. It's a convenient way to start your project. When opened, it will create a new Power BI Desktop solution that already stores the connection details to your SQL pool.*
 
@@ -189,7 +189,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 4. From the drop down please select the option  **workspace<inject key="DeploymentID" enableCopy="false"/>.sql.azuresynapse.net;sqldb<inject key="DeploymentID" enableCopy="false"/>** **(1)** as shown below and click Select **Connect (2)**.
 
-   ![](../images1/dp-lab4-23.png)
+   ![](../images1/dp-lab4-(23).png)
    
 5. In the **Navigator** window, select (don't check) the **DimDate** table.
 
@@ -249,7 +249,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 15. In the **Choose Columns** window, to uncheck all checkboxes, uncheck the first checkbox.
 
-	![](../images/dp500-32.png)
+	![](../images1/dp500-(32).png)
 
 
 16. Check the following five columns and select **OK**.
