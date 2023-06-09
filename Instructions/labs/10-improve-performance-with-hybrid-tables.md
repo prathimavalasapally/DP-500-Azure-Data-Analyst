@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will set up incremental refresh and enable a DirectQuery partition to deliver real time updates and improve refresh and query performance.
 
 In this lab, you learn how to:
@@ -11,6 +9,9 @@ In this lab, you learn how to:
 - Set up incremental refresh.
 
 - Review table partitions.
+
+
+## Exercise 1: Set up the Azure SQL Database
 
 ### Task 1: Set up the Azure SQL Database
 
@@ -106,7 +107,7 @@ In this task, you will create a workspace.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image5.png)
 
-4. Set the **License mode** option to **Premium per user**.
+4. Set the **License mode** option to **Premium per-user**.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image6.png)
 
