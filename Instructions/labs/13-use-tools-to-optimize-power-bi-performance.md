@@ -50,8 +50,8 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
-
-	![](../images/DP500-16-14.png)
+    
+    ![](../images1/dp-500-lab7-3.png)
 
 2. Use the model diagram to review the model design.
 
@@ -69,7 +69,7 @@ In this task, you will load BPA rules.
 
 1. On the **External Tools** ribbon, select **Tabular Editor**.
 
-	![](../images/DP500-13-6.png)
+	![](../images1/dp-500-lab7-2.png)
 
 	*Tabular Editor opens in a new window and connects live to the data model hosted in Power BI Desktop. Changes made to the model in Tabular Editor aren't propagated to Power BI Desktop until you save them.*
 
