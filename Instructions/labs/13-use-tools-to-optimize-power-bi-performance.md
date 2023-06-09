@@ -33,13 +33,15 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 5. Select **Save**.
 
-6. Select the **External Tools** ribbon tab.
+6.  Select the **External Tools** ribbon tab.
 
-	![](../images/DP500-13-3.png)
+    ![Graphical user interface, application Description automatically
+    generated](../images1/dp-500-lab7-(1).png)
 
-7. Notice that it's possible to launch Tabular Editor from this ribbon tab.
+7.  Notice that it’s possible to launch Tabular Editor from this ribbon tab.
 
-	![](../images/DP500-13-4.png)
+    ![Text Description automatically generated with low
+    confidence](../images1/dp-500-lab7-2.png)
 
 	*Later in this exercise, you will use Tabular Editor to work with BPA.*
 
