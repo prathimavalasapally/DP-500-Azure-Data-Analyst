@@ -67,7 +67,7 @@ In this task, you will load BPA rules.
 
 *The BPA rules aren't added during the Tabular Editor installation. You must download and install them.*
 
-1. On the **External Tools** ribbon, select **Tabular Editor**.
+1. Navigate back to power bi desktop and on the **External Tools** ribbon, select **Tabular Editor**.
 
 	![](../images1/dp-500-lab7-2.png)
 
