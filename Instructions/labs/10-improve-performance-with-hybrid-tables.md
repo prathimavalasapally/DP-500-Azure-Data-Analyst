@@ -73,25 +73,25 @@ You will sign in to the Power BI service and start a trial license in this task.
 
 1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) in case it is not opened.
 
-![](../images1/logintopowerbi.png)
-![](../images1/logintopowerbi1.png)
-![](../images1/logintopowerbi2.png)
-![](../images1/logintopowerbi3.png)
-![](../images1/logintopowerbi4.png)
+  ![](../images1/logintopowerbi.png)
 
 2. Use the lab credentials to complete the sign-in process.
 
 3. At the top-right, select the **profile icon (1) **, and then select **Start trial (2)**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image1.png)
+    ![](../images1/logintopowerbi1.png)
+
 
 4. When prompted, again select **Start trial**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image2.png)
+    ![](../images1/logintopowerbi2.png)
 
 	*You require a Power BI Premium per User (PPU) license to complete this lab. A trial license is sufficient. *
 
 5. Do any remaining tasks to complete the trial setup.
+
+    ![](../images1/logintopowerbi3.png)
+    ![](../images1/logintopowerbi4.png)
 
 	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
 
@@ -147,7 +147,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
 
-    ![](../images1/dp500-improve-performance-with-hybrid-tables-image15a.png)
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
 7. Select **OK**.
 
@@ -167,7 +167,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
     Password: `P@ssw0rd01`
 
-     ![](../images1/dp500-improve-performance-with-hybrid-tables-image15b.png)
+     ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
 11.  Select **OK**.
     
@@ -175,7 +175,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 12. In the **Data source settings** window, select **Close**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image20.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image20.png)
 
 13. On the **Home** ribbon tab, from inside the **Queries** group, select **Refresh**.
 
@@ -208,7 +208,7 @@ In this task, you will review the pre-developed data model.
 
 1. Switch to **Model** view.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image24.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image24.png)
 
 2. Use the model diagram to review the model design.
 
@@ -235,11 +235,11 @@ In this task, you will add two parameters.
 
 1. To open the Power Query Editor window, on the **Home** ribbon tab, from inside the **Queries** group, click the **Transform data** icon.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image26.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image26.png)
 
 2. In the Power Query Editor window, from inside the **Queries** pane, select the **Sales** query.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image27.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image27.png)
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
@@ -283,7 +283,7 @@ In this task, you will add two parameters.
 
 11. Select **OK**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 ### Task 8: Filter the query
 
@@ -295,25 +295,11 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
-3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**.
+3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**,In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. In the corresponding dropdown lists, select the **RangeEnd (3)** parameter.Select **OK (4)**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
 
-4. In the adjacent dropdown list, notice that the **RangeStart** parameter is set.
-
-	*The default parameter selection is the correct one.*
-
-5. In the second "range" dropdown list, select **is before**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image35.png)
-
-6. In the corresponding dropdown lists, select the **RangeEnd** parameter.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image36.png)
-
-7. Select **OK**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image37.png)
+	>**Note**:The default parameter selection is the correct one.
 
 8. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
@@ -337,31 +323,15 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image41.png)
 
-2. In the **Incremental refresh and real-time data** window, at step 2, turn on incremental refresh.
+2. In the **Incremental refresh and real-time data** window, at step 2, turn on incremental refresh.Set the following: Archive data starting **2 Years** before refresh date.Set the following: Incrementally refresh data starting **7 Days** before refresh date. At step 3, check the **Get the latest data in real time with DirectQuery** option. Select **Apply**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
-
-3. Set the following: Archive data starting **2 Years** before refresh date.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image43.png)
+     ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
 
 	*This setting determines the historical period. In this instance, Power BI will create two whole-year partitions for historic data.*
-
-4. Set the following: Incrementally refresh data starting **7 Days** before refresh date.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image44.png)
-
+	
 	*This setting determines the incremental refresh period in which all rows with a date/time in that period are included in the refresh partition(s) and refreshed with each refresh operation.*
 
-5. At step 3, check the **Get the latest data in real time with DirectQuery** option.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image45.png)
-
 	*This setting enables fetching the latest changes from the selected table at the data source beyond the incremental refresh period by using DirectQuery. All rows with a date/time later than the incremental refresh period are included in a DirectQuery partition and fetched from the data source with every dataset query. This setting makes the table a hybrid table because it will contain import partitions and one DirectQuery partition.*
-
-6. Select **Apply**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image46.png)
 
 7. Save the Power BI Desktop file.
 
@@ -386,8 +356,6 @@ In this task, you will publish the dataset.
 4. Close Power BI Desktop.
 
 5. If prompted to save changes, select **Save**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
 ### Task 11: Set up the dataset
 
