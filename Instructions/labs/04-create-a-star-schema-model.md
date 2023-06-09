@@ -83,7 +83,7 @@ In this task, you will set up Power BI.
 
 1. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Apply**.
 
-    *Note: The workspace name must be unique. If you're getting an error, update the workspace name.*
+    *Note: The workspace name must be unique within the tenant. If you're getting an error, change the workspace name.*
 
     ![](../images1/dp-lab4-9.png)
 
