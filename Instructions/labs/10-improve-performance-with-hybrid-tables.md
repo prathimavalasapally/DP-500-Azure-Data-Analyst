@@ -161,7 +161,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 3. Double-click the **Sales Analysis - Improve performance with hybrid tables.pbix** file to open a pre-developed Power BI Desktop file.
 
-4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1) ** dropdown, and then select **Data source settings (2)**.
+4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1)** dropdown, and then select **Data source settings (2)**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
 
@@ -300,7 +300,7 @@ In this task, you will add two parameters.
 
 	- Current Value: **7/1/2022** (July 1, 2022)
 	
-	![](../images/dp500-improve-performance-with-hybrid-tables-image31.png)
+	  ![](../images/dp500-improve-performance-with-hybrid-tables-image31.png)
 	
 	>**Note:** For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022*
 
