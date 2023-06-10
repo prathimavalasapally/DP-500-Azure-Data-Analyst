@@ -111,15 +111,11 @@ In this task, you will create a workspace.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image5.png)
 
-4. Set the **License mode** option to **Premium per-user**.
+4. Set the **License mode** option to **Premium per-user**. Click **Apply**.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image6.png)
 
 	*Power BI only supports incremental refresh and hybrid tables in Premium workspaces.*
-
-5. Select **Save**.
-
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image7.png)
 
 	*Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.*
 
