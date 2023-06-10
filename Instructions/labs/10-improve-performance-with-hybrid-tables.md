@@ -82,7 +82,6 @@ In this task, you will set up Power BI Desktop.
 
      * Password: <inject key="AzureAdUserPassword"></inject>
 
-
 #### Task 2.2: Set up Power BI Premium trial
 
 You will sign into the Power BI service and start a trial license in this task.
