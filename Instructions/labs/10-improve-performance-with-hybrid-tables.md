@@ -10,14 +10,13 @@ In this lab, you learn how to:
 
 - Review table partitions.
 
-
 ## Exercise 1: Set up the Azure SQL Database
 
 ### Task 1: Set up the Azure SQL Database
 
 In this task, you will set up the Azure SQL Database to allow connections from your virtual machine's (VM's) IP address.
 
-1.  If you are not logged in already, click on Azure portal shortcut that is available on the desktop and log in with below Azure credentials or skip to **step 3**.
+1.  If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the below Azure credentials or skip to **step 3**.
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
@@ -30,12 +29,12 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 	![](../images/dp500-improve-performance-with-hybrid-tables-image9.png)
 
 4. In the list of SQL databases, select the **AdventureWorksDW2022-DP500** database.
-
+ 
 5. In the action bar on the Overview tab, select **Set server firewall**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image10.png)
 
-6. On the public access tab, review that **Selected networks** is selected, if not please select it.
+6. On the public access tab, review that **Selected networks** are selected, if not please select it.
 
 7. Select **Add your client IPv4 address**.
 
@@ -43,7 +42,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 7. Select **Save**.
 
-     ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
+      ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
 
 8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
 
@@ -61,37 +60,70 @@ In this task, you will set up Power BI Desktop.
 
 1. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Improve performance with hybrid tables** file.
 
-1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
+1. Select **X** located at the top-right of the getting started window.
+
+      ![](../images/logintopowerbi0.png)
+
+1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign-in process.
 
 	![](../images/dp500-create-a-dataflow-image2.png)
+	
+1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-    *Note: this will likely take you to the Power BI service to complete the sign-up process.*
+      ![](../images/logintopowerbi01.png)
+      
+1. If Prompted Select **work or school (1)** account and click **contiune (2)** on Let's get you signed in page.
+
+      ![](../images/logintopowerbi011.png)
+	
+1. Complete the sign up process by providing username and password:
+
+     * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+     * Password: <inject key="AzureAdUserPassword"></inject>
+
 
 #### Task 2.2: Set up Power BI Premium trial
 
-You will sign in to the Power BI service and start a trial license in this task.
+You will sign into the Power BI service and start a trial license in this task.
 
 1. In a web browser, go to [https://powerbi.com](https://powerbi.com/) in case it is not opened.
 
-  ![](../images1/logintopowerbi.png)
-  ![](../images1/logintopowerbi2.png)
+1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
 
-2. Use the lab credentials to complete the sign-in process.
+     ![](../images/logintopowerbi0111.png)
+    
+      >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.    
+      
+ 1. If prompted **Signin** with following Username and Password.
 
-3. At the top-right, select the **profile icon (1) **, and then select **Start trial (2)**.
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-   ![](../images1/logintopowerbi3.png)
+    * Password: <inject key="AzureAdUserPassword"></inject>
+	
+1. If stay signed in window Pops-up, select **No**
+
+1. Select your **Country/Region** and enter a 10 digit **phone number** and select **Get started**.
+
+     ![](../images1/logintopowerbi.png)
+
+3. Select **Get started** once more. You will be redirected to Power BI.
+
+    ![](../images1/logintopowerbi1.png)
+
+5. At the top-right, select the **profile icon (1)**, and then select **Start trial (2)**.
+
+      ![](../images1/logintopowerbi3.png)
 
 4. When prompted, again select **Start trial**.
 
-     ![](../images1/logintopowerbi4.png)
+      ![](../images1/logintopowerbi4.png)
 
-
-	*You require a Power BI Premium per User (PPU) license to complete this lab. A trial license is sufficient. *
+	>**Note:** You require a Power BI Premium per User (PPU) license to complete this lab. A trial lic ense is sufficient. 
 
 5. Do any remaining tasks to complete the trial setup.
 
-	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
+	**Tip:** The Power BI web browser experience is known as the **Power BI service**.
 
 ### Task 3: Create a workspace
 
@@ -103,9 +135,9 @@ In this task, you will create a workspace.
 
 2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**.
 
-	*The workspace name must be unique within the tenant.*
-
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image4.png)
+	
+	>**Note**: The workspace name must be unique within the tenant.
 
 3. Beneath the **Description** box, expand and open the **Advanced** section.
 
@@ -115,9 +147,8 @@ In this task, you will create a workspace.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image6.png)
 
-	*Power BI only supports incremental refresh and hybrid tables in Premium workspaces.*
-
-	*Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.*
+	>**Note:** Power BI only supports incremental refresh and hybrid tables in Premium workspaces.
+	>Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.
 
 ### Task 4: Set up Power BI Desktop
 
@@ -139,9 +170,9 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
-6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
+6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is in the Azure portal, SQL databases.
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
+      ![](../images/serverdatabaseurl.png)
 
 7. Select **OK**.
 
@@ -165,7 +196,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 11.  Select **OK**.
     
-      ![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
+       ![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
 
 12. In the **Data source settings** window, select **Close**.
 
@@ -183,8 +214,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 17. Select **Save**.
 
->**Note**: If it asks for a replacement, please select ok to save.
-
+    >**Note**: If it asks for a replacement, please select ok to save.
 
 ### Task 5: Review the report
 
@@ -194,7 +224,7 @@ In this task, you will review the pre-developed report.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image23.png)
 
-	*The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.*
+	>**Note:** The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.*
 
 ### Task 6: Review the data model
 
@@ -208,20 +238,21 @@ In this task, you will review the pre-developed data model.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image25.png)
 
-	*The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.*
-
-	*In this lab, you will set up the **Sales** table to use an incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.*
+	>**Note:** The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.
+	>In this lab, you will set up the **Sales** table to use an incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.
 
 **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We## Set up incremental refresh
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
+    
+## Set up incremental refresh.
 
 In this exercise, you will set up incremental refresh.
 
-*Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.*
+Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.
 
 ### Task 7: Add parameters
 
@@ -237,9 +268,8 @@ In this task, you will add two parameters.
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
-	*Incremental refresh requires that the table contain a date column of date/time or integer data type with the value formatted as yyyymmdd.*
-
-	*To set up incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.*
+	>**Note:** Incremental refresh requires that the table contain a date column of date/time or integer data type with the value formatted as yyyymmdd.
+	>To set up incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.
 
 4. To create a parameter, on the **Home** ribbon tab, select the **Manager Parameters** icon.
 
@@ -255,11 +285,11 @@ In this task, you will add two parameters.
 
 8. In the **Current Value** box, enter **6/1/2022** (June 1, 2022 - the VM uses US date formats). 
 
-    *Note that for non-MM-DD-YYY format locations, the date should be entered as 1/6/2022*
-
-	*While setting up the parameters, you can use arbitrary values. Power BI will update parameter values when it creates and manages the partitions. In this lab, you'll set a range for the month of June 2022.*
-
 	![](../images/dp500-improve-performance-with-hybrid-tables-image30.png)
+	
+	>**Note:** For non-MM-DD-YYY format locations, the date should be entered as 1/6/2022.
+        >While setting up the parameters, you can use arbitrary values. Power BI will update parameter values when it creates and manages the partitions. In this lab, you'll set a range for the month of June 2022.*
+
 
 9. To create a second parameter, select **New**.
 
@@ -270,10 +300,10 @@ In this task, you will add two parameters.
 	- Type: **Date/Time**
 
 	- Current Value: **7/1/2022** (July 1, 2022)
-
-     *Note that for non-MM-DD-YYY format locations, the date should be entered as 1/7/2022*
-
+	
 	![](../images/dp500-improve-performance-with-hybrid-tables-image31.png)
+	
+	>**Note:** For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022*
 
 11. Select **OK**.
 
@@ -289,11 +319,11 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
-3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**,In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. In the corresponding dropdown lists, select the **RangeEnd (3)** parameter.Select **OK (4)**.
+3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. In the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
 
-	>**Note**:The default parameter selection is the correct one.
+	>**Note**: The default parameter selection is the correct one.
 
 8. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
@@ -303,7 +333,7 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image39.png)
 
-	*These are the filtered rows for the June 2022.*
+	>**Note**: These are the filtered rows for June 2022.
 
 10. Save the Power BI Desktop file.
 
@@ -317,19 +347,19 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image41.png)
 
-2. In the **Incremental refresh and real-time data** window, at step 2, turn on incremental refresh.Set the following: Archive data starting **2 Years** before refresh date.Set the following: Incrementally refresh data starting **7 Days** before refresh date. At step 3, check the **Get the latest data in real time with DirectQuery** option. Select **Apply**.
+2. In the **Incremental refresh and real-time data** window, at step 2, turn on incremental refresh. Set the Archive data starting **2 Years** before the refresh date. Set an Incrementally refresh data starting **7 Days** before the refresh date. At step 3, check the **Get the latest data in real time with the DirectQuery** option. Select **Apply**.
 
-     ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
+      ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
+      
+	>**Note:Archive sata starting:** This setting determines the historical period. In this instance, Power BI will create two whole-year partitions for historic data.
 
-	*This setting determines the historical period. In this instance, Power BI will create two whole-year partitions for historic data.*
-	
-	*This setting determines the incremental refresh period in which all rows with a date/time in that period are included in the refresh partition(s) and refreshed with each refresh operation.*
+	>**Note:Incrementally refresh data starting:** This setting determines the incremental refresh period in which all rows with a date/time in that period are included in the refresh partition(s) and refreshed with each refresh operation.
 
-	*This setting enables fetching the latest changes from the selected table at the data source beyond the incremental refresh period by using DirectQuery. All rows with a date/time later than the incremental refresh period are included in a DirectQuery partition and fetched from the data source with every dataset query. This setting makes the table a hybrid table because it will contain import partitions and one DirectQuery partition.*
+	> **Note:Get the latest data in real time with DirectQuery** This setting enables fetching the latest changes from the selected table at the data source beyond the incremental refresh period by using DirectQuery. All rows with a date/time later than the incremental refresh period are included in a DirectQuery partition and fetched from the data source with every dataset query. This setting makes the table a hybrid table because it will contain import partitions and one DirectQuery partition.
 
-7. Save the Power BI Desktop file.
+7. **Save** the Power BI Desktop file.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
 ### Task 10: Publish the dataset
 
@@ -339,7 +369,7 @@ In this task, you will publish the dataset.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image48.png)
 
-2. In the **Publish to Power BI** window, select the workspace created in this lab, and then select.
+2. In the **Publish to Power BI (1)** window, select the workspace created in this lab, and then **select (2)*.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image49.png)
 
@@ -369,7 +399,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
-5. In the window, enter the username and password, and set the privacy level to **Organizational(3)**. Select **Sign In (4)**.
+5. In the window, enter the username and password, and set the privacy level to **Organizational (3)**. Select **Sign In (4)**.
        
       Username: `sqladmin` **(1)**
 
@@ -379,13 +409,12 @@ In this task, you will set up the data source credentials and refresh the datase
 
 6. Expand open the **Scheduled refresh and performance optimization** section.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image56.png)
+     ![](../images/dp500-improve-performance-with-hybrid-tables-image56.png)
 	
 7. Notice, but do not change, any of the settings.
 
-	*In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.*
-
-	*In this lab, you will do an on-demand refresh.*
+	>**Note:** In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.
+	>In this lab, you will do an on-demand refresh.
 
 8. In the **Navigation** pane (located at the left), select your workspace.
 
@@ -417,11 +446,12 @@ In this task, you will use SSMS to review the table partitions.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
-2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).In the **Authentication** dropdown list, select **Azure Active Directory - Password**. Enter Azure Username/Email: <inject key="AzureAdUserEmail"></inject>  and Azure Password: <inject key="AzureAdUserPassword"></inject>.Select **Connect**.
+2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).In the **Authentication** dropdown list, select **Azure Active Directory - Password**. Enter Azure Username/Email: <inject key="AzureAdUserEmail"></inject> and Azure Password: <inject key="AzureAdUserPassword"></inject>.Select **Connect**.
 
-  ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
+      ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
 
->**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.*
+     >**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
+    
 7. In Object Explorer (located at the left), expand open the **Databases** folder, expand open the **Sales Analysis...** database (dataset), and then the **Tables** folder.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
@@ -430,11 +460,11 @@ In this task, you will use SSMS to review the table partitions.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image67.png)
 
-9. In the **Partitions** window, notice the list of partitions for the two years history, followed by quarterly partitions and daily partitions.
+9. In the **Partitions** window, notice the list of partitions for the two years’ history, followed by quarterly partitions and daily partitions.
 
-10. Scroll to the bottom of the list, and notice the last one is a DirectQuery partition for the current and future dates.
+10. Scroll to the bottom of the list and notice the last one is a DirectQuery partition for the current and future dates.
 
-	*Power BI creates and manages all of these partitions automatically.*
+	>**Note:** Power BI creates and manages all of these partitions automatically.
 
 11. Select **Cancel**.
 
@@ -456,9 +486,8 @@ In this task, you will open the report.
 
 3. If necessary, in the **Fiscal Year** slicer, select the fiscal year that contains the current month (based on today's date).
 
-    *The current month should be visible as a bar in the bar chart.*
-
-    *Note that August 2022 onwards is not in FY 2022, which is the default for the slicer.*
+	  >**Note:** The current month should be visible as a bar in the bar chart.
+	  >August 2022 onwards is not in FY 2022, which is the default for the slicer.
 
 ### Task 14: Add an order to the database
 
@@ -476,7 +505,7 @@ In this task, you will add an order to the database.
 
 5. In the **Connect to Database Engine** window, in **Server name** box enter **serverDID.database.windows.net**.
 
-    >**Note :** Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
+    >**Note:** Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
@@ -488,7 +517,7 @@ In this task, you will add an order to the database.
 
 9. Review the script.
 
-	*This script inserts a single order into the **FactInternetSales** table using today as the order date.*
+	>**Note:** This script inserts a single order into the **FactInternetSales** table using today as the order date.*
 	
 10. Select **AdventureWorksDW2022-DP500** from the **Available Databases** dropdown list.
 
@@ -510,13 +539,13 @@ In this task, you will refresh the report.
 
 3. On the action bar, select the **Refresh** command.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image73.png)
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image73.png)
 
 4. When the report refresh completes, verify that the sales amount for the current month increased by $10,000 dollars.
 
-	*When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.*
+	>**Note:** When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.
 
-	*Tip: Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.*
+	**Tip:**  Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.
 	
    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
