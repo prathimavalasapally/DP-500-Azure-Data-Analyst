@@ -375,7 +375,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 5. In the window, enter the username and password, and set the privacy level to **Organizational(3)**. Select **Sign In (4)**.
        
-       Username: `sqladmin` **(1)**
+      Username: `sqladmin` **(1)**
 
       Password: `P@ssw0rd01` **(2)**
 
