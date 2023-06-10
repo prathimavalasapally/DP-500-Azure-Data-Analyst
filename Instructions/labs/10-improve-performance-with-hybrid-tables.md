@@ -373,35 +373,31 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
-5. In the window, enter the username and password, and set the privacy level to Organizational.
+5. In the window, enter the username and password, and set the privacy level to **Organizational(3)**. Select **Sign In (4)**.
        
-	Username: `sqladmin`
+       Username: `sqladmin` **(1)**
 
-    Password: `P@ssw0rd01`
+      Password: `P@ssw0rd01` **(2)**
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
 
-6. Select **Sign In**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image55.png)
-
-8. Expand open the **Scheduled refresh and performance optimization** section.
+6. Expand open the **Scheduled refresh and performance optimization** section.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image56.png)
-
-9. Notice, but do not change, any of the settings.
+	
+7. Notice, but do not change, any of the settings.
 
 	*In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.*
 
 	*In this lab, you will do an on-demand refresh.*
 
-10. In the **Navigation** pane (located at the left), select your workspace.
+8. In the **Navigation** pane (located at the left), select your workspace.
 
-11. In the workspace landing page, hover the cursor over the dataset, and then select the **Refresh** icon.
+9. In the workspace landing page, hover the cursor over the dataset, and then select the **Refresh** icon.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image57.png)
 
-12. In the **Refreshed** column, notice the spinning icon, and wait until it stops (indicating that the refresh has completed).
+10. In the **Refreshed** column, notice the spinning icon, and wait until it stops (indicating that the refresh has completed).
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image58.png)
 
@@ -409,19 +405,13 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image59.png)
 
-14. In the **Settings** pane, select the **Premium** tab.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image60.png)
-
-15. To copy the workspace connection to the clipboard, select **Copy**.
+14. In the **Settings** pane, select the **Premium** tab. To copy the workspace connection to the clipboard, select **Copy**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image61.png)
 
 	*You will use the workspace connection to connect to it in SQL Server Management Studio (SSMS).*
 
-16. To close the pane, select **Cancel**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
+16. To close the pane, select **X**.
 
 ### Task 12: Review the table partitions
 
@@ -431,22 +421,11 @@ In this task, you will use SSMS to review the table partitions.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
-2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**.
+2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).In the **Authentication** dropdown list, select **Azure Active Directory - Password**. Enter Azure Username/Email: <inject key="AzureAdUserEmail"></inject>  and Azure Password: <inject key="AzureAdUserPassword"></inject>.Select **Connect**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image64.png)
+  ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
 
-	*You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.*
-
-3. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).
-
-4. In the **Authentication** dropdown list, select **Azure Active Directory - Password**.
-
-5. Enter your lab credentials.
-
-6. Select **Connect**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
-
+>**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.*
 7. In Object Explorer (located at the left), expand open the **Databases** folder, expand open the **Sales Analysis...** database (dataset), and then the **Tables** folder.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
