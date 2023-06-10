@@ -23,17 +23,17 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 2. If prompted to take a tour, select **Maybe later**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image8.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image8.png)
 
 3. Select the **SQL databases** tile.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image9.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image9.png)
 
 4. In the list of SQL databases, select the **AdventureWorksDW2022-DP500** database.
 
 5. In the action bar on the Overview tab, select **Set server firewall**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image10.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image10.png)
 
 6. On the public access tab, review that **Selected networks** is selected, if not please select it.
 
@@ -63,7 +63,7 @@ In this task, you will set up Power BI Desktop.
 
 1. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-	![](../images1/dp500-create-a-dataflow-image2.png)
+	![](../images/dp500-create-a-dataflow-image2.png)
 
     *Note: this will likely take you to the Power BI service to complete the sign-up process.*
 
@@ -109,7 +109,7 @@ In this task, you will create a workspace.
 
 3. Beneath the **Description** box, expand and open the **Advanced** section.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image5.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image5.png)
 
 4. Set the **License mode** option to **Premium per-user**. Click **Apply**.
 
@@ -133,11 +133,11 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1) ** dropdown, and then select **Data source settings (2)**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image14.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
 
 5. In the **Data source settings** window, select **Change Source**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image15.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
 6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
 
@@ -149,11 +149,11 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 8. Select **Edit Permissions**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image17.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image17.png)
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image18.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
 
 10. In the **SQL Server database** window, enter the SQL Server database username and password and save. 
 
@@ -173,7 +173,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 13. On the **Home** ribbon tab, from inside the **Queries** group, select **Refresh**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image21.png)
+	![](../images/dp500-improve-performance-with-hybrid-tables-image21.png)
 
 14. Wait until the data refresh completes.
 
