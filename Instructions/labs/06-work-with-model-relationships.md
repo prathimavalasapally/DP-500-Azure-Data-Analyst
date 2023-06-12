@@ -263,7 +263,7 @@ In this task, you will create a query to add another date table to the model.
 
    ![](../images/dp500-6-31.png)
 
-   >**Note** Select **Connect***
+   >**Note** Select **Connect**
 
    ![](../images/dp500-6-32.png)
 	 
