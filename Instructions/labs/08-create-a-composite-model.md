@@ -60,19 +60,19 @@ In this task, you will review the pre-developed report.
 
     ![](../images/dp500-8-5.png)
 
-    *A DirectQuery model comprises tables that use DirectQuery storage mode. A table that uses DirectQuery storage mode passes queries through to the underlying data source. Data modelers often use this storage mode to model large volumes of data. In this instance, the underlying data source is a SQL Server database.*
+    >**Note**: A DirectQuery model comprises tables that use DirectQuery storage mode. A table that uses DirectQuery storage mode passes queries through to the underlying data source. Data modelers often use this storage mode to model large volumes of data. In this instance, the underlying data source is a SQL Server database.
 
 1. Review the report design.
 
     ![](../images/dp500-8-6.png)
 
-    *This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales amounts. You will improve upon this design by adding sales targets to the column chart visual.*
+    >**Note**: This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales amounts. You will improve upon this design by adding sales targets to the column chart visual.*
 
 1. In the **Fiscal Year** slicer, select **FY2021**.
 
      ![](../images1/dp-500-lab8-3.png)
 
-    *It's important to understand that slicer selections change the filters applied to the column chart visual. Power BI refreshes the column chart visual. That involves retrieving data from the source database. That way, the column chart visual shows the latest source data. (Some report-level caching may occur, meaning the report may reuse previously queried data.)*
+    >**Note**: It's important to understand that slicer selections change the filters applied to the column chart visual. Power BI refreshes the column chart visual. That involves retrieving data from the source database. That way, the column chart visual shows the latest source data. (Some report-level caching may occur, meaning the report may reuse previously queried data).
 
 ### Task-3: Review the data model
 
@@ -86,15 +86,15 @@ In this task, you will review the pre-developed data model.
 
      ![](../images1/dp-500-lab8-5.png)
      
-    *The model comprises three dimension tables and one fact table. The **Sales** fact table represents sales order details. It's a classic star schema design. The bar across the top of each table indicates it uses DirectQuery storage mode. Because each table has a blue bar, it indicates all tables belong to the same source group.*
+    >**Note**: The model comprises three dimension tables and one fact table. The **Sales** fact table represents sales order details. It's a classic star schema design. The bar across the top of each table indicates it uses DirectQuery storage mode. Because each table has a blue bar, it indicates all tables belong to the same source group.
 
-    *You will extend the model with another fact table to support analyzing sales target facts too.*
+    >**Note**: You will extend the model with another fact table to support analyzing sales target facts too.
 
 ## Create a composite model
 
 In this exercise, you will add an import table that will convert the DirectQuery model to a composite model.
 
-*A composite model comprises more than one source group.*
+>**Note**: A composite model comprises more than one source group.
 
 ### Task-4: Add a table
 
@@ -117,9 +117,9 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 1. In the preview pane (located at the right), notice that the table comprises **three columns (1)**, and each row of the table represents a fiscal quarter, sales region, and a target sales amount and select **Transform Data (2)**.
 
 
-   ![](../images1/dp-500-lab8-9.png)
+    ![](../images1/dp-500-lab8-9.png)
 
-    *You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.*
+    >**Note**: You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.
 
 1. In the Power Query Editor window, to rename the first column, double-click the **Period** column header.
 
@@ -139,13 +139,13 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
 1. In Power BI Desktop, when the load process completes, in the model diagram, position the new table directly beneath the **Order Date** table.
 
-    *The table may be out of view. If this is the case, scroll horizontally to reveal the table.*
+   >**Note**: The table may be out of view. If this is the case, scroll horizontally to reveal the table.*
 
 1. Notice that the **Targets** table doesn't have a blue bar across the top.
 
      ![](../images1/dp-500-lab8-13.png)
 
-    *The absence of a bar indicates the table belongs to the import source group.*
+     >**Note**: The absence of a bar indicates the table belongs to the import source group.
 
 ### Task-5: Create model relationships
 
@@ -157,7 +157,7 @@ In this task, you will create two model relationships.
 
 1. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **One to many (1)** and select **OK (2)**.
 
-    *The **Region** column in the **Sales Territory** table contains unique values, while the **Region** column in the **Targets** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and fact tables.*
+   >**Note**: The **Region** column in the **Sales Territory** table contains unique values, while the **Region** column in the **Targets** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and fact tables.
 
     ![](../images1/dp-500-lab8-14.png)
 
@@ -165,9 +165,9 @@ In this task, you will create two model relationships.
 
 1. Notice also that the relationship line look different to the other relationship lines.
 
-   ![](../images1/dp-500-lab8-15.png)
+    ![](../images1/dp-500-lab8-15.png)
 
-    *The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).*
+    >**Note**: The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).
 
 1. Create another relationship, this time relating the **Fiscal Quarter** column of the **Order Date** table to the **Fiscal Quarter** column of the **Targets** table.
 
@@ -175,13 +175,13 @@ In this task, you will create two model relationships.
 
 1. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **Many to many**.
 
-    *Because both columns contain duplicate values, Power BI Desktop automatically sets the cardinality to many to many. However, the default cross filter direction is incorrect.*
+   >**Note**: Because both columns contain duplicate values, Power BI Desktop automatically sets the cardinality to many to many. However, the default cross filter direction is incorrect.
 
 1. In the **Cross filter direction** dropdown list, select **Single (Order Date filters Targets)**.
 
      ![](../images1/dp-500-lab8-(17).png)
      
-    *It's common that dimension tables filter fact tables. In this model design, it isn't necessary (or efficient) to propagate filters from the fact table to the dimension table.*
+     >**Note**: It's common that dimension tables filter fact tables. In this model design, it isn't necessary (or efficient) to propagate filters from the fact table to the dimension table.
 
 1. Select **OK**.
 
@@ -215,7 +215,7 @@ In this task, you will add two measures to allow the analysis of sales target va
 
 1. In the formula bar, enter the following measure definition.
 
-    *Tip: All measure definitions are available to copy and paste from the* **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\08\Assets\Snippets.txt** *file.*
+    >**Tip** : All measure definitions are available to copy and paste from the* **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\08\Assets\Snippets.txt** *file.*
 
 
     ```
@@ -224,7 +224,8 @@ In this task, you will add two measures to allow the analysis of sales target va
     ```
     
      ![](../images1/dp-500-lab8-21-1.png)
-   >**Note**: *The measure named **Variance** subtracts the sum of **Target Amount** from the sum of **Sales Amount**.*
+     
+     >**Note**: *The measure named **Variance** subtracts the sum of **Target Amount** from the sum of **Sales Amount**.
 
 1. On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the decimal places box, enter **2**.
 
@@ -232,7 +233,7 @@ In this task, you will add two measures to allow the analysis of sales target va
     
     >**Note**: If you don't find **Measure Tools** under ribbon tab, in the **Properties** pane, in the **Formatting** section, set the **Decimal places** property to **2**.
             
-     ![](../images1/dp-500-lab8-21.png)
+    ![](../images1/dp-500-lab8-21.png)
       
 1. Create another measure using the following measure definition.
 
@@ -251,18 +252,16 @@ In this task, you will add two measures to allow the analysis of sales target va
     ```
 
 
-    >Note: *The measure named **Variance Margin** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the **Variance** measure by the sum of the **Target Amount** column.*
+    >**Note**: The measure named **Variance Margin** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the **Variance** measure by the sum of the **Target Amount** column.
 
 1. On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the **Format** dropdown list, select **Percentage**.
 
     ![](../images1/dp500-8-(24).png)
     
-    >**Note**:If you don't find **Measure Tools** under ribbon tab, in the **Properties** pane, in the **Formatting** section, set the **Format** dropdown list, select **Percentage** .
-
+    >**Note**:If you don't find **Measure Tools** under ribbon tab, in the **Properties** pane, in the **Formatting** section, set the **Format** dropdown list, select **Percentage**.
 
      ![](../images1/dp-500-lab8-22.png)
      
-
 1. In the **Data** pane, inside the **Targets** table, verify that there are two measures.
 
    ![](../images1/dp-500-lab8-23.png)
@@ -292,7 +291,7 @@ In this task, you will update the report to use the new measures.
 
     ![](../images/dp500-8-26.png)
 
-    *You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.*
+    >**Note**: You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.*
     
  
 ### Task-9: Finish up
