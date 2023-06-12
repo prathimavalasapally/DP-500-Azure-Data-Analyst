@@ -150,13 +150,9 @@ In this exercise, you will develop a DirectQuery model to support Power BI analy
 
 In this task, you will download a Power BI data source file from Synapse Studio.
 
-1. In Microsoft Edge, navigate to **Synapse Studio**.
+1. In the Synapse Studio, on the left, select the Develop hub.
 
-    ![](../images/dp500-create-a-star-schema-model-image4a.png)
-
-1. At the left, select the **Develop** hub.
-
-    ![](../images1/dp-lab4-18.png)
+    ![](../images1/dp-lab4-(18).png)
 
 1. In the **Develop** pane, expand **Power BI**, then expand the workspace, and then select **Power BI datasets**. If not present, Click **Publish all** to publish Workspace and refresh the browser.
 
