@@ -235,7 +235,6 @@ In this task, you will add two measures to allow the analysis of sales target va
       
 1. Create another measure using the following measure definition.
 
-
     ```
     Variance Margin =
 
@@ -248,7 +247,6 @@ In this task, you will add two measures to allow the analysis of sales target va
     )
     
     ```
-
 
     >**Note**: The measure named **Variance Margin** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the **Variance** measure by the sum of the **Target Amount** column.
 
