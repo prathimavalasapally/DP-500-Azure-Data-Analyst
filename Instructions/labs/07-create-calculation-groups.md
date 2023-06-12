@@ -57,10 +57,10 @@ Review the data model to understand how calculation groups will apply to this mo
     ![Graphical user interface, diagram Description automatically
     generated](../images1/dp-500-lab7-4.png)
 
-    >**Note**: The above diagram where the  model comprises seven dimension tables and two fact tables. The
+    >**Note**: The above diagram where the model comprises seven dimension tables and two fact tables. The
     **Sales** fact table stores sales order details. The **Currency Rate** fact
     table stores daily currency exchange rates for multiple currencies. It’s a
-    classic star schema design.*
+    classic star schema design.
 
 3.  Switch to **Report** view.
 
