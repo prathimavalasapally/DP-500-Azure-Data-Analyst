@@ -136,7 +136,7 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
 
     ![](../images1/dp-lab4-15.png)
 
-1. Navigate to **Manage**, select **Publish all** and then click on **Publish** to ensure changes are published.
+1. Navigate to **Manage (1)**, select **Publish all (2)** and then click on **Publish (3)** to ensure changes are published.
 
     ![](../images1/dp-lab4-(16).png)
     
