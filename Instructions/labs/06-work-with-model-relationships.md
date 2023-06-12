@@ -216,8 +216,8 @@ In this exercise, you will add a date table to support ship date analysis.
 In this task, you will remove the existing relationship to the **ShipDateKey** column.
 
 1. Switch to **Model** view.
-
-    ![](../images/modelview.png)
+   
+   ![](../images/mod5-modelview.png)
 
 2. In the model diagram, right-click the **ShipDateKey** relationship, and then select **Delete**.
 
