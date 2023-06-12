@@ -217,7 +217,7 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 1. Switch to **Model** view.
 
-   ![](../images/dp500-16-14.png)
+   ![](../images/modelview.png)
 
 2. In the model diagram, right-click the **ShipDateKey** relationship, and then select **Delete**.
 
