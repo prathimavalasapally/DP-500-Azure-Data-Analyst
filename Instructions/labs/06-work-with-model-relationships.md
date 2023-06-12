@@ -52,17 +52,17 @@ In this task, you will review the data model.
 
    ![](../images/dp500-6-11.png)
 
-   *The **DateKey** column in the **Date** table is a unique column representing the "one” side of the relationships. Filters applied to any column of the **Date** table propagate to the **Sales** table using one of the relationships.*
+   >**Note** The **DateKey** column in the **Date** table is a unique column representing the "one” side of the relationships. Filters applied to any column of the **Date** table propagate to the **Sales** table using one of the relationships.
 
 4. Hover the cursor over each of the three relationships to highlight the "many” side column in the **Sales** table.
 
 5. Notice that the relationship to the **OrderDateKey** column is a solid line, while the other relationships are represented by a dotted line.
 
-   *A solid line represents an active relationship. There can only be one active relationship path between two model tables, and the path is used by default to propagate filters between tables. Conversely, a dotted line represents an inactive relationship. Inactive relationships are used only when explicitly invoked by DAX formulas.*
+   >**Note** A solid line represents an active relationship. There can only be one active relationship path between two model tables, and the path is used by default to propagate filters between tables. Conversely, a dotted line represents an inactive relationship. Inactive relationships are used only when explicitly invoked by DAX formulas.
 
-   *The current model design indicates that the **Date** table is a role-playing dimension. This dimension could play the role of order date, due date, or ship date. Which role depends on the analytical requirements of the report.*
+   >**Note** The current model design indicates that the **Date** table is a role-playing dimension. This dimension could play the role of order date, due date, or ship date. Which role depends on the analytical requirements of the report.
 
-   *In this lab, you will learn how to design a model to support role playing dimensions.*
+   >**Note** In this lab, you will learn how to design a model to support role playing dimensions.*
 
 #### Task-3: Visualize date data
 
@@ -92,9 +92,9 @@ In this task, you will visualize sales data by date and switch the active status
 
    ![](../images/dp500-6-14.png)
 
-	*The table visual shows the sum of the **Sales Amount** column grouped by year. But what does **Fiscal Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDateKey** column, **Fiscal Year** means the fiscal year in which the orders were made.*
+   >**Note** The table visual shows the sum of the **Sales Amount** column grouped by year. But what does **Fiscal Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDateKey** column, **Fiscal Year** means the fiscal year in which the orders were made.
 
-	*To clarify which fiscal year, it’s a good idea to rename the visual field (or add a title to the visual).*
+  >**Note** To clarify which fiscal year, it’s a good idea to rename the visual field (or add a title to the visual).
 
 7. In the **Visualizations** pane for the table visual, from inside the **Values** well, select the down-arrow, and then select **Rename for this visual**.
 
@@ -104,13 +104,13 @@ In this task, you will visualize sales data by date and switch the active status
 
 8. Replace the text with **Order Year**, and then press **Enter**.
 
-	![](../images/dp500-6-16.png)
+   ![](../images/dp500-6-16.png)
 
-	*Tip: It’s quicker to rename a visual field by double-clicking its name.*
-
+   >**Note** Tip: It’s quicker to rename a visual field by double-clicking its name.
+ 
 9. Notice that the table visual column header updates to the new name.
 
-	![](../images/dp500-6-17.png)
+   ![](../images/dp500-6-17.png)
 
 #### Task-4: Modify relationship active status
 
@@ -118,31 +118,31 @@ In this task, you will modify the active status of two relationships.
 
 1. On the **Modeling** ribbon, select **Manage Relationships**.
 
-	![](../images/dp500-6-18.png)
+   ![](../images/dp500-6-18.png)
 
 2. In the **Manage relationships** window, for the relationship between the **Sales** and **Date** tables for the **OrderDateKey** column (third in the list), uncheck the **Active** checkbox.
 
-	![](../images/dp500-6-8.png)
+   ![](../images/dp500-6-8.png)
 
 3. Check the **Active** checkbox for the relationship between the **Sales** and **Date** tables for the **ShipDateKey** column (last in the list).
 
-	![](../images/dp500-6-9.png)
+   ![](../images/dp500-6-9.png)
 
 4. Select **Close**.
 
-	![](../images/dp500-6-7.png)
+   ![](../images/dp500-6-7.png)
 
-	*These configurations have switched the active relationship between the **Date** and **Sales** tables to the **ShipDateKey** column.*
+   >**Note**These configurations have switched the active relationship between the **Date** and **Sales** tables to the **ShipDateKey** column.
 
 5. Review the table visual that now shows sales amounts grouped by ship years.
 
-	![](../images/dp500-6-19.png)
+   ![](../images/dp500-6-19.png)
 
 6. Rename the first column as **Ship Year**.
 
-	![](../images/dp500-6-20.png)
+   ![](../images/dp500-6-20.png)
 
-	*The first row represents a blank group because some orders have not yet shipped. In other words, there are BLANKs in the **ShipDateKey** column of the **Sales** table.*
+   >**Note** The first row represents a blank group because some orders have not yet shipped. In other words, there are BLANKs in the **ShipDateKey** column of the **Sales** table.
 
 7. In the **Manage relationships** window, revert the **OrderDateKey** relationship back to active by using the following steps:
 
@@ -158,7 +158,7 @@ In this task, you will modify the active status of two relationships.
 
 	![](../images/dp500-6-21.png)
 
-	*In the next exercise, you will learn how to make a relationship active in a DAX formula.*
+   >**Note** In the next exercise, you will learn how to make a relationship active in a DAX formula.*
 
 ### Excercise-2: Use inactive relationships
 
@@ -170,11 +170,11 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 1. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
-	![](../images/dp500-6-22.png)
+   ![](../images/dp500-6-22.png)
 
 2. In the formula bar (located beneath the ribbon), replace the text with the following measure definition, and then press **Enter**.
 
-	*Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Assets\Snippets.txt**.*
+   >**Note** Tip: All formulas are available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Assets\Snippets.txt**.
 
 	```
 	Sales Shipped =
@@ -183,7 +183,7 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 	USERELATIONSHIP ( 'Date'[DateKey], 'Sales'[ShipDateKey] )
 	)
 	```	
-	*This formula uses the CALCULATE function to modify the filter context. It’s the USERELATIONSHIP function that, for the purpose of this calculation, makes the **ShipDateKey** relationship active.*
+   >**Note** This formula uses the CALCULATE function to modify the filter context. It’s the USERELATIONSHIP function that, for the purpose of this calculation, makes the **ShipDateKey** relationship active.
 
 3. On the **Measure tools** contextual ribbon, from inside the **Formatting** group, set the decimals places to **2**.
 
@@ -193,19 +193,19 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 4. Add the **Sales Shipped** measure to the table visual.
 
-	![](../images/dp500-6-24.png)
+   ![](../images/dp500-6-24.png)
 
 5. Widen the table visual so all columns are fully visible.
 
-	![](../images/dp500-6-25.png)
+   ![](../images/dp500-6-25.png)
 
-	*Creating measures that temporarily set relationships as active is one way to work with role-playing dimensions. However, it can become tedious when there’s a need to create role-playing versions for many measures. For example, if there were 10 sales-related measures and three role-playing dates, it could mean creating 30 measures. Creating them with calculation groups could make the process easier.*
+   >**Note** Creating measures that temporarily set relationships as active is one way to work with role-playing dimensions. However, it can become tedious when there’s a need to create role-playing versions for many measures. For example, if there were 10 sales-related measures and three role-playing dates, it could mean creating 30 measures. Creating them with calculation groups could make the process easier.
 
-	*Another approach is to create a different model table for each role-playing dimension. You will do that in the next exercise.*
+   >**Note** Another approach is to create a different model table for each role-playing dimension. You will do that in the next exercise.
 
 6. To remove the measure from the table visual, in the **Visualizations** pane, from inside the **Values** well, for the **Sales Shipped** field, press **X**.
 
-	![](../images/dp500-6-26.png)
+   ![](../images/dp500-6-26.png)
 
 ### Excercise-3: Add another Date table
 
@@ -217,17 +217,17 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 1. Switch to **Model** view.
 
-	![](../images/dp500-16-14.png)
+   ![](../images/dp500-16-14.png)
 
 2. In the model diagram, right-click the **ShipDateKey** relationship, and then select **Delete**.
 
-	![](../images/dp500-6-27.png)
+   ![](../images/dp500-6-27.png)
 
 3. When prompted to confirm the deletion, select **Yes**.
 
-	![](../images1/dp500-6-66.png)
+   ![](../images1/dp500-6-66.png)
 
-	*Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.*
+   >**Note** Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.
 
 #### Task-2: Disable relationship options
 
@@ -235,21 +235,21 @@ In this task, you will disable two relationship options.
 
 1. On the **File** ribbon tab, select **Options and settings**, and then select **Options**.
 
-	![](../images/dp500-6-28.png)
+   ![](../images/dp500-6-28.png)
 
 2. In the **Options** window, at the bottom-left, from inside the **CURRENT FILE** group, select **Data Load**.
 
-	![](../images/dp500-6-29.png)
+   ![](../images/dp500-6-29.png)
 
 3. In the **Relationships** section, uncheck the two enabled options.
 
-	![](../images/dp500-6-30.png)
+   ![](../images/dp500-6-30.png)
 
-	*Generally, in your day-to-day work it’s okay to keep these options enabled. However, for the purposes of this lab, you will create relationships explicitly.*
+   >**Note** Generally, in your day-to-day work it’s okay to keep these options enabled. However, for the purposes of this lab, you will create relationships explicitly.
 
 4. Select **OK**.
 
-	![](../images/dp500-6-2.png)
+   ![](../images/dp500-6-2.png)
 
 #### Task-3: Add another date table
 
@@ -257,49 +257,49 @@ In this task, you will create a query to add another date table to the model.
 
 1. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
 
-	![](../images/dp500-6-6.png) 
+   ![](../images/dp500-6-6.png) 
 
-	*If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.*
+   >**Note** If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.*
 
-	![](../images/dp500-6-31.png)
+   ![](../images/dp500-6-31.png)
 
-	*Select **Connect***
+   >**Note** Select **Connect***
 
-	 ![](../images/dp500-6-32.png)
+   ![](../images/dp500-6-32.png)
 	 
-	*If prompted for Encryption Support, click on **OK**
+   >**Note** If prompted for Encryption Support, click on **OK**
 	
-	 ![](../images/dp500-6-4.png)
+   ![](../images/dp500-6-4.png)
  
 2. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Date** query, and then select **Reference**.
 
-	![](../images/eriespanedate.png)
+   ![](../images/eriespanedate.png)
 	
-	![](../images/dp500-6-33.png)
+   ![](../images/dp500-6-33.png)
 
-	*A referencing query is one that uses another query as its source. So, this new query sources its date from the **Date** query.*
+   >**Note** A referencing query is one that uses another query as its source. So, this new query sources its date from the **Date** query.*
 
 3. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Ship Date**.
 
-	![](../images/dp500-6-34.png)
+   ![](../images/dp500-6-34.png)
 
 4. To rename the **DateKey** column, double-click the **DateKey** column header.
 
 5. Replace the text with **ShipDateKey**, and then press **Enter**.
 
-	![](../images/dp500-6-35.png)
+   ![](../images/dp500-6-35.png)
 
 6. Also rename the **Fiscal Year** column as **Ship Year**.
 
-	*If possible, it’s a good idea to rename all column so they describe the role they’re playing. In this lab, to keep things simple you will rename only two columns.*
+   >**Note** If possible, it’s a good idea to rename all column so they describe the role they’re playing. In this lab, to keep things simple you will rename only two columns.
 
 7. To load the table to the model, on the **Home** ribbon tab, select the **Close &amp; Apply** icon.
 
-	![](../images/dp500-6-36.png)
+   ![](../images/dp500-6-36.png)
 
 8. When the table has added to the model, to create a relationship, from the **Ship Date** table drag the **ShipDateKey** column to the **ShipDateKey** column of the **Sales** table.
 
-	![](../images/dp500-6-37.png)
+   ![](../images/dp500-6-37.png)
 
 9. Notice that an active relationship now exists between the **Ship Date** and **Sales** tables.
 
@@ -309,41 +309,41 @@ In this task, you will visualize the ship date data in a new table visual.
 
 1. Switch to **Report** view.
 
-	![](../images/dp500-6-12.png)
+   ![](../images/dp500-6-12.png)
 
 2. To clone the table visual, first select the visual.
 
 3. On the **Home** ribbon tab, from inside the **Clipboard** group, select **Copy**.
 
-	![](../images/dp500-6-38.png)
+   ![](../images/dp500-6-38.png)
 
 4. To paste the copied visual, on the **Home** ribbon tab, from inside the **Clipboard** group, select **Paste**.
 
-	*Tip: You can also use the **Ctrl+C** and **Ctrl+V** shortcuts.*
+   >**Note** Tip: You can also use the **Ctrl+C** and **Ctrl+V** shortcuts.*
 
-	![](../images/dp500-6-39.png)
+   ![](../images/dp500-6-39.png)
 
 5. Move the new table visual to the right of the existing table visual.
  
 6. Select the new table visual, and then in the **Visualizations** pane, from inside the **Values** well, remove the **Order Year** field.
 
-	![](../images/dp500-6-40.png)
+   ![](../images/dp500-6-40.png)
 
 7. In the **Data** pane, expand open the **Ship Date** table.
 
 8. To add a new field to the new table visual, from the **Ship Date** table, drag the **Ship Year** field to the **Values** well, above the **Sales Amount** field.
 
-	![](../images/dp500-6-41.png)
+   ![](../images/dp500-6-41.png)
 
 9. Verify that the new table visual shows sales amount grouped by ship year.
 
-	![](../images/dp500-6-42.png)
+   ![](../images/dp500-6-42.png)
 
-	*The model now has two date tables, each with an active relationship to the **Sales** table. The benefit of this design approach is that it’s flexible. It’s now possible to use all measures and summarizable fields with either date table.*
+   >**Note** The model now has two date tables, each with an active relationship to the **Sales** table. The benefit of this design approach is that it’s flexible. It’s now possible to use all measures and summarizable fields with either date table.
 
-	*There are, however, some disadvantages. Each role-playing table will contribute to a larger model size—although dimension table aren’t typically large in terms of rows. Each role-playing table will also require duplicating model configurations, like marking the date table, creating hierarchies, and other settings. Also, additional tables contribute to a possible overwhelming number of fields. Users may find it more difficult to find the model resources they need.*
+   >**Note** There are, however, some disadvantages. Each role-playing table will contribute to a larger model size—although dimension table aren’t typically large in terms of rows. Each role-playing table will also require duplicating model configurations, like marking the date table, creating hierarchies, and other settings. Also, additional tables contribute to a possible overwhelming number of fields. Users may find it more difficult to find the model resources they need.
 
-	*Lastly, it’s not possible to achieve a combination of filters in the one visual. For example, it’s not possible to combine sales ordered and sales shipped in the same visual without creating a measure. You will create that measure in the next exercise.*
+   >**Note** Lastly, it’s not possible to achieve a combination of filters in the one visual. For example, it’s not possible to combine sales ordered and sales shipped in the same visual without creating a measure. You will create that measure in the next exercise.*
 
 ### Excercise-4: Explore other relationship functions
 
@@ -355,7 +355,7 @@ In this task, you will work with the CROSSFILTER and TREATAS functions to modify
 
 1. In the **Data** pane, from inside the **Sales** table, select the **Sales Shipped** measure.
 
-	![](../images/dp500-6-43.png)
+   ![](../images/dp500-6-43.png)
 
 2. In the formula base, replace the text with the following definition:
 
@@ -371,19 +371,19 @@ In this task, you will work with the CROSSFILTER and TREATAS functions to modify
 	)
 	```
 
-	*This formula uses the CALCULATE function to sum the **Sales Amount** column by using modified relationship behaviors. The CROSSFILTER function disables the active relationship to the **OrderDateKey** column (this function can also modify filter direction). The TREATAS function creates a virtual relationship by applying the in-context **DateKey** values to the **ShipDateKey** column.*
+   >**Note** This formula uses the CALCULATE function to sum the **Sales Amount** column by using modified relationship behaviors. The CROSSFILTER function disables the active relationship to the **OrderDateKey** column (this function can also modify filter direction). The TREATAS function creates a virtual relationship by applying the in-context **DateKey** values to the **ShipDateKey** column.
 
 3. Add the revised **Sales Shipped** measure to the first table visual.
 
-	![](../images/dp500-6-44.png)
+   ![](../images/dp500-6-44.png)
 
 4. Review the first table visual.
 
-	![](../images/dp500-6-45.png)
+   ![](../images/dp500-6-45.png)
 
 5. Notice that there is no BLANK group.
 
-	*Because there are no BLANKs in the **OrderDateKey** column, a BLANK group wasn’t generated. Showing unshipped sales will require a different approach.*
+   >**Note** Because there are no BLANKs in the **OrderDateKey** column, a BLANK group wasn’t generated. Showing unshipped sales will require a different approach.
 
 #### Task-2: Show unshipped sales
 
@@ -398,7 +398,7 @@ In this task, you will create a measure to show the unshipped sales amount.
 	ISBLANK ( 'Sales'[ShipDateKey] )
 	)
 	```
-	*This formula sums the **Sales Amount** column where the **ShipDateKey** column is BLANK.*
+   >**Note** This formula sums the **Sales Amount** column where the **ShipDateKey** column is BLANK.
 
 2. Format the measure to use two decimal places.
 
@@ -406,15 +406,15 @@ In this task, you will create a measure to show the unshipped sales amount.
 
 4. In the **Visualizations** pane, select the **Card** visual icon.
 
-	![](../images/dp500-6-46.png)
+   ![](../images/dp500-6-46.png)
 
 5. Drag the **Sales Unshipped** measure into the card visual.
 
-	![](../images/dp500-6-47.png)
+   ![](../images/dp500-6-47.png)
 
 6. Verify that the final report page layout looks like the following.
 
-	![](../images/dp500-6-48.png)
+   ![](../images/dp500-6-48.png)
 	
 #### Task-3: Finish up
 
@@ -422,7 +422,7 @@ In this task, you will finish up.
 
 1. Save the Power BI Desktop file.
 
-	![](../images/DP500-16-25.png)
+   ![](../images/DP500-16-25.png)
 	
 2. Close Power BI Desktop.
 
