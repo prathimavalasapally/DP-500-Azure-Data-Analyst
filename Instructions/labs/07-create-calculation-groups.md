@@ -146,7 +146,7 @@ Now you'll create two calculation groups. The first will support time intelligen
 Use Tabular Editor to create the **Time Intelligence** calculation group. It will simplify the creation of many time-related calculations, including PY (prior year), YoY (year-over-year), and YoY % (year-over-year percentage). The calculation group will allow analyzing any measure by using different Time Intelligence calculations.
 
    >**Note**: Power BI Desktop does not support the creation or management of calculation
-groups.*
+groups.
 
    > **Tip**: All syntax is available to copy and paste from the C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt
 
@@ -157,7 +157,7 @@ groups.*
 
     >**Note**: Tabular Editor opens in a new window and connects live to the data model
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
-    aren’t propagated to Power BI Desktop until you save them.*
+    aren’t propagated to Power BI Desktop until you save them.
 
 2.  In the Tabular Editor window, in the left pane, right-click the **Tables (1)**
     folder, and then select **Create New (2)** \> **Calculation Group (3)**.
@@ -174,7 +174,7 @@ groups.*
     
     >**Note**: The calculation group comprises this single column, while rows of data
     define the group of calculations. It’s a good practice to rename the column
-    to reflect the subject of the calculations.*
+    to reflect the subject of the calculations.
 
 6.  select the **Name (1)** column and in the **Properties** pane (located at the bottom-right), select the
     **Name** property, and rename as **Time Calculation (2)**.
@@ -199,7 +199,7 @@ groups.*
      ![](../images1/dp-500-lab7-14.png)
 
     >**Note**: The SELECTEDMEASURE function returns a reference to the measure that is
-    currently in context when the calculation item is evaluated.*
+    currently in context when the calculation item is evaluated.
 
 10. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
@@ -218,7 +218,7 @@ groups.*
 
     ```CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )```
 
-    >**Note**: The prior year (PY) formula calculates the value for the selected measure in the prior year.*
+    >**Note**: The prior year (PY) formula calculates the value for the selected measure in the prior year.
     
     
 10. In the **Expression Editor** pane toolbar, select the first button to accept
@@ -243,7 +243,7 @@ groups.*
     changes.
 
     >**Note**: The year-over-year (YoY) formula calculates the difference of the selected
-    measure of the current year to the prior year.*
+    measure of the current year to the prior year.
 
  1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
@@ -266,7 +266,7 @@ groups.*
     changes.
     
     >**Note**: The year-over-year percentage (YoY %) formula calculates the percentage
-    change of the selected measure over the prior year.*
+    change of the selected measure over the prior year.
 
 14. In the **Properties** pane (located at the bottom-right), set the **Format String Expression** property
     to: 
@@ -288,7 +288,7 @@ groups.*
 16. To save the changes to the Power BI Desktop model, on the **File** menu,
     select **Save**.
 
-    **Tip:** *It’s also possible to select the toolbar button or press **Ctrl+S**.*
+    **Tip:** *It’s also possible to select the toolbar button or press **Ctrl+S**.
 
 17. Switch to Power BI Desktop.
 
@@ -300,7 +300,7 @@ groups.*
 
     ![](../images/dp500_07-22.png)
 
-    >**Note**: Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.*
+    >**Note**: Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.
 
 20. In the **Data** pane, expand open the **Time Intelligence** table.
 
@@ -338,7 +338,7 @@ column.
 
     >**Note**: The format of the values is derived from the selected measures. However,
     recall that you set the format string expression for the **YoY %** measure
-    to produce a percentage format.*
+    to produce a percentage format.
 
 ### Create the Currency Conversion calculation group
 
@@ -358,14 +358,14 @@ currency. It will also apply appropriate formatting for the selected currency.
       ![](../images/dp500_07-22.png)
       
     >**Note**: You will use a DAX expression to apply the format string of the selected
-    currency.*
+    currency.
 
 4.  Switch to Tabular Editor.
 
 5.  Create a calculation group named **Currency Conversion**.
 
     >**Note**: Due to the repetition of tasks, briefer instructions are provided. If
-    necessary, you can refer to the steps in the first task of this exercise.*
+    necessary, you can refer to the steps in the first task of this exercise.
 
     ![Text Description automatically
     generated](../images1/dp-500-lab7-t3.png)
@@ -390,7 +390,7 @@ currency. It will also apply appropriate formatting for the selected currency.
     )
     ```
     
-    >**Note**: When there’s only one currency in the filter context, the formula sums daily values of the selected measure that are divided by that day’s end of day rate.*
+    >**Note**: When there’s only one currency in the filter context, the formula sums daily values of the selected measure that are divided by that day’s end of day rate.
 
 8.  In the **Properties** pane, set the **Format String Expression** property to the following formula:
 
@@ -447,7 +447,7 @@ currency. It will also apply appropriate formatting for the selected currency.
     incorrect. Presently, the **YoY %** calculation happens, then the currency
     conversion adds daily calculation results over the month. To produce the
     correct result, the calculation order must be reversed. You can control
-    calculation order by setting precedence values.*
+    calculation order by setting precedence values.
 
 ### Modify calculation group precedence
 
@@ -468,7 +468,7 @@ calculation groups.
     generated](../images1/dp-500-lab7-t7.png)
 
     >**Note**: The higher the value the higher the precedence of application. So, the
-    calculation group with the higher precedence is applied first.*
+    calculation group with the higher precedence is applied first.
 
 4.  Set the calculation group precedence for the **Currency Conversion**
     calculation group to **10**.
@@ -477,7 +477,7 @@ calculation groups.
     generated](../images/dp500_07-40.png)
 
     >**Note**: These configurations will ensure the **Time Intelligence** calculations
-    happen later.*
+    happen later.
 
 5.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
 
