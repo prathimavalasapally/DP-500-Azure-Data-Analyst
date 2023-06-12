@@ -100,8 +100,8 @@ In this task, you will visualize sales data by date and switch the active status
 
 7. In the **Visualizations** pane for the table visual, from inside the **Values** well, select the down-arrow, and then select **Rename for this visual**.
 
-  
-	
+   ![](../images/visualizations.png)
+   	
    ![](../images/dp500-6-15.png)
 
 8. Replace the text with **Order Year**, and then press **Enter**.
