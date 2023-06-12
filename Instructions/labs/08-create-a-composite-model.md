@@ -223,7 +223,7 @@ In this task, you will add two measures to allow the analysis of sales target va
     
      ![](../images1/dp-500-lab8-21-1.png)
      
-     >**Note**: *The measure named **Variance** subtracts the sum of **Target Amount** from the sum of **Sales Amount**.
+     >**Note**: The measure named **Variance** subtracts the sum of **Target Amount** from the sum of **Sales Amount**.
 
 1. On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the decimal places box, enter **2**.
 
