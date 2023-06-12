@@ -41,8 +41,8 @@ Now you'll open a pre-developed Power BI Desktop solution.
     ![Text Description automatically generated with low
     confidence](../images1/dp-500-lab7-2.png)
 
-    *In the next exercise, you will use Tabular Editor to create calculation
-    groups.*
+    >**Note**: In the next exercise, you will use Tabular Editor to create calculation
+    groups.
 
 ### Review the data model
 
@@ -57,7 +57,7 @@ Review the data model to understand how calculation groups will apply to this mo
     ![Graphical user interface, diagram Description automatically
     generated](../images1/dp-500-lab7-4.png)
 
-    *The model comprises seven dimension tables and two fact tables. The
+    >**Note**: The above diagram where the  model comprises seven dimension tables and two fact tables. The
     **Sales** fact table stores sales order details. The **Currency Rate** fact
     table stores daily currency exchange rates for multiple currencies. It’s a
     classic star schema design.*
@@ -75,12 +75,12 @@ Review the data model to understand how calculation groups will apply to this mo
 5.  Notice that the two **Sales** table fields are decorated with the sigma
     symbol (∑).
 
-    *The sigma symbol indicates that the fields will automatically summarize by using aggregation functions like sum, count, average, or others.*
+    >**Note**: The sigma symbol indicates that the fields will automatically summarize by using aggregation functions like sum, count, average, or others.
 
-    *However, when calculation groups are added to a model, this automatic
+    >**Note**: However, when calculation groups are added to a model, this automatic
     behavior must be disabled. That means that summarization can only be
     achieved by measures, which are defined by using Data Analysis Expressions
-    (DAX) formulas. In the next task, you will add measures to the model.*
+    (DAX) formulas. In the next task, you will add measures to the model.
 
 ### Create measures
 
@@ -134,8 +134,8 @@ Create three sales-related measures in preparation for the creation of your calc
     ![Application Description automatically generated with low
     confidence](../images1/dp-500-lab7-7.png)
 
-    *When a table comprises only visible measures, it’s presented at the top of the pane. This way, it behaves like a measure group (an object of a multidimensional model). Do not confuse this cosmetic representation of a
-    tabular model with DAX calculation groups.*
+    >**Note**: When a table comprises only visible measures, it’s presented at the top of the pane. This way, it behaves like a measure group (an object of a multidimensional model). Do not confuse this cosmetic representation of a
+    tabular model with DAX calculation groups.
 
 ## Create a calculation group
 
@@ -145,7 +145,7 @@ Now you'll create two calculation groups. The first will support time intelligen
 
 Use Tabular Editor to create the **Time Intelligence** calculation group. It will simplify the creation of many time-related calculations, including PY (prior year), YoY (year-over-year), and YoY % (year-over-year percentage). The calculation group will allow analyzing any measure by using different Time Intelligence calculations.
 
-*Power BI Desktop does not support the creation or management of calculation
+   >**Note**: Power BI Desktop does not support the creation or management of calculation
 groups.*
 
    > **Tip**: All syntax is available to copy and paste from the C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Assets\Snippets.txt
@@ -155,7 +155,7 @@ groups.*
     ![Text Description automatically generated with low
     confidence](../images1/dp-500-lab7-2.png)
 
-    *Tabular Editor opens in a new window and connects live to the data model
+    >**Note**: Tabular Editor opens in a new window and connects live to the data model
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
     aren’t propagated to Power BI Desktop until you save them.*
 
@@ -172,7 +172,7 @@ groups.*
 
 4.  Expand open the **Time Intelligence** table. 
     
-    *The calculation group comprises this single column, while rows of data
+    >**Note**: The calculation group comprises this single column, while rows of data
     define the group of calculations. It’s a good practice to rename the column
     to reflect the subject of the calculations.*
 
@@ -198,7 +198,7 @@ groups.*
 
      ![](../images1/dp-500-lab7-14.png)
 
-    *The SELECTEDMEASURE function returns a reference to the measure that is
+    >**Note**: The SELECTEDMEASURE function returns a reference to the measure that is
     currently in context when the calculation item is evaluated.*
 
 10. In the **Expression Editor** pane toolbar, select the first button to accept
@@ -218,7 +218,7 @@ groups.*
 
     ```CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )```
 
-    *The prior year (PY) formula calculates the value for the selected measure in the prior year.*
+    >**Note**: The prior year (PY) formula calculates the value for the selected measure in the prior year.*
     
     
 10. In the **Expression Editor** pane toolbar, select the first button to accept
@@ -242,7 +242,7 @@ groups.*
 10. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
 
-    *The year-over-year (YoY) formula calculates the difference of the selected
+    >**Note**: The year-over-year (YoY) formula calculates the difference of the selected
     measure of the current year to the prior year.*
 
  1. To create a fourth calculation item, right-click the **Time Intelligence** table,
@@ -265,7 +265,7 @@ groups.*
  1. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
     
-    *The year-over-year percentage (YoY %) formula calculates the percentage
+    >**Note**: The year-over-year percentage (YoY %) formula calculates the percentage
     change of the selected measure over the prior year.*
 
 14. In the **Properties** pane (located at the bottom-right), set the **Format String Expression** property
@@ -300,7 +300,7 @@ groups.*
 
     ![](../images/dp500_07-22.png)
 
-    *Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.*
+    >**Note**: Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.*
 
 20. In the **Data** pane, expand open the **Time Intelligence** table.
 
@@ -336,7 +336,7 @@ column.
     ![Graphical user interface, application, table, Excel Description
     automatically generated](../images/dp500_07-27.png)
 
-    *The format of the values is derived from the selected measures. However,
+    >**Note**: The format of the values is derived from the selected measures. However,
     recall that you set the format string expression for the **YoY %** measure
     to produce a percentage format.*
 
@@ -357,14 +357,14 @@ currency. It will also apply appropriate formatting for the selected currency.
 
       ![](../images/dp500_07-22.png)
       
-    *You will use a DAX expression to apply the format string of the selected
+    >**Note**: You will use a DAX expression to apply the format string of the selected
     currency.*
 
 4.  Switch to Tabular Editor.
 
 5.  Create a calculation group named **Currency Conversion**.
 
-    *Due to the repetition of tasks, briefer instructions are provided. If
+    >**Note**: Due to the repetition of tasks, briefer instructions are provided. If
     necessary, you can refer to the steps in the first task of this exercise.*
 
     ![Text Description automatically
@@ -389,7 +389,8 @@ currency. It will also apply appropriate formatting for the selected currency.
         )
     )
     ```
-    *When there’s only one currency in the filter context, the formula sums daily values of the selected measure that are divided by that day’s end of day rate.*
+    
+    >**Note**: When there’s only one currency in the filter context, the formula sums daily values of the selected measure that are divided by that day’s end of day rate.*
 
 8.  In the **Properties** pane, set the **Format String Expression** property to the following formula:
 
@@ -397,7 +398,8 @@ currency. It will also apply appropriate formatting for the selected currency.
     ```
     SELECTEDVALUE ( 'Currency'[FormatString] )
     ```
-    This formula returns the format string of the selected currency. This way,
+    
+    >**Note**: This formula returns the format string of the selected currency. This way,
     formatting is dynamically driven by the data in the **Currency** dimension
     table.
 
@@ -440,7 +442,7 @@ currency. It will also apply appropriate formatting for the selected currency.
 
 18. Notice, however, that the **YoY %** values are no longer percentages.
 
-    *There’s a problem. Both the **Time Intelligence** and **Currency
+    >**Note**: There’s a problem. Both the **Time Intelligence** and **Currency
     Conversion** calculations groups are applied, but the calculation order is
     incorrect. Presently, the **YoY %** calculation happens, then the currency
     conversion adds daily calculation results over the month. To produce the
@@ -465,7 +467,7 @@ calculation groups.
     ![Graphical user interface, application Description automatically
     generated](../images1/dp-500-lab7-t7.png)
 
-    *The higher the value the higher the precedence of application. So, the
+    >**Note**: The higher the value the higher the precedence of application. So, the
     calculation group with the higher precedence is applied first.*
 
 4.  Set the calculation group precedence for the **Currency Conversion**
@@ -474,7 +476,7 @@ calculation groups.
     ![Graphical user interface, application, table Description automatically
     generated](../images/dp500_07-40.png)
 
-    *These configurations will ensure the **Time Intelligence** calculations
+    >**Note**: These configurations will ensure the **Time Intelligence** calculations
     happen later.*
 
 5.  To save the changes to Power BI Desktop model, save the current changes in the Tabular Editor - **Ctrl+S**
@@ -498,9 +500,9 @@ In this task, you'll finish up.
 2.  Close Power BI Desktop.
 
     **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
    
 3.  Close Tabular Editor.
