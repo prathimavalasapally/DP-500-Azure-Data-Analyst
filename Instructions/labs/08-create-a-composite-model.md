@@ -127,7 +127,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
     ![](../images1/dp-500-lab8-10.png)
     
-1. To modify the data type of the third column, in the **Target Amount** column header, select the data type icon (123), and then select **Fixed Decimal Number**.
+1. To modify the data type of the third column, in the **Target Amount** column header, select the data type icon **(123) (1)**, and then select **Fixed Decimal Number (2)**.
 
      ![](../images1/dp-500-lab8-11.png)
 
