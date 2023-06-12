@@ -78,8 +78,6 @@ In this task, you will visualize sales data by date and switch the active status
 
 3. To add columns to the table visual, in the **Data** pane (located at the right), first expand the **Date** table.
 
-   ![](../images/datepane.png)
-   
    ![](../images/dp500-6-1.png)
 
 4. Drag the **Fiscal Year** column and drop it into the table visual.
