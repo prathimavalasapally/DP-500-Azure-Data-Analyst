@@ -66,7 +66,7 @@ In this task, you will review the pre-developed report.
 
     ![](../images/dp500-8-6.png)
 
-    >**Note**: This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales amounts. You will improve upon this design by adding sales targets to the column chart visual.*
+    >**Note**: This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales amounts. You will improve upon this design by adding sales targets to the column chart visual.
 
 1. In the **Fiscal Year** slicer, select **FY2021**.
 
@@ -138,7 +138,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
 1. In Power BI Desktop, when the load process completes, in the model diagram, position the new table directly beneath the **Order Date** table.
 
-   >**Note**: The table may be out of view. If this is the case, scroll horizontally to reveal the table.*
+   >**Note**: The table may be out of view. If this is the case, scroll horizontally to reveal the table.
 
 1. Notice that the **Targets** table doesn't have a blue bar across the top.
 
