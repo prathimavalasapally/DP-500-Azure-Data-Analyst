@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will work with model relationships specifically to address the need for role-playing dimensions. It will involve working with active and inactive relationships, and also Data Analysis Expressions (DAX) functions that modify relationship behavior.
 
 In this lab, you learn how to:
@@ -14,17 +12,17 @@ In this lab, you learn how to:
 
 - Use DAX functions that modify relationship behavior.
 
-## Excercise-1: Explore model relationships
+### Excercise-1: Explore model relationships
 
 In this exercise, you will open a pre-developed Power BI Desktop solution to learn about the data model. You will then explore the behavior of active model relationships.
 
-### Task-1: Set up Power BI Desktop
+#### Task-1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/DP500-16-13.png)
+   ![](../images/DP500-16-13.png)
 
 2. In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\06\Starter** folder.
 
@@ -36,63 +34,65 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 6. Select **Save**.
 
-### Task-2: Review the data model
+#### Task-2: Review the data model
 
 In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
-	![](../images/DP500-16-14.png)
+   ![](../images/DP500-16-14.png)
 
 2. Use the model diagram to review the model design.
 
-	![](../images/dp500-6-10.png)
+   ![](../images/dp500-6-10.png)
 
-	*The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It’s a classic star schema design.*
+   *The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It’s a classic star schema design.*
  
 3. Notice that there are three relationships between the **Date** and **Sales** tables.
 
-	![](../images/dp500-6-11.png)
+   ![](../images/dp500-6-11.png)
 
-	*The **DateKey** column in the **Date** table is a unique column representing the "one” side of the relationships. Filters applied to any column of the **Date** table propagate to the **Sales** table using one of the relationships.*
+   *The **DateKey** column in the **Date** table is a unique column representing the "one” side of the relationships. Filters applied to any column of the **Date** table propagate to the **Sales** table using one of the relationships.*
 
 4. Hover the cursor over each of the three relationships to highlight the "many” side column in the **Sales** table.
 
 5. Notice that the relationship to the **OrderDateKey** column is a solid line, while the other relationships are represented by a dotted line.
 
-	*A solid line represents an active relationship. There can only be one active relationship path between two model tables, and the path is used by default to propagate filters between tables. Conversely, a dotted line represents an inactive relationship. Inactive relationships are used only when explicitly invoked by DAX formulas.*
+   *A solid line represents an active relationship. There can only be one active relationship path between two model tables, and the path is used by default to propagate filters between tables. Conversely, a dotted line represents an inactive relationship. Inactive relationships are used only when explicitly invoked by DAX formulas.*
 
-	*The current model design indicates that the **Date** table is a role-playing dimension. This dimension could play the role of order date, due date, or ship date. Which role depends on the analytical requirements of the report.*
+   *The current model design indicates that the **Date** table is a role-playing dimension. This dimension could play the role of order date, due date, or ship date. Which role depends on the analytical requirements of the report.*
 
-	*In this lab, you will learn how to design a model to support role playing dimensions.*
+   *In this lab, you will learn how to design a model to support role playing dimensions.*
 
-### Task-3: Visualize date data
+#### Task-3: Visualize date data
 
 In this task, you will visualize sales data by date and switch the active status of relationships.
 
 1. Switch to **Report** view.
 
-	![](../images/dp500-6-12.png)
+   ![](../images/dp500-6-12.png)
 
 2. To add a table visual, in the **Visualizations** pane, select the **Table** visual icon.
 
-	![](../images/DP500-16-32.png)
+   ![](../images/DP500-16-32.png)
 
 3. To add columns to the table visual, in the **Data** pane (located at the right), first expand the **Date** table.
 
-	![](../images/dp500-6-1.png)
+   ![](../images/datepane.png)
+   
+   ![](../images/dp500-6-1.png)
 
 4. Drag the **Fiscal Year** column and drop it into the table visual.
 
-	![](../images/dp500-6-5.png)
+   ![](../images/dp500-6-5.png)
 
 5. Expand open the **Sales** table, and then drag and drop the **Sales Amount** column into the table visual.
 
-	![](../images/dp500-6-13.png)
+   ![](../images/dp500-6-13.png)
 
 6. Review the table visual.
 
-	![](../images/dp500-6-14.png)
+   ![](../images/dp500-6-14.png)
 
 	*The table visual shows the sum of the **Sales Amount** column grouped by year. But what does **Fiscal Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDateKey** column, **Fiscal Year** means the fiscal year in which the orders were made.*
 
@@ -100,7 +100,9 @@ In this task, you will visualize sales data by date and switch the active status
 
 7. In the **Visualizations** pane for the table visual, from inside the **Values** well, select the down-arrow, and then select **Rename for this visual**.
 
-	![](../images/dp500-6-15.png)
+   ![](../images/visualizations.png)
+	
+   ![](../images/dp500-6-15.png)
 
 8. Replace the text with **Order Year**, and then press **Enter**.
 
@@ -112,7 +114,7 @@ In this task, you will visualize sales data by date and switch the active status
 
 	![](../images/dp500-6-17.png)
 
-### Task-4: Modify relationship active status
+#### Task-4: Modify relationship active status
 
 In this task, you will modify the active status of two relationships.
 
@@ -160,11 +162,11 @@ In this task, you will modify the active status of two relationships.
 
 	*In the next exercise, you will learn how to make a relationship active in a DAX formula.*
 
-## Excercise-2: Use inactive relationships
+### Excercise-2: Use inactive relationships
 
 In this exercise, you will learn how to make a relationship active in a DAX formula.
 
-### Task-1: Use inactive relationships
+#### Task-1: Use inactive relationships
 
 In this task, you will use the USERELATIONSHIP function to make an inactive relationship active.
 
@@ -187,7 +189,9 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 3. On the **Measure tools** contextual ribbon, from inside the **Formatting** group, set the decimals places to **2**.
 
-	![](../images/dp500-6-23.png)
+   ![](../images/measuretools.png)
+   
+   ![](../images/dp500-6-23.png)
 
 4. Add the **Sales Shipped** measure to the table visual.
 
@@ -205,11 +209,11 @@ In this task, you will use the USERELATIONSHIP function to make an inactive rela
 
 	![](../images/dp500-6-26.png)
 
-## Excercise-3: Add another Date table
+### Excercise-3: Add another Date table
 
 In this exercise, you will add a date table to support ship date analysis.
 
-### Task-1: Remove the inactive relationships
+#### Task-1: Remove the inactive relationships
 
 In this task, you will remove the existing relationship to the **ShipDateKey** column.
 
@@ -227,7 +231,7 @@ In this task, you will remove the existing relationship to the **ShipDateKey** c
 
 	*Deleting the relationship results in an error with the **Sales Shipped** measure. You will rewrite the measure formula later in this lab.*
 
-### Task-2: Disable relationship options
+#### Task-2: Disable relationship options
 
 In this task, you will disable two relationship options.
 
@@ -249,7 +253,7 @@ In this task, you will disable two relationship options.
 
 	![](../images/dp500-6-2.png)
 
-### Task-3: Add another date table
+#### Task-3: Add another date table
 
 In this task, you will create a query to add another date table to the model.
 
@@ -271,6 +275,8 @@ In this task, you will create a query to add another date table to the model.
  
 2. In the **Power Query Editor** window, in the **Queries** pane (located at the left), right-click the **Date** query, and then select **Reference**.
 
+	![](../images/eriespanedate.png)
+	
 	![](../images/dp500-6-33.png)
 
 	*A referencing query is one that uses another query as its source. So, this new query sources its date from the **Date** query.*
@@ -299,7 +305,7 @@ In this task, you will create a query to add another date table to the model.
 
 9. Notice that an active relationship now exists between the **Ship Date** and **Sales** tables.
 
-### Task-4: Visualize ship date data
+#### Task-4: Visualize ship date data
 
 In this task, you will visualize the ship date data in a new table visual.
 
@@ -341,11 +347,11 @@ In this task, you will visualize the ship date data in a new table visual.
 
 	*Lastly, it’s not possible to achieve a combination of filters in the one visual. For example, it’s not possible to combine sales ordered and sales shipped in the same visual without creating a measure. You will create that measure in the next exercise.*
 
-## Excercise-4: Explore other relationship functions
+### Excercise-4: Explore other relationship functions
 
 In this exercise, you will work with other DAX relationship functions.
 
-### Task-1: Explore other relationship functions
+#### Task-1: Explore other relationship functions
 
 In this task, you will work with the CROSSFILTER and TREATAS functions to modify relationship behavior during calculations.
 
@@ -381,7 +387,7 @@ In this task, you will work with the CROSSFILTER and TREATAS functions to modify
 
 	*Because there are no BLANKs in the **OrderDateKey** column, a BLANK group wasn’t generated. Showing unshipped sales will require a different approach.*
 
-### Task-2: Show unshipped sales
+#### Task-2: Show unshipped sales
 
 In this task, you will create a measure to show the unshipped sales amount.
 
@@ -412,7 +418,7 @@ In this task, you will create a measure to show the unshipped sales amount.
 
 	![](../images/dp500-6-48.png)
 	
-### Task-3: Finish up
+#### Task-3: Finish up
 
 In this task, you will finish up.
 
