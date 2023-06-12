@@ -75,7 +75,7 @@ In this task, you will set up Power BI.
 
 1. Do any remaining tasks to complete the trial setup.
 
-   *Tip: The Power BI web browser experience is known as the **Power BI service**.*
+   >**Tip**: The Power BI web browser experience is known as the **Power BI service**.
 	
 1. Select Workspaces and **Create a Workspace**.
     
@@ -83,7 +83,7 @@ In this task, you will set up Power BI.
 
 1. Create a workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Apply**.
 
-    *Note: The workspace name must be unique within the tenant. If you're getting an error, change the workspace name.*
+    >**Note**: The workspace name must be unique within the tenant. If you're getting an error, change the workspace name.
 
     ![](../images1/dp-lab4-9.png)
 
@@ -93,7 +93,7 @@ In this task, you will set up Power BI.
 
 1. Go to Power BI Desktop and select **File** then **Options and settings** then **Options** then **Security** and under Authentication Browser check **Use my default web browser** and select **OK**. Close Power BI Desktop. Do not save your file.
 
-	*You will open Power BI Desktop again in the upcoming exercises.*
+   >**Note**: You will open Power BI Desktop again in the upcoming exercises.
 
 ### Start the SQL pool
 
@@ -103,7 +103,7 @@ In this task, you will start the SQL pool.
 
 1. Use the lab credentials to complete the sign in process.
 
-1.  In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, Search and select **Azure Synapse Analytics**
+1. In the Azure portal, in the **Search resources, services, and docs** text box at the top of the Azure portal page, Search and select **Azure Synapse Analytics**
  
 1. Select your Synapse workspace.
 
@@ -118,7 +118,7 @@ In this task, you will start the SQL pool.
     ![](../images1/dp-lab4-12.png)
 
 
-	*Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.*
+    >**Important**: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
 
 ### Link your Power BI workspace to Azure Synapse Analytics
 
@@ -158,12 +158,11 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
     ![](../images1/dp-lab4-19-1.png)
 
-	*Note: If you don't see any data here, confirm that your dedicated SQL pool is running and that your Power BI workspace is linked to your Synapse workspace.*
+    >**Note**: If you don't see any data here, confirm that your dedicated SQL pool is running and that your Power BI workspace is linked to your Synapse workspace.
 
 1. In the **Power BI Datasets** pane, select **New Power BI Dataset**.
 
     ![](../images1/dp-lab4-19.png)
-
 
 1. In the left pane, at the bottom, select **Start**.
 	
@@ -175,11 +174,11 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
     ![](../images1/dp-lab4-(21).png)
 
-	*A .pbids file contains a connection to your SQL pool. It's a convenient way to start your project. When opened, it will create a new Power BI Desktop solution that already stores the connection details to your SQL pool.*
+    >**Note**: A .pbids file contains a connection to your SQL pool. It's a convenient way to start your project. When opened, it will create a new Power BI Desktop solution that already stores the connection details to your SQL pool.
 
 1. When the .pbids file has downloaded, **open it**.
 
-	*When the file opens, it will prompt you to create queries using the connection. You will define those queries in the next task.*
+   >**Note**: When the file opens, it will prompt you to create queries using the connection. You will define those queries in the next task.
 
 ### Create model queries
 
@@ -223,21 +222,21 @@ In this task, you will create five Power Query queries that will each load as a 
 
     ![](../images1/dp-lab4-25.png)
 
-	*Transforming the data allows you to define what data will be available in your model.*
+    >**Note**: Transforming the data allows you to define what data will be available in your model.
 
 
 1. In the **Connection Settings** window, select the **DirectQuery (1)** option and click **OK (2)**.
 
     ![](../images1/dp-lab4-26.png)
 
-	*This decision is important. DirectQuery is a storage mode. A model table that uses DirectQuery storage mode doesn't store data. So, when a Power BI report visual queries a DirectQuery table, Power BI sends a native query to the data source. This storage mode can be used for large data stores like Azure Synapse Analytics (because it could be impractical or uneconomic to import large data volumes) or when near real-time results are required.*
+    >**Note**: This decision is important. DirectQuery is a storage mode. A model table that uses DirectQuery storage mode doesn't store data. So, when a Power BI report visual queries a DirectQuery table, Power BI sends a native query to the data source. This storage mode can be used for large data stores like Azure Synapse Analytics (because it could be impractical or uneconomic to import large data volumes) or when near real-time results are required.
 
 1. In the **Power Query Editor** window, in the **Queries** pane (located at the left), notice there is one query for each table you checked.
 
     ![](../images1/dp-lab4-27.png)
 
 
-	*You will now revise the definition of each query. Each query will become a model table when it's applied to the model. You will now rename the queries, so they're described in more friendly and concise ways, and apply transformations to deliver the columns required by the known reporting requirements.*
+    **Note**: You will now revise the definition of each query. Each query will become a model table when it's applied to the model. You will now rename the queries, so they're described in more friendly and concise ways, and apply transformations to deliver the columns required by the known reporting requirements.
 
 1. Select the **DimDate** query.
 
@@ -279,7 +278,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
     ![](../images1/dp-lab4-31.png)
      
-    *Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.*
+    >**Note**: Power Query defines steps to achieve the desired structure and data. Each transformation is a step in the query logic.
 
 1. To rename the **FullDateAlternateKey** column, double-click the **FullDateAlternateKey** column header.
 
@@ -303,9 +302,9 @@ In this task, you will create five Power Query queries that will each load as a 
 
      ![](../images/dp500-checkColumns.png)
 
-      *Important: If the query design does not match, review the exercise steps to make any corrections.*
+      >**Important**: If the query design does not match, review the exercise steps to make any corrections.
 
-      *The design of the **Date** query is now complete.*
+      >**Note**: The design of the **Date** query is now complete.
 
 1. In the **Applied Steps** pane, right-click the last step, and then select **View Native Query**.
 
@@ -313,7 +312,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. In the **Native Query** window, review the SELECT statement that reflects the query design.
 
-	*This concept is important. A native query is what Power BI uses to query the data source. To ensure best performance, the database developer should ensure this query is optimized by creating appropriate indexes, etc.*
+   >**Note**: This concept is important. A native query is what Power BI uses to query the data source. To ensure best performance, the database developer should ensure this query is optimized by creating appropriate indexes, etc.
 
 1. To close the **Native Query** window, select **OK**.
 
@@ -323,19 +322,19 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. On the home tab of the ribbon, in the Combine group, select **Merge Queries.** 
 
-	*Note: We are merging queries to get the product details, category and sub category. This will be used in the Product dimension.*
+   >**Note**: We are merging queries to get the product details, category and sub category. This will be used in the Product dimension.
 
 1. Select the **DimProductSubcategory (1)** table from the drop down and select the **ProductCategoryKey (2)** Column in each table. Select **OK (1)**.
 
     ![](../images1/dp-lab4-35.png)
 
-	*Note: Use the default join for this merge, which is a left outer join.*
+    >**Note**: Use the default join for this merge, which is a left outer join.
 
 1. Expand the **DimProductSubcategory (1)** column. Select the **ProductSubcategoryKey (2)** and the **EnglishProductSubcategoryName (3)** columns. De-select **Use original column name as prefix (4)** and select **OK (6)**.
 
     ![](../images1/dp-lab4-1(36).png)
 
-	*The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.*
+    >**Note**: The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.
 
 1. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
@@ -349,7 +348,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
    - EnglishProductSubcategoryName
 
-   You should now have three columns with 37 rows.
+   >**Note**: You should now have three columns with 37 rows.
    
    >**Note**:This selection of columns determine what will be available in your model.
    
@@ -410,7 +409,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Verify that the query has five columns.
 
-	*The design of the **Product** query is now complete.*
+   >**Note**: The design of the **Product** query is now complete.
 
 1. Select the **DimReseller** query.
 
@@ -438,7 +437,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Verify that the query has three columns.
 
-	*The design of the **Reseller** query is now complete.*
+   >**Note**: The design of the **Reseller** query is now complete.
 
 1. Select the **DimSalesTerritory** query.
 
@@ -460,7 +459,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- SalesTerritoryGroup
 
-    >**Note**:This selection of columns determine what will be available in your model.
+    >**Note**: This selection of columns determine what will be available in your model.
 
 1. Rename the following columns:
 
@@ -472,7 +471,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Verify that the query has four columns.
 
-	*The design of the **Territory** query is now complete.*
+   >**Note**: The design of the **Territory** query is now complete.
 
 1. Select the **FactResellerSales** query.
 
@@ -497,7 +496,7 @@ In this task, you will create five Power Query queries that will each load as a 
 	- UnitPrice
 
 	
-    >**Note**:This selection of columns determine what will be available in your model.
+    >**Note**: This selection of columns determine what will be available in your model.
 
 
 1. Rename the following columns:
@@ -529,7 +528,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Verify that the query has seven columns.
 
-	*The design of the **Sales** query is now complete.*
+   >**Note**: The design of the **Sales** query is now complete.
 
 1. Right-click on the **Product Details** table and de-select **Enable load**. This will disable the load of the Product Details table to the data model, and it will not appear in the report.
 
@@ -541,7 +540,8 @@ In this task, you will create five Power Query queries that will each load as a 
 
     ![](../images1/dp-lab4-56.png)
 
-	*Each query is applied to create a model table. Because the data connection is using DirectQuery storage mode, only the model structure is created. No data is imported. The model now consists of one table for each query.*
+
+    >**Note**: Each query is applied to create a model table. Because the data connection is using DirectQuery storage mode, only the model structure is created. No data is imported. The model now consists of one table for each query.
 
 1. In Power BI Desktop, when the queries have been applied, at the bottom-left corner in the status bar, notice that the model storage mode is DirectQuery.
 
@@ -559,11 +559,11 @@ In this task, you will organize the model diagram to easily understand the star 
 
 1. In Power BI Desktop, at the left, select **Model** view.
 
-	 ![](../images1/dp-lab4-45.png)
+    ![](../images1/dp-lab4-45.png)
 
 2. To resize the model diagram to fit to screen, at the bottom-right, select the **Fit to screen** icon.
 
-	 ![](../images1/dp-lab4-46.png)
+    ![](../images1/dp-lab4-46.png)
 	 
 3. Drag the tables into position so that the **Sales** fact table is located at the middle of the diagram, and the remaining tables, which are dimension tables, are located around the fact table.
 
@@ -576,17 +576,17 @@ In this task, you will organize the model diagram to easily understand the star 
 
 5. Review the final layout of the model diagram.
 
-	![](../images/dp500-60.png)
+    ![](../images/dp500-60.png)
 
-	*The creation of the star schema model is now complete. There are many modeling configurations that could now be applied, like adding hierarchies, calculations, and setting properties like column visibility.*
+    >**Note**: The creation of the star schema model is now complete. There are many modeling configurations that could now be applied, like adding hierarchies, calculations, and setting properties like column visibility.
 
 6. Optionally, to save the solution, at the top-left, select the disk icon.
 
 7. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\04\MySolution** folder.
 
 8. In the **File name** box, enter **Sales Analysis**.
-
-	![](../images1/dp-lab4-61.png)
+   
+    ![](../images1/dp-lab4-61.png)
 
 9. Select **Save**.
 
