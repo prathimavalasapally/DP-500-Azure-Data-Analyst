@@ -124,7 +124,7 @@ In this task, you will review the BPA rules that you loaded in the previous task
 
 4. Notice that BPA groups the rules into categories.
 
-   >**Note**: Some rules, like DAX expressions, focus on performance optimization while others, like the formatting rules, are aesthetic-oriented.*
+   >**Note**: Some rules, like DAX expressions, focus on performance optimization while others, like the formatting rules, are aesthetic-oriented.
 
 5. Notice the **Severity** column.
 
