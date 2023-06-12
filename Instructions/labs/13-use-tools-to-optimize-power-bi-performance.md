@@ -65,13 +65,13 @@ In this task, you will review the data model.
 
 In this task, you will load BPA rules.
 
->**Note**: The BPA rules aren't added during the Tabular Editor installation. You must download and install them.*
+>**Note**: The BPA rules aren't added during the Tabular Editor installation. You must download and install them.
 
 1. Navigate back to power bi desktop and on the **External Tools** ribbon, select **Tabular Editor**.
 
     ![](../images1/dp-500-lab7-2.png)
 
-    >**Note**: Tabular Editor opens in a new window and connects live to the data model hosted in Power BI Desktop. Changes made to the model in Tabular Editor aren't propagated to Power BI Desktop until you save them.*
+    >**Note**: Tabular Editor opens in a new window and connects live to the data model hosted in Power BI Desktop. Changes made to the model in Tabular Editor aren't propagated to Power BI Desktop until you save them.
 
 2. To load the BPA rules, select the **C# Script** tab.
 
