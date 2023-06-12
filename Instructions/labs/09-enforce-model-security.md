@@ -22,11 +22,13 @@ In this task, you will set up Power BI Desktop.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/dp500-enforce-model-security-image1.png)
+	![](../images1/dp9-1.png)
 
 2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
+	
+	![](../images1/dp9-2.png)
 
 4. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
 
@@ -34,7 +36,7 @@ In this task, you will set up Power BI Desktop.
 	
 5. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1/DP500-16-56.png)
+	![](../images1/dp9-3.png)
 	
 6. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
@@ -66,14 +68,13 @@ In this task, you will create a workspace.
 
 1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces**, and then select **Create workspace**.
 
-	![](../images/dp500-create-a-star-schema-model-image2a.png)
-
+	![](../images1/dp9-4.png)
 
 2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />** and select **Save**.
 
 	*The workspace name must be unique within the tenant. If you are getting an error, update the workspace name.*
 
-	![](../images/dp500-create-a-star-schema-model-image2b.png)
+	![](../images1/dp9-5.png)
 
 ### Review the data model
 
@@ -85,7 +86,7 @@ In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
-	![](../images/dp500_07-03.png)
+	![](../images1/dp9-6.png)
 
 
 2. Use the model diagram to review the model design.
@@ -112,18 +113,18 @@ In this task, you will create two static roles.
 
 1. Switch to **Report** view.
 
-	![](../images1/dp500_09-12.png)
+	![](../images1/dp9-7.png)
 
 2. In the stacked column chart visual, in the legend, notice (for now) that it's possible to see many regions.
 
-	![](../images1/dp500_09-13.png)
+	![](../images1/dp9-8.png)
 
 	*For now, the chart looks overly busy. That's because all regions are visible. When the solution enforces row-level security, the report consumer will see only one region.*
 
 
 3. To add a security role, on the **Modeling** ribbon tab, from inside the **Security** group, select **Manage roles**.
 
-	![](../images1/dp500_09-14.png)
+	![](../images1/dp9-9.png)
 
 4. In the **Manage roles** window, select **Create**.
 
@@ -136,11 +137,11 @@ In this task, you will create two static roles.
 
 6. In the **Tables** list, for the **Sales Territory** table, select the ellipsis, and then select **Add filter** > **[Region]**.
 
-	![](../images1/dp500_09-17.png)
+	![](../images1/dp9-12.png)
 
 7. In the **Table filter DAX expression** box, replace **Value** with **Australia**.
 
-	![](../images1/dp500_09-18.png)
+	![](../images1/dp9-13.png)
 
 	*This expression filters the **Region** column by the value **Australia**.*
 
@@ -151,7 +152,7 @@ In this task, you will create two static roles.
 
 9. Repeat the steps in this task to create a role named **Canada** that filters the **Region** column by **Canada**.
 
-	![](../images1/dp500_09-20.png)
+	![](../images1/dp9-14.png)
 
 	*In this lab, you'll create just the two roles. Consider, however, that in a real-world solution, a role must be created for each of the 11 Adventure Works regions.*
 
@@ -178,7 +179,7 @@ In this task, you will validate one of the static roles.
 
 4. On the report page, notice that the stacked column chart visual shows only data for Australia.
 
-	![](../images1/dp500_09-25.png)
+	![](../images1/dp9-16.png)
 
 5. Across the top of the report, notice the yellow banner that confirms the enforced role.
 
@@ -186,7 +187,7 @@ In this task, you will validate one of the static roles.
 
 6. To stop viewing by using the role, at the right of the yellow banner, select **Stop viewing**.
 
-	![](../images1/dp500_09-27.png)
+	![](../images1/dp9-17.png)
 
 ### Publish the report
 
@@ -194,20 +195,18 @@ In this task, you will publish the report.
 
 1. Save the Power BI Desktop file.
 
-	![](../images1/dp500_09-28.png)
+	![](../images1/dp9-18.png)
  
 
 2. To publish the report, on the **Home** ribbon tab, select **Publish**.
 
-	![](../images1/dp500_09-29.png)
+	![](../images1/dp9-19.png)
 
 3. In the **Publish to Power BI** window, select your workspace, and then select **Select**.
-
-	![](../images1/dp500_09-30.png)
-
 4. When the publishing succeeds, select **Got it**.
 
-	![](../images1/dp500_09-31.png)
+
+	![](../images1/dp9-20.png)
 
 ### Configure row-level security (*Read-only*)
 
@@ -270,15 +269,15 @@ In this task, you will add the **Salesperson** table to the model.
 
 2. On the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data** icon.
 
-	![](../images1/dp500_09-39.png)
+	![](../images1/dp9-23.png)
 
 	*If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.*
 
-	![](../images1/dp500_09-40.png)
+	![](../images1/dp9-24.png)
 
 	*Select **Connect***
 
-	 ![](../images1/dp500_09-41.png)
+	![](../images1/dp9-25.png)
 	 
 	*If you are prompted for Encryption Support, click on **OK**
 	
@@ -302,7 +301,7 @@ In this task, you will add the **Salesperson** table to the model.
 
 6. When prompted to confirm deletion of the step, select **Delete**.
 
-	![](../images1/dp500_09-46.png)
+	![](../images1/dp9-29.png)
 
 7. To source data from a different data warehouse table, in the **Applied Steps** list, in the **Navigation** step (second step), select the gear icon (located at the right).
 
@@ -310,7 +309,7 @@ In this task, you will add the **Salesperson** table to the model.
 
 8. In the **Navigation** window, select the **DimEmployee** table.
 
-	![](../images1/dp500_09-48.png)
+	![](../images1/dp9-31.png)
 
 
 9. Select **OK**.
@@ -319,7 +318,7 @@ In this task, you will add the **Salesperson** table to the model.
 
 10. To remove unnecessary columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
 
-	![](../images1/dp500_09-50.png)
+	![](../images1/dp9-32.png)
 
 11. In the **Choose Columns** window, uncheck the **(Select All Columns)** item.
 
@@ -332,6 +331,9 @@ In this task, you will add the **Salesperson** table to the model.
 	- SalesTerritoryKey
 
 	- EmailAddress
+
+	![](../images1/dp9-33.png)
+
 
 13. Select **OK**.
 
@@ -362,6 +364,9 @@ In this task, you will configure properties of the new relationship.
 
 2. In the **Edit relationship** window, in the **Cross filter direction** dropdown list, select **Both**.
 
+	![](../images1/dp9-37.png)
+
+
 3. Check the **Apply security filter in both directions** checkbox.
 
 	![](../images1/dp500_09-56.png)
@@ -391,11 +396,9 @@ In this task, you will create a dynamic role, which enforces permissions based o
 
 1. Switch to **Report** view.
 
-	![](../images1/dp500_09-59.png)
-
 2. To add a security role, on the **Modeling** ribbon tab, from inside the **Security** group, select **Manage roles**.
 
-	![](../images1/dp500_09-60.png)
+	![](../images1/dp9-39.png)
 
 3. In the **Manage roles** window, select **Create**.
 
@@ -437,7 +440,7 @@ In this task, you will validate the dynamic role.
 
 1. On the **Modeling** ribbon tab, from inside the **Security** group, select **View as**.
 
-	![](../images1/dp500_09-68.png)
+	![](../images1/dp9-44.png)
 
 
 2. In the **View as roles** window, check **Other user**, and then in the corresponding box, enter: **michael9@adventure-works.com**
@@ -448,7 +451,7 @@ In this task, you will validate the dynamic role.
 
 3. Check the **Salespeople** role.
 
-	![](../images1/dp500_09-70.png)
+	![](../images1/dp9-46.png)
 
 4. Select **OK**.
 
@@ -456,7 +459,7 @@ In this task, you will validate the dynamic role.
 
 5. On the report page, notice that the stacked column chart visual shows only data for Northeast.
 
-	![](../images1/dp500_09-72.png)
+	![](../images1/dp9-47.png)
 
 6. Across the top of the report, notice the yellow banner that confirms the enforced role.
 
