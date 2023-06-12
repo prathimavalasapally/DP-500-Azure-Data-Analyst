@@ -46,7 +46,7 @@ In this task, you will review the data model.
 
    ![](../images/dp500-6-10.png)
 
-   *The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It’s a classic star schema design.*
+   >**Note** The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It’s a classic star schema design.
  
 3. Notice that there are three relationships between the **Date** and **Sales** tables.
 
@@ -94,7 +94,7 @@ In this task, you will visualize sales data by date and switch the active status
 
    >**Note** The table visual shows the sum of the **Sales Amount** column grouped by year. But what does **Fiscal Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDateKey** column, **Fiscal Year** means the fiscal year in which the orders were made.
 
-  >**Note** To clarify which fiscal year, it’s a good idea to rename the visual field (or add a title to the visual).
+   >**Note** To clarify which fiscal year, it’s a good idea to rename the visual field (or add a title to the visual).
 
 7. In the **Visualizations** pane for the table visual, from inside the **Values** well, select the down-arrow, and then select **Rename for this visual**.
 
@@ -156,9 +156,9 @@ In this task, you will modify the active status of two relationships.
 
 	- Rename the first visual field in the table visual as **Order Year**
 
-	![](../images/dp500-6-21.png)
+   ![](../images/dp500-6-21.png)
 
-   >**Note** In the next exercise, you will learn how to make a relationship active in a DAX formula.*
+   >**Note** In the next exercise, you will learn how to make a relationship active in a DAX formula.
 
 ### Excercise-2: Use inactive relationships
 
@@ -259,7 +259,7 @@ In this task, you will create a query to add another date table to the model.
 
    ![](../images/dp500-6-6.png) 
 
-   >**Note** If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.*
+   >**Note** If you are prompted to specify how to connect, **Edit Credentials** and specify how to sign-in.
 
    ![](../images/dp500-6-31.png)
 
@@ -277,7 +277,7 @@ In this task, you will create a query to add another date table to the model.
 	
    ![](../images/dp500-6-33.png)
 
-   >**Note** A referencing query is one that uses another query as its source. So, this new query sources its date from the **Date** query.*
+   >**Note** A referencing query is one that uses another query as its source. So, this new query sources its date from the **Date** query.
 
 3. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Ship Date**.
 
@@ -319,7 +319,7 @@ In this task, you will visualize the ship date data in a new table visual.
 
 4. To paste the copied visual, on the **Home** ribbon tab, from inside the **Clipboard** group, select **Paste**.
 
-   >**Note** Tip: You can also use the **Ctrl+C** and **Ctrl+V** shortcuts.*
+   >**Note** Tip: You can also use the **Ctrl+C** and **Ctrl+V** shortcuts.
 
    ![](../images/dp500-6-39.png)
 
@@ -343,7 +343,7 @@ In this task, you will visualize the ship date data in a new table visual.
 
    >**Note** There are, however, some disadvantages. Each role-playing table will contribute to a larger model size—although dimension table aren’t typically large in terms of rows. Each role-playing table will also require duplicating model configurations, like marking the date table, creating hierarchies, and other settings. Also, additional tables contribute to a possible overwhelming number of fields. Users may find it more difficult to find the model resources they need.
 
-   >**Note** Lastly, it’s not possible to achieve a combination of filters in the one visual. For example, it’s not possible to combine sales ordered and sales shipped in the same visual without creating a measure. You will create that measure in the next exercise.*
+   >**Note** Lastly, it’s not possible to achieve a combination of filters in the one visual. For example, it’s not possible to combine sales ordered and sales shipped in the same visual without creating a measure. You will create that measure in the next exercise.
 
 ### Excercise-4: Explore other relationship functions
 
