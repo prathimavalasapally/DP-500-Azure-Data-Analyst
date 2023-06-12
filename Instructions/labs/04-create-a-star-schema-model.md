@@ -167,7 +167,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
 1. In the left pane, at the bottom, select **Start**.
 	
-1. Select your SQL pool, **sqldb-<inject key="Deployment ID" enableCopy="false" />**, and then select **Continue**.
+1. Select your SQL pool, **sqldb-<inject key="Deployment ID" enableCopy="false" />** **(1)**, and then select **Continue (2)**.
 
     ![](../images1/dp-lab4-20.png)
 
@@ -226,7 +226,7 @@ In this task, you will create five Power Query queries that will each load as a 
 	*Transforming the data allows you to define what data will be available in your model.*
 
 
-1. In the **Connection Settings** window, select the **DirectQuery** option and click **OK**.
+1. In the **Connection Settings** window, select the **DirectQuery (1)** option and click **OK (2)**.
 
     ![](../images1/dp-lab4-26.png)
 
@@ -325,15 +325,15 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	*Note: We are merging queries to get the product details, category and sub category. This will be used in the Product dimension.*
 
-1. Select the **DimProductSubcategory** table from the drop down and select the **ProductCategoryKey** Column in each table. Select **OK**.
+1. Select the **DimProductSubcategory (1)** table from the drop down and select the **ProductCategoryKey (2)** Column in each table. Select **OK (1)**.
 
     ![](../images1/dp-lab4-35.png)
 
 	*Note: Use the default join for this merge, which is a left outer join.*
 
-1. Expand the **DimProductSubcategory** column. Select the **ProductSubcategoryKey** and the **EnglishProductSubcategoryName** columns. De-select **Use original column name as prefix** and select **OK**.
+1. Expand the **DimProductSubcategory (1)** column. Select the **ProductSubcategoryKey (2)** and the **EnglishProductSubcategoryName (3)** columns. De-select **Use original column name as prefix (4)** and select **OK (6)**.
 
-    ![](../images1/dp-lab4-(36).png)
+    ![](../images1/dp-lab4-1(36).png)
 
 	*The Expand feature allows joining tables based on foreign key constraints in the source data. The design approach taken by this lab is to join snowflake dimension tables together to produce a denormalized representation of the data.*
 
@@ -362,7 +362,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. On the home tab of the ribbon, in the Combine group, select **Merge Queries.** 
 
-1. Select the **Product Details** table from the drop down and select the **ProductSubcategoryKey** column in both the Product table and the Product details table1 and select **OK**.
+1. Select the **Product Details (1)** table from the drop down and select the **ProductSubcategoryKey (2)** column in both the Product table and the Product details table1 and select **OK (3)**.
 
      ![](../images1/dp-lab4-39.png)
 
@@ -372,7 +372,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 1. Select **OK**.
 
-1.  To filter the query, in the **FinishedGoodsFlag** column header, open the dropdown menu, uncheck **FALSE** and Select **OK**.
+1.  To filter the query, in the **FinishedGoodsFlag (1)** column header, open the dropdown menu, uncheck **FALSE (2)** and Select **OK (3)**.
 
      ![](../images1/dp-lab4-41.png)
      
