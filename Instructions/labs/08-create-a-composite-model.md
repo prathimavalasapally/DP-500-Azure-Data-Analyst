@@ -155,7 +155,7 @@ In this task, you will create two model relationships.
 
     ![](../images1/dp-500-lab8-13-1.png)
 
-1. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **One to many** and select **OK**.
+1. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **One to many (1)** and select **OK (2)**.
 
     *The **Region** column in the **Sales Territory** table contains unique values, while the **Region** column in the **Targets** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and fact tables.*
 
