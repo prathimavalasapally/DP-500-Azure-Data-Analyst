@@ -254,7 +254,7 @@ In this task, you will add two measures to allow the analysis of sales target va
 
     ![](../images1/dp500-8-(24).png)
     
-    >**Note**:If you don't find **Measure Tools** under ribbon tab, in the **Properties** pane, in the **Formatting** section, set the **Format** dropdown list, select **Percentage**.
+    >**Note**: If you don't find **Measure Tools** under ribbon tab, in the **Properties** pane, in the **Formatting** section, set the **Format** dropdown list, select **Percentage**.
 
      ![](../images1/dp-500-lab8-22.png)
      
@@ -287,7 +287,7 @@ In this task, you will update the report to use the new measures.
 
     ![](../images/dp500-8-26.png)
 
-    >**Note**: You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.*
+    >**Note**: You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.
     
  
 ### Task-9: Finish up
