@@ -116,7 +116,6 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
 1. In the preview pane (located at the right), notice that the table comprises **three columns (1)**, and each row of the table represents a fiscal quarter, sales region, and a target sales amount and select **Transform Data (2)**.
 
-
     ![](../images1/dp-500-lab8-9.png)
 
     >**Note**: You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.
@@ -215,8 +214,7 @@ In this task, you will add two measures to allow the analysis of sales target va
 
 1. In the formula bar, enter the following measure definition.
 
-    >**Tip** : All measure definitions are available to copy and paste from the* **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\08\Assets\Snippets.txt** *file.*
-
+    >**Tip** : All measure definitions are available to copy and paste from the* **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\08\Assets\Snippets.txt** file.
 
     ```
     Variance = SUM ( 'Sales'[Sales Amount] ) - SUM ( 'Targets'[Target Amount] )
