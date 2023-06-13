@@ -20,9 +20,9 @@ In this lab, you learn how to:
 
 In this task, you will use SQL Server Management Studio (SSMS) to setup the database by running two scripts.
 
-1. To open SSMS, on the taskbar, select the **SSMS** shortcut.
+1. To open SSMS, on the desktop, select the **SSMS** shortcut.
 
-	![](../images1/dp500_14-01.png)
+    ![](../images1/dp500_14-01.png)
 
 2. In the **Connect to Server** window, ensure that the **Server name** is set to **localhost**, and that the Authentication dropdown list is set to **Windows Authentication**.
 	
@@ -46,7 +46,7 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 8. Review the script.
 
-	*This script creates a table named **FactInternetSalesRealTime**. A different script will load data into this table to simulate a real-time workload of internet sales orders.*
+	>**Note**: This script creates a table named **FactInternetSalesRealTime**. A different script will load data into this table to simulate a real-time workload of internet sales orders.
 
 9. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
@@ -60,7 +60,7 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 12. Review this script also.
 
-	*This script runs an infinite loop. For each loop, it inserts a sales order and then delays for a random period of 1-15 seconds.*
+	>**Note**: This script runs an infinite loop. For each loop, it inserts a sales order and then delays for a random period of 1-15 seconds.
 
 13. Run the script, and leave it running until the end of the lab.
 
