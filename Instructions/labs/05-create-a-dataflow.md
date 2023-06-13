@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will create a dataflow to deliver date dimension data sourced from the Azure Synapse Adventure Works data warehouse. The dataflow will provide a consistent definition of date-related data for use by the organization's business analysts.
 
 In this lab, you learn how to:
@@ -35,7 +33,6 @@ In this task, you will start the SQL pool.
    ![](../images/resume-sql-pool.png)
 
    >**Note** Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
-
 
 #### Task 1: Set up Power BI Desktop
 
@@ -128,7 +125,6 @@ In this task, you will review the data model developed in Power BI Desktop.
 
    >**Note** The **Date** table was created by the business analyst. It doesn't represent a consistent definition of date-related data, and it does not include helpful offset columns to support relative date filters. In a later exercise, you will replace this table with a new table sourced from a dataflow.
     
-
 #### Task 2: Create a dataflow
 
 In this task, you will create a dataflow that represents a consistent definition of date-related data.
@@ -143,7 +139,7 @@ In this task, you will create a dataflow that represents a consistent definition
 
    >**Note** Adding new tables involves using Power Query Online to define queries.
 
-1. To choose a data source, search for the **Azure Synapse Analytics (SQL DW)** and select it.
+1. To choose a data source, search(1) for the **Azure Synapse Analytics (SQL DW) (2)** and select it.
 
    ![](../images/selectazuresyanapseanalyticsdw.png)
 
@@ -155,11 +151,11 @@ In this task, you will create a dataflow that represents a consistent definition
   
     - Ensure the Authentication kind is **Organizational account**. If you are prompted to sign in, use the lab provided credentials.
 
-   ![](../images1/dp500_05-connectionSettings.png)
+    ![](../images1/dp500_05-connectionSettings.png)
          
    >**Note**: We can also fetch the server name by signing into the azure portal and navigating to **Connection Strings** under the dedicated sql pool resource present in lab05-rg, which is well explained in the below screenshot.
     
-   ![](../images1nameofsynapticsendpoint.png)
+    ![](../images/nameofsynapticsendpoint.png)
      
    >**Note**: The Server name should look similar to: *synapsewsxxxxx.sql.azuresynapse.net
 
@@ -169,13 +165,13 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. In the Power Query navigation pane, expand the **sqldb<inject key="DeploymentID" enableCopy="false"/>** and select (do not check) the **DimDate** table.
 
-    ![](../images1/mod5-create-a-dataflow.png)
+   ![](../images1/mod5-create-a-dataflow.png)
 
 1. Notice the preview of table data.
 
 1. To create a query, check the **DimDate (1)** table. And at the bottom-right, select **Transform data (2)**.
 
-   ![](../images1/transformdata.png)
+   ![](../images/transformdata.png)
 
    >**Note** Power Query Online will now be used to apply transformations to the table. It provides an almost-identical experience to the Power Query Editor in Power BI Desktop.
 
