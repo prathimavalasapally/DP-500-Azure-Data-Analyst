@@ -24,25 +24,17 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
     ![](../images1/dp500_14-01.png)
 
-2. In the **Connect to Server** window, ensure that the **Server name** is set to **localhost**, and that the Authentication dropdown list is set to **Windows Authentication**.
+2. In the **Connect to Server** window, ensure that the **Server name** is set to **localhost (1)**, and that the Authentication dropdown list is set to **Windows Authentication (2)** and select **Connect (3)**.
 	
-	![](../images1/dp500_14-02.png)
-
-3. Select **Connect**.
-	
-	![](../images1/dp500_14-03.png)
+    ![](../images1/dp-500-lab14-1.png)
 
 4. To open a script file, on the **File** menu, select **Open** > **File**.
 
 5. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Assets** folder.
 
-6. Select the **1-Setup** sql file.
+6. Select the **1-Setup (1)** sql file and click **Open (2)**.
 
-	![](../images1/dp500_14-04.png)
-
-7. Select **Open**.
-
-	![](../images1/dp500_14-05.png)
+    ![](../images1/dp-500-lab14-2.png)
 
 8. Review the script.
 
@@ -50,14 +42,14 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 
 9. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
-	![](../images1/dp500_14-06.png)
-
+    ![](../images1/dp-500-lab14-3.png) 
+	
 10. To close the file, on the **File** menu, select **Close**.
 
-11. **Ctrl+O** to access the **Open File** window. Select and open the **2-InsertOrders** sql file.
+11. Press **Ctrl+O** to access the **Open File** window. Select **2-InsertOrders (1)** sql file and click **Opene (2)**
 
-	![](../images1/dp500_14-07.png)
-
+     ![](../images1/dp-500-lab14-4.png)
+	
 12. Review this script also.
 
 	>**Note**: This script runs an infinite loop. For each loop, it inserts a sales order and then delays for a random period of 1-15 seconds.
