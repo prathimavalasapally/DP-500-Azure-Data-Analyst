@@ -24,7 +24,7 @@ In this task, you will set up Power BI.
 
 1. To open Power BI Desktop, select the **Power BI Desktop** shortcut on desktop page.
 
-	![](../images1/dp-0.png)
+	![](../images1/dp-0new.png)
 
 1. Select **X** located at the top-right of the getting started window.
 
