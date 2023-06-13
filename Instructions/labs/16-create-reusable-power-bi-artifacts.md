@@ -24,11 +24,11 @@ In this task, you will set up Power BI.
 
 1. To open Power BI Desktop, select the **Power BI Desktop** shortcut on desktop page.
 
-	![](../images1/DP500-16-63.png)
+	![](../images1/dp-0.png)
 
 1. Select **X** located at the top-right of the getting started window.
 
-	![](../images/DP500-16-2.png)
+	![](../images1/dp-1new.png)
 
 1. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
@@ -84,12 +84,10 @@ In this task, you will create a workspace.
 
 
 2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**
+3. Select **Apply**.
 
-	![](../images/DP500-16-11.png)
 
-3. Select **Save**.
-
-	![](../images/DP500-16-12.png)
+	![](../images1/dp-4.png)
 
 	*Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
 
@@ -138,15 +136,13 @@ In this task, you will publish the data model.
 
     *If prompted to save changes, select **Save.***
 
-	![](../images/DP500-16-16.png)
-
 2. In the **Publish to Power BI** window, select the workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
 
-	![](../images/DP500-16-17.png)
+	![](../images1/dp-5.png)	
 
 3. When the publishing succeeds, select **Got it**.
 
-	![](../images/DP500-16-18.png)
+	![](../images1/dp-6.png)	
 
 	*Once published, the model becomes a Power BI dataset. In this lab, this dataset is a core dataset that a business analyst can extend to create a specialized dataset. In the next exercise, you will create a specialized dataset to solve a specific business requirement.*
 
@@ -166,11 +162,11 @@ In this task, you will create a new report that uses a live connection to the **
 
 1. To open Power BI Desktop, on the taskbar, select the **Power BI Desktop** shortcut.
 
-	![](../images1/DP500-16-63.png)
+	![](../images1/dp-7.png)	
 
 2. Select **X** located at the top-right of the getting started window.
 
-	![](../images/DP500-16-2.png)
+	![](../images1/dp-1new.png)	
 
 3. To save the file, on the **File** ribbon, select **Save as**.
 
@@ -198,7 +194,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 10. At the bottom left, in the status bar, notice that the report connects live to the dataset.
 
-	![](../images/DP500-16-21.png)
+	![](../images1/dp-9.png)	
 
 11. Switch to **Model** view.
 
@@ -229,6 +225,10 @@ In this task, you will create a local DirectQuery model.
 	*Note: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
 	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect.(you can save and close and reopen the file if still the changes are not shownup) 
 
+	![](../images1/dp-11.png)
+	
+	![](../images1/dp-12.png)	
+
 2. Now,after changing the settings,you can able to view and select **Make changes to this model** and then select **Add a local model**.
 
 	![](../images/DP500-16-27.png)
@@ -247,13 +247,13 @@ In this task, you will design the report layout to analyze US state sales.
 
 1. Switch to **Report** view.
 
-	![](../images/DP500-16-29.png)
+	![](../images/dp-16.png)
 
 2. In the **Data** pane (located at the right), expand open the **Reseller** table.
 
 3. Right-click the **Country-Region** field, and then select **Add to filters** > **Report-level filters**.
 
-	![](../images/DP500-16-30.png)
+	![](../images/DP500-16-29.png)
 
 4. Expand open the **Filters** pane (located at the left of the **Visualizations** pane).
 
@@ -298,6 +298,9 @@ In this task, you will add a table of US population data sourced from a web page
 	*For the purposes of this lab, Power BI Desktop will access the web page from the file system.*
 
 	*Tip: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
+	
+	![](../images1/dp-20.png)
+
 
 4. Select **OK**.
 
@@ -305,17 +308,14 @@ In this task, you will add a table of US population data sourced from a web page
 
 5. In the **Navigator** window, at the right, switch to **Web View**.
 
-	![](../images/DP500-16-38.png)
+	![](../images1/dp-21.png)
 
 	*The web page presents US resident population estimates sourced from the April 2020 census.*
 
 6. Switch back to Table view.
-
-	![](../images/DP500-16-39.png)
-
 7. At the left, select **Table 2**.
 
-	![](../images/DP500-16-40.png)
+	![](../images1/dp-22.png)
 
 8. Notice the table view preview.
 
@@ -330,16 +330,14 @@ In this task, you will add a table of US population data sourced from a web page
 	![](../images/DP500-16-42.png)
 
 11. To remove the **United States** row, in the **STATE** column header, select the down-arrow, and then unselect the **United States** item (scroll to the bottom of the list).
-
-	![](../images/DP500-16-43.png)
-
 12. Select **OK**.
 
-	![](../images/DP500-16-37.png)
+
+	![](../images1/dp-25.png)
 
 13. To remove the **RANK** column, right-click the column header, and then select **Remove**.
 
-	![](../images/DP500-16-44.png)
+	![](../images1/dp-26.png)
 
 14. To rename the **STATE** column, double-click the column header, replace the text with **State**, and then press **Enter**.
 
@@ -353,7 +351,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 17. When prompted about a potential security risk, read the notification, and then select **OK**.
 
-	![](../images/DP500-16-37.png)
+	![](../images1/dp-29.png)
 
 	*Power BI Desktop applies the query to create a model table. It adds a new table that imports population data to the model.*
 
@@ -365,7 +363,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 20. In the **Create Relationship** window, in the **Cross Filter Direction** dropdown list, select **Both**.
 
-	![](../images/DP500-16-48.png)
+	![](../images1/dp-30.png)
 
 	*Each row of the **Reseller** table stores a reseller, so the values found in the **State-Province** column will contain duplicate values (for example, there are many resellers in the state of California). When you create the relationship, Power BI Desktop automatically determines column cardinalities and discovered that it's a many-to-one relationship. To ensure filters propagate from the **Reseller** table to the **US Population** table, the relationship must cross filter in both directions.*
 
@@ -389,7 +387,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 2. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
-	![](../images/DP500-16-50.png)
+	![](../images1/dp-33.png)
 
 3. In the formula bar, Replace and enter the following measure definition.
 
@@ -404,6 +402,9 @@ In this task, you will add a measure to calculate sales per capita.
 	```
 
 	*The measure named **Sales per Capita** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the sum of the **Sales Amount** column by the sum of the **Population** column.*
+	
+	![](../images1/dp-34.png)
+
 
 4. On the **Measure Tools** contextual ribbon tab, from inside the **Formatting** group, in the decimal places box, enter **4**.
 
@@ -412,6 +413,8 @@ In this task, you will add a measure to calculate sales per capita.
 5. To add the measure to the matrix visual, in the **Data** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
 
 	*The measure evaluates the result by combining data sourced from a remote model in the Power BI service with data from the imported table that is local to your new model.*
+	
+	![](../images1/dp-35.png)
 
 6. To sort the states by descending sales per capita value, select the **Sales per Capita** column header.
 
@@ -431,17 +434,17 @@ In this task, you will publish the solution, which comprises a specialized data 
 
 3. In the **Publish to Power BI** window, select your workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
 
-	![](../images/DP500-16-17.png)
+	![](../images1/dp-38.png)
 
 4. When the publishing succeeds, select **Got it**.
 
-	![](../images/DP500-16-18.png)
+	![](../images1/dp-39.png)
 
 5. Close Power BI Desktop.
 
 6. If prompted to save changes, select **Don't save**.
 
-	![](../images/DP500-16-19.png)
+	![](../images1/dp-40.png)
 
 ### Task-7: Review the specialized dataset
 
@@ -456,7 +459,7 @@ In this task, you will review the specialized dataset in the Power BI service.
 
 3. Hover the cursor over the **US Sales Analysis** dataset, and when the ellipsis appears, select the ellipsis, and then select **View lineage**.
 
-	![](../images/DP500-16-54.png)
+	![](../images1/dp-42.png)
 
 	*The **View lineage** option supports finding out dependencies between Power BI assets. That's important, for example, if you are going to publish changes to a core dataset. Lineage view will tell you the dependent datasets that might require testing.*
 
