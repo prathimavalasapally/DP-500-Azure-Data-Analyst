@@ -80,35 +80,35 @@ In this task, you will review the pre-developed report.
 
 1. In Power BI Desktop, review the report page.
 
-	![](../images1/dp500_14-09.png)
+    ![](../images1/dp500_14-09.png)
 
-	*This report page has a title and two visuals. The card visual displays the number of sales orders, while the bar chart visual displays the sales amount for each bike subcategory.*
+    >**Note**: This report page has a title and two visuals. The card visual displays the number of sales orders, while the bar chart visual displays the sales amount for each bike subcategory.
 
 2. To refresh the report, on the **View** ribbon tab, from inside the **Show** panes group, select **Performance analyzer**.
 
-	![](../images1/dp500_14-10.png)
+    ![](../images1/dp-500-lab14-5.png)
 
 3. In the **Performance analyzer** pane (located to the right of the **Visualizations** pane), select **Start recording**.
 
-	![](../images1/dp500_14-11.png)
+     ![](../images1/dp-500-lab14-6.png)
 
-	*Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).*
+      >**Note**: Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
 
 4. Select **Refresh visuals**.
 
-	![](../images1/dp500_14-12.png)
+    ![](../images1/dp-500-lab14-7.png)
 
 5. Notice that the report visuals update to show the latest internet sales results.
 
-	*When developing a report that connects to a local DirectQuery model, it's not possible to refresh the report by using the **Refresh** command (located on the **Home** ribbon tab). That's because Power BI Desktop refreshes the DirectQuery table connections instead. To refresh the report visuals, follow the steps you just did. When published to the Power BI service, report consumers will be able to select **Refresh** on the action bar to refresh the report visuals.*
+    - When developing a report that connects to a local DirectQuery model, it's not possible to refresh the report by using the **Refresh** command (located on the **Home** ribbon tab). That's because Power BI Desktop refreshes the DirectQuery table connections instead. To refresh the report visuals, follow the steps you just did. When published to the Power BI service, report consumers will be able to select **Refresh** on the action bar to refresh the report visuals.
 
-	*When you design a report for real-time analysis, there must be a better way than asking users to constantly refresh the report page. You will achieve that better way when you set up automatic page refresh in the next exercise.*
+    - When you design a report for real-time analysis, there must be a better way than asking users to constantly refresh the report page. You will achieve that better way when you set up automatic page refresh in the next exercise.
 
 ## Set up automatic page refresh
 
 In this exercise, you will set up automatic page refresh and experiment by using the change detection feature.
 
-*Automatic page refresh requires at least one model table that's set to use DirectQuery storage mode.*
+>**Note**: Automatic page refresh requires at least one model table that's set to use DirectQuery storage mode.
 
 ### Task 1: Set up automatic page refresh
 
@@ -118,31 +118,30 @@ In this task, you will set up automatic page refresh.
 
 2. In the **Visualizations** pane, select the format icon (paint brush).
 
-	![](../images1/dp500_14-13.png)
+    ![](../images1/dp-500-lab14-8.png)
 
 3. Switch the **Page refresh** setting (last in the list) to **On**.
 
-	![](../images1/dp500_14-14.png)
-
-	*Automatic page refresh is a page-level setting. You can enable it for specific pages in the report.*
+     ![](../images1/dp-500-lab14-9.png)
+	 
+     >**Note**: Automatic page refresh is a page-level setting. You can enable it for specific pages in the report.
+     >**Note**: First select an empty area of the report page (below the graph) or else you won't find **Page refresh** setting
 
 4. In the **Performance analyzer** pane, notice that the report visuals just refreshed.
 
-5. In the **Visualizations** pane, expand open the **Page refresh** settings.
+5. In the **Visualizations** pane, expand open the **Page refresh** settings and Notice that by default the page will refresh every 30 minutes.
 
-	![](../images1/dp500_14-15.png)
-
-6. Notice that by default the page will refresh every 30 minutes.
+    ![](../images1/dp-500-lab14-10.png)
 
 7. Modify the settings to refresh the page every 5 seconds.
 
-	![](../images1/dp500_14-16.png)
+    ![](../images1/dp-500-lab14-11.png)
 
-	*Important: This frequent refresh interval will help you efficiently work through this lab. But take care, because setting such a frequent refresh interval could seriously impact on the performance of the source database and other users viewing the report.*
+    >**Important**: This frequent refresh interval will help you efficiently work through this lab. But take care, because setting such a frequent refresh interval could seriously impact on the performance of the source database and other users viewing the report.
 
-	*Because an internet sales order loads every 1-15 seconds, sometimes the page refresh retrieves the same results (because the database recorded no orders in the last five seconds). Preferably, the report visuals only refresh when needed. You will set up the change detection feature to do that in the next task.*
+    >**Note**: Because an internet sales order loads every 1-15 seconds, sometimes the page refresh retrieves the same results (because the database recorded no orders in the last five seconds). Preferably, the report visuals only refresh when needed. You will set up the change detection feature to do that in the next task.
 
-	*Once published to the Power BI service, refresh intervals less than 30 minutes require that you save the report to a workspace assigned to Premium capacity. Also, a capacity admin must enable and set up the capacity to allow such frequent intervals. For more information, see [Automatic page refresh in Power BI](https://docs.microsoft.com/power-bi/create-reports/desktop-automatic-page-refresh).*
+    >**Note**: Once published to the Power BI service, refresh intervals less than 30 minutes require that you save the report to a workspace assigned to Premium capacity. Also, a capacity admin must enable and set up the capacity to allow such frequent intervals. For more information, see [Automatic page refresh in Power BI](https://docs.microsoft.com/power-bi/create-reports/desktop-automatic-page-refresh).
 
 ### Task 2: Set up change detection
 
@@ -150,51 +149,43 @@ In this task, you will set up change detection.
 
 1. In the **Page refresh** settings, set the **Refresh type** dropdown list to **Change detection**.
 
-	![](../images1/dp500_14-17.png)
-
+    ![](../images1/dp-500-lab14-12.png)
+	
 2. To create a change detection measure, select the **Add change detection** link.
 
-	![](../images1/dp500_14-18.png)
+    ![](../images1/dp-500-lab14-13.png)
 
 3. In the **Change detection** window, notice that the default set up is to create a new measure.
 
-	![](../images1/dp500_14-19.png)
+	![](../images1/dp-500-lab14-14-1.png)
 
 4. In the **Choose a calculation** dropdown list, select **Count (Distinct)**.
 
-	![](../images1/dp500_14-20.png)
+    ![](../images1/dp-500-lab14-14-2.png)
 
 5. In the **Fields** pane (located at the right, inside the window), scroll down to locate the **Internet Sales** table.
 
-6. Select the **Sales Order** field, and notice that the window added it to the **Choose a field to apply it to** box.
+6. Select the **Sales Order (1)** field, and notice that the window added it to the **Choose a field to apply it to (2)** box and for the **Check for changes every** setting, set it to **5 seconds (3)** and select **Apply (4)**.
 
-	![](../images1/dp500_14-21.png)
+    ![](../images1/dp-500-lab14-15.png)
+	
+9. In the **Data** pane, inside the **Internet Sales (1)** table, notice the addition of a **change detection measure (2)**.
 
-7. For the **Check for changes every** setting, set it to 5 seconds.
+    ![](../images1/dp-500-lab14-16.png)
 
-	![](../images1/dp500_14-22.png)
+    >**Note**: Power BI now uses the change detection measure to query the source database every five seconds. Each time, Power BI stores the result so it can compare it the next time it's used. When the results differ, it means the data has changed (in this case, the database inserted new internet sales orders). In this case, Power BI refreshes all report page visuals.
 
-8. Select **Apply**.
-
-	![](../images1/dp500_14-23.png)
-
-9. In the **Data** pane, inside the **Internet Sales** table, notice the addition of a change detection measure.
-
-	![](../images1/data-lab14.png)
-
-	*Power BI now uses the change detection measure to query the source database every five seconds. Each time, Power BI stores the result so it can compare it the next time it's used. When the results differ, it means the data has changed (in this case, the database inserted new internet sales orders). In this case, Power BI refreshes all report page visuals.*
-
-	*Once published to the Power BI service, Power BI only supports change detection measures for Premium capacities.*
+     >**Note**: Once published to the Power BI service, Power BI only supports change detection measures for Premium capacities.
 
 10. In the **Performance analyzer** pane, select **Clear**.
 
-	![](../images1/dp500_14-25.png)
+     ![](../images1/dp-500-lab14-17.png)
 
 11. Notice that Performance analyzer displays change detection queries.
 
 12. Notice that sometimes multiple change detection queries happen before Power BI Desktop refreshes the report visuals.
 
-	*That's because the database inserted no new internet sales orders at that time. This set up is now more efficient because report visuals only refresh when necessary.*
+    >**Note**: That's because the database inserted no new internet sales orders at that time. This set up is now more efficient because report visuals only refresh when necessary.
 
 ### Finish up
 
@@ -202,14 +193,14 @@ In this task, you will finish up.
 
 1. Save the Power BI Desktop file.
 
-	![](../images1/dp500_14-26.png)
+    ![](../images1/dp500_14-26.png)
 
 2. Close Power BI Desktop.
 
 3. In SSMS, to stop running the script, on the toolbar, select **Stop** (or press **Alt+Break**).
 
-	![](../images1/dp500_14-27.png)
-
+    ![](../images1/dp-500-lab14-18.png)
+	 
 4. Close the script file.
 
 5. Close SSMS.
