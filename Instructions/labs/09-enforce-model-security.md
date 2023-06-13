@@ -86,7 +86,7 @@ In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
-	![](../images1/dp9-6.png)
+	![](../images1/dp9-6new.png)
 
 
 2. Use the model diagram to review the model design.
