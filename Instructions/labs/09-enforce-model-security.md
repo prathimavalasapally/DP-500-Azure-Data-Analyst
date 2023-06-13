@@ -22,7 +22,7 @@ In this task, you will set up Power BI Desktop.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images1/dp9-1.png)
+	![](../images1/dp9-1new.png)
 
 2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
