@@ -98,16 +98,12 @@ In this task, you will create a workspace.
 
    ![](../images/createnewworkspace.png)
 
-1. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500workspace-<inject key="Deployment ID" enableCopy="false" />**.
+1. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500workspace-<inject key="Deployment ID" enableCopy="false" />**. And Click **Apply**.
 
+   ![](../images/createmyworkspace.png)
+   
    >**Note** The workspace name must be unique within the tenant.
-
-   ![](../images/mod5-workspace-name.png)
-
-1. Select **Save**.
-
-   ![](../images/mod5-save.png)
-
+ 
    >**Note** Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.
 
 ### Exercise 2: Develop a dataflow
@@ -137,19 +133,19 @@ In this task, you will review the data model developed in Power BI Desktop.
 
 In this task, you will create a dataflow that represents a consistent definition of date-related data.
 
-1. Switch back to the Power BI service, select **New** and then **Dataflow**.
+1. Switch back to the Power BI service, select **New (1)** and then **Dataflow (2)**.
 
-   ![](../images/mod5-dataflow.png)
+   ![](../images/dataflow.png)
 
 1. In the **Define new tables** tile, select **Add new tables**.
 
-   ![](../images/mod5-newtable.png)
+   ![](../images/addnewtables.png)
 
    >**Note** Adding new tables involves using Power Query Online to define queries.
 
 1. To choose a data source, search for the **Azure Synapse Analytics (SQL DW)** and select it.
 
-   ![](../images/mod5-sqldw.png)
+   ![](../images/selectazuresyanapseanalyticsdw.png)
 
    >**Note** Tip: You can use the Search box (located at the top-right) to help find the data source.
 
@@ -163,7 +159,7 @@ In this task, you will create a dataflow that represents a consistent definition
          
    >**Note**: We can also fetch the server name by signing into the azure portal and navigating to **Connection Strings** under the dedicated sql pool resource present in lab05-rg, which is well explained in the below screenshot.
     
-   ![](../images1/dp500_05-connectionString.png)
+   ![](../images1nameofsynapticsendpoint.png)
      
    >**Note**: The Server name should look similar to: *synapsewsxxxxx.sql.azuresynapse.net
 
@@ -177,13 +173,9 @@ In this task, you will create a dataflow that represents a consistent definition
 
 1. Notice the preview of table data.
 
-1. To create a query, check the **DimDate** table.
+1. To create a query, check the **DimDate (1)** table. And at the bottom-right, select **Transform data (2)**.
 
-   ![](../images1/mod5-query.png)
-
-1. At the bottom-right, select **Transform data**.
-
-   ![](../images1/mod5-transform-data.png)
+   ![](../images1/transformdata.png)
 
    >**Note** Power Query Online will now be used to apply transformations to the table. It provides an almost-identical experience to the Power Query Editor in Power BI Desktop.
 
