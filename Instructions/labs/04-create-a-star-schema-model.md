@@ -271,7 +271,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	 ![](../images1/dp-lab4-30.png)
 
-	>**Note**:This selection of columns determine what will be available in your model.
+	>**Note**: This selection of columns determine what will be available in your model.
 
 
 1. In the **Query Settings** pane, in the **Applied Steps** list, notice that a step was added to remove other columns.
@@ -350,7 +350,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
    >**Note**: You should now have three columns with 37 rows.
    
-   >**Note**:This selection of columns determine what will be available in your model.
+   >**Note**: This selection of columns determine what will be available in your model.
    
 1.  Select the **DimProduct** query.
 
@@ -391,7 +391,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- EnglishProductCategoryName
 
-    >**Note**:This selection of columns determine what will be available in your model.
+    >**Note**: This selection of columns determine what will be available in your model.
 
 1. Rename the following columns:
 
@@ -427,7 +427,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
 	- ResellerName
 
-    >**Note**:This selection of columns determine what will be available in your model.
+    >**Note**: This selection of columns determine what will be available in your model.
 
 1. Rename the following columns:
 
