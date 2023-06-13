@@ -72,7 +72,7 @@ In this task, you will set up Power BI.
 
 1. Do any remaining tasks to complete the trial setup.
 
-	*Tip: The Power BI web browser experience is known as the **Power BI service**.*
+	>**Note**: The Power BI web browser experience is known as the **Power BI service**.*
 
 ### Task-2: Create a workspace in the Power BI Service
 
@@ -89,7 +89,7 @@ In this task, you will create a workspace.
 
 	![](../images1/dp-4.png)
 
-	*Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
+	>**Note**:Once created, the workspace opens. In the next task, you will publish a dataset to this workspace.*
 
 4. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -126,7 +126,7 @@ In this task, you will review the data model.
 
 	![](../images/DP500-16-15.png)
 
-	*The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design.*
+	>**Note**:The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design.*
 
 ### Task-5: Publish the data model
 
@@ -134,7 +134,7 @@ In this task, you will publish the data model.
 
 1. To publish the report, on the **Home** ribbon tab, select **Publish**. 
 
-    *If prompted to save changes, select **Save.***
+    	>**Note**:If prompted to save changes, select **Save.***
 
 2. In the **Publish to Power BI** window, select the workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />**, and then select **Select**.
 
@@ -144,7 +144,7 @@ In this task, you will publish the data model.
 
 	![](../images1/dp-6.png)	
 
-	*Once published, the model becomes a Power BI dataset. In this lab, this dataset is a core dataset that a business analyst can extend to create a specialized dataset. In the next exercise, you will create a specialized dataset to solve a specific business requirement.*
+	>**Note**:Once published, the model becomes a Power BI dataset. In this lab, this dataset is a core dataset that a business analyst can extend to create a specialized dataset. In the next exercise, you will create a specialized dataset to solve a specific business requirement.*
 
 4. Close Power BI Desktop.
 
@@ -208,7 +208,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 	![](../images/DP500-16-24.png)
 
-	*These properties indicate that a remote model hosts the table. In the next task, you will make changes to the model to extend it. That process will create a local DirectQuery model that you can modify in many different ways.*
+	>**Note**:These properties indicate that a remote model hosts the table. In the next task, you will make changes to the model to extend it. That process will create a local DirectQuery model that you can modify in many different ways.*
 
 14. Save the Power BI Desktop file.
 
@@ -222,8 +222,8 @@ In this task, you will create a local DirectQuery model.
 
 	![](../images/DP500-16-26.png)
 
-	*Note: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
-	- Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect.(you can save and close and reopen the file if still the changes are not shownup) 
+	>**Note**: if you do not see the option to make changes to this model, you need to enable the preview feature, DirectQuery for PBI datasets and AS*
+	>**Note**: Navigate to **File** > **Options and settings** > **Options**, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect.(you can save and close and reopen the file if still the changes are not shownup) 
 
 	![](../images1/dp-11.png)
 	
@@ -233,7 +233,7 @@ In this task, you will create a local DirectQuery model.
 
 	![](../images/DP500-16-27.png)
 
-	*The model is now a DirectQuery model. It's now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It's even possible to extend the model with new tables of data that are sourced from other data sources. You will add a table to add US population data to the model.*
+	>**Note**:The model is now a DirectQuery model. It's now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It's even possible to extend the model with new tables of data that are sourced from other data sources. You will add a table to add US population data to the model.*
 
 3. Select **Submit** in the Connect to data popup-window.
 	
@@ -279,7 +279,7 @@ In this task, you will design the report layout to analyze US state sales.
 
 	![](../images/DP500-16-35.png)
 
-	*This report layout now provides basic detail about US state sales. However, an additional requirement is to show sales per capita and sort states by descending order of that measure.*
+	>**Note**:This report layout now provides basic detail about US state sales. However, an additional requirement is to show sales per capita and sort states by descending order of that measure.*
 
 ### Task-4: Add a table
 
@@ -295,9 +295,9 @@ In this task, you will add a table of US population data sourced from a web page
 
 3. In the **URL** box, enter the following file path: **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\us-resident-population-estimates-2020.html**
 
-	*For the purposes of this lab, Power BI Desktop will access the web page from the file system.*
+	>**Note**:For the purposes of this lab, Power BI Desktop will access the web page from the file system.*
 
-	*Tip: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
+	>**Note**: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 	
 	![](../images1/dp-20.png)
 
@@ -310,7 +310,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	![](../images1/dp-21.png)
 
-	*The web page presents US resident population estimates sourced from the April 2020 census.*
+	>**Note**:The web page presents US resident population estimates sourced from the April 2020 census.*
 
 6. Switch back to Table view.
 7. At the left, select **Table 2**.
@@ -319,7 +319,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 8. Notice the table view preview.
 
-	*This table of data contains the data that's required by your model to calculate sales per capita. You will need to prepare the data by applying transformations: Specifically, you will remove the row for **United States**, remove the **RANK** column, and rename the **STATE** and **NUMBER** columns.*
+	>**Note**:This table of data contains the data that's required by your model to calculate sales per capita. You will need to prepare the data by applying transformations: Specifically, you will remove the row for **United States**, remove the **RANK** column, and rename the **STATE** and **NUMBER** columns.*
 
 9. To prepare the data, select **Transform Data**.
 
@@ -353,7 +353,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	![](../images1/dp-29.png)
 
-	*Power BI Desktop applies the query to create a model table. It adds a new table that imports population data to the model.*
+	>**Note**:Power BI Desktop applies the query to create a model table. It adds a new table that imports population data to the model.*
 
 18. Reposition the **US Population** table near the **Reseller** table.
 
@@ -365,7 +365,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	![](../images1/dp-30.png)
 
-	*Each row of the **Reseller** table stores a reseller, so the values found in the **State-Province** column will contain duplicate values (for example, there are many resellers in the state of California). When you create the relationship, Power BI Desktop automatically determines column cardinalities and discovered that it's a many-to-one relationship. To ensure filters propagate from the **Reseller** table to the **US Population** table, the relationship must cross filter in both directions.*
+	>**Note**:Each row of the **Reseller** table stores a reseller, so the values found in the **State-Province** column will contain duplicate values (for example, there are many resellers in the state of California). When you create the relationship, Power BI Desktop automatically determines column cardinalities and discovered that it's a many-to-one relationship. To ensure filters propagate from the **Reseller** table to the **US Population** table, the relationship must cross filter in both directions.*
 
 21. Select **OK**.
 
@@ -375,7 +375,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	![](../images/DP500-16-49.png)
 
-	*The table doesn't need to be visible to report authors.*
+	>**Note**:The table doesn't need to be visible to report authors.*
 
 ### Task-5: Add a measure
 
@@ -391,7 +391,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 3. In the formula bar, Replace and enter the following measure definition.
 
-	*Tip: The measure definition is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
+	>**Note**: The measure definition is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 
 	```
 	Sales per Capita =
@@ -401,7 +401,7 @@ In this task, you will add a measure to calculate sales per capita.
 	)
 	```
 
-	*The measure named **Sales per Capita** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the sum of the **Sales Amount** column by the sum of the **Population** column.*
+	>**Note**:The measure named **Sales per Capita** uses the DAX [DIVIDE](https://docs.microsoft.com/dax/divide-function-dax) function to divide the sum of the **Sales Amount** column by the sum of the **Population** column.*
 	
 	![](../images1/dp-34.png)
 
@@ -412,7 +412,7 @@ In this task, you will add a measure to calculate sales per capita.
 
 5. To add the measure to the matrix visual, in the **Data** pane, from inside the **Sales** table, drag the **Sales per Capita** field into the table visual.
 
-	*The measure evaluates the result by combining data sourced from a remote model in the Power BI service with data from the imported table that is local to your new model.*
+	>**Note**:The measure evaluates the result by combining data sourced from a remote model in the Power BI service with data from the imported table that is local to your new model.*
 	
 	![](../images1/dp-35.png)
 
@@ -461,13 +461,13 @@ In this task, you will review the specialized dataset in the Power BI service.
 
 	![](../images1/dp-42.png)
 
-	*The **View lineage** option supports finding out dependencies between Power BI assets. That's important, for example, if you are going to publish changes to a core dataset. Lineage view will tell you the dependent datasets that might require testing.*
+	>**Note**:The **View lineage** option supports finding out dependencies between Power BI assets. That's important, for example, if you are going to publish changes to a core dataset. Lineage view will tell you the dependent datasets that might require testing.*
 
 4. In lineage view, notice the connection between the report, the **US Sales Analysis** dataset, and the **Sales Analysis - Create reusable Power BI artifacts** dataset.
 
 	![](../images/DP500-16-55.png)
 
-	*When Power BI datasets relate to other datasets, it's known as chaining. In this lab, the **US Sales Analysis** dataset is chained to the **Sales Analysis - Create reusable Power BI artifacts** dataset, enabling its reuse for a specialized purpose.*
+	>**Note**:When Power BI datasets relate to other datasets, it's known as chaining. In this lab, the **US Sales Analysis** dataset is chained to the **Sales Analysis - Create reusable Power BI artifacts** dataset, enabling its reuse for a specialized purpose.*
 
 5. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
