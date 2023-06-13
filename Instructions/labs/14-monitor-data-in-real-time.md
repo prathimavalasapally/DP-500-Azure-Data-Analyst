@@ -62,17 +62,23 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images1/dp500_14-08.png)
+    ![](../images1/dp500_14-08.png)
 
 2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Starter** folder.
 
 3. To open a pre-developed Power BI Desktop file, double-click the **Internet Sales - Monitor data in real time.pbix** file.
 
-4. To save the file, on the **File** ribbon tab, select **Save as**.
+4. If Prompted select **Save** on **SQL Server database** page.
+   
+    ![](../images1/dp-500-lab14-(1).png)
+ 
+5.  If Prompted click **OK** on **Encryption Support** page.
 
-5. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\MySolution** folder.
+6. To save the file, on the **File** ribbon tab, select **Save as**.
 
-6. Select **Save**.
+7. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\MySolution** folder.
+
+8. Select **Save**.
 
 ### Task 3: Review the report
 
