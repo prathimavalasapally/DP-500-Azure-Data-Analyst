@@ -4,8 +4,7 @@
 
      ![](../images1/minimize.png "Close Sign_up")
    
-   > **Note**:  If you see a powershell script running in the background please minimize and continue with the next instructions.
-
+     >**Note**:  If you see a powershell script running in the background please minimize and continue with the next instructions.
 
 2. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom (1) area to switch to different exercises of the lab guide.
 
