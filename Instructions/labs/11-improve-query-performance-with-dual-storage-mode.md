@@ -46,7 +46,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
     | **Server** | **localhost** **(1)**  |
     | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)** |
     
-    
+    ![](../images1/dp-500-lab11-5.png)
  
  1. If prompted for Encryption Support,click on **OK** 
 
