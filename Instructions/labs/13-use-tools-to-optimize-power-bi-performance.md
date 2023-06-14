@@ -288,7 +288,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
     ![](../images/DP500-13-32.png)
 
-   >**Note**: The second measure definition provides a more efficient result. You will now update the query to use the second measure.
+    >**Note**: The second measure definition provides a more efficient result. You will now update the query to use the second measure.
 
 12. At line 72 in the script, replace the word **Bad** with **Better** 
 
