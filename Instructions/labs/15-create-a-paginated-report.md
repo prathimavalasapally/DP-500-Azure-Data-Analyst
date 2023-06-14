@@ -34,7 +34,7 @@ In this task, you will open Power BI Report Builder to create and then save a re
 
 1. To open Power BI Report Builder, on the taskbar, select the **Power BI Report Builder** shortcut.
 
-	![](../images1/dp500_15-02.png)
+   ![](../images1/dp500_15-02.png)
 
 1. If you are prompted to update to the latest version of Power BI report Builder, select **Cancel**.
 
