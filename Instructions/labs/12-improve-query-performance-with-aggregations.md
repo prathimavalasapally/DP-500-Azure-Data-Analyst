@@ -32,21 +32,45 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
       ![](../images1/dp500-run.png)
 	
-6. If prompted about a potential security risk, read the message, and then select **OK**
+6. If prompted about a potential security risk, read the message, and then select **OK**.
+
+      ![](../images1/potentialsecurityrisk.png)
 	
-7. If prompted for sqlserver database connection, change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+7. On the **SQL Server database** page, ensure **Use my current credentials (1)** is selected and  click **Save (2)**. 
 
-	![](../images/dp500-11-60.png)
+	![](../images/usemycredentials.png)
 
-8. If prompted for Encryption Support, click on **OK**
+8. Select the **File** ribbon tab, select **Get data (1)** > **SQL Server database (2)**.
 
-	![](../images/dp500-6-2.png)
+	![](../images/getdata.png)
 
-9. To save the file, on the **File** ribbon tab, select **Save as**.
+9. On **SQL Server database** page specify the following and click **Ok (3)**.
 
-10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
+	| Setting | Value |
+    	| --- | --- |
+    	| **Server** | **localhost** **(1)**|
+    	| **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
+	
+	![](../images/onsqlserverdb.png)
+    
+10. If prompted for Encryption Support,click on **OK**
 
-11. Select **Save**.
+	![](../images1/encryptionsupport.png)
+
+11. Select **Cancel** on the navigator pane. 
+12. On the yellow warning bar that is displayed, click on **Apply changes**
+
+	![](../images1/applychanges.png)
+	
+13. If prompted to approve running a Native Database Query, select **Run**.
+
+	![](../images1/navigatequeryrun.png)
+	
+14. To save the file, on the **File** ribbon tab, select **Save as**.
+
+15. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
+
+16. Select **Save**.
 
 #### Task 2: Review the report
 
