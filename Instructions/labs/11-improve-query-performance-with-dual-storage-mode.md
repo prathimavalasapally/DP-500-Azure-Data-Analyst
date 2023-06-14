@@ -27,21 +27,21 @@ In this lab, you learn how to:
 
 	![](../images1/dp-500-lab11-2.png)
 	
-1. On the **SQL Server database** page, ensure **Use my current credentials** is selected and  click **Save**. 
+1. On the **SQL Server database** page, ensure **Use my current credentials (1)** is selected and  click **Save (2)**. 
 
-   ![](../images1/dp-500-lab11-3.png)
+   ![](../images1/dp-500-lab11-(3).png)
 	
 	
-1. On the **File** ribbon tab, select **Get data** > **SQL Server database**.
+1. Select the **File** ribbon tab, select **Get data (1)** > **SQL Server database (2)**.
 
-   ![](../images1/dp-500-lab11-4.png)
+   ![](../images1/dp-500-lab11-(4).png)
 
-1. On **SQL Server database** page specify the following and click **Ok**.
+1. On **SQL Server database** page specify the following and click **Ok (3)**.
   
     | Setting | Value |
     | --- | --- |
-    | **Server** | **localhost** |
-    | **Database(optional)** | **AdventureWorksDW2022-DP500** |
+    | **Server** | **localhost** **(1)**|
+    | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
     
     ![](../images1/dp-500-lab11-5.png)
     
@@ -87,11 +87,11 @@ In this task, you will review the pre-developed data model.
 
 1. Switch to **Model** view.
 
-    ![](../images/DP500-16-14.png)
+    ![](../images1/dp-500-lab11-T1.png)
 
 2. Use the model diagram to review the model design.
 
-    ![](../images/DP500-11-40.png)
+   ![](../images1/dp-500-lab11-T2.png)
 
     >**Note**: The model comprises three dimension tables and two fact tables. The **Sales** fact table represents sales order details, while the **Targets** table represents quarterly sales targets. It's a classic star schema design. The bar across the top of some of the tables indicate they use DirectQuery storage mode. Every table that has a blue bar belongs to the same source group.
 
@@ -109,31 +109,31 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
 1. Switch to **Report** view.
 
-    ![](../images/dp500-6-12.png)
+    ![](../images1/dp-500-lab11-T3.png)
 
 2. To inspect visual refresh events, on the **View** ribbon tab, from inside the **Show** panes group, select **Performance analyzer**.
 
-    ![](../images/dp500-12-4.png)
+    ![](../images1/dp-500-lab11-T4.png)
 
 3. In the **Performance analyzer** pane (located to the left of the **Visualizations** pane), select **Start recording**.
 
-    ![](../images/dp500-12-5.png)
+    ![](../images1/dp-500-lab11-T5.png)
 
     >**Note**: Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
 
 4. Select **Refresh visuals**.
 
-    ![](../images/dp500-12-6.png)
+    ![](../images1/dp-500-lab11-T6.png)
 
-5. In the **Performance analyzer** pane, expand open the **Slicer** visual, and notice the direct query event.
+5. In the **Performance analyzer** pane, expand open the **Slicer (1)** visual, and notice the **Direct query (2)** event.
 
-    ![](../images/DP500-11-16.png)
+    ![](../images1/dp-500-lab11-T7.png)
 
     >**Note**: Whenever you see a direct query event, it tells you that Power BI used DirectQuery storage mode to retrieve the data from the source database.
 
-6. Expand open the **Sales Result by Fiscal Quarter** visual, and notice that it recorded a direct query event also.
+6. Expand open the **Sales Result by Fiscal Quarter (1)** visual, and notice that it recorded a **Direct query (2)** event also.
 
-    ![](../images/DP500-11-17.png)
+    ![](../images1/dp-500-lab11-T8.png)
 
     >**Note**: You always set up a slicer visual by using one or more fields from the same table. It isn't possible to use fields from different tables to set up a slicer. What's more, a slicer almost always uses fields from a dimension table. So, to improve query performance of slicer visuals, ensure they store imported data. In this case, because the dimension tables use DirectQuery storage mode, you can set them to dual storage mode. Because dimension tables store few rows (relative to fact tables), it shouldn't result in an excessively large model cache.
 
@@ -143,33 +143,31 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 1. Switch to **Model** view.
 
+   ![](../images1/dp-500-lab11-T1.png)
+
 2. Select the header of the **Product** table.
 
 3. While pressing the **Ctrl** key, select the headers of the **Order Date** and **Sales Territory** tables also.
 
 4. In the **Properties** pane, expand open the **Advanced** section.
 
-    ![](../images/DP500-11-30.png)
-
 5. In the **Storage mode** dropdown list, select **Dual**.
 
-    ![](../images/DP500-11-25.png)
+     ![](../images1/dp-500-lab11-T9.png)
 
 6. When Storage mode dialog box is prompted, select **OK**.
 
-    ![](../images/dp500-6-2.png)
-
-    >**Note**: The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables.
+   >**Note**: The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables.
 	
 7. If Pending changes window Pops-up, click on **close** and click on **Apply changes** on the top of the model view and repeat from the 4th steps.
 
-    ![](../images1/dp500-11-72.png)
+   ![](../images1/dp-500-lab11-7.png)
 
 8. In the model diagram, notice the striped bar across the top of each dimension table.
 
-    ![](../images/dp500-11-23.png)
+   ![](../images1/dp-500-lab11-T11.png)
 
-    >**Note**: A striped bar indicates dual storage mode.
+   >**Note**: A striped bar indicates dual storage mode.
 
 ### Task-6: Review the report
 
@@ -181,29 +179,29 @@ In this task, you will review the pre-developed report.
 
 2. In the **Performance analyzer** pane, select **Clear**.
 
-    ![](../images/DP500-11-18.png)
+   ![](../images1/dp-500-lab11-T12.png)
 
 3. Refresh the visuals.
 
-    ![](../images/dp500-12-6.png)
+    ![](../images1/dp-500-lab11-T13.png)
 
 4. Notice that the slicer visual no longer uses a direct query connection.
 
-    ![](../images/DP500-11-19.png)
+   ![](../images1/dp-500-lab11-T14.png)
 
-    >**Note**:Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
+   >**Note**:Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
 
 5. Notice, however, that the column chart visual still uses a direct query connection.
 
-    >**Note**: That's because the **Sales Amount** field is a column of the **Sales** table, which uses DirectQuery store mode.
+   >**Note**: That's because the **Sales Amount** field is a column of the **Sales** table, which uses DirectQuery store mode.
 
 6. Select the column chart visuals, and then in the **Visualizations** pane, from inside the **Values** well, remove the **Sales Amount** field.
 
-    ![](../images/dp500-11-20.png)
+    ![](../images1/dp-500-lab11-T15.png)
 
 7. Also remove the two fields from the **Tooltips** well.
 
-    ![](../images/dp500-11-21.png)
+    ![](../images1/dp-500-lab11-T16.png)
 
     >**Note**: Both of these measures depend on the **Sales Amount** column.
 
