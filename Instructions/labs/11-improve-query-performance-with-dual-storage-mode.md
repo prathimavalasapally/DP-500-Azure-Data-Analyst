@@ -178,7 +178,7 @@ In this task, you will review the pre-developed report.
 
 1. Switch to **Report** view.
 
-    ![](../images/dp500-6-12.png)
+   ![](../images1/dp-500-lab11-T3.png)
 
 2. In the **Performance analyzer** pane, select **Clear**.
 
