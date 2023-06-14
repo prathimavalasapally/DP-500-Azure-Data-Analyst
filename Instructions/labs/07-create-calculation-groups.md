@@ -16,9 +16,11 @@ In this lab, you learn how to:
 
 #### Note: In this lab session, PowerBI Desktop and Tabular Editor have already been installed for the ease of execution.
 
-### Set up Power BI Desktop
+## Exercise 1: Set up Power BI Desktop
 
-Now you'll open a pre-developed Power BI Desktop solution.
+### Task 1: Set up Power BI Desktop
+
+In this Task, you'll open a pre-developed Power BI Desktop solution.
 
 1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
