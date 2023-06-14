@@ -99,8 +99,6 @@ In this task, you will review the pre-developed data model.
 
     >**Note**: The model comprises three dimension tables and two fact tables. The **Sales** fact table represents sales order details, while the **Targets** table represents quarterly sales targets. It's a classic star schema design. The bar across the top of some of the tables indicate they use DirectQuery storage mode. Every table that has a blue bar belongs to the same source group.
 
-    >**Note**: In this lab, you will set up some tables to use dual storage mode.
-
 ## Excercise 2: Set up dual storage mode
 
 In this exercise, you will set up dual storage mode.
@@ -147,8 +145,6 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 1. Switch to **Model** view.
 
-   ![](../images1/dp-500-lab11-T1.png)
-
 2. Select the header of the **Product** table.
 
 3. While pressing the **Ctrl** key, select the headers of the **Order Date** and **Sales Territory** tables also.
@@ -178,8 +174,6 @@ In this task, you will set all dimension tables to use dual storage mode.
 In this task, you will review the pre-developed report.
 
 1. Switch to **Report** view.
-
-   ![](../images1/dp-500-lab11-T3.png)
 
 2. In the **Performance analyzer** pane, select **Clear**.
 
