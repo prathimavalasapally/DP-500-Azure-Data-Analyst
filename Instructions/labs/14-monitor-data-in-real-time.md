@@ -30,33 +30,33 @@ In this task, you will use SQL Server Management Studio (SSMS) to setup the data
 	
     ![](../images1/dp-500-lab14-1.png)
 
-4. To open a script file, on the **File** menu, select **Open** > **File**.
+3. To open a script file, on the **File** menu, select **Open** > **File**.
 
-5. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Assets** folder.
+4. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\14\Assets** folder.
 
-6. Select the **1-Setup (1)** sql file and click **Open (2)**.
+5. Select the **1-Setup (1)** sql file and click **Open (2)**.
 
     ![](../images1/dp-500-lab14-2.png)
 
-8. Review the script.
+6. Review the script.
 
-	>**Note**: This script creates a table named **FactInternetSalesRealTime**. A different script will load data into this table to simulate a real-time workload of internet sales orders.
+   >**Note**: This script creates a table named **FactInternetSalesRealTime**. A different script will load data into this table to simulate a real-time workload of internet sales orders.
 
-9. To run a script, on the toolbar, select **Execute** (or press **F5**).
+7. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
     ![](../images1/dp-500-lab14-3.png) 
 	
-10. To close the file, on the **File** menu, select **Close**.
+8. To close the file, on the **File** menu, select **Close**.
 
-11. Press **Ctrl+O** to access the **Open File** window. Select **2-InsertOrders (1)** sql file and click **Opene (2)**
+9. Press **Ctrl+O** to access the **Open File** window. Select **2-InsertOrders (1)** sql file and click **Opene (2)**
 
      ![](../images1/dp-500-lab14-4.png)
 	
-12. Review this script also.
+10. Review this script also.
 
-	>**Note**: This script runs an infinite loop. For each loop, it inserts a sales order and then delays for a random period of 1-15 seconds.
+    >**Note**: This script runs an infinite loop. For each loop, it inserts a sales order and then delays for a random period of 1-15 seconds.
 
-13. Run the script, and leave it running until the end of the lab.
+11. Run the script, and leave it running until the end of the lab.
 
 ### Task 2: Set up Power BI Desktop
 
@@ -74,7 +74,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
    
     ![](../images1/dp-500-lab14-(1).png)
  
-5.  If Prompted click **OK** on **Encryption Support** page.
+5. If Prompted click **OK** on **Encryption Support** page.
 
 6. To save the file, on the **File** ribbon tab, select **Save as**.
 
@@ -98,9 +98,9 @@ In this task, you will review the pre-developed report.
 
 3. In the **Performance analyzer** pane (located to the right of the **Visualizations** pane), select **Start recording**.
 
-     ![](../images1/dp-500-lab14-6.png)
+    ![](../images1/dp-500-lab14-6.png)
 
-      >**Note**: Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
+     >**Note**: Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
 
 4. Select **Refresh visuals**.
 
@@ -124,24 +124,24 @@ In this task, you will set up automatic page refresh.
 
 1. To select the report page, first select an empty area of the report page (below the graph).
 
-2. In the **Visualizations** pane, select the format icon (paint brush).
+1. In the **Visualizations** pane, select the format icon (paint brush).
 
     ![](../images1/dp-500-lab14-8.png)
 
-3. Switch the **Page refresh** setting (last in the list) to **On**.
+1. Switch the **Page refresh** setting (last in the list) to **On**.
 
      ![](../images1/dp-500-lab14-9.png)
 	 
      >**Note**: Automatic page refresh is a page-level setting. You can enable it for specific pages in the report.
      >**Note**: First select an empty area of the report page (below the graph) or else you won't find **Page refresh** setting
 
-4. In the **Performance analyzer** pane, notice that the report visuals just refreshed.
+1. In the **Performance analyzer** pane, notice that the report visuals just refreshed.
 
-5. In the **Visualizations** pane, expand open the **Page refresh** settings and Notice that by default the page will refresh every 30 minutes.
+1. In the **Visualizations** pane, expand open the **Page refresh** settings and Notice that by default the page will refresh every 30 minutes.
 
     ![](../images1/dp-500-lab14-10.png)
 
-7. Modify the settings to refresh the page every 5 seconds.
+1. Modify the settings to refresh the page every 5 seconds.
 
     ![](../images1/dp-500-lab14-11.png)
 
@@ -159,25 +159,25 @@ In this task, you will set up change detection.
 
     ![](../images1/dp-500-lab14-12.png)
 	
-2. To create a change detection measure, select the **Add change detection** link.
+1. To create a change detection measure, select the **Add change detection** link.
 
     ![](../images1/dp-500-lab14-13.png)
 
-3. In the **Change detection** window, notice that the default set up is to create a new measure.
+1. In the **Change detection** window, notice that the default set up is to create a new measure.
 
 	![](../images1/dp-500-lab14-14-1.png)
 
-4. In the **Choose a calculation** dropdown list, select **Count (Distinct)**.
+1. In the **Choose a calculation** dropdown list, select **Count (Distinct)**.
 
     ![](../images1/dp-500-lab14-14-2.png)
 
-5. In the **Fields** pane (located at the right, inside the window), scroll down to locate the **Internet Sales** table.
+1. In the **Fields** pane (located at the right, inside the window), scroll down to locate the **Internet Sales** table.
 
-6. Select the **Sales Order (1)** field, and notice that the window added it to the **Choose a field to apply it to (2)** box and for the **Check for changes every** setting, set it to **5 seconds (3)** and select **Apply (4)**.
+1. Select the **Sales Order (1)** field, and notice that the window added it to the **Choose a field to apply it to (2)** box and for the **Check for changes every** setting, set it to **5 seconds (3)** and select **Apply (4)**.
 
     ![](../images1/dp-500-lab14-15.png)
 	
-9. In the **Data** pane, inside the **Internet Sales (1)** table, notice the addition of a **change detection measure (2)**.
+1. In the **Data** pane, inside the **Internet Sales (1)** table, notice the addition of a **change detection measure (2)**.
 
     ![](../images1/dp-500-lab14-16.png)
 
@@ -185,13 +185,13 @@ In this task, you will set up change detection.
 
      >**Note**: Once published to the Power BI service, Power BI only supports change detection measures for Premium capacities.
 
-10. In the **Performance analyzer** pane, select **Clear**.
+1. In the **Performance analyzer** pane, select **Clear**.
 
      ![](../images1/dp-500-lab14-17.png)
 
-11. Notice that Performance analyzer displays change detection queries.
+1. Notice that Performance analyzer displays change detection queries.
 
-12. Notice that sometimes multiple change detection queries happen before Power BI Desktop refreshes the report visuals.
+1. Notice that sometimes multiple change detection queries happen before Power BI Desktop refreshes the report visuals.
 
     >**Note**: That's because the database inserted no new internet sales orders at that time. This set up is now more efficient because report visuals only refresh when necessary.
 
@@ -203,15 +203,15 @@ In this task, you will finish up.
 
     ![](../images1/dp500_14-26.png)
 
-2. Close Power BI Desktop.
+1. Close Power BI Desktop.
 
-3. In SSMS, to stop running the script, on the toolbar, select **Stop** (or press **Alt+Break**).
+1. In SSMS, to stop running the script, on the toolbar, select **Stop** (or press **Alt+Break**).
 
     ![](../images1/dp-500-lab14-18.png)
 	 
-4. Close the script file.
+1. Close the script file.
 
-5. Close SSMS.
+1. Close SSMS.
 
    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:  
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
