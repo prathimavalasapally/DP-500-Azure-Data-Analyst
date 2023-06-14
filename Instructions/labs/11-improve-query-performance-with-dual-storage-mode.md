@@ -187,7 +187,7 @@ In this task, you will review the pre-developed report.
 
    ![](../images1/dp-500-lab11-T14.png)
 
-   >**Note**:Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
+   >**Note**: Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
 
 5. Notice, however, that the column chart visual still uses a direct query connection.
 
