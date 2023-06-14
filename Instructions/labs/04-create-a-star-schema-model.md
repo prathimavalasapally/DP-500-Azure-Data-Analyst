@@ -1,4 +1,4 @@
-# Create a star schema model
+# Lab4 - Create a star schema model
 
 ## Overview
 
