@@ -340,6 +340,8 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 3. Expand open the **Sales Result by Fiscal Quarter** visual, and notice that it no longer has a direct query event.
 
+	![](../images/expandopen.png)	
+
 4. Compare the duration with the baseline you noted earlier in this lab.
 
 	![](../images/dp500-12-26.png)
