@@ -48,17 +48,17 @@ In this task, you will open a pre-developed Power BI Desktop solution.
     
     ![](../images1/dp-500-lab11-5.png)
  
- 1. If prompted for Encryption Support,click on **OK** 
+1. If prompted for Encryption Support,click on **OK** 
 
     ![](../images1/dp-500-lab11-6.png)
 
- 1. Select **Cancel** on the navigator pane.  	
+1. Select **Cancel** on the navigator pane.  	
 						    
- 1. On the yellow warning bar that is displayed, click on **Apply changes**
+1. On the yellow warning bar that is displayed, click on **Apply changes**
  
     ![](../images1/dp-500-lab11-7.png)
 	
- 1. If prompted to approve running a Native Database Query, select **Run**.
+1. If prompted to approve running a Native Database Query, select **Run**.
 
     ![](../images1/dp-500-lab11-8.png)
 	
