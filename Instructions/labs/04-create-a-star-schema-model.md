@@ -1,4 +1,4 @@
-# Create a star schema model
+# Lab4 - Create a star schema model
 
 ## Overview
 
@@ -12,9 +12,9 @@ In this lab, you learn how to:
 
 - Organize the model diagram.
 
-## Exercise 1: Set up Power BI
+### Exercise 1: Set up Power BI
 
-### Task 1: In this task, you will set up Power BI.
+#### Task 1: In this task, you will set up Power BI.
 
 1. To open Power BI Desktop, on the Desktop, select the **Power BI Desktop** shortcut.
 
@@ -92,7 +92,7 @@ In this lab, you learn how to:
 
    >**Note**: You will open Power BI Desktop again in the upcoming exercises.
 
-### Task 2: Start the SQL pool
+#### Task 2: Start the SQL pool
 
 In this task, you will start the SQL pool.
 
@@ -117,7 +117,7 @@ In this task, you will start the SQL pool.
 
     >**Important**: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
 
-### Task 3: Link your Power BI workspace to Azure Synapse Analytics
+#### Task 3: Link your Power BI workspace to Azure Synapse Analytics
 
 In this task you will link your existing Power BI workspace to your Azure Synapse Analytics workspace.
 
@@ -139,11 +139,11 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
     
     ![](../images1/dp-lab4-17.png)
 
-## Exercise 2: Develop a data model
+### Exercise 2: Develop a data model
 
 In this exercise, you will develop a DirectQuery model to support Power BI analysis and reporting of the data warehouse reseller sales subject.
 
-### Task 1: Download a dataset file
+#### Task 1: Download a dataset file
 
 In this task, you will download a Power BI data source file from Synapse Studio.
 
@@ -177,7 +177,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
    >**Note**: When the file opens, it will prompt you to create queries using the connection. You will define those queries in the next task.
 
-### Task 2: Create model queries
+#### Task 2: Create model queries
 
 In this task, you will create five Power Query queries that will each load as a table to your model.
 
@@ -549,7 +549,7 @@ In this task, you will create five Power Query queries that will each load as a 
     > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 3: Organize the model diagram
+#### Task 3: Organize the model diagram
 
 In this task, you will organize the model diagram to easily understand the star schema design.
 
