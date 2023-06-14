@@ -20,7 +20,7 @@ In this lab, you learn how to:
 
 ### Task 1: Set up Power BI Desktop
 
-In this task, you'll open a pre-developed Power BI Desktop solution.
+In this task, you will open a pre-developed Power BI Desktop solution.
 
 1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
