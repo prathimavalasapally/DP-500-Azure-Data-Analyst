@@ -20,7 +20,7 @@ In this lab, you learn how to:
 
 ### Task 1: Set up Power BI Desktop
 
-In this Task, you'll open a pre-developed Power BI Desktop solution.
+In this task, you'll open a pre-developed Power BI Desktop solution.
 
 1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
@@ -46,9 +46,9 @@ In this Task, you'll open a pre-developed Power BI Desktop solution.
     >**Note**: In the next exercise, you will use Tabular Editor to create calculation
     groups.
 
-### Review the data model
+### Task 2: Review the data model
 
-Review the data model to understand how calculation groups will apply to this model.
+In this task, you will review the data model to understand how calculation groups will apply to this model.
 
 1.  In Power BI Desktop, at the left, switch to **Model** view.
 
@@ -84,9 +84,9 @@ Review the data model to understand how calculation groups will apply to this mo
     achieved by measures, which are defined by using Data Analysis Expressions
     (DAX) formulas. In the next task, you will add measures to the model.
 
-### Create measures
+### Task 3: Create measures
 
-Create three sales-related measures in preparation for the creation of your calculation groups.
+In this task, you will create three sales-related measures in preparation for the creation of your calculation groups.
 
 1.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**.
