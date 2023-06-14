@@ -173,7 +173,6 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 	![](../images1/dp500_15-16.png)
 
-
 5. In the **Connection Properties** window, in the **Server Name** box, enter **localhost**.
 
 	>**Note** In this lab, you will connect to the SQL Server database by using **localhost**. However, it's not a recommended practice when creating your own solutions because gateway data sources cannot resolve **localhost**.
@@ -195,7 +194,6 @@ In this task, you will create a data source and dataset to retrieve a query resu
 	>**Note** A report dataset is a different in purpose and structure from a Power BI dataset.
 
 11. In the **Dataset Properties** window, in the **Name** box, replace the text with **SalesOrder**.
-
 
 12. To import a pre-defined query, select **Import**.
 
@@ -249,7 +247,6 @@ In this task, you will configure the report parameter with a default value.
 
 5. To add a default value, select **Add**.
 
-
 6. In the **Value** dropdown list, replace the text with **43659**.
 
 	![](../images1/dp500_15-26.png)
@@ -277,7 +274,6 @@ In this task, you will finalize the report header region design by adding textbo
 4. To insert a place holder, immediately after the space just entered, right-click and then select **Create Placeholder**.
 
 	![](../images1/dp500_15-28.png)
-
 
 5. In the **Placeholder Properties** window, at the right of the **Value** dropdown list, select the **fx** button.
 
