@@ -21,24 +21,44 @@ In this lab, you learn how to:
 
 1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and **Double Click** on the the existing file to Open the file.
 
-	![](../images/dp500-11-54.png)
+	![](../images1/dp-500-lab11-1.png)
 	
 1. If prompted about a potential security risk, read the message, and then select **OK**
 
-	![](../images/dp500-6-2.png)
+	![](../images1/dp-500-lab11-2.png)
 	
-1. If prompted for sqlserver database connection,change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+1. On the **SQL Server database** page, ensure **Use my current credentials** is selected and  click **Save**. 
 
-	![](../images/dp500-11-60.png)
+   ![](../images1/dp-500-lab11-3.png)
 	
-1. If prompted to approve running a Native Database Query, select **Run**.
+	
+1. On the **File** ribbon tab, select **Get data** > **SQL Server database**.
 
-	![](../images/dp500-11-13.png) 
+   ![](../images1/dp-500-lab11-4.png)
 
-1. If prompted for Encryption Support,click on **OK**
+1. On **SQL Server database** page specify the following and click **Ok**.
+  
+    | Setting | Value |
+    | --- | --- |
+    | **Server** | **localhost** |
+    | **Database(optional)** | **AdventureWorksDW2022-DP500** |
+    
+    ![](../images1/dp-500-lab11-5.png)
+    
+ 1. If prompted for Encryption Support,click on **OK** 
 
-	![](../images/dp500-6-2.png)
+    ![](../images1/dp-500-lab11-6.png)
 
+ 1. Select **Cancel** on the navigator pane.  	
+						    
+ 1. select **apply changes**
+ 
+    ![](../images1/dp-500-lab11-7.png)
+	
+ 1. If prompted to approve running a Native Database Query, select **Run**.
+
+    ![](../images1/dp-500-lab11-8.png)
+	
 1. To save the file, on the **File** ribbon tab, select **Save as**.
 
 1. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\MySolution** folder.
