@@ -40,13 +40,15 @@ In this task, you will open a pre-developed Power BI Desktop solution.
    ![](../images1/dp-500-lab11-(4).png)
 
 1. On **SQL Server database** page specify the following and click **Ok (3)**.
+
+    | Setting | Value |
+    | --- | --- |
+    | **Server** | **localhost** **(1)**  |
+    | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)** |
+    | Auto-generate password | unchecked **(4)** |
+    | Password | **Provide a secure password (5)** |
     
-    | Setting               | Value                                 |
-    | ----------------------| --------------------------------------|
-    | **Server**            | **localhost** **(1)**                  |
-    | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
- 
- 	![](../images1/dp-500-lab11-5.png)
+    ![](../images1/dp-500-lab11-5.png)
  
  1. If prompted for Encryption Support,click on **OK** 
 
