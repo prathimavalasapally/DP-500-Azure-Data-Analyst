@@ -59,7 +59,7 @@ In this task, you will set up Power BI.
 
 1. Select your **Country/Region (1)** and enter a 10 digit **phone number (2)** and select **Get started (3)**.
 
-    ![](../images1/dp-lab4-4.png)
+    ![](../images1/dp-lab4-(4).png)
 
 1. Select **Get started** once more. You will be redirected to Power BI.
 
@@ -547,7 +547,7 @@ In this task, you will create five Power Query queries that will each load as a 
 
     ![](../images/dp500-57.png)
 	
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.
     > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
