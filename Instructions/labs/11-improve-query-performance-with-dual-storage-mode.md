@@ -1,5 +1,5 @@
 
-# Excercise 1: Improve query performance with dual storage mode
+# Improve query performance with dual storage mode
 
 ## Overview
 
@@ -13,25 +13,28 @@ In this lab, you learn how to:
 
 - Use Performance analyzer to review refresh activities.
 
+## Excercise 1: Set up Power BI Desktop
+
 ### Task 1: Set up Power BI Desktop
+
+In this task, you will open a pre-developed Power BI Desktop solution.
 
 1. To open File Explorer, on the taskbar, select the **File Explorer** shortcut.
 
-	![](../images/DP500-16-13.png)
+   ![](../images/DP500-16-13.png)
 
 1. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\11\Starter** and **Double Click** on the the existing file to Open the file.
 
-	![](../images1/dp-500-lab11-1.png)
+   ![](../images1/dp-500-lab11-1.png)
 	
 1. If prompted about a potential security risk, read the message, and then select **OK**
 
-	![](../images1/dp-500-lab11-2.png)
+   ![](../images1/dp-500-lab11-2.png)
 	
 1. On the **SQL Server database** page, ensure **Use my current credentials (1)** is selected and  click **Save (2)**. 
 
    ![](../images1/dp-500-lab11-(3).png)
-	
-	
+		
 1. Select the **File** ribbon tab, select **Get data (1)** > **SQL Server database (2)**.
 
    ![](../images1/dp-500-lab11-(4).png)
@@ -51,7 +54,7 @@ In this lab, you learn how to:
 
  1. Select **Cancel** on the navigator pane.  	
 						    
- 1. select **apply changes**
+ 1. On the yellow warning bar that is displayed, click on **Apply changes**
  
     ![](../images1/dp-500-lab11-7.png)
 	
@@ -65,7 +68,7 @@ In this lab, you learn how to:
 
 1. Select **Save**.
 
-### Task-2: Review the report
+### Task 2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -81,7 +84,7 @@ In this task, you will review the pre-developed report.
 
     >**Note**: This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales and target amounts. You will improve the performance of the report by setting some tables to use dual storage mode.
 
-### Task-3: Review the data model
+### Task 3: Review the data model
 
 In this task, you will review the pre-developed data model.
 
@@ -97,13 +100,13 @@ In this task, you will review the pre-developed data model.
 
     >**Note**: In this lab, you will set up some tables to use dual storage mode.
 
-## Set up dual storage mode
+## Excercise 2: Set up dual storage mode
 
 In this exercise, you will set up dual storage mode.
 
 >**Note**: A model table that uses dual storage mode uses both import and DirectQuery storage mode at the same time. Power BI determines the most efficient storage mode to use on a query by query basis, striving to use import mode whenever possible because it's faster.
 
-### Task-4: Use Performance analyzer
+### Task 1: Use Performance analyzer
 
 In this task, you will open Performance analyzer and use it to inspect refresh events.
 
@@ -137,7 +140,7 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
     >**Note**: You always set up a slicer visual by using one or more fields from the same table. It isn't possible to use fields from different tables to set up a slicer. What's more, a slicer almost always uses fields from a dimension table. So, to improve query performance of slicer visuals, ensure they store imported data. In this case, because the dimension tables use DirectQuery storage mode, you can set them to dual storage mode. Because dimension tables store few rows (relative to fact tables), it shouldn't result in an excessively large model cache.
 
-### Task-5 Set up dual storage mode
+### Task 2: Set up dual storage mode
 
 In this task, you will set all dimension tables to use dual storage mode.
 
@@ -169,7 +172,7 @@ In this task, you will set all dimension tables to use dual storage mode.
 
    >**Note**: A striped bar indicates dual storage mode.
 
-### Task-6: Review the report
+### Task 3: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -213,7 +216,7 @@ In this task, you will review the pre-developed report.
 
    >**Note**: You could further optimize the model to improve query performance by adding aggregations. However, that enhancement will be the learning objective of a different lab.
 
-### Task-7: Finish up
+### Task 4: Finish up
 
 In this task, you will finish up.
 
