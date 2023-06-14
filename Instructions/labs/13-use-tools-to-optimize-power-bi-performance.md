@@ -136,7 +136,7 @@ In this task, you will review the BPA rules that you loaded in the previous task
 
     >**Note**: You can disable individual rules or entire categories of rules. BPA won't check disabled rules against your model. The removal of this specific rule is to show you how to disable a rule.
 
-### Task 5 Address BPA issues
+### Task 5: Address BPA issues
 
 In this task, you will open BPA and review the results of the checks.
 
