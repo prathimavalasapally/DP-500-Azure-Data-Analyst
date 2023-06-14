@@ -14,7 +14,9 @@ In this lab, you learn how to:
 
 - Create measures.
 
-### Task-1: Set up Power BI Desktop
+## Exercise 1: Set up Power BI Desktop
+
+### Task 1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI template file.
 
@@ -52,7 +54,7 @@ In this task, you will open a pre-developed Power BI template file.
 
 1. Select **Save**.
 
-### Task-2: Review the report
+### Task 2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -74,7 +76,7 @@ In this task, you will review the pre-developed report.
 
     >**Note**: It's important to understand that slicer selections change the filters applied to the column chart visual. Power BI refreshes the column chart visual. That involves retrieving data from the source database. That way, the column chart visual shows the latest source data. (Some report-level caching may occur, meaning the report may reuse previously queried data).
 
-### Task-3: Review the data model
+### Task 3: Review the data model
 
 In this task, you will review the pre-developed data model.
 
@@ -90,13 +92,13 @@ In this task, you will review the pre-developed data model.
 
     >**Note**: You will extend the model with another fact table to support analyzing sales target facts too.
 
-## Create a composite model
+## Exercise 2: Create a composite model
 
 In this exercise, you will add an import table that will convert the DirectQuery model to a composite model.
 
 >**Note**: A composite model comprises more than one source group.
 
-### Task-4: Add a table
+### Task 1: Add a table
 
 In this task, you will add a table that stores sales targets sourced from an Excel workbook.
 
@@ -146,7 +148,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
      >**Note**: The absence of a bar indicates the table belongs to the import source group.
 
-### Task-5: Create model relationships
+### Task 2: Create model relationships
 
 In this task, you will create two model relationships.
 
@@ -184,7 +186,7 @@ In this task, you will create two model relationships.
 
 1. Select **OK**.
 
-### Task-6: Set model properties
+### Task 3: Set model properties
 
 In this task, you will set model properties of the new table.
 
@@ -202,7 +204,7 @@ In this task, you will set model properties of the new table.
 
     ![](../images1/dp-500-lab8-19.png)
 
-### Task-7: Add measures
+### Task 4: Add measures
 
 In this task, you will add two measures to allow the analysis of sales target variance.
 
@@ -263,7 +265,7 @@ In this task, you will add two measures to allow the analysis of sales target va
    ![](../images1/dp-500-lab8-23.png)
    
    
-### Task-8: Update the report layout
+### Task 5: Update the report layout
 
 In this task, you will update the report to use the new measures.
 
@@ -290,7 +292,7 @@ In this task, you will update the report to use the new measures.
     >**Note**: You have now completed the creation of a composite model that combines DirectQuery and import tables. You could optimize the model to improve query performance by setting dimension tables to use dual storage mode, and by adding aggregations. However, those enhancements will be the learning objective of other labs.
     
  
-### Task-9: Finish up
+### Task 6: Finish up
 
 In this task, you will finish up.
 

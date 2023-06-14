@@ -12,14 +12,14 @@ In this lab, you learn how to:
 
 - Use DAX Studio.
 
-## Excercise-1: Use Best Practice Analyzer
+## Excercise 1: Use Best Practice Analyzer
 
 In this exercise,You will review the BPA rules, and then address specific issues found in the data model.
 
 >**Note**: BPA is a free third-party tool that notifies you of potential modeling missteps or changes that you can make to improve your model design and performance. It includes recommendations for naming, user experience, and common optimizations that you can apply to improve performance. For more information, see [Best practice rules to improve your model's performance](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/).
 
 
-### Task-1: Set up Power BI Desktop
+### Task 1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
@@ -45,7 +45,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
     >**Note**: Later in this exercise, you will use Tabular Editor to work with BPA.
 
-### Task-2: Review the data model
+### Task 2: Review the data model
 
 In this task, you will review the data model.
 
@@ -61,7 +61,7 @@ In this task, you will review the data model.
 
     >**Note**: In this exercise, you will use BPA to detect model issues and fix them.
 
-### Task-3: Load BPA rules
+### Task 3: Load BPA rules
 
 In this task, you will load BPA rules.
 
@@ -104,7 +104,7 @@ In this task, you will load BPA rules.
 
     ![](../images1/dp-500-lab7-2.png)
 
-### Task-4: Review the BPA rules
+### Task 4: Review the BPA rules
 
 In this task, you will review the BPA rules that you loaded in the previous task.
 
@@ -136,7 +136,7 @@ In this task, you will review the BPA rules that you loaded in the previous task
 
     >**Note**: You can disable individual rules or entire categories of rules. BPA won't check disabled rules against your model. The removal of this specific rule is to show you how to disable a rule.
 
-### Task-5 Address BPA issues
+### Task 5: Address BPA issues
 
 In this task, you will open BPA and review the results of the checks.
 
@@ -222,11 +222,11 @@ In this task, you will open BPA and review the results of the checks.
 
      >**Note**: You must also save the Power BI Desktop file to ensure the Tabular Editor changes are saved.
 
-## Excercise-2: Use DAX Studio
+## Excercise 2: Use DAX Studio
 
 >**Note**: According to its website, DAX Studio is "the ultimate tool for executing and analyzing DAX queries against Microsoft Tabular models." It's a feature-rich tool for DAX authoring, diagnosis, performance tuning, and analysis. Features include object browsing, integrated tracing, query execution breakdowns with detailed statistics, DAX syntax highlighting and formatting.
 
-### Task-1: Use DAX Studio
+### Task 1: Use DAX Studio
 
 1. Open **DAX Studio** shortcut icon in the Desktop.
 
@@ -238,7 +238,7 @@ In this task, you will open BPA and review the results of the checks.
 
 1. If necessary, maximize the DAX Studio window.
 
-### Task-2: Use DAX studio to optimize a query
+### Task 2: Use DAX studio to optimize a query
 
 In this task, you will optimize a query by using an improved measure formula.
 
@@ -288,7 +288,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
     ![](../images/DP500-13-32.png)
 
-   >**Note**: The second measure definition provides a more efficient result. You will now update the query to use the second measure.
+    >**Note**: The second measure definition provides a more efficient result. You will now update the query to use the second measure.
 
 12. At line 72 in the script, replace the word **Bad** with **Better** 
 
@@ -304,7 +304,7 @@ In this task, you will optimize a query by using an improved measure formula.
 
      >**Note**: In this case, you can determine that the "better" query, which uses variables and a time intelligence function, performs better-almost a 50% reduction in query execution time.
 
-### Task-3: Finish up
+### Task 3: Finish up
 
 In this task, you will finish up.
 

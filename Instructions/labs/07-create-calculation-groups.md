@@ -16,9 +16,11 @@ In this lab, you learn how to:
 
 #### Note: In this lab session, PowerBI Desktop and Tabular Editor have already been installed for the ease of execution.
 
-### Set up Power BI Desktop
+## Exercise 1: Set up Power BI Desktop
 
-Now you'll open a pre-developed Power BI Desktop solution.
+### Task 1: Set up Power BI Desktop
+
+In this task, you will open a pre-developed Power BI Desktop solution.
 
 1.  In File Explorer, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\07\Starter** folder.
 
@@ -44,9 +46,9 @@ Now you'll open a pre-developed Power BI Desktop solution.
     >**Note**: In the next exercise, you will use Tabular Editor to create calculation
     groups.
 
-### Review the data model
+### Task 2: Review the data model
 
-Review the data model to understand how calculation groups will apply to this model.
+In this task, you will review the data model to understand how calculation groups will apply to this model.
 
 1.  In Power BI Desktop, at the left, switch to **Model** view.
 
@@ -82,9 +84,9 @@ Review the data model to understand how calculation groups will apply to this mo
     achieved by measures, which are defined by using Data Analysis Expressions
     (DAX) formulas. In the next task, you will add measures to the model.
 
-### Create measures
+### Task 3: Create measures
 
-Create three sales-related measures in preparation for the creation of your calculation groups.
+In this task, you will create three sales-related measures in preparation for the creation of your calculation groups.
 
 1.  In the **Data** pane, right-click the **Sales** table, and then select
     **New measure**.
@@ -137,11 +139,11 @@ Create three sales-related measures in preparation for the creation of your calc
     >**Note**: When a table comprises only visible measures, it’s presented at the top of the pane. This way, it behaves like a measure group (an object of a multidimensional model). Do not confuse this cosmetic representation of a
     tabular model with DAX calculation groups.
 
-## Create a calculation group
+## Exercise 2: Create a calculation group
 
 Now you'll create two calculation groups. The first will support time intelligence. The second will support currency conversion.
 
-### Create the Time Intelligence calculation group
+### Task 1: Create the Time Intelligence calculation group
 
 Use Tabular Editor to create the **Time Intelligence** calculation group. It will simplify the creation of many time-related calculations, including PY (prior year), YoY (year-over-year), and YoY % (year-over-year percentage). The calculation group will allow analyzing any measure by using different Time Intelligence calculations.
 
@@ -159,37 +161,37 @@ groups.
     hosted in Power BI Desktop. Changes made to the model in Tabular Editor
     aren’t propagated to Power BI Desktop until you save them.
 
-2.  In the Tabular Editor window, in the left pane, right-click the **Tables (1)**
+1.  In the Tabular Editor window, in the left pane, right-click the **Tables (1)**
     folder, and then select **Create New (2)** \> **Calculation Group (3)**.
 
     ![Graphical user interface, text, application, table Description
     automatically generated](../images1/dp-500-lab7-8.png)
 
-3.  In the left pane, replace the default **New calculater name** with **Time Intelligence**, and
+1.  In the left pane, replace the default **New calculater name** with **Time Intelligence**, and
     then press **Enter**.
     
     ![](../images1/dp-500-lab7-10.png)
 
-4.  Expand open the **Time Intelligence** table. 
+1.  Expand open the **Time Intelligence** table. 
     
     >**Note**: The calculation group comprises this single column, while rows of data
     define the group of calculations. It’s a good practice to rename the column
     to reflect the subject of the calculations.
 
-6.  select the **Name (1)** column and in the **Properties** pane (located at the bottom-right), select the
+1.  select the **Name (1)** column and in the **Properties** pane (located at the bottom-right), select the
     **Name** property, and rename as **Time Calculation (2)**.
 
      ![](../images1/dp-500-lab7-12.png)
 
-7.  To create a **calculation item**, right-click the **Time Intelligence (1)** table,
+1.  To create a **calculation item**, right-click the **Time Intelligence (1)** table,
     and then select **Create New (2)** \> **Calculation Item (3)**.
 
      ![](../images1/dp-500-lab7-13.png)
 
-8.  In the left pane, replace the default  name with **Current**, and then press
+1.  In the left pane, replace the default  name with **Current**, and then press
     **Enter**.
 
-9.  In the **Expression Editor** pane (located above the **Properties** pane),
+1.  In the **Expression Editor** pane (located above the **Properties** pane),
     enter the following formula:
 
     DAX
@@ -201,18 +203,18 @@ groups.
     >**Note**: The SELECTEDMEASURE function returns a reference to the measure that is
     currently in context when the calculation item is evaluated.
 
-10. In the **Expression Editor** pane toolbar, select the first button to accept
+1.  In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
 
     ![](../images1/dp-500-lab7-15.png)
  
- 1. To Create a second calculation item, right-click the **Time Intelligence** table,
+1.  To Create a second calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default name with  **PY**, and then press
+1.  In the left pane, replace the default name with  **PY**, and then press
     **Enter**. 
     
-11. In the **Expression Editor**, run the following formula:
+1.  In the **Expression Editor**, run the following formula:
 
     DAX
 
@@ -221,16 +223,16 @@ groups.
     >**Note**: The prior year (PY) formula calculates the value for the selected measure in the prior year.
     
     
-10. In the **Expression Editor** pane toolbar, select the first button to accept
+1.  In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
     
- 1. To create a third calculation item, right-click the **Time Intelligence** table,
+1.  To create a third calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default name with  **YoY**, and then press
+1.  In the left pane, replace the default name with  **YoY**, and then press
     **Enter**.
 
-12. In the **Expression Editor**, run the following formula:
+1.  In the **Expression Editor**, run the following formula:
 
 
     DAX
@@ -239,20 +241,19 @@ groups.
         - CALCULATE ( SELECTEDMEASURE (), 'Time Intelligence'[Time Calculation] = "PY" )
     ```
     
-10. In the **Expression Editor** pane toolbar, select the first button to accept
+1. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
 
     >**Note**: The year-over-year (YoY) formula calculates the difference of the selected
     measure of the current year to the prior year.
 
- 1. To create a fourth calculation item, right-click the **Time Intelligence** table,
+1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
- 1.  In the left pane, replace the default name with  **YoY %**, and then press
+1. In the left pane, replace the default name with  **YoY %**, and then press
     **Enter**.
 
-13. In the **Expression Editor**, run the following formula:
-
+1. In the **Expression Editor**, run the following formula:
 
     DAX
     ```
@@ -262,13 +263,13 @@ groups.
     )
     ```
     
- 1. In the **Expression Editor** pane toolbar, select the first button to accept
+1. In the **Expression Editor** pane toolbar, select the first button to accept
     changes.
     
     >**Note**: The year-over-year percentage (YoY %) formula calculates the percentage
     change of the selected measure over the prior year.
 
-14. In the **Properties** pane (located at the bottom-right), set the **Format String Expression** property
+1. In the **Properties** pane (located at the bottom-right), set the **Format String Expression** property
     to: 
     ```
     "0.00%;-0.00%;0.00%"
@@ -280,36 +281,36 @@ groups.
     ![Graphical user interface, text, application Description automatically
     generated](../images1/dp-500-lab7-t1.png)
 
-15. Verify that the **Time Intelligence** calculation group has four calculation items.
+1. Verify that the **Time Intelligence** calculation group has four calculation items.
 
     ![Text Description automatically
     generated](../images1/dp-500-lab7-t2.png)
 
-16. To save the changes to the Power BI Desktop model, on the **File** menu,
+1. To save the changes to the Power BI Desktop model, on the **File** menu,
     select **Save**.
 
     **Tip:** *It’s also possible to select the toolbar button or press **Ctrl+S**.
 
-17. Switch to Power BI Desktop.
+1. Switch to Power BI Desktop.
 
-18. Above the report designer, notice the yellow banner.
+1. Above the report designer, notice the yellow banner.
 
     ![](../images/dp500_07-21.png)
 
-19. At the right of the banner, select **Refresh now**.
+1. At the right of the banner, select **Refresh now**.
 
     ![](../images/dp500_07-22.png)
 
     >**Note**: Refreshing applies the changes by creating the calculation group as a model table. It then loads the calculation items as rows of data.
 
-20. In the **Data** pane, expand open the **Time Intelligence** table.
+1. In the **Data** pane, expand open the **Time Intelligence** table.
 
     ![Text Description automatically generated with medium
     confidence](../images/dp500_07-23.png)
 
-### Update the matrix visual
+### Task 2: Update the matrix visual
 
-Now you'll modify the matrix visual to use the **Time Calculation**
+In this task, you'll modify the matrix visual to use the **Time Calculation**
 column.
 
 1.  In the report View, select the matrix visual.
@@ -340,9 +341,9 @@ column.
     recall that you set the format string expression for the **YoY %** measure
     to produce a percentage format.
 
-### Create the Currency Conversion calculation group
+### Task 3: Create the Currency Conversion calculation group
 
-Now you'll create the **Currency Conversion** calculation group. It
+In this task, you'll create the **Currency Conversion** calculation group. It
 will provide flexibility to convert the **Sales** table measures to a selected
 currency. It will also apply appropriate formatting for the selected currency.
 
@@ -449,9 +450,9 @@ currency. It will also apply appropriate formatting for the selected currency.
     correct result, the calculation order must be reversed. You can control
     calculation order by setting precedence values.
 
-### Modify calculation group precedence
+### Task 4: Modify calculation group precedence
 
-Now you will modify the calculation group precedence of the two
+In this task, you will modify the calculation group precedence of the two
 calculation groups.
 
 1.  Switch to Tabular Editor.
@@ -489,7 +490,7 @@ calculation groups.
     generated](../images1/dp-500-lab7-t8.png)
     
 
-### Finish up
+### Task 5: Finish up
 
 In this task, you'll finish up.
 

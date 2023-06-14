@@ -1,4 +1,4 @@
-# Monitor data in real time
+# Lab14 - Monitor data in real time
 
 ## Overview
 
@@ -14,7 +14,9 @@ In this lab, you learn how to:
 
 - Create and use the change detection feature.
 
-## Get started
+## Exercise 1: Setting Up Database using SQL Server Management Studio (SSMS).
+
+In this exercise, you will set up Database using SQL Server Management Studio (SSMS)
 
 ### Task 1: Set up the database
 
@@ -110,7 +112,7 @@ In this task, you will review the pre-developed report.
 
     - When you design a report for real-time analysis, there must be a better way than asking users to constantly refresh the report page. You will achieve that better way when you set up automatic page refresh in the next exercise.
 
-## Set up automatic page refresh
+## Exercise 2: Set up automatic page refresh
 
 In this exercise, you will set up automatic page refresh and experiment by using the change detection feature.
 

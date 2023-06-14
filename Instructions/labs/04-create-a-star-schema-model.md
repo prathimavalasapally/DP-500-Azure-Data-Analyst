@@ -12,9 +12,9 @@ In this lab, you learn how to:
 
 - Organize the model diagram.
 
-## Set up Power BI
+## Exercise 1: Set up Power BI
 
-In this task, you will set up Power BI.
+### Task 1: In this task, you will set up Power BI.
 
 1. To open Power BI Desktop, on the Desktop, select the **Power BI Desktop** shortcut.
 
@@ -34,17 +34,14 @@ In this task, you will set up Power BI.
 
     ![](../images1/dp-lab4-2.png)
 
-
 1. Complete the sign up process by providing username and password:
 
      * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
      * Password: <inject key="AzureAdUserPassword"></inject>
 
-	
 1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
 
-   
    >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
 	![](../images1/dp-lab4-3.png)
@@ -59,7 +56,7 @@ In this task, you will set up Power BI.
 
 1. Select your **Country/Region (1)** and enter a 10 digit **phone number (2)** and select **Get started (3)**.
 
-    ![](../images1/dp-lab4-4.png)
+    ![](../images1/dp-lab4-(4).png)
 
 1. Select **Get started** once more. You will be redirected to Power BI.
 
@@ -95,7 +92,7 @@ In this task, you will set up Power BI.
 
    >**Note**: You will open Power BI Desktop again in the upcoming exercises.
 
-### Start the SQL pool
+### Task 2: Start the SQL pool
 
 In this task, you will start the SQL pool.
 
@@ -120,7 +117,7 @@ In this task, you will start the SQL pool.
 
     >**Important**: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
 
-### Link your Power BI workspace to Azure Synapse Analytics
+### Task 3: Link your Power BI workspace to Azure Synapse Analytics
 
 In this task you will link your existing Power BI workspace to your Azure Synapse Analytics workspace.
 
@@ -142,11 +139,11 @@ In this task you will link your existing Power BI workspace to your Azure Synaps
     
     ![](../images1/dp-lab4-17.png)
 
-## Develop a data model
+## Exercise 2: Develop a data model
 
 In this exercise, you will develop a DirectQuery model to support Power BI analysis and reporting of the data warehouse reseller sales subject.
 
-### Download a dataset file
+### Task 1: Download a dataset file
 
 In this task, you will download a Power BI data source file from Synapse Studio.
 
@@ -180,7 +177,7 @@ In this task, you will download a Power BI data source file from Synapse Studio.
 
    >**Note**: When the file opens, it will prompt you to create queries using the connection. You will define those queries in the next task.
 
-### Create model queries
+### Task 2: Create model queries
 
 In this task, you will create five Power Query queries that will each load as a table to your model.
 
@@ -498,7 +495,6 @@ In this task, you will create five Power Query queries that will each load as a 
 	
     >**Note**: This selection of columns determine what will be available in your model.
 
-
 1. Rename the following columns:
 
 	- **OrderQuantity** as **Quantity**
@@ -547,13 +543,13 @@ In this task, you will create five Power Query queries that will each load as a 
 
     ![](../images/dp500-57.png)
 	
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.
     > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Organize the model diagram
+### Task 3: Organize the model diagram
 
 In this task, you will organize the model diagram to easily understand the star schema design.
 
@@ -598,7 +594,7 @@ In this task, you will organize the model diagram to easily understand the star 
        > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
        > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
 
-### Pause the SQL pool
+### Task 4: Pause the SQL pool
 
 In this task, you will stop the SQL pool.
 
