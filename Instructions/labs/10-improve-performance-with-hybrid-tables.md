@@ -116,11 +116,11 @@ You will sign into the Power BI service and start a trial license in this task.
 
       ![](../images1/logintopowerbi4.png)
 
-	>**Note:** You require a Power BI Premium per User (PPU) license to complete this lab. A trial lic ense is sufficient. 
+	>**Note**: You require a Power BI Premium per User (PPU) license to complete this lab. A trial lic ense is sufficient. 
 
 1. Do any remaining tasks to complete the trial setup.
 
-	**Tip:** The Power BI web browser experience is known as the **Power BI service**.
+	**Tip**: The Power BI web browser experience is known as the **Power BI service**.
 
 ### Task 3: Create a workspace
 
@@ -144,8 +144,8 @@ In this task, you will create a workspace.
 
 	![](../images1/dp500-10-2.png)
 
-	>**Note:** Power BI only supports incremental refresh and hybrid tables in Premium workspaces.
-	>Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.
+	>**Note**: Power BI only supports incremental refresh and hybrid tables in Premium workspaces.
+	>**Note**: Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.
 
 ### Task 4: Set up Power BI Desktop
 
@@ -217,7 +217,7 @@ In this task, you will review the pre-developed report.
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image23.png)
 
-	>**Note:** The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.*
+	>**Note**: The report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the bar chart visual displays monthly sales amounts. In this lab, you will improve the performance of the report by setting up incremental refresh and a hybrid table.
 
 ### Task 6: Review the data model
 
@@ -241,13 +241,13 @@ In this task, you will review the pre-developed data model.
       > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
       > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
     
-## Set up incremental refresh.
+## Exercise 2: Set up incremental refresh.
 
 In this exercise, you will set up incremental refresh.
 
 Incremental refresh extends scheduled refresh operations by providing automated partition creation and management for dataset tables that frequently load new and updated data. It helps to reduce refresh time, placing lower burdens on source data and Power BI. It can also help surface current data to Power BI report more quickly.
 
-### Task 7: Add parameters
+### Task 1: Add parameters
 
 In this task, you will add two parameters.
 
@@ -261,8 +261,8 @@ In this task, you will add two parameters.
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
-	>**Note:** Incremental refresh requires that the table contain a date column of date/time or integer data type with the value formatted as yyyymmdd.
-	>To set up incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.
+	>**Note**: Incremental refresh requires that the table contain a date column of date/time or integer data type with the value formatted as yyyymmdd.
+	>**Note**: To set up incremental refresh, you must create parameters that Power BI will use to filter this column to create table partitions.
 
 4. To create a parameter, on the **Home** ribbon tab, select the **Manager Parameters** icon.
 
@@ -298,7 +298,7 @@ In this task, you will add two parameters.
 	
 	>**Note**: For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022.
 
-### Task 8: Filter the query
+### Task 2: Filter the query
 
 In this task, you will add filters to the **Sales** query.
 
@@ -334,7 +334,7 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### Task 9: Set up incremental refresh
+### Task 3: Set up incremental refresh
 
 In this task, you will set up the incremental refresh policy for the **Sales** table.
 
@@ -356,7 +356,7 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### Task 10: Publish the dataset
+### Task 4: Publish the dataset
 
 In this task, you will publish the dataset.
 
@@ -376,7 +376,7 @@ In this task, you will publish the dataset.
 
 5. If prompted to save changes, select **Save**.
 
-### Task 11: Set up the dataset
+### Task 5: Set up the dataset
 
 In this task, you will set up the data source credentials and refresh the dataset.
 
@@ -408,8 +408,8 @@ In this task, you will set up the data source credentials and refresh the datase
 	
 7. Notice, but do not change, any of the settings.
 
-	>**Note:** In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.
-	>In this lab, you will do an on-demand refresh.
+	>**Note**: In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.
+	>**Note**: In this lab, you will do an on-demand refresh.
 
 8. In the **Navigation** pane (located at the left), select **Workspaces (1)** and select the workspace **DP500-<inject key="Deployment ID" enableCopy="false" />** **(2)**.
 
@@ -435,7 +435,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 13. To close the pane, select **X**.
 
-### Task 12: Review the table partitions
+### Task 6: Review the table partitions
 
 In this task, you will use SSMS to review the table partitions.
 
@@ -451,7 +451,7 @@ In this task, you will use SSMS to review the table partitions.
 
         ![](../images1/dp500-10-37.png)
      
-        >**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
+        >**Note**: You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
     
 3. In Object Explorer (located at the left), expand the **Databases** folder, expand the **Sales Analysis...** database (dataset), and then the **Tables** folder.
 
@@ -465,15 +465,15 @@ In this task, you will use SSMS to review the table partitions.
 
 6. Scroll to the bottom of the list and notice the last one is a DirectQuery partition for the current and future dates.
 
-	>**Note:** Power BI creates and manages all of these partitions automatically.
+	>**Note**: Power BI creates and manages all of these partitions automatically.
 
 7. Select **Cancel**.
 
-## Test the hybrid table
+## Exercise 3: Test the hybrid table
 
 In this exercise, you will open the report, add a sales order, and then see the report data update.
 
-### Task 13: Open the report
+### Task 1: Open the report
 
 In this task, you will open the report.
 
@@ -488,7 +488,7 @@ In this task, you will open the report.
 	  >**Note**: The current month should be visible as a bar in the bar chart.
 	  >**Note**: August 2022 onwards is not in FY 2022, which is the default for the slicer.
 
-### Task 14: Add an order to the database
+### Task 2: Add an order to the database
 
 In this task, you will add an order to the database.
 
@@ -504,7 +504,7 @@ In this task, you will add an order to the database.
 
 5. In the **Connect to Database Engine** window, in **Server name** box enter **serverDID.database.windows.net**.
 
-    >**Note:** Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
+    >**Note**: Replace **DID** with **<inject key="DeploymentID" enableCopy="true" />**
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
@@ -516,7 +516,7 @@ In this task, you will add an order to the database.
 
 9. Review the script.
 
-	>**Note:** This script inserts a single order into the **FactInternetSales** table using today as the order date.*
+	>**Note**: This script inserts a single order into the **FactInternetSales** table using today as the order date.
 	
 10. Select **AdventureWorksDW2022-DP500** from the **Available Databases** dropdown list.
 
@@ -528,7 +528,7 @@ In this task, you will add an order to the database.
 
 12. To close the file, on the **File** menu, select **Close**.
 
-### Task 15: Refresh the report
+### Task 3: Refresh the report
 
 In this task, you will refresh the report.
 
@@ -542,9 +542,9 @@ In this task, you will refresh the report.
 
 4. When the report refresh completes, verify that the sales amount for the current month increased by $10,000 dollars.
 
-	>**Note:** When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.
+	>**Note**: When Power BI queried the **Sales** table, it retrieved current data from the DirectQuery partition, which queried the Azure SQL database directly.
 
-	**Tip:**  Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.
+	>**Tip**: Hybrid tables work especially well with automatic page refresh, which is a feature that automatically refreshes a Power BI report.
 	
    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
