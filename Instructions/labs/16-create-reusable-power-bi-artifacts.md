@@ -117,7 +117,7 @@ In this task, you will review the data model.
 
 1. In Power BI Desktop, at the left, switch to **Model** view.
 
-	![](../images/DP500-16-14.png)
+	![](../images1/DP500-16-22new.png)
 
 2. Use the model diagram to review the model design.
 
@@ -195,7 +195,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 11. Switch to **Model** view.
 
-	![](../images/DP500-16-22.png)
+	![](../images1/DP500-16-22new.png)
 
 12. If necessary, to fit the model diagram to your screen, at the bottom right, select **Fit to screen**.
 
@@ -284,7 +284,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 1. Switch to **Model** view.
 
-	![](../images/DP500-16-22.png)
+	![](../images1/DP500-16-22new.png)
 
 2. On the **Home** ribbon tab, from inside the **Data** group, select **Get data**, and then select **Web**.
 
