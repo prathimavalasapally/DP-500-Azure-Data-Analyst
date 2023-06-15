@@ -42,8 +42,8 @@ In this lab, you learn how to:
 
 1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
 
-   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
-
+    >**Note**: In a web browser, go to [https://powerbi.com](https://powerbi.com/) in case it is not opened.
+   
 	![](../images1/dp-lab4-3.png)
 	
 1. If prompted **Signin** with following Username and Password.
