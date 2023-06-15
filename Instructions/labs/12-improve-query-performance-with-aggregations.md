@@ -100,8 +100,6 @@ In this task, you will review the pre-developed data model.
 
 	> **Note** The three dimension tables have a striped bar, which indicates they use dual storage mode. That means the tables use both import and DirectQuery storage mode. Power BI determines the most efficient storage mode to use on a query by query basis, striving to use import mode whenever possible because it's faster.
 
-	> **Note** In this lab, you will add an aggregation to improve the performance of specific **Sales** table queries.
-
 ### Task 4: Use Performance analyzer
 
 In this task, you will open Performance analyzer and use it to inspect refresh events.
