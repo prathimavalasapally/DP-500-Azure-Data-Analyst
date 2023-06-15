@@ -322,7 +322,7 @@ In this task, you will add filters to the **Sales** query.
 
 4. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image38.png)
+	![](../images1/dp500-10-22.png)
 
 5. Notice that Power BI Desktop loaded 5,134 rows into the **Sales** table.
 
@@ -340,11 +340,11 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 1. In the model diagram, right-click the **Sales** table header, and then select **Incremental refresh**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image41.png)
+	![](../images1/dp500-10-23.png)
+	
+2. In the **Incremental refresh and real-time data** window, at step 2, turn on **Incrementally refresh this table (1)**. Set the Archive data starting **2 Years (2)** before the refresh date. Set an Incrementally refresh data starting **7 Days (3)** before the refresh date. At step 3, **check** the **Get the latest data in real time with the DirectQuery (4)** option. Select **Apply (5)**.
 
-2. In the **Incremental refresh and real-time data** window, at step 2, turn on **Incrementally refresh this table (1)**. Set the Archive data starting **2 Years** before the refresh date. Set an Incrementally refresh data starting **7 Days** before the refresh date. At step 3, check the **Get the latest data in real time with the DirectQuery** option. Select **Apply**.
-
-      ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
+      ![](../images1/dp500-10-24.png)
       
 	>**Note:Archive sata starting:** This setting determines the historical period. In this instance, Power BI will create two whole-year partitions for historic data.
 
@@ -362,15 +362,15 @@ In this task, you will publish the dataset.
 
 1. To publish the report, on the **Home** ribbon tab, select **Publish**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image48.png)
+	![](../images1/dp500-10-25.png)
 
-2. In the **Publish to Power BI (1)** window, select the workspace created in this lab, and then **select (2)**.
+2. On the **Publish to Power BI** window, select the workspace **DP500-<inject key="Deployment ID" enableCopy="false" />** **(1)** created in this lab, and then **select (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image49.png)
+	![](../images1/dp500-10-26.png)
 
 3. When the publishing succeeds, select **Got it**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image50.png)
+	![](../images1/dp500-10-27.png)
 
 4. Close Power BI Desktop.
 
@@ -384,15 +384,15 @@ In this task, you will set up the data source credentials and refresh the datase
 
 2. In the workspace landing page, locate the report and dataset.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image52.png)
+	![](../images1/dp500-10-28.png)
 
 3. Hover the cursor over the dataset, and when the ellipsis appears, select the ellipsis, and then select **Settings**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image53.png)
+	![](../images1/dp500-10-29.png)
 
-4. On **Datasets** tab under the **Data source credentials** section, (you need to scroll down to see option) select the **Edit credentials** link.
+4. On **Datasets** tab under the **Data source credentials** section (you need to scroll down to see option), select the **Edit credentials** link.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
+	![](../images1/dp500-10-30.png)
 
 5. In the window, enter the username and password, and set the privacy level to **Organizational (3)**. Select **Sign In (4)**.
        
@@ -400,36 +400,38 @@ In this task, you will set up the data source credentials and refresh the datase
 
       Password: `P@ssw0rd01` **(2)**
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
-
+    ![](../images1/dp500-10-31.png)
+    
 6. Expand open the **Scheduled refresh and performance optimization** section.
 
-     ![](../images/dp500-improve-performance-with-hybrid-tables-image56.png)
+     ![](../images1/dp500-10-32.png)
 	
 7. Notice, but do not change, any of the settings.
 
 	>**Note:** In a real world set up, you schedule data refresh to allow Power BI to refresh and manage the partitions on a recurring basis.
 	>In this lab, you will do an on-demand refresh.
 
-8. In the **Navigation** pane (located at the left), select your workspace.
+8. In the **Navigation** pane (located at the left), select **Workspaces (1)** and select the workspace **DP500-<inject key="Deployment ID" enableCopy="false" />** **(2)**.
+
+   ![](../images1/dp500-10-33.png)
 
 9. In the workspace landing page, hover the cursor over the dataset, and then select the **Refresh** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image57.png)
+	![](../images1/dp500-10-34.png)
 
 10. In the **Refreshed** column, notice the spinning icon, and wait until it stops (indicating that the refresh has completed).
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image58.png)
+	![](../images1/dp500-10-35.png)
 
 11. To open the workspace settings, at the top select ellipsis, select **Workspace Settings**.
 
 	![](../images1/dp500-10.png)
 
-12. In the **Settings** pane, select the **Premium** tab. To copy the workspace connection to the clipboard, select **Copy**.
+12. In the **Workspace Settings** pane, select the **Premium (1)** tab. To copy the workspace connection to the clipboard, select **Copy (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image61.png)
+	![](../images1/dp500-10-36.png)
 
-	*You will use the workspace connection to connect to it in SQL Server Management Studio (SSMS).*
+	>**Note**: You will use the workspace connection to connect to it in SQL Server Management Studio (SSMS).
 
 13. To close the pane, select **X**.
 
@@ -447,17 +449,17 @@ In this task, you will use SSMS to review the table partitions.
       - and Azure Password: <inject key="AzureAdUserPassword"></inject>
       - Select **Connect**.
 
-      ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
-
-     >**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
+        ![](../images1/dp500-10-37.png)
+     
+        >**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
     
-3. In Object Explorer (located at the left), expand open the **Databases** folder, expand open the **Sales Analysis...** database (dataset), and then the **Tables** folder.
+3. In Object Explorer (located at the left), expand the **Databases** folder, expand the **Sales Analysis...** database (dataset), and then the **Tables** folder.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
+	![](../images1/dp500-10-38.png)
 
 4. Right-click the **Sales** table, and then select **Partitions**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image67.png)
+	![](../images1/dp500-10-39.png)
 
 5. In the **Partitions** window, notice the list of partitions for the two years’ history, followed by quarterly partitions and daily partitions.
 
@@ -466,8 +468,6 @@ In this task, you will use SSMS to review the table partitions.
 	>**Note:** Power BI creates and manages all of these partitions automatically.
 
 7. Select **Cancel**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image68.png)
 
 ## Test the hybrid table
 
@@ -481,12 +481,12 @@ In this task, you will open the report.
 
 2. In the workspace landing page, select the report.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image69.png)
+	![](../images1/dp500-10-40.png)
 
 3. If necessary, in the **Fiscal Year** slicer, select the fiscal year that contains the current month (based on today's date).
 
-	  >**Note:** The current month should be visible as a bar in the bar chart.
-	  >August 2022 onwards is not in FY 2022, which is the default for the slicer.
+	  >**Note**: The current month should be visible as a bar in the bar chart.
+	  >**Note**: August 2022 onwards is not in FY 2022, which is the default for the slicer.
 
 ### Task 14: Add an order to the database
 
@@ -498,9 +498,9 @@ In this task, you will add an order to the database.
 
 3. In the **Open File** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\10\Assets** folder.
 
-4. Select the **1-InsertOrder.sql** file and select **Open**.
+4. Select the **1-InsertOrder (1)** file and select **Open (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
+	![](../images1/dp500-10-41.png)
 
 5. In the **Connect to Database Engine** window, in **Server name** box enter **serverDID.database.windows.net**.
 
@@ -508,11 +508,11 @@ In this task, you will add an order to the database.
 
 6. In the **Authentication** dropdown list, select **SQL Server Authentication**.
 
-7. Enter the username **sqladmin** and password `P@ssw0rd01`.
+7. Enter the Login username **sqladmin** and password `P@ssw0rd01`.
 
 8. Select **Connect**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image71.png)
+	![](../images1/dp500-10-42.png)
 
 9. Review the script.
 
@@ -520,11 +520,11 @@ In this task, you will add an order to the database.
 	
 10. Select **AdventureWorksDW2022-DP500** from the **Available Databases** dropdown list.
 
-	![](../images1/dp500_10-availableDbs.png)
+	![](../images1/dp500-10-43.png)
 
 11. To run a script, on the toolbar, select **Execute** (or press **F5**).
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
+	![](../images1/dp500-10-44.png)
 
 12. To close the file, on the **File** menu, select **Close**.
 
@@ -536,9 +536,9 @@ In this task, you will refresh the report.
 
 2. In the report, take note of the sales amount for the current month.
 
-3. On the action bar, select the **Refresh** command.
+3. On the action bar, select the **Refresh** command (at top right corner).
 
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image73.png)
+    ![](../images1/dp500-10-45.png)
 
 4. When the report refresh completes, verify that the sales amount for the current month increased by $10,000 dollars.
 
