@@ -332,8 +332,6 @@ In this task, you will setup an aggregation.
 
 7. Select **Apply all**.
 
-	![](../images/dp500-12-22.png)
-
 8. In the model diagram, notice that the **Sales Agg** table is a hidden table.
 
 	![](../images/dp500-12-33.png)
