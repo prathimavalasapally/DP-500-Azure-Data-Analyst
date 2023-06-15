@@ -30,7 +30,7 @@ In this task, you will set up Power BI.
 
 1. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
-	![](../images/DP500-16-6.png)
+	![](../images1/DP500-16-6new.png)
 	
 1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
