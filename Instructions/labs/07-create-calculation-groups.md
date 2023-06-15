@@ -1,4 +1,4 @@
-# Lab 7-  Create calculation groups
+# Lab7 - Create calculation groups
 
 ## Overview
 
