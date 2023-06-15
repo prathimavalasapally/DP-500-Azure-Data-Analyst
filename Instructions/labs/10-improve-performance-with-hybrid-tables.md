@@ -40,11 +40,11 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 	![](../images1/dp500-improve-performance-with-hybrid-tables-image11.png)
 
-7. Select **Save**.
+8. Select **Save**.
 
       ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
 
-8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
+9. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
 
 ### Task 2: Set up Power BI
 
@@ -94,7 +94,7 @@ You will sign into the Power BI service and start a trial license in this task.
     
       >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.    
       
- 1. If prompted **Signin** with following Username and Password.
+1. If prompted **Signin** with following Username and Password.
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -106,21 +106,21 @@ You will sign into the Power BI service and start a trial license in this task.
 
      ![](../images1/logintopowerbi.png)
 
-3. Select **Get started** once more. You will be redirected to Power BI.
+1. Select **Get started** once more. You will be redirected to Power BI.
 
     ![](../images1/logintopowerbi1.png)
 
-5. At the top-right, select the **profile icon (1)**, and then select **Start trial (2)**.
+1. At the top-right, select the **profile icon (1)**, and then select **Start trial (2)**.
 
       ![](../images1/logintopowerbi3.png)
 
-4. When prompted, again select **Start trial**.
+1. When prompted, again select **Start trial**.
 
       ![](../images1/logintopowerbi4.png)
 
 	>**Note:** You require a Power BI Premium per User (PPU) license to complete this lab. A trial lic ense is sufficient. 
 
-5. Do any remaining tasks to complete the trial setup.
+1. Do any remaining tasks to complete the trial setup.
 
 	**Tip:** The Power BI web browser experience is known as the **Power BI service**.
 
@@ -314,23 +314,23 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
 
-3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. In the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
+3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. select the second calendar icon dropdown list, and then select **Parameter**and In the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
 
 	>**Note**: The default parameter selection is the correct one.
 
-8. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
+4. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image38.png)
 
-9. Notice that Power BI Desktop loaded 5,134 rows into the **Sales** table.
+5. Notice that Power BI Desktop loaded 5,134 rows into the **Sales** table.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image39.png)
 
 	>**Note**: These are the filtered rows for June 2022.
 
-10. Save the Power BI Desktop file.
+6. Save the Power BI Desktop file.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
@@ -352,7 +352,7 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	> **Note:Get the latest data in real time with DirectQuery** This setting enables fetching the latest changes from the selected table at the data source beyond the incremental refresh period by using DirectQuery. All rows with a date/time later than the incremental refresh period are included in a DirectQuery partition and fetched from the data source with every dataset query. This setting makes the table a hybrid table because it will contain import partitions and one DirectQuery partition.
 
-7. **Save** the Power BI Desktop file.
+3. **Save** the Power BI Desktop file.
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
@@ -421,17 +421,17 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image58.png)
 
-13. To open the workspace settings, at the top right, select **Settings**.
+11. To open the workspace settings, at the top select ellipsis, select **Workspace Settings**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image59.png)
+	![](../images1/dp500-10.png)
 
-14. In the **Settings** pane, select the **Premium** tab. To copy the workspace connection to the clipboard, select **Copy**.
+12. In the **Settings** pane, select the **Premium** tab. To copy the workspace connection to the clipboard, select **Copy**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image61.png)
 
 	*You will use the workspace connection to connect to it in SQL Server Management Studio (SSMS).*
 
-16. To close the pane, select **X**.
+13. To close the pane, select **X**.
 
 ### Task 12: Review the table partitions
 
@@ -451,21 +451,21 @@ In this task, you will use SSMS to review the table partitions.
 
      >**Note:** You can use SSMS to connect to the workspace by using the XMLA read/write endpoint. The endpoint is only available for Premium workspaces.
     
-7. In Object Explorer (located at the left), expand open the **Databases** folder, expand open the **Sales Analysis...** database (dataset), and then the **Tables** folder.
+3. In Object Explorer (located at the left), expand open the **Databases** folder, expand open the **Sales Analysis...** database (dataset), and then the **Tables** folder.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image66.png)
 
-8. Right-click the **Sales** table, and then select **Partitions**.
+4. Right-click the **Sales** table, and then select **Partitions**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image67.png)
 
-9. In the **Partitions** window, notice the list of partitions for the two years’ history, followed by quarterly partitions and daily partitions.
+5. In the **Partitions** window, notice the list of partitions for the two years’ history, followed by quarterly partitions and daily partitions.
 
-10. Scroll to the bottom of the list and notice the last one is a DirectQuery partition for the current and future dates.
+6. Scroll to the bottom of the list and notice the last one is a DirectQuery partition for the current and future dates.
 
 	>**Note:** Power BI creates and manages all of these partitions automatically.
 
-11. Select **Cancel**.
+7. Select **Cancel**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image68.png)
 
