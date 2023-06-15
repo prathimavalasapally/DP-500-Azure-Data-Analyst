@@ -441,7 +441,11 @@ In this task, you will use SSMS to review the table partitions.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
-2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).In the **Authentication** dropdown list, select **Azure Active Directory - Password**. Enter Azure Username/Email: <inject key="AzureAdUserEmail"></inject> and Azure Password: <inject key="AzureAdUserPassword"></inject>.Select **Connect**.
+2. In the **Connect to Server** window, in the **Server type** dropdown list, select **Analysis Services**. In the **Server name** box, replace the text by pasting in the workspace connection (press **Ctrl+V**).In the **Authentication** dropdown list, select **Azure Active Directory - Password**. 
+ 
+      - Enter Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
+      - and Azure Password: <inject key="AzureAdUserPassword"></inject>
+      - Select **Connect**.
 
       ![](../images/dp500-improve-performance-with-hybrid-tables-image65.png)
 
