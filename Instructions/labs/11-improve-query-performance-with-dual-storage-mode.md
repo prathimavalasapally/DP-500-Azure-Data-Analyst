@@ -1,5 +1,5 @@
 
-# Excercise 1: Improve query performance with dual storage mode
+# Lab11 - Improve query performance with dual storage mode
 
 ## Overview
 
