@@ -1,4 +1,4 @@
-# Improve performance with hybrid tables
+# Lab10 - Improve performance with hybrid tables
 
 ## Overview
 
@@ -24,7 +24,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image8.png)
 
-3. Select the **SQL databases** tile.
+3. On the Azure portal select the **SQL databases** tile.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image9.png)
 
