@@ -1,4 +1,4 @@
-# Lab15- Create a paginated report
+# Lab15 - Create a paginated report
 
 ## Overview
 
