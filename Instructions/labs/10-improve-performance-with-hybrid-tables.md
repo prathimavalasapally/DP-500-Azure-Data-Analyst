@@ -91,9 +91,7 @@ You will sign into the Power BI service and start a trial license in this task.
 1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **contiune**.
 
      ![](../images/logintopowerbi0111.png)
-    
-      >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.    
-      
+     
 1. If prompted **Signin** with following Username and Password.
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -128,7 +126,7 @@ You will sign into the Power BI service and start a trial license in this task.
 
 In this task, you will create a workspace.
 
-1. In the Power BI service, to create a workspace, fron the left **Navigation** pane (located at the left), select **Workspaces (1)**, and then select **Create workspace (2)**.
+1. In the Power BI service, to create a workspace, fron the left **Navigation** pane (located at the left), select **Workspaces (1)**, and then select **+ New workspace (2)**.
 
 	![](../images1/dp-lab4-8.png)
 
