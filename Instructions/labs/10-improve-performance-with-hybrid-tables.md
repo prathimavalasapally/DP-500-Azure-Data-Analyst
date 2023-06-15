@@ -342,7 +342,7 @@ In this task, you will set up the incremental refresh policy for the **Sales** t
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image41.png)
 
-2. In the **Incremental refresh and real-time data** window, at step 2, turn on incremental refresh. Set the Archive data starting **2 Years** before the refresh date. Set an Incrementally refresh data starting **7 Days** before the refresh date. At step 3, check the **Get the latest data in real time with the DirectQuery** option. Select **Apply**.
+2. In the **Incremental refresh and real-time data** window, at step 2, turn on **Incrementally refresh this table (1)**. Set the Archive data starting **2 Years** before the refresh date. Set an Incrementally refresh data starting **7 Days** before the refresh date. At step 3, check the **Get the latest data in real time with the DirectQuery** option. Select **Apply**.
 
       ![](../images/dp500-improve-performance-with-hybrid-tables-image42.png)
       
@@ -390,7 +390,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image53.png)
 
-4. In the **Data source credentials** section, select the **Edit credentials** link.
+4. On **Datasets** tab under the **Data source credentials** section, (you need to scroll down to see option) select the **Edit credentials** link.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
