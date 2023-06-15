@@ -169,7 +169,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 6. On the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server name. This is in the Azure portal, SQL databases.
 
-   ![](../images/serverdatabaseurl.png)
+   ![](../images/serverdatabaseurl(1).png)
 
 7. Select **OK**.
 
