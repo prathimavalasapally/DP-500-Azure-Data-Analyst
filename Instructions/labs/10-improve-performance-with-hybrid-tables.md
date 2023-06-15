@@ -193,7 +193,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
      ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
-11.  Select **Save**.
+11.  Select **Save** and **Ok**
     
 12. In the **Data source settings** window, select **Close**.
 
