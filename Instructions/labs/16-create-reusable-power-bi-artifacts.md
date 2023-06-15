@@ -121,7 +121,7 @@ In this task, you will review the data model.
 
 2. Use the model diagram to review the model design.
 
-	![](../images/DP500-16-15.png)
+	![](../images1/DP500-16-15new.png)
 
 	>**Note**:The model comprises six dimension tables and one fact table. The **Sales** fact table stores sales order details. It's a classic star schema design.*
 
@@ -228,7 +228,7 @@ In this task, you will create a local DirectQuery model.
 
 2. Now,after changing the settings,you can able to view and select **Make changes to this model** and then select **Add a local model**.
 
-	![](../images/DP500-16-27.png)
+	![](../images1/DP500-16-27new.png)
 
 	>**Note**:The model is now a DirectQuery model. It's now possible to enhance the model by modifying certain table or column properties, or adding calculated columns. It's even possible to extend the model with new tables of data that are sourced from other data sources. You will add a table to add US population data to the model.*
 
@@ -250,7 +250,7 @@ In this task, you will design the report layout to analyze US state sales.
 
 3. Right-click the **Country-Region** field, and then select **Add to filters** > **Report-level filters**.
 
-	![](../images/DP500-16-29.png)
+	![](../images1/DP500-16-29new.png)
 
 4. Expand open the **Filters** pane (located at the left of the **Visualizations** pane).
 
@@ -312,7 +312,7 @@ In this task, you will add a table of US population data sourced from a web page
 6. Switch back to Table view.
 7. At the left, select **Table 2**.
 
-	![](../images1/dp-22.png)
+	![](../images1/dp-22new.png)
 
 8. Notice the table view preview.
 
@@ -320,7 +320,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 9. To prepare the data, select **Transform Data**.
 
-	![](../images/DP500-16-41.png)
+	![](../images1/DP500-16-41new.png)
 
 10. In the Power Query Editor window, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **US Population**, and then press **Enter**.
 
@@ -427,7 +427,7 @@ In this task, you will publish the solution, which comprises a specialized data 
 
 2. To publish the solution, on the **Home** ribbon tab, select **Publish**.
 
-	![](../images/DP500-16-16.png)
+	![](../images1/dp9-18new.png)
 
 3. In the **Publish to Power BI** window, select your workspace named **DP500-<inject key="Deployment ID" enableCopy="false" />** , and then select **Select**.
 
