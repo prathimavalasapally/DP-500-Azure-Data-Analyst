@@ -167,7 +167,7 @@ groups.
     ![Graphical user interface, text, application, table Description
     automatically generated](../images1/dp-500-lab7-8.png)
 
-1.  In the left pane, replace the default **New calculater name** with **Time Intelligence**, and
+1.  In the left pane, replace the default name **New calculation Group** with **Time Intelligence**, and
     then press **Enter**.
     
     ![](../images1/dp-500-lab7-10.png)
@@ -188,7 +188,7 @@ groups.
 
      ![](../images1/dp-500-lab7-13.png)
 
-1.  In the left pane, replace the default  name with **Current**, and then press
+1.  In the left pane, replace the default name (New Calculation) with **Current**, and then press
     **Enter**.
 
 1.  In the **Expression Editor** pane (located above the **Properties** pane),
@@ -211,7 +211,7 @@ groups.
 1.  To Create a second calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1.  In the left pane, replace the default name with  **PY**, and then press
+1.  In the left pane, replace the default name (New Calculation 1) with  **PY**, and then press
     **Enter**. 
     
 1.  In the **Expression Editor**, run the following formula:
@@ -229,7 +229,7 @@ groups.
 1.  To create a third calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1.  In the left pane, replace the default name with  **YoY**, and then press
+1.  In the left pane, replace the default name (New Calculation 2) with  **YoY**, and then press
     **Enter**.
 
 1.  In the **Expression Editor**, run the following formula:
@@ -250,7 +250,7 @@ groups.
 1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1. In the left pane, replace the default name with  **YoY %**, and then press
+1. In the left pane, replace the default name (New Calculation 3) with  **YoY %**, and then press
     **Enter**.
 
 1. In the **Expression Editor**, run the following formula:
