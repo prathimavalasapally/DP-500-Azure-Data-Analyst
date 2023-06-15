@@ -6,9 +6,11 @@ In this lab, you will add an aggregation to improve the query performance of the
 
 In this lab, you learn how to:
 
+- Create and review the report in PowerBI Desktop.
 - Set up an aggregation.
-
 - Use Performance analyzer to determine whether Power BI uses an aggregation.
+
+## Excercise 1: Create and review the Report in PowerBI Desktop
 
 ### Task 1: Set up Power BI Desktop
 
@@ -86,7 +88,7 @@ In this task, you will review the pre-developed report.
 
 ### Task 3: Review the data model
 
-In this task, you will review the pre-developed data model.
+In this task, you will review the pre-developed data model
 
 1. Switch to **Model** view.
 
@@ -102,7 +104,7 @@ In this task, you will review the pre-developed data model.
 
 ### Task 4: Use Performance analyzer
 
-In this task, you will open Performance analyzer and use it to inspect refresh events.
+In this task, you will open Performance analyzer and use it to inspect refresh events
 
 1. Switch to **Report** view.
 
@@ -134,13 +136,13 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
 	> **Note** In this lab, you will add an aggregation of the **Sales** table data to specifically improve the performance for visual refreshes that query the sum of the **Sales Amount** column by date and sales territory.
 
-## Set up an aggregation
+## Excercise 2: Set up an aggregation
 
 In this exercise, you will set up an aggregation.
 
-*Aggregations in Power BI can improve query performance over exceptionally large DirectQuery tables. By using aggregations, the data model caches data at an aggregated level in-memory. Power BI automatically uses the aggregation whenever it can.*
+> **Note** Aggregations in Power BI can improve query performance over exceptionally large DirectQuery tables. By using aggregations, the data model caches data at an aggregated level in-memory. Power BI automatically uses the aggregation whenever it can.*
 
-### Task 5: Add an aggregation table
+### Task 1: Add an aggregation table
 
 In this task, you will add an aggregation table to model.
 
@@ -200,13 +202,13 @@ In this task, you will add an aggregation table to model.
 
 	> **Note** Power BI Desktop adds a new table to the model.
 
-15. Save the Power BI Desktop file.
+15. **Save** the Power BI Desktop file.
 
 	![](../images/DP500-16-25.png)
 
-### Task 6: Set model properties
+### Task 2: Set model properties
 
-In this task, you will set model properties for the new table.
+In this task, you will set model properties for the new table
 
 1. Switch to **Model** view.
 
@@ -254,7 +256,7 @@ In this task, you will set model properties for the new table.
 
 	![](../images/dp500-12-21.png)
 
-### Task 7: Create model relationships
+### Task 3: Create model relationships
 
 In this task, you will create two model relationships.
 
@@ -280,7 +282,7 @@ In this task, you will create two model relationships.
 
 	![](../images/dp500-12-38.png)
 
-#### Task 8: Set up an aggregation
+### Task 4: Set up an aggregation
 
 In this task, you will setup an aggregation.
 
@@ -332,7 +334,9 @@ In this task, you will setup an aggregation.
 
 	> **Note** Now, whenever a visual queries the **Sales** table for the sum of the **Sales Amount** column, grouping by any column of the **Order Date** or **Sales Territory** tables, Power BI will use the aggregation instead.
 
-### Task 9: Test the aggregation
+## Excercise 3: Use Performance analyzer to determine whether Power BI uses an aggregation
+
+### Task 1: Test the aggregation
 
 In this task, you will test the aggregation and determine whether Power BI uses it.
 
@@ -398,7 +402,7 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 	> **Note** You have now improved the performance of specific queries by allowing Power BI to retrieve data from the model cache. The key takeaway is that aggregations can accelerate the performance of fact table queries, especially for specific measure and high-level groupings. Also, dual storage mode and aggregations work well together, providing opportunities for Power BI to avoid using expensive DirectQuery connections to source data.
 
-### Task 10: Finish up
+### Task 2: Finish up
 
 In this task, you will finish up.
 
