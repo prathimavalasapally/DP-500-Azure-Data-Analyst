@@ -1,4 +1,4 @@
-# Lab6- Work with model relationships
+# Lab6 - Work with model relationships
 
 ## Overview
 
