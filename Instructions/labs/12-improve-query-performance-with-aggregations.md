@@ -28,25 +28,45 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-11-70.png)
 	
-5. If prompted to approve running a Native Database Query, select **Run**.
+5. If prompted about a potential security risk, read the message, and then select **OK**.
 
-      ![](../images1/dp500-run.png)
+      ![](../images/potentialsecurityrisk.png)
 	
-6. If prompted about a potential security risk, read the message, and then select **OK**
+6. On the **SQL Server database** page, ensure **Use my current credentials (1)** is selected and  click **Save (2)**. 
+
+	![](../images/usemycredentials.png)
+
+7. Select the **File** ribbon tab, select **Get data (1)** > **SQL Server database (2)**.
+
+	![](../images/getdata.png)
+
+8. On **SQL Server database** page specify the following and click **Ok (3)**.
+
+	| Setting | Value |
+    	| --- | --- |
+    	| **Server** | **localhost** **(1)**|
+    	| **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
 	
-7. If prompted for sqlserver database connection, change the select which level to apply these settings to **localhost:AdventureWorksDW2022-DP500** from dropdown and click on connect.
+	![](../images/onsqlserverdb.png)
+    
+9. If prompted for Encryption Support,click on **OK**
 
-	![](../images/dp500-11-60.png)
+	![](../images/encryptionsupport.png)
 
-8. If prompted for Encryption Support, click on **OK**
+10. Select **Cancel** on the navigator pane. 
+11. On the yellow warning bar that is displayed, click on **Apply changes**
 
-	![](../images/dp500-6-2.png)
+	![](../images/applychanges.png)
+	
+12. If prompted to approve running a Native Database Query, select **Run**.
 
-9. To save the file, on the **File** ribbon tab, select **Save as**.
+	![](../images/navigatequeryrun.png)
+	
+13. To save the file, on the **File** ribbon tab, select **Save as**.
 
-10. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
+14. In the **Save As** window, go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\MySolution** folder.
 
-11. Select **Save**.
+15. Select **Save**.
 
 #### Task 2: Review the report
 
