@@ -296,7 +296,7 @@ In this task, you will add a table of US population data sourced from a web page
 
 	>**Note**: The file path is available to copy and paste from the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\16\Assets\Snippets.txt** file.*
 	
-	![](../images1/dp-20.png)
+	![](../images1/dp-20new.png)
 
 
 4. Select **OK**.
