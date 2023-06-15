@@ -34,7 +34,7 @@ In this task, you will set up Power BI.
 	
 1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1/DP500-16-56.png)
+	![](../images1/dp9-3.png)
 	
 1. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
