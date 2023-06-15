@@ -1,4 +1,4 @@
-# Lab 8 - Create a composite model
+# Lab8 - Create a composite model
 
 ## Overview
 
