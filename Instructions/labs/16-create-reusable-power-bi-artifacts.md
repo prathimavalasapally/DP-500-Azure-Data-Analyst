@@ -109,7 +109,7 @@ In this task, you will create a workspace.
 
 4. If you're not already signed in, at the top-right corner of Power BI Desktop, select **Sign In**. Use the lab credentials to complete the sign in process.
 
-	![](../images/DP500-16-6.png)
+	![](../images1/DP500-16-6new.png)
 
 ### Task-4: Review the data model
 
@@ -209,7 +209,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 14. Save the Power BI Desktop file.
 
-	![](../images/DP500-16-25.png)
+	![](../images1/dp9-18.png)
 
 ### Task-2: Create a local DirectQuery model
 
