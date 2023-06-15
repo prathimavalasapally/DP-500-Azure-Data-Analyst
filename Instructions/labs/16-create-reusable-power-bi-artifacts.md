@@ -1,4 +1,4 @@
-# Create reusable Power BI assets
+# Lab12 -  Create reusable Power BI assets
 
 ## Overview
 
