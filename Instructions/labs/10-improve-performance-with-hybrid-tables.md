@@ -366,7 +366,7 @@ In this task, you will publish the dataset.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image48.png)
 
-2. In the **Publish to Power BI (1)** window, select the workspace created in this lab, and then **select (2)*.
+2. In the **Publish to Power BI (1)** window, select the workspace created in this lab, and then **select (2)**.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image49.png)
 
