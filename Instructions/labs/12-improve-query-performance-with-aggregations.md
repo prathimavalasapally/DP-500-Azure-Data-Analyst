@@ -42,10 +42,10 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 8. On **SQL Server database** page specify the following and click **Ok (3)**.
 
-	| Setting | Value |
-    	| --- | --- |
-    	| **Server** | **localhost** **(1)**|
-    	| **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
+   | Setting | Value |
+   | --- | --- |
+   | **Server** | **localhost** **(1)**|
+   | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
 	
 	![](../images/onsqlserverdb.png)
     
