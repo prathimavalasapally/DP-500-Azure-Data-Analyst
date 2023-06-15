@@ -44,8 +44,6 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 8. Select **Save**.
 
-      ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
-
 9. Keep the Azure portal web browser session open. You will need to copy the database connection string in the **Set up Power BI Desktop task**.
 
 ### Task 2: Set up Power BI
@@ -130,9 +128,9 @@ You will sign into the Power BI service and start a trial license in this task.
 
 In this task, you will create a workspace.
 
-1. In the Power BI service, to create a workspace, in the **Navigation** pane (located at the left), select **Workspaces (1)**, and then select **Create workspace (2)**.
+1. In the Power BI service, to create a workspace, fron the left **Navigation** pane (located at the left), select **Workspaces (1)**, and then select **Create workspace (2)**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image3.png)
+	![](../images1/dp-lab4-8.png)
 
 2. In the **Create a workspace** pane (located at the right), in the **Workspace name** box, enter a name for the workspace as **DP500-<inject key="Deployment ID" enableCopy="false" />**.
 
