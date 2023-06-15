@@ -262,8 +262,6 @@ In this task, you will create two model relationships.
 
 1. To create a relationship, from the **Order Date** table, drag the **DateKey** column and drop it on to the **OrderDateKey** column of the **Sales Agg** table.
 
-	![](../images/dp500-12-50.png)
-
 2. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **One to many**.
 
 	> **Note** The **DateKey** column in the **Order Date** table contains unique values, while the **OrderDateKey** column in the **Sales Agg** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and aggregations based on fact tables.
