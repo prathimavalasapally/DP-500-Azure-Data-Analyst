@@ -169,15 +169,15 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 6. On the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server name. This is in the Azure portal, SQL databases.
 
-      ![](../images/serverdatabaseurl.png)
+   ![](../images/serverdatabaseurl.png)
 
 7. Select **OK**.
 
-	![](../images1/dp500-10-5.png)
+    ![](../images1/dp500-10-5.png)
 
 8. On the **Data source settings** window, select **Edit Permissions**.
 
-	![](../images1/dp500-10-(6).png)
+    ![](../images1/dp500-10-(6).png)
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
@@ -296,7 +296,7 @@ In this task, you will add two parameters.
 	
 	  ![](../images1/dp500-10-17.png)
 	
-	>**Note**: For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022.
+	  >**Note**: For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022.
 
 ### Task 2: Filter the query
 
@@ -308,7 +308,7 @@ In this task, you will add filters to the **Sales** query.
 
 	![](../images1/dp500-10-18.png)
 
-3. In the **Filter Rows** window, select the **first calendar icon** **(1)** dropdown list, and then select **Parameter (2)**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. 
+3. In the **Filter Rows** window, select the **first calendar icon** **(1)** dropdown list, and then select **Parameter (2)**, In the adjacent dropdown list, notice that the **RangeStart (3)** parameter is set. 
 
       ![](../images1/dp500-10-19.png)
       
