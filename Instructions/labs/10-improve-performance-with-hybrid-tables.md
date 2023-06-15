@@ -30,7 +30,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 4. In the list of SQL databases, select the **AdventureWorksDW2022-DP500** database.
   
-   >**Note**: If you're not able to see **AdventureWorksDW2022-DP500** database, kindly wait for 5-10 mins and try to refresh the page.
+   >**Note**: If you're not able to see **AdventureWorksDW2022-DP500** database, you may need to wait for 10-15 mins and kindly try to refresh the page multiple times.
  
 5. In the action bar on the Overview tab, select **Set server firewall**.
 
