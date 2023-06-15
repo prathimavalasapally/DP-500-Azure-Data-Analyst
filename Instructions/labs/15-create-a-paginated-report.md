@@ -1,4 +1,4 @@
-# Create a paginated report
+# Lab15- Create a paginated report
 
 ## Overview
 
@@ -26,7 +26,7 @@ In this lab, you learn how to:
 
 In this exercise, you will open Power BI Report Builder to create and then save a report.
 
-#### Task 1: Create the report
+### Task 1: Create the report
 
 In this task, you will open Power BI Report Builder to create and then save a report.
 
@@ -55,7 +55,7 @@ In this task, you will open Power BI Report Builder to create and then save a re
 
 In this exercise, you will develop the report layout, and then explore the final report design.
 
-#### Task 2: Configure the report header
+### Task 2: Configure the report header
 
 In this task, you will configure the report header.
 
@@ -79,7 +79,7 @@ In this task, you will configure the report header.
 
 	![](../images1/dp500_15-07.png)
 
-6. To modify the report title textbox text, select inside the text box, and then enter: **Sales Order Report**
+6. To modify the report title textbox text, select inside the text box, and then enter: **Sales Order Report**.
 
 	>**Note** To resize the textbox, you will first open the **Properties** pane. For fine-grained control of location and size properties, you will need use the **Properties** pane.
 
@@ -155,7 +155,7 @@ In this task, you will configure the report header.
 	>**Note** You are now ready to configure the report to retrieve a database query result.
 
 
-#### Task 3: Retrieve data
+### Task 3: Retrieve data
 
 In this task, you will create a data source and dataset to retrieve a query result from the **AdventureWorksDW2022-DP500** SQL Server database.
 
@@ -163,7 +163,7 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 	![](../images1/dp500_15-15.png)
 
-	*It's possible to retrieve data from cloud or on-premises databases, or a Power BI dataset.*
+	>**Note** It's possible to retrieve data from cloud or on-premises databases, or a Power BI dataset.
 
 2. In the **Data Source Properties** window, in the **Name** box, replace the text with **AdventureWorksDW2022**.
 
@@ -223,7 +223,7 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 19. Save the report.
 
-#### Task 4: Configure the report parameter
+### Task 4: Configure the report parameter
 
 In this task, you will configure the report parameter with a default value.
 
@@ -259,7 +259,7 @@ In this task, you will configure the report parameter with a default value.
 
 	>**Note** You will now complete the report header region design by adding textboxes to describe the sales order.
 
-#### Task 5: Finalize the report header layout
+### Task 5: Finalize the report header layout
 
 In this task, you will finalize the report header region design by adding textboxes.
 
@@ -395,7 +395,7 @@ In this task, you will finalize the report header region design by adding textbo
 
 	>**Note** You will now add a table to the report body to display a formatted layout of the sales order lines.
 
-#### Task 6: Add a table data region
+### Task 6: Add a table data region
 
 In this task, you will add a table data region to the report body.
 
@@ -469,7 +469,7 @@ In this task, you will add a table data region to the report body.
 	- Add and format a total row for the table
 
 
-#### Task 7: Format the table data region
+### Task 7: Format the table data region
 
 In this task, you will format the table data region.
 
@@ -537,7 +537,7 @@ In this task, you will format the table data region.
 
 	![](../images1/dp500_15-58.png)
 
-19. Save the report
+19. Save the report.
 
 20. Preview the report.(Click on Run button)
 
@@ -553,7 +553,7 @@ In this task, you will format the table data region.
 
 	![](../images1/dp500_15-61.png)
 
-	*This sales order has 72 sales order lines, and so the data will render over many pages.*
+	>**Note** This sales order has 72 sales order lines, and so the data will render over many pages.
 
 24. To navigate to the second page of the report, on the **Run** ribbon tab, from inside the **Navigation** group, select **Next**.
 
@@ -567,7 +567,7 @@ In this task, you will format the table data region.
 
 	>**Note** In the next task, you will improve the footer text by appending the page number.
 
-#### Task 8: Finalize the report design
+### Task 8: Finalize the report design
 
 In this task, you will finalize the report design by ensuring multi-page reports render appropriately.
 
@@ -640,7 +640,7 @@ In this task, you will finalize the report design by ensuring multi-page reports
 
 19. Save the report.
 
-#### Task 9: Explore the completed report
+### Task 9: Explore the completed report
 
 In this task, you will view the report in print layout mode.
 
