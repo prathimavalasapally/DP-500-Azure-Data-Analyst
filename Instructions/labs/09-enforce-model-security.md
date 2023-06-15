@@ -30,35 +30,46 @@ In this task, you will set up Power BI Desktop.
 	
 	![](../images1/dp9-2.png)
 
-4. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials to complete the sign in process.
+1. At the top-right corner of Power BI Desktop, if you're not already signed in, select **Sign In**. Use the lab credentials in the Environment details tab to complete the sign in process.
 
-	![](../images/dp500-create-a-star-schema-model-image3.png)
+	![](../images1/DP500-16-6new.png)
 	
-5. Enter the Lab username in the **Enter your email address** and click on **Continue**
+1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1/dp9-3.png)
+	![](../images1/dp-up1.png)
 	
-6. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
+1. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
-	![](../images1/DP500-16-57.png)
+	![](../images1/dp-up2.png)
 	
-	![](../images1/DP500-16-58.png)	
+	
+1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
 
-7. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Continue** to complete the sign up.
+   
+   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
-	![](../images/dp500-create-a-star-schema-model-image3b.png)
+	
+	![](../images1/dp-up3.png)
+	
+1. Enter the Password provided in the Environment Details tab and click on **Signin**
+	
+	![](../images1/dp-up4.png)
+	
+1. If stay signed in window Pops-up, select **No**
 
-8. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
+1. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
-9. At the top-right, select the profile icon, and then select **Start trial**.
+	![](../images1/dp-up5.png)
 
-	![](../images/dp500-create-a-dataflow-image3.png)
+1. At the top-right, select the profile icon, and then select **Start trial**.
 
-10. When prompted, select **Start trial**.
+	![](../images1/dp-up6.png)
 
-	![](../images/dp500-create-a-dataflow-image4.png)
+1. When prompted, select **Start trial**.
 
-11. Do any remaining tasks to complete the trial setup.
+	![](../images1/dp-up7.png)
+
+1. Do any remaining tasks to complete the trial setup.
 
 	>**Note**: The Power BI web browser experience is known as the **Power BI service**.*
 
