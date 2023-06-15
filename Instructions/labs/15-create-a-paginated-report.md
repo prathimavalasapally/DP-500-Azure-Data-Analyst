@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will use Power BI Report Builder to develop a pixel-perfect paginated report layout that sources data from the **AdventureWorksDW2022-DP500** SQL Server database. You will then create a data source and dataset, and also configure a report parameter. The report layout will allow data to render over multiple pages and to be exported in PDF and other formats.
 
 The final report will look like the following:
@@ -28,13 +26,13 @@ In this lab, you learn how to:
 
 In this exercise, you will open Power BI Report Builder to create and then save a report.
 
-### Task 1: Create the report
+#### Task 1: Create the report
 
 In this task, you will open Power BI Report Builder to create and then save a report.
 
 1. To open Power BI Report Builder, on the taskbar, select the **Power BI Report Builder** shortcut.
 
-	![](../images1/dp500_15-02.png)
+   ![](../images1/dp500_15-02.png)
 
 1. If you are prompted to update to the latest version of Power BI report Builder, select **Cancel**.
 
@@ -57,7 +55,7 @@ In this task, you will open Power BI Report Builder to create and then save a re
 
 In this exercise, you will develop the report layout, and then explore the final report design.
 
-### Task 2: Configure the report header
+#### Task 2: Configure the report header
 
 In this task, you will configure the report header.
 
@@ -65,9 +63,9 @@ In this task, you will configure the report header.
 
 	![](../images1/dp500_15-05.png)
 
-	*The body contains a single textbox ready for a report title, and the report footer contains a single textbox describing the report execution time.*
+	>**Note** The body contains a single textbox ready for a report title, and the report footer contains a single textbox describing the report execution time.
 
-	*The default design will render the report title once, in the body, on the first rendered page. However, you will now modify the report design by adding a report header region, and by moving the report title textbox into this region. This way, the report title will repeat on every page. You will also add an image of the company logo.*
+	>**Note** The default design will render the report title once, in the body, on the first rendered page. However, you will now modify the report design by adding a report header region, and by moving the report title textbox into this region. This way, the report title will repeat on every page. You will also add an image of the company logo.
 
 2. To add a report header region, on the **Insert** ribbon tab, from inside the **Header &amp; Footer** group, open **Header**, and then select **Add Header**.
 
@@ -83,7 +81,7 @@ In this task, you will configure the report header.
 
 6. To modify the report title textbox text, select inside the text box, and then enter: **Sales Order Report**
 
-	*To resize the textbox, you will first open the **Properties** pane. For fine-grained control of location and size properties, you will need use the **Properties** pane.*
+	>**Note** To resize the textbox, you will first open the **Properties** pane. For fine-grained control of location and size properties, you will need use the **Properties** pane.
 
 7. On the **View** ribbon tab, from inside the **Show/Hide** group, select **Properties**.
 
@@ -91,19 +89,19 @@ In this task, you will configure the report header.
 
 8. To focus on the report title textbox, first select an area outside the textbox, and then select the textbox again.
 
-	*The textbox is selected when you see the border of the textbox highlighted and resizing handles (small circles) appear on the border.*
+	>**Note** The textbox is selected when you see the border of the textbox highlighted and resizing handles (small circles) appear on the border.
 
 9. In the **Properties** pane (located at the right), scroll down the list to locate the **Position** group.
 
 	![](../images1/dp500_15-09.png)
 
-	*The **Position** group allows setting exact values for the location and size of report items.*
+	>**Note** The **Position** group allows setting exact values for the location and size of report items.
 
-	*Important: Enter the values as directed in this lab. Pixel-perfect layout is required to achieve the page rendering at the end of the lab.*
+	>**Note** Important: Enter the values as directed in this lab. Pixel-perfect layout is required to achieve the page rendering at the end of the lab.
 
 10. Within the **Position** group, expand the **Location** group, and ensure that the **Left** and **Top** properties are each set to **0in**.
 
-	*The location and size units are in inches because the regional settings of the lab virtual machine is set to the United States. If your region uses metric measurements, centimeters would be the default unit.*
+	>**Note** The location and size units are in inches because the regional settings of the lab virtual machine is set to the United States. If your region uses metric measurements, centimeters would be the default unit.
 
 11. Within the **Position** group, expand the **Size** group, and then set the **Width** property to **4**.
 
@@ -150,14 +148,14 @@ In this task, you will configure the report header.
 
 23. To save the report, on the **File** tab, select **Save**.
 
-	*Tip: You can also select the disk icon located at the top-left.*
+	>**Note** Tip: You can also select the disk icon located at the top-left.
 
 	![](../images1/dp500_15-14.png)
 
-	*You are now ready to configure the report to retrieve a database query result.*
+	>**Note** You are now ready to configure the report to retrieve a database query result.
 
 
-### Task 3: Retrieve data
+#### Task 3: Retrieve data
 
 In this task, you will create a data source and dataset to retrieve a query result from the **AdventureWorksDW2022-DP500** SQL Server database.
 
@@ -175,10 +173,9 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 	![](../images1/dp500_15-16.png)
 
-
 5. In the **Connection Properties** window, in the **Server Name** box, enter **localhost**.
 
-	*In this lab, you will connect to the SQL Server database by using **localhost**. However, it's not a recommended practice when creating your own solutions because gateway data sources cannot resolve **localhost**.*
+	>**Note** In this lab, you will connect to the SQL Server database by using **localhost**. However, it's not a recommended practice when creating your own solutions because gateway data sources cannot resolve **localhost**.
 
 6. In the **Select or Enter a Database Name** dropdown list, select the **AdventureWorksDW2022-DP500** database.
 
@@ -194,10 +191,9 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 	![](../images1/dp500_15-18.png)
 
-	*A report dataset is a different in purpose and structure from a Power BI dataset.*
+	>**Note** A report dataset is a different in purpose and structure from a Power BI dataset.
 
 11. In the **Dataset Properties** window, in the **Name** box, replace the text with **SalesOrder**.
-
 
 12. To import a pre-defined query, select **Import**.
 
@@ -209,27 +205,25 @@ In this task, you will create a data source and dataset to retrieve a query resu
 
 15. In the **Query** box, review the query, and be sure to scroll down to the bottom of the query text.
 
-	*It's not important that you understand the details of the query statement. It has been designed to retrieve sales order line details. The WHERE clause includes a predicate to restrict the query result to a single sales order. The ORDER BY clause ensures the rows are returned by line number order.*
+	>**Note** It's not important that you understand the details of the query statement. It has been designed to retrieve sales order line details. The WHERE clause includes a predicate to restrict the query result to a single sales order. The ORDER BY clause ensures the rows are returned by line number order.
 
 16. Notice the use of **@SalesOrderNumber** in the WHERE clause, which represents a query parameter.
 
 	![](../images1/dp500_15-20.png)
 
-	*A query parameter is a placeholder for a value that will be passed in at query execution time. You will configure a report parameter to prompt the report user for a single sales order number which will then be passed to the query parameter.*
+	>**Note** A query parameter is a placeholder for a value that will be passed in at query execution time. You will configure a report parameter to prompt the report user for a single sales order number which will then be passed to the query parameter.
 
 17. Select **OK**.
-
-
 
 18. In the **Report Data** pane, notice the addition of the **SalesOrder** dataset and its fields.
 
 	![](../images1/dp500_15-21.png)
 
-	*Fields are used to configure data regions in the report layout. They were derived from the dataset query columns.*
+	>**Note** Fields are used to configure data regions in the report layout. They were derived from the dataset query columns.
 
 19. Save the report.
 
-### Task 4: Configure the report parameter
+#### Task 4: Configure the report parameter
 
 In this task, you will configure the report parameter with a default value.
 
@@ -237,7 +231,7 @@ In this task, you will configure the report parameter with a default value.
 
 	![](../images1/dp500_15-22.png)
 
-	*The **SalesOrderNumber** report parameter was added automatically when the dataset was created. It's because the dataset query included the **@SalesOrderNumber** query parameter.*
+	>**Note** The **SalesOrderNumber** report parameter was added automatically when the dataset was created. It's because the dataset query included the **@SalesOrderNumber** query parameter.
 
 2. To edit the report parameter, right-click the **SalesOrderNumber** report parameter, and then select **Parameter Properties**.
 
@@ -253,20 +247,19 @@ In this task, you will configure the report parameter with a default value.
 
 5. To add a default value, select **Add**.
 
-
 6. In the **Value** dropdown list, replace the text with **43659**.
 
 	![](../images1/dp500_15-26.png)
 
-	*Sales order 43659 is the value you will initially use to test the report design.*
+	>**Note** Sales order 43659 is the value you will initially use to test the report design.
 
 7. Select **OK**.
 
 8. Save the report.
 
-	*You will now complete the report header region design by adding textboxes to describe the sales order.*
+	>**Note** You will now complete the report header region design by adding textboxes to describe the sales order.
 
-### Task 5: Finalize the report header layout
+#### Task 5: Finalize the report header layout
 
 In this task, you will finalize the report header region design by adding textboxes.
 
@@ -282,12 +275,11 @@ In this task, you will finalize the report header region design by adding textbo
 
 	![](../images1/dp500_15-28.png)
 
-
 5. In the **Placeholder Properties** window, at the right of the **Value** dropdown list, select the **fx** button.
 
 	![](../images1/dp500_15-29.png)
 
-	*The **fx** button allows entering a custom expression. This expression will be used to return the sales order number.*
+	>**Note** The **fx** button allows entering a custom expression. This expression will be used to return the sales order number.
 
 6. In the **Expression** window, in the **Category** list, select **Parameters**.
 
@@ -325,10 +317,9 @@ In this task, you will finalize the report header region design by adding textbo
 
 15. Add another textbox to the report header region, and then enter the text **Reseller:** followed by a space.
 
-	*Tip: You can also add a textbox by right-clicking the canvas, and then selected **Insert** > **Text Box**.*
+	>**Note** Tip: You can also add a textbox by right-clicking the canvas, and then selected **Insert** > **Text Box**.
 
 16. After the space, insert a placeholder, and then set the value of the placeholder to use an expression.
-
 
 17. In the **Expression** window, in the **Category** list, select **Datasets**.
 
@@ -376,13 +367,11 @@ In this task, you will finalize the report header region design by adding textbo
 	|  Position > Size > Width| 4 |
 	|  Position > Size > Height| 0.25 |
 
-
 28. Format the **Order Date:** text as bold.
 
 29. Finally, select a blank area of the report header region.
 
 30. In the **Properties** pane, set the **Height** property to **1.5**.
-
 
 31. Verify that the report header region looks like the following:
 
@@ -394,20 +383,19 @@ In this task, you will finalize the report header region design by adding textbo
 
 	![](../images1/dp500_15-39.png)
 
-	*Running the report renders the report in HTML format. As the only report parameter has a default value, the report will run automatically.*
+	>**Note** Running the report renders the report in HTML format. As the only report parameter has a default value, the report will run automatically.
 
 34. Verify that the rendered report looks like the following:
 
 	![](../images1/dp500_15-40.png)
 
-
 35. To return to design view, on the **Run** ribbon tab, from inside the **Views** group, select **Design**.
 
 	![](../images1/dp500_15-41.png)
 
-	*You will now add a table to the report body to display a formatted layout of the sales order lines.*
+	>**Note** You will now add a table to the report body to display a formatted layout of the sales order lines.
 
-### Task 6: Add a table data region
+#### Task 6: Add a table data region
 
 In this task, you will add a table data region to the report body.
 
@@ -464,24 +452,24 @@ In this task, you will add a table data region to the report body.
 
 	![](../images1/dp500_15-49.png)
 
-	*The table includes a header and 12 sales order line rows. There are many improvements that can be made by formatting the table layout.*
+	>**Note** The table includes a header and 12 sales order line rows. There are many improvements that can be made by formatting the table layout.
 
-	*In the next task you will:*
+	>**Note** In the next task you will:
 
-	- *Format the table header by using a background color and bold font style*
+	- Format the table header by using a background color and bold font style
 
-	- *Modify column widths to remove redundant space and to prevent long text values from wrapping*
+	- Modify column widths to remove redundant space and to prevent long text values from wrapping
 
-	- *Left-justify the first column values*
+	- Left-justify the first column values
 
-	- *Right-justify the last three column values*
+	- Right-justify the last three column values
 
-	- *Format currency values using a currency symbol (for USD)*
+	- Format currency values using a currency symbol (for USD)
 
-	- *Add and format a total row for the table*
+	- Add and format a total row for the table
 
 
-### Task 7: Format the table data region
+#### Task 7: Format the table data region
 
 In this task, you will format the table data region.
 
@@ -491,13 +479,13 @@ In this task, you will format the table data region.
 
 	![](../images1/dp500_15-50.png)
 
-	*The cell guides are there to help you configure entire rows or columns.*
+	>**Note** The cell guides are there to help you configure entire rows or columns.
 
 3. To format the table header, select the header row guide.
 
 	![](../images1/dp500_15-51.png)
 
-	*Selecting a row or a column guide selects all cells in the row or column. Each cell is in fact a textbox. Formatting single textbox-or a multi-selection of textboxes-can then be achieved by using the **Properties** pane, or the ribbon commands.*
+	>**Note** Selecting a row or a column guide selects all cells in the row or column. Each cell is in fact a textbox. Formatting single textbox-or a multi-selection of textboxes-can then be achieved by using the **Properties** pane, or the ribbon commands.
 
 4. In the **Properties** pane (or the ribbon), configure the following properties:
 
@@ -506,7 +494,6 @@ In this task, you will format the table data region.
 	|  Fill > BackgroundColor| DarkGreen (tip: hover the cursor over each color to reveal its name) |
 	|  Font > Color| White |
 	|  Font > Font > FontWeight| Bold |
-
 
 5. Select the first column guide.
 
@@ -530,7 +517,6 @@ In this task, you will format the table data region.
 
 	![](../images1/dp500_15-55.png)
 
-
 12. To add a total row to the table, right-click the **Quantity** detail textbox, and then select **Add Total**.
 
 	![](../images1/dp500_15-56.png)
@@ -546,7 +532,6 @@ In this task, you will format the table data region.
 17. Verify that the table design looks like the following:
 
 	![](../images1/dp500_15-57.png)
-
 
 18. To remove any trailing space after the table, hover the cursor over the dashed line between the report body and report footer region, and then drag upwards to touch the bottom of the table.
 
@@ -576,13 +561,13 @@ In this task, you will format the table data region.
 
 25. On page 2, notice that the table header does not appear.
 
-	*You will address this issue in the next task.*
+	>**Note** You will address this issue in the next task.
 
 26. Scroll to the bottom of the page, and then notice that the report footer displays only the execution time.
 
-	*In the next task, you will improve the footer text by appending the page number.*
+	>**Note** In the next task, you will improve the footer text by appending the page number.
 
-### Task 8: Finalize the report design
+#### Task 8: Finalize the report design
 
 In this task, you will finalize the report design by ensuring multi-page reports render appropriately.
 
@@ -598,11 +583,11 @@ In this task, you will finalize the report design by ensuring multi-page reports
 
 	![](../images1/dp500_15-64.png)
 
-	*This selected the table header row.*
+	>**Note** This selected the table header row.
 
 5. In the **Properties** pane, set the **Other** > **RepeatOnNewPage** property to **True**.
 
-	*This ensures that the first static group (representing the table header) will repeat on all pages.*
+	>**Note** This ensures that the first static group (representing the table header) will repeat on all pages.
 
 6. In the table footer region, right-click the **ExecutionTime** textbox, and then select **Expression**.
 
@@ -614,7 +599,6 @@ In this task, you will finalize the report design by ensuring multi-page reports
 	```
 	=Globals!ExecutionTime & " | Page " &
 	```
-
 
 8. Ensure that a space follows the last ampersand (&).
 
@@ -634,17 +618,17 @@ In this task, you will finalize the report design by ensuring multi-page reports
 
 	![](../images1/dp500_15-68.png)
 
-	*The design of the report is now complete. Lastly, you will ensure that the page width is set to exactly six inches, and also remove the report parameter default value.*
+	>**Note** The design of the report is now complete. Lastly, you will ensure that the page width is set to exactly six inches, and also remove the report parameter default value.
 
 14. To select the report body, right-click any table textbox, and then select **Select** > **Body**.
 
 	![](../images1/dp500_15-69.png)
 
-	*As the table fills the entire report body, this technique must be used to select the report body.*
+	>**Note** As the table fills the entire report body, this technique must be used to select the report body.
 
 15. In the **Properties** pane, ensure that the **Position** > **Size** > **Width** property is set to **6**.
 
-	*It's important the width is not greater than six inches, as rendering to print format would break the table up across multiple pages.*
+	>**Note** It's important the width is not greater than six inches, as rendering to print format would break the table up across multiple pages.
 
 16. In the **Report Data** pane, open the **SalesOrderNumber** report parameter properties.
 
@@ -656,9 +640,7 @@ In this task, you will finalize the report design by ensuring multi-page reports
 
 19. Save the report.
 
-  
-
-### Task 9: Explore the completed report
+#### Task 9: Explore the completed report
 
 In this task, you will view the report in print layout mode.
 
@@ -670,11 +652,11 @@ In this task, you will view the report in print layout mode.
 
 	![](../images1/dp500_15-71.png)
 
-	*Print layout mode provides a preview of what the report will look like when printed to the strict page size.*
+	>**Note** Print layout mode provides a preview of what the report will look like when printed to the strict page size.
 
 4. Navigate to pages 2 and 3.
 
-	*In this lab, you won't publish the report. Note that paginated reports can only be rendered in the Power BI service when they are stored in a workspace that has its license mode set to **Premium per user** or **Premium per capacity**, and when that capacity has the paginated reports workload enabled.*
+	>**Note** In this lab, you won't publish the report. Note that paginated reports can only be rendered in the Power BI service when they are stored in a workspace that has its license mode set to **Premium per user** or **Premium per capacity**, and when that capacity has the paginated reports workload enabled.
 
 5. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
