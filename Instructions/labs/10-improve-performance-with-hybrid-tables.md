@@ -185,7 +185,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
 
-10. In the **SQL Server database** window, enter the SQL Server database username and password and save. 
+10. In the **SQL Server database** window, select **Database** and  enter the SQL Server database username and password and save. 
 
     Username: `sqladmin`
 
