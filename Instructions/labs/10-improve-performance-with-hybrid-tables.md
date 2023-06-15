@@ -29,6 +29,8 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 	![](../images/dp500-improve-performance-with-hybrid-tables-image9.png)
 
 4. In the list of SQL databases, select the **AdventureWorksDW2022-DP500** database.
+  
+   >**Note**: If you're not able to see **AdventureWorksDW2022-DP500** database, kindly wait for 5-10 mins and try to refresh the page.
  
 5. In the action bar on the Overview tab, select **Set server firewall**.
 
