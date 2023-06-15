@@ -194,8 +194,6 @@ In this task, you will add an aggregation table to model.
 
 13. Select **OK**.
 
-	![](../images/dp500-6-2.png)
-
 14. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
 	![](../images/dp500-6-36.png)
