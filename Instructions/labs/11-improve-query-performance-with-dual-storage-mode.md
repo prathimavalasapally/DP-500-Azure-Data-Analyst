@@ -46,8 +46,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
     | **Server** | **localhost** **(1)**|
     | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
      
-     
-     ![](../images1/dp-500-lab11-5.png)
+    ![](../images1/dp-500-lab11-5.png)
     
  1. If prompted for Encryption Support,click on **OK** 
 
@@ -197,7 +196,7 @@ In this task, you will review the pre-developed report.
 
     ![](../images1/dp-500-lab11-T15.png)
 
-7. Also remove the two fields from the **Tooltips** well.
+7. Also remove the Variance and Variance Margin from the **Tooltips** well.
 
     ![](../images1/dp-500-lab11-T16.png)
 
