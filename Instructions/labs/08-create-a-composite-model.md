@@ -1,4 +1,4 @@
-# Create a composite model
+# Lab 8 - Create a composite model
 
 ## Overview
 
@@ -120,7 +120,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
     ![](../images/dp500-8-11.png)
 
-    *You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.*
+    >**Note** You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.
 
 1. Select **Transform Data**.
 
@@ -146,7 +146,7 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
 1. In Power BI Desktop, when the load process completes, in the model diagram, position the new table directly beneath the **Order Date** table.
 
-    *The table may be out of view. If this is the case, scroll horizontally to reveal the table.*
+    >**Note** The table may be out of view. If this is the case, scroll horizontally to reveal the table.
 
     ![](../images/dp500-8-15.png)
 
@@ -176,7 +176,7 @@ In this task, you will create two model relationships.
 
     ![](../images/dp500-8-17.png)
 
-    *The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).*
+    >**Note** The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).
 
 1. Create another relationship, this time relating the **Fiscal Quarter** column of the **Order Date** table to the **Fiscal Quarter** column of the **Targets** table.
 
@@ -184,7 +184,7 @@ In this task, you will create two model relationships.
 
 1. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **Many to many**.
 
-    *Because both columns contain duplicate values, Power BI Desktop automatically sets the cardinality to many to many. However, the default cross filter direction is incorrect.*
+    >**Note** Because both columns contain duplicate values, Power BI Desktop automatically sets the cardinality to many to many. However, the default cross filter direction is incorrect.
 
 1. In the **Cross filter direction** dropdown list, select **Single (Order Date filters Targets)**.
 
