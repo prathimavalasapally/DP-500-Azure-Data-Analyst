@@ -34,13 +34,12 @@ In this task, you will set up Power BI.
 	
 1. Enter the Lab username in the **Enter your email address** and click on **Continue**
 
-	![](../images1/dp9-3.png)
+	![](../images1/dp-up1.png)
 	
 1. Complete the sign up process by selecting the username and entering the password provided in the environment details tab.
 
-	![](../images1/DP500-16-57.png)
+	![](../images1/dp-up2.png)
 	
-	![](../images1/DP500-16-58.png)	
 	
 1. You will be redirected to the Power BI sign-up page in Microsoft Edge. Select **Signin**.
 
@@ -48,25 +47,25 @@ In this task, you will set up Power BI.
    >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
 	
-	![](../images1/DP500-16-59.png)
+	![](../images1/dp-up3.png)
 	
 1. Enter the Password provided in the Environment Details tab and click on **Signin**
 	
-	![](../images1/DP500-16-60.png)	
+	![](../images1/dp-up4.png)
 	
 1. If stay signed in window Pops-up, select **No**
 
 1. Enter a 10 digit phone number and select **Get started**. Select **Get started** once more. You will be redirected to Power BI.
 
-	![](../images1/DP500-16-61.png)
+	![](../images1/dp-up5.png)
 
 1. At the top-right, select the profile icon, and then select **Start trial**.
 
-	![](../images/DP500-16-8.png)
+	![](../images1/dp-up6.png)
 
 1. When prompted, select **Start trial**.
 
-	![](../images/DP500-16-9.png)
+	![](../images1/dp-up7.png)
 
 1. Do any remaining tasks to complete the trial setup.
 
