@@ -211,7 +211,7 @@ groups.
 1.  To Create a second calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1.  In the left pane, replace the default name (New Calculation 1) with  **PY**, and then press
+1.  In the left pane, replace the default name (New Calculation) with  **PY**, and then press
     **Enter**. 
     
 1.  In the **Expression Editor**, run the following formula:
@@ -229,7 +229,7 @@ groups.
 1.  To create a third calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1.  In the left pane, replace the default name (New Calculation 2) with  **YoY**, and then press
+1.  In the left pane, replace the default name (New Calculation) with  **YoY**, and then press
     **Enter**.
 
 1.  In the **Expression Editor**, run the following formula:
@@ -250,7 +250,7 @@ groups.
 1. To create a fourth calculation item, right-click the **Time Intelligence** table,
     and then select **Create New** \> **Calculation Item**.
     
-1. In the left pane, replace the default name (New Calculation 3) with  **YoY %**, and then press
+1. In the left pane, replace the default name (New Calculation) with  **YoY %**, and then press
     **Enter**.
 
 1. In the **Expression Editor**, run the following formula:
