@@ -439,7 +439,7 @@ In this task, you will set up the data source credentials and refresh the datase
 
 In this task, you will use SSMS to review the table partitions.
 
-1. To open SSMS, on the taskbar, select the **SSMS** shortcut.
+1. To open SSMS, on the desktop, select the **SSMS** shortcut.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image63.png)
 
