@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will update a pre-developed data model to enforce security. Specifically, salespeople at the Adventure Works company should only be able to see sales data related to their assigned sales region.
 
 In this lab, you learn how to:
@@ -16,7 +14,7 @@ In this lab, you learn how to:
 
 - Map security principals to dataset roles.
 
-## Set up Power BI Desktop
+### Task-1: Set up Power BI Desktop
 
 In this task, you will set up Power BI Desktop.
 
@@ -24,9 +22,9 @@ In this task, you will set up Power BI Desktop.
 
 	![](../images1/dp9-1new.png)
 
-2. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
+1. Go to the **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\09\Starter** folder.
 
-3. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
+1. To open a pre-developed Power BI Desktop file, double-click the **Sales Analysis - Enforce model security.pbix** file.
 	
 	![](../images1/dp9-2.png)
 
@@ -73,7 +71,7 @@ In this task, you will set up Power BI Desktop.
 
 	>**Note**: The Power BI web browser experience is known as the **Power BI service**.*
 
-### Create a workspace
+### Task-2: Create a workspace
 
 In this task, you will create a workspace.
 
@@ -87,7 +85,7 @@ In this task, you will create a workspace.
 
 	![](../images1/dp9-5.png)
 
-### Review the data model
+### Task-3: Review the data model
 
 In this task, you will review the data model.
 
@@ -114,11 +112,11 @@ In this task, you will review the data model.
 
 	>**Note**: The **Region** column stores the Adventure Works sales regions. At this organization, salespeople are only allowed to see data related to their assigned sales region. In this lab, you will implement two different row-level security techniques to enforce data permissions.*
 
-## Create static roles
+## Exercise-1: Create static roles
 
 In this exercise, you will create and validate static roles, and then see how you would map security principals to the dataset roles.
 
-### Create static roles
+### Task-1: Create static roles
 
 In this task, you will create two static roles.
 
@@ -171,7 +169,7 @@ In this task, you will create two static roles.
 
 	![](../images1/dp500_09-21.png)
 
-### Validate the static roles
+### Task-2: Validate the static roles
 
 In this task, you will validate one of the static roles.
 
@@ -200,7 +198,7 @@ In this task, you will validate one of the static roles.
 
 	![](../images1/dp9-17.png)
 
-### Publish the report
+### Task-3: Publish the report
 
 In this task, you will publish the report.
 
@@ -219,7 +217,7 @@ In this task, you will publish the report.
 
 	![](../images1/dp9-20.png)
 
-### Configure row-level security (*Read-only*)
+### Task-4: Configure row-level security (*Read-only*)
 
 In this task, you will see how to configure row-level security in the Power BI service. 
 
@@ -265,11 +263,11 @@ This task relies on the existence of a **Salespeople_Australia** security group 
 
 8. To return to the workspace landing page, in the **Navigation** pane, select the workspace.
 
-## Create a dynamic role
+## Exercise-2: Create a dynamic role
 
 In this exercise, you will add a table to the model, create and validate a dynamic role, and then map a security principal to the dataset role.
 
-### Add the Salesperson table
+### Task-1: Add the Salesperson table
 
 In this task, you will add the **Salesperson** table to the model.
 
@@ -363,7 +361,7 @@ In this task, you will add the **Salesperson** table to the model.
 
 17. When the table has added to the model, notice that a relationship to the **Sales Territory** table was automatically created.
 
-### Configure the relationship
+### Task-2: Configure the relationship
 
 In this task, you will configure properties of the new relationship.
 
@@ -400,7 +398,7 @@ In this task, you will configure properties of the new relationship.
 	>**Note**: The purpose of the **Salesperson** table is to enforce data permissions. When hidden, report authors and the Q&A experience won't see the table or its fields.*
  
 
-### Create a dynamic role
+### Task-3: Create a dynamic role
 
 In this task, you will create a dynamic role, which enforces permissions based on data in the model.
 
@@ -444,7 +442,7 @@ In this task, you will create a dynamic role, which enforces permissions based o
 
 	![](../images1/67.png)
 
-### Validate the dynamic role
+### Task-4: Validate the dynamic role
 
 In this task, you will validate the dynamic role.
 
@@ -480,7 +478,7 @@ In this task, you will validate the dynamic role.
 
 	![](../images1/dp500_09-74.png)
 
-### Finalize the design (*Read-only*)
+### Task-5: Finalize the design (*Read-only*)
 
 In this task, you will finalize the design by publishing the report and mapping a security group to the role.
 
