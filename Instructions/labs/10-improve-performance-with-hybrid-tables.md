@@ -181,7 +181,7 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
-	![](../images1/dp500-10-7.png)
+	![](../images1/dp500-10-(7).png)
 
 10. In the **SQL Server database** window, select **Database (1)** and  enter the SQL Server database username and password and click **save (4)**. 
 
@@ -229,7 +229,7 @@ In this task, you will review the pre-developed data model.
 
 2. Use the model diagram to review the model design.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image25.png)
+	![](../images1/dp500-10-(11).png)
 
 	>**Note:** The model comprises five dimension tables and one fact table. Each table uses import storage mode. The **Sales** fact table represents sales order details. It's a classic star schema design.
 	>In this lab, you will set up the **Sales** table to use an incremental refresh and become a hybrid table. A hybrid table includes a DirectQuery partition that represents the latest time period. That partition ensures current data from the data source is available in Power BI reports.
@@ -253,11 +253,11 @@ In this task, you will add two parameters.
 
 1. To open the Power Query Editor window, on the **Home** ribbon tab, from inside the **Queries** group, click the **Transform data** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image26.png)
+	![](../images1/dp500-10-12.png)
 
 2. In the Power Query Editor window, from inside the **Queries** pane, select the **Sales** query.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image27.png)
+	![](../images1/dp500-10-13.png)
 
 3. In the preview pane, notice the **OrderDate** column, which is a date/time column.
 
@@ -266,41 +266,37 @@ In this task, you will add two parameters.
 
 4. To create a parameter, on the **Home** ribbon tab, select the **Manager Parameters** icon.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image28.png)
+	![](../images1/dp500-10-14.png)
 
 5. In the **Manage Parameters** window, select **New**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image29.png)
+	![](../images1/dp500-10-15.png)
 
-6. In the **Name** box, replace the text with **RangeStart**.
+6. In the **Name** box, replace the text with **RangeStart (1)**.
 
-7. In the **Type** dropdown list, select **Date/Time**.
+7. In the **Type** dropdown list, select **Date/Time (2)**.
 
-8. In the **Current Value** box, enter **6/1/2022** (June 1, 2022 - the VM uses US date formats). 
+8. In the **Current Value** box, enter **6/1/2022 (3)** (June 1, 2022 - the VM uses US date formats). 
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image30.png)
+	![](../images1/dp500-10-16.png)
 	
-	>**Note:** For non-MM-DD-YYY format locations, the date should be entered as 1/6/2022.
-        >While setting up the parameters, you can use arbitrary values. Power BI will update parameter values when it creates and manages the partitions. In this lab, you'll set a range for the month of June 2022.*
+	>**Note**: For non-MM-DD-YYY format locations, the date should be entered as 1/6/2022.
+        >**Note**: While setting up the parameters, you can use arbitrary values. Power BI will update parameter values when it creates and manages the partitions. In this lab, you'll set a range for the month of June 2022.
 
 
 9. To create a second parameter, select **New**.
 
-10. Set the following parameter properties:
+10. Set the following parameter properties and click **OK (4)**.
 
-	- Name: **RangeEnd**
+	- Name: **RangeEnd (1)**
 
-	- Type: **Date/Time**
+	- Type: **Date/Time (2)**
 
-	- Current Value: **7/1/2022** (July 1, 2022)
+	- Current Value: **7/1/2022 (3)** (July 1, 2022)
 	
-	  ![](../images/dp500-improve-performance-with-hybrid-tables-image31.png)
+	  ![](../images1/dp500-10-17.png)
 	
-	>**Note:** For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022*
-
-11. Select **OK**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image16.png)
+	>**Note**: For non-MM-DD-YYY format locations, the date should be entered as 1/7/2022.
 
 ### Task 8: Filter the query
 
@@ -308,13 +304,19 @@ In this task, you will add filters to the **Sales** query.
 
 1. In the **Queries** pane, select the **Sales** query.
 
-2. In the header of the **OrderDate** column, select the down arrow, and then select **Date/Time Filters** > **Between**.
+2. In the header of the **OrderDate (1)** column, select the down arrow, and then select **Date/Time Filters (2)** > **Between (3)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image33.png)
+	![](../images1/dp500-10-18.png)
 
-3. In the **Filter Rows** window, select the first calendar icon dropdown list, and then select **Parameter**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. In the second "range" dropdown list, select **is before (2)**. select the second calendar icon dropdown list, and then select **Parameter**and In the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
+3. In the **Filter Rows** window, select the **first calendar icon** **(1)** dropdown list, and then select **Parameter (2)**, In the adjacent dropdown list, notice that the **RangeStart (1)** parameter is set. 
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image34.png)
+      ![](../images1/dp500-10-19.png)
+      
+      ![](../images1/dp500-10-20.png)
+	
+5. In the second "range" dropdown list, select **is before (1)**. select the **second calendar icon (2)** dropdown list, select **Parameter** and in the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
+
+	![](../images1/dp500-10-21.png)
 
 	>**Note**: The default parameter selection is the correct one.
 
