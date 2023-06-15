@@ -138,11 +138,11 @@ In this task, you will create a workspace.
 
 3. Beneath the **Description** box, expand and open the **Advanced** section.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image5.png)
+	![](../images1/dp500-10-1.png)
 
-4. Set the **License mode** option to **Premium per-user**. Click **Apply**.
+4. Set the **License mode** option to **Premium per-user (1)**. Click **Apply**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image6.png)
+	![](../images1/dp500-10-2.png)
 
 	>**Note:** Power BI only supports incremental refresh and hybrid tables in Premium workspaces.
 	>Once created, the Power BI service opens the workspace. You will return to this workspace later in this lab.
@@ -161,44 +161,44 @@ In this task, you will open a pre-developed Power BI Desktop solution, set the d
 
 4. To edit the database data source, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform data (1)** dropdown, and then select **Data source settings (2)**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image14.png)
+	![](../images1/dp500-10-3.png)
 
-5. In the **Data source settings** window, select **Change Source**.
+5. On the **Data source settings** window, select **Change Source**.
 
-6. In the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server. This is in the Azure portal, SQL databases.
+      ![](../images1/dp500-10-(4).png)
+
+6. On the **SQL Server database** window, in the **Server** box, replace the text with the lab Azure SQL Database server name. This is in the Azure portal, SQL databases.
 
       ![](../images/serverdatabaseurl.png)
 
 7. Select **OK**.
 
-	![](../images1/dp500-improve-performance-with-hybrid-tables-image16.png)
+	![](../images1/dp500-10-5.png)
 
-8. Select **Edit Permissions**.
+8. On the **Data source settings** window, select **Edit Permissions**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image17.png)
+	![](../images1/dp500-10-(6).png)
 
 9. In the **Edit Permissions** window, to edit the database credentials, select **Edit**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image18.png)
+	![](../images1/dp500-10-7.png)
 
-10. In the **SQL Server database** window, select **Database** and  enter the SQL Server database username and password and save. 
+10. In the **SQL Server database** window, select **Database (1)** and  enter the SQL Server database username and password and click **save (4)**. 
 
-    Username: `sqladmin`
+    Username: `sqladmin` **(2)**
 
-    Password: `P@ssw0rd01`
+    Password: `P@ssw0rd01`  **(3)**
 
-     ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
-
-11.  Select **Save** and **Ok**
+    ![](../images1/dp500-10-8.png)
     
-12. In the **Data source settings** window, select **Close**.
-
-	![](../images/dp500-improve-performance-with-hybrid-tables-image20.png)
+11. On the **Edit Permissions** window, select **Ok**.
+    
+12. On the **Data source settings** window, select **Close**.
 
 13. On the **Home** ribbon tab, from inside the **Queries** group, select **Refresh**.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image21.png)
-
+	 ![](../images1/dp500-10-(9).png)
+	 
 14. Wait until the data refresh completes.
 
 15. To save the file, on the **File** ribbon tab, select **Save as**.
@@ -225,7 +225,7 @@ In this task, you will review the pre-developed data model.
 
 1. Switch to **Model** view.
 
-	![](../images/dp500-improve-performance-with-hybrid-tables-image24.png)
+	![](../images1/dp500-10-10.png)
 
 2. Use the model diagram to review the model design.
 
