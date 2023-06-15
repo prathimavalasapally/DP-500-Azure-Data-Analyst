@@ -2,8 +2,6 @@
 
 ## Overview
 
-**The estimated time to complete the lab is 45 minutes**
-
 In this lab, you will create a specialized Power BI dataset that extends a core dataset. The specialized dataset will enable the analysis of US sales per capita.
 
 In this lab, you learn how to:
