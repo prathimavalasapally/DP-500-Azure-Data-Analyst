@@ -191,7 +191,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 10. At the bottom left, in the status bar, notice that the report connects live to the dataset.
 
-	![](../images1/dp-9.png)	
+	![](../images1/dp-9new.png)	
 
 11. Switch to **Model** view.
 
