@@ -43,10 +43,10 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
     | Setting | Value |
     | --- | --- |
-    | **Server** | **localhost** **(1)**  |
-    | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)** |
-    
-      ![](../images1/dp-500-lab11-5.png)
+    | **Server** | **localhost** **(1)**|
+    | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
+     
+    ![](../images1/dp-500-lab11-5.png)
  
 1. If prompted for Encryption Support,click on **OK** 
 
@@ -98,8 +98,6 @@ In this task, you will review the pre-developed data model.
 
     >**Note**: The model comprises three dimension tables and two fact tables. The **Sales** fact table represents sales order details, while the **Targets** table represents quarterly sales targets. It's a classic star schema design. The bar across the top of some of the tables indicate they use DirectQuery storage mode. Every table that has a blue bar belongs to the same source group.
 
-    >**Note**: In this lab, you will set up some tables to use dual storage mode.
-
 ## Excercise 2: Set up dual storage mode
 
 In this exercise, you will set up dual storage mode.
@@ -146,8 +144,6 @@ In this task, you will set all dimension tables to use dual storage mode.
 
 1. Switch to **Model** view.
 
-   ![](../images1/dp-500-lab11-T1.png)
-
 2. Select the header of the **Product** table.
 
 3. While pressing the **Ctrl** key, select the headers of the **Order Date** and **Sales Territory** tables also.
@@ -178,8 +174,6 @@ In this task, you will review the pre-developed report.
 
 1. Switch to **Report** view.
 
-   ![](../images1/dp-500-lab11-T3.png)
-
 2. In the **Performance analyzer** pane, select **Clear**.
 
    ![](../images1/dp-500-lab11-T12.png)
@@ -192,7 +186,7 @@ In this task, you will review the pre-developed report.
 
    ![](../images1/dp-500-lab11-T14.png)
 
-   >**Note**:Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
+   >**Note**: Power BI queries the model cache of imported data, so the slicer now refreshes more quickly.
 
 5. Notice, however, that the column chart visual still uses a direct query connection.
 
@@ -202,7 +196,7 @@ In this task, you will review the pre-developed report.
 
     ![](../images1/dp-500-lab11-T15.png)
 
-7. Also remove the two fields from the **Tooltips** well.
+7. Also remove the Variance and Variance Margin from the **Tooltips** well.
 
     ![](../images1/dp-500-lab11-T16.png)
 
@@ -231,3 +225,5 @@ In this task, you will finish up.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
+   
+**You have successfully completed the lab**

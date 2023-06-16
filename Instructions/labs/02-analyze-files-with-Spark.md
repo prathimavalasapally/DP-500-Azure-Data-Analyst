@@ -438,8 +438,8 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 1. Click on **Publish all** button at the top to publish the changes.
 
->**Note**: To learn more about plotting with seaborn, see the [seaborn documentation](https://seaborn.pydata.org/index.html).
+   >**Note**: To learn more about plotting with seaborn, see the [seaborn documentation](https://seaborn.pydata.org/index.html).
 
-## You have successfully completed the lab
+**You have successfully completed the lab**
 
 **End of the Lab**

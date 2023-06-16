@@ -452,3 +452,5 @@ In this task, you will stop the SQL pool.
 1.  Go to resource group and locate the SQL pool named **sqldb<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Pause the SQL pool.
+
+**You have successfully completed the lab**
