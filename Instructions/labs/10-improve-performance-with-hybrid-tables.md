@@ -314,23 +314,23 @@ In this task, you will add filters to the **Sales** query.
       
       ![](../images1/dp500-10-20.png)
 	
-5. In the second "range" dropdown list, select **is before (1)**. select the **second calendar icon (2)** dropdown list, select **Parameter** and in the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
+4. In the second "range" dropdown list, select **is before (1)**. select the **second calendar icon (2)** dropdown list, select **Parameter** and in the corresponding dropdown lists, select the **RangeEnd (3)** parameter. Select **OK (4)**.
 
 	![](../images1/dp500-10-21.png)
 
 	>**Note**: The default parameter selection is the correct one.
 
-4. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
+5. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
 	![](../images1/dp500-10-22.png)
 
-5. Notice that Power BI Desktop loaded 5,134 rows into the **Sales** table.
+6. Notice that Power BI Desktop loaded 5,134 rows into the **Sales** table.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image39.png)
 
 	>**Note**: These are the filtered rows for June 2022.
 
-6. Save the Power BI Desktop file.
+7. Save the Power BI Desktop file.
 
 	![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
