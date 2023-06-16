@@ -507,3 +507,5 @@ In this task, you'll finish up.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. 
    
 3.  Close Tabular Editor.
+
+**You have successfully completed the lab**
