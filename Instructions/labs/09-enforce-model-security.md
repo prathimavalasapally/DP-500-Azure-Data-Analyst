@@ -504,11 +504,10 @@ In this task, you will finalize the design by publishing the report and mapping 
 
 	>**Note**: This design approach is simple and effective when the data model stores the user principal name values. When salespeople are added or removed, or are assigned to different sales territories, this design approach will simply work.*
 
-7. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.
+    > - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 **You have successfully completed the lab**
