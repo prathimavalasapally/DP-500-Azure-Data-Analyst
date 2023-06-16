@@ -311,3 +311,5 @@ When exploring very large volumes of data, queries can take significant time and
 1. Experiment with queries to explore the rest of the tables in the data warehouse schema as your leisure.
 
 1. When you're done, on the **Manage** page, pause the **sqldb<inject key="DeploymentID" enableCopy="false"/>** dedicated SQL pool.
+
+**You have successfully completed the lab**
