@@ -1,4 +1,4 @@
-### Exercise 1: Create a dataflow
+# Lab5 - Create a dataflow
 
 ## Overview
 
@@ -34,7 +34,9 @@ In this task, you will start the SQL pool.
 
    >**Note** Important: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
 
-#### Task 1: Set up Power BI Desktop
+## Exercise 1: Create a dataflow
+
+### Task 1: Set up Power BI Desktop
 
 In this task, you will set up Power BI Desktop.
 
@@ -103,11 +105,11 @@ In this task, you will create a workspace.
  
    >**Note** Once created, the workspace is opened. In a later exercise, you will create a dataflow for this workspace.
 
-### Exercise 2: Develop a dataflow
+## Exercise 2: Develop a dataflow
 
 In this exercise, you will develop a dataflow to support Power BI model development. It will provide a consistent representation of the data warehouse date dimension table.
 
-#### Task 1: Review the data model
+### Task 1: Review the data model
 
 In this task, you will review the data model developed in Power BI Desktop.
 
@@ -125,7 +127,7 @@ In this task, you will review the data model developed in Power BI Desktop.
 
    >**Note** The **Date** table was created by the business analyst. It doesn't represent a consistent definition of date-related data, and it does not include helpful offset columns to support relative date filters. In a later exercise, you will replace this table with a new table sourced from a dataflow.
     
-#### Task 2: Create a dataflow
+### Task 2: Create a dataflow
 
 In this task, you will create a dataflow that represents a consistent definition of date-related data.
 
@@ -336,7 +338,7 @@ In this task, you will create a dataflow that represents a consistent definition
 
 In this exercise, in the Power BI Desktop solution, you will replace the existing **Date** table with a new table that sources its data from the dataflow.
 
-#### Task 1: Remove the original Date table
+### Task 1: Remove the original Date table
 
 In this task, you will remove the original **Date** table.
 
@@ -351,7 +353,7 @@ In this task, you will remove the original **Date** table.
    ![](../images1/dp500_05-deleteTable.png)
 
 
-#### Task 2: Add a new Date table
+### Task 2: Add a new Date table
 
 In this task, you will add a new **Date** table that sources its data from the dataflow.
 
@@ -401,7 +403,7 @@ In this task, you will add a new **Date** table that sources its data from the d
 
    >**Note** There are many other model configurations, like hiding columns or creating a hierarchy, that can be done.
 
-#### Task 3: Validate the model
+### Task 3: Validate the model
 
 In this task, you will test the model by creating a simple report layout.
 

@@ -1,4 +1,4 @@
-# Improve query performance with aggregations
+ # Lab12 : Improve query performance with aggregations
 
 ## Overview
 
@@ -6,11 +6,13 @@ In this lab, you will add an aggregation to improve the query performance of the
 
 In this lab, you learn how to:
 
+- Create and review the report in PowerBI Desktop.
 - Set up an aggregation.
-
 - Use Performance analyzer to determine whether Power BI uses an aggregation.
 
-#### Task 1: Set up Power BI Desktop
+## Excercise 1: Create and review the Report in PowerBI Desktop
+
+### Task 1: Set up Power BI Desktop
 
 In this task, you will open a pre-developed Power BI Desktop solution.
 
@@ -22,9 +24,9 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 	![](../images/dp500-11-51.png)
 
-3. Click on **File Menu** and click on **Browse reports**
+3. Click on **File Menu** and click on **Browse reports**.
 
-4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\Starter** and select the existing file and click on **Open**
+4. Navigate to **C:\LabFiles\DP-500-Azure-Data-Analyst\Allfiles\12\Starter** and select the existing file and click on **Open**.
 
 	![](../images/dp500-11-70.png)
 	
@@ -42,19 +44,19 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 8. On **SQL Server database** page specify the following and click **Ok (3)**.
 
-	| Setting | Value |
-    	| --- | --- |
-    	| **Server** | **localhost** **(1)**|
-    	| **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
+   | Setting | Value |
+   | --- | --- |
+   | **Server** | **localhost** **(1)**|
+   | **Database(optional)** | **AdventureWorksDW2022-DP500** **(2)**|
 	
 	![](../images/onsqlserverdb.png)
     
-9. If prompted for Encryption Support,click on **OK**
+9. If prompted for Encryption Support,click on **OK**.
 
 	![](../images/encryptionsupport.png)
 
 10. Select **Cancel** on the navigator pane. 
-11. On the yellow warning bar that is displayed, click on **Apply changes**
+11. On the yellow warning bar that is displayed, click on **Apply changes**.
 
 	![](../images/applychanges.png)
 	
@@ -68,7 +70,7 @@ In this task, you will open a pre-developed Power BI Desktop solution.
 
 15. Select **Save**.
 
-#### Task 2: Review the report
+### Task 2: Review the report
 
 In this task, you will review the pre-developed report.
 
@@ -76,17 +78,17 @@ In this task, you will review the pre-developed report.
 
 	![](../images/dp500-12-1.png)
 
-	> **Note** A mixed mode model comprises tables from different source groups. This model has one import table that sources its data from an Excel workbook. The remaining tables use a DirectQuery connection to a SQL Server database, which is the data warehouse.
+	> **Note**: A mixed mode model comprises tables from different source groups. This model has one import table that sources its data from an Excel workbook. The remaining tables use a DirectQuery connection to a SQL Server database, which is the data warehouse.
 
 2. Review the report design.
 
 	![](../images/dp500-12-2.png)
 
-	> **Note** This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales and target amounts. In this lab, you will improve the performance of the report by adding an aggregation.
+	> **Note**: This report page has a title and two visuals. The slicer visual allows filtering by a single fiscal year, while the column chart visual displays quarterly sales and target amounts. In this lab, you will improve the performance of the report by adding an aggregation.
 
-#### Task 3: Review the data model
+### Task 3: Review the data model
 
-In this task, you will review the pre-developed data model.
+In this task, you will review the pre-developed data model
 
 1. Switch to **Model** view.
 
@@ -96,15 +98,13 @@ In this task, you will review the pre-developed data model.
 
 	![](../images/dp500-12-3.png)
 
-	> **Note** The model comprises three dimension tables and two fact tables. The **Sales** fact table represents sales order details, while the **Targets** table represents quarterly sales targets. It's a classic star schema design. The bar across the top of some of the tables indicate they use DirectQuery storage mode. Every table that has a blue bar belongs to the same source group.
+	> **Note**: The model comprises three dimension tables and two fact tables. The **Sales** fact table represents sales order details, while the **Targets** table represents quarterly sales targets. It's a classic star schema design. The bar across the top of some of the tables indicate they use DirectQuery storage mode. Every table that has a blue bar belongs to the same source group.
 
-	> **Note** The three dimension tables have a striped bar, which indicates they use dual storage mode. That means the tables use both import and DirectQuery storage mode. Power BI determines the most efficient storage mode to use on a query by query basis, striving to use import mode whenever possible because it's faster.
+	> **Note**: The three dimension tables have a striped bar, which indicates they use dual storage mode. That means the tables use both import and DirectQuery storage modes. Power BI determines the most efficient storage mode to use on a query by query basis, striving to use import mode whenever possible because it's faster.
 
-	> **Note** In this lab, you will add an aggregation to improve the performance of specific **Sales** table queries.
+### Task 4: Use a Performance analyzer
 
-#### Task 4: Use Performance analyzer
-
-In this task, you will open Performance analyzer and use it to inspect refresh events.
+In this task, you will open the Performance analyzer and use it to inspect refresh events
 
 1. Switch to **Report** view.
 
@@ -118,7 +118,7 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
 	![](../images/dp500-12-5.png)
 
-	> **Note** Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
+	> **Note**: Performance analyzer inspects and displays the duration necessary to update or refresh the visuals. Each visual issues at least one query to the source database. For more information, see [Use Performance Analyzer to examine report element performance](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer).
 
 4. Select **Refresh visuals**.
 
@@ -130,19 +130,19 @@ In this task, you will open Performance analyzer and use it to inspect refresh e
 
 	![](../images/dp500-12-7.png)
 
-	> **Note** Whenever you see a direct query event, it tells you that Power BI used DirectQuery storage mode to retrieve the data from the source database.
+	> **Note**: Whenever you see a direct query event, it tells you that Power BI used DirectQuery storage mode to retrieve the data from the source database.
 
-	> **Note** A common reason why a data warehouse fact table uses DirectQuery mode is because of its large data volumes. It isn't possible or economically practical to import such a large volume of data. However, the data model can cache an aggregated view of the fact table that can help improve the performance of specific, typically high-level, queries.
+	> **Note**: A common reason why a data warehouse fact table uses DirectQuery mode is because of its large data volumes. It isn't possible or economically practical to import such a large volume of data. However, the data model can cache an aggregated view of the fact table that can help improve the performance of specific, typically high-level, queries.
 
-	> **Note** In this lab, you will add an aggregation of the **Sales** table data to specifically improve the performance for visual refreshes that query the sum of the **Sales Amount** column by date and sales territory.
+	> **Note**: In this lab, you will add an aggregation of the **Sales** table data to specifically improve the performance for visual refreshes that query the sum of the **Sales Amount** column by date and sales territory.
 
-## Set up an aggregation
+## Excercise 2: Set up an aggregation
 
 In this exercise, you will set up an aggregation.
 
-*Aggregations in Power BI can improve query performance over exceptionally large DirectQuery tables. By using aggregations, the data model caches data at an aggregated level in-memory. Power BI automatically uses the aggregation whenever it can.*
+> **Note**: Aggregations in Power BI can improve query performance over exceptionally large DirectQuery tables. By using aggregations, the data model caches data at an aggregated level in-memory. Power BI automatically uses the aggregation whenever it can.
 
-#### Task 5: Add an aggregation table
+### Task 1: Add an aggregation table
 
 In this task, you will add an aggregation table to model.
 
@@ -158,7 +158,7 @@ In this task, you will add an aggregation table to model.
 
 	![](../images/dp500-12-9.png)
 
-	> **Note** You will apply a transformation to group by the **OrderDateKey** and **SalesTerritoryKey** columns, and aggregate the sum of **Sales Amount** column.
+	> **Note**: You will apply a transformation to group by the **OrderDateKey** and **SalesTerritoryKey** columns, and aggregate the sum of **Sales Amount** column.
 
 4. In the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Sales Agg**.
 
@@ -172,9 +172,9 @@ In this task, you will add an aggregation table to model.
 
 	![](../images/dp500-12-12.png)
 
-	*The advanced option allows grouping by more than one column.*
+	> **Note**: The advanced option allows grouping by more than one column.
 
-7. In the grouping dropdown list, select **OrderDateKey**.
+7. In the grouping dropdown list, select **Orde DateKey**.
 
 	![](../images/dp500-12-13.png)
 
@@ -196,21 +196,19 @@ In this task, you will add an aggregation table to model.
 
 13. Select **OK**.
 
-	![](../images/dp500-6-2.png)
-
 14. On the **Home** ribbon tab, from inside the **Close** group, click the **Close &amp; Apply** icon.
 
 	![](../images/dp500-6-36.png)
 
-	> **Note** Power BI Desktop adds a new table to the model.
+	> **Note**: Power BI Desktop adds a new table to the model.
 
-15. Save the Power BI Desktop file.
+15. **Save** the Power BI Desktop file.
 
 	![](../images/DP500-16-25.png)
 
-#### Task 6: Set model properties
+### Task 2: Set model properties
 
-In this task, you will set model properties for the new table.
+In this task, you will set model properties for the new table
 
 1. Switch to **Model** view.
 
@@ -222,7 +220,7 @@ In this task, you will set model properties for the new table.
 
 3. Notice that the **Sales Agg** table has a blue bar across the top, indicating that is uses DirectQuery storage mode.
 
-	> **Note** While it's possible for aggregations to use DirectQuery storage mode, in these cases they should connect to a materialized view in the data source. In this lab, the aggregation will use import storage mode.
+	> **Note**: While it's possible for aggregations to use DirectQuery storage mode, in these cases they should connect to a materialized view in the data source. In this lab, the aggregation will use import storage mode.
 
 4. Select the **Sales Agg** table.
 
@@ -238,13 +236,13 @@ In this task, you will set model properties for the new table.
 
 	![](../images/dp500-6-2.png)
 
-	> **Note** The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables. It also informs you that it's an irreversible action. It's not possible to change an import storage mode table back to a DirectQuery storage mode table (unless you restore from an earlier version of the Power BI Desktop file).
+	> **Note**: The warning informs you that it might take considerable time for Power BI Desktop to import data into the model tables. It also informs you that it's an irreversible action. It's not possible to change an import storage mode table back to a DirectQuery storage mode table (unless you restore from an earlier version of the Power BI Desktop file).
 
 8. Notice that Power BI Desktop loaded 6,806 rows of data into the new table.
 
 	![](../images/dp500-12-20.png)
 
-	> **Note** These rows represent each order date and sales region combination. It's a very small amount of data that has summarized a potentially very large volume of fact table rows.
+	> **Note**: These rows represent each order date and sales region combination. It's a very small amount of data that has summarized a potentially very large volume of fact table rows.
 
 9. In the **Sales Agg** table, select the **Sales Amount** column.
 
@@ -252,27 +250,23 @@ In this task, you will set model properties for the new table.
 
 	![](../images/dp500-12-41.png)
 
-	> **Note** To manage the aggregation (later in this exercise), the data type must match that of the **Sales Amount** column in the **Sales** table.
+	> **Note**: To manage the aggregation (later in this exercise), the data type must match that of the **Sales Amount** column in the **Sales** table.
 
 11. When **Data type change** dialog box is prompted, select **Yes**.
 
 	![](../images/dp500-12-21.png)
 
-#### Task 7: Create model relationships
+### Task 3: Create model relationships
 
 In this task, you will create two model relationships.
 
 1. To create a relationship, from the **Order Date** table, drag the **DateKey** column and drop it on to the **OrderDateKey** column of the **Sales Agg** table.
 
-	![](../images/dp500-12-50.png)
-
 2. In the **Create relationship** window, notice that the **Cardinality** dropdown list is set to **One to many**.
 
-	> **Note** The **DateKey** column in the **Order Date** table contains unique values, while the **OrderDateKey** column in the **Sales Agg** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and aggregations based on fact tables.
+	> **Note**: The **DateKey** column in the **Order Date** table contains unique values, while the **OrderDateKey** column in the **Sales Agg** table contains duplicate values. This one-to-many cardinality is common for relationships between dimension and aggregations based on fact tables.
 
 3. Select **OK**.
-
-	![](../images/dp500-6-2.png)
 
 4. In the model diagram, notice that a relationship now exists between the **Order Date** and **Sales Agg** tables.
 
@@ -282,15 +276,13 @@ In this task, you will create two model relationships.
 
 6. In the **Create relationship** window, select **OK**.
 
-	![](../images/dp500-6-2.png)
-
-	> **Note** The tasks you completed in this lab have added an import table to the model, and related it to other model tables. However, it's not yet an aggregation that Power BI can transparently use to improve query performance. You will set up the aggregation in the next task.
+> **Note**: The tasks you completed in this lab have added an import table to the model, and related it to other model tables. However, it's not yet an aggregation that Power BI can transparently use to improve query performance. You will set up the aggregation in the next task.
 
 7. Review the model diagram, and notice that the **Sales Agg** table is now related to two dimension tables.
 
 	![](../images/dp500-12-38.png)
 
-#### Task 8: Set up an aggregation
+### Task 4: Set up an aggregation
 
 In this task, you will setup an aggregation.
 
@@ -332,19 +324,19 @@ In this task, you will setup an aggregation.
 
 	![](../images/dp500-12-34.png)
 
-	> **Note** Power BI Desktop will hide the table in a way that's different to other hidden model objects. Power BI will always hide aggregations, and not even model calculations can ever reference them.
+	> **Note**: Power BI Desktop will hide the table in a way that's different to other hidden model objects. Power BI will always hide aggregations, and not even model calculations can ever reference them.
 
 7. Select **Apply all**.
-
-	![](../images/dp500-12-22.png)
 
 8. In the model diagram, notice that the **Sales Agg** table is a hidden table.
 
 	![](../images/dp500-12-33.png)
 
-	> **Note** Now, whenever a visual queries the **Sales** table for the sum of the **Sales Amount** column, grouping by any column of the **Order Date** or **Sales Territory** tables, Power BI will use the aggregation instead.
+	> **Note**: Now, whenever a visual queries the **Sales** table for the sum of the **Sales Amount** column, grouping by any column of the **Order Date** or **Sales Territory** tables, Power BI will use the aggregation instead.
 
-#### Task 9: Test the aggregation
+## Excercise 3: Use Performance analyzer to determine whether Power BI uses an aggregation
+
+### Task 1: Test the aggregation
 
 In this task, you will test the aggregation and determine whether Power BI uses it.
 
@@ -364,7 +356,7 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 	![](../images/dp500-12-26.png)
 
-	> **Note** What happens when users filter the column chart visual by other tables?
+	> **Note**: What happens when users filter the column chart visual by other tables?
 
 5. To clone the **Fiscal Year** slicer, first select the slicer.
 
@@ -396,21 +388,21 @@ In this task, you will test the aggregation and determine whether Power BI uses 
 
 	![](../images/dp500-12-32.png)
 
-	> **Note** Does Power BI use the aggregation?
+	> **Note**: Does Power BI use aggregation?
 
-	> **Note** The answer is yes because the aggregation groups by the **SalesTerritoryKey** column. That column relates to the **Sales Territory** table. So, you can use any column of the **Sales Territory** table to filter the column chart visual and it will use the aggregation.
+	> **Note**: The answer is yes because the aggregation groups by the **SalesTerritoryKey** column. That column relates to the **Sales Territory** table. So, you can use any column of the **Sales Territory** table to filter the column chart visual and it will use the aggregation.
 
 12. Clone the **Group** slicer to create a slicer based on the **Category** field of the **Product** table.
 
 	![](../images/dp500-12-25.png)
 
-	> **Note** Does Power BI use the aggregation?
+	> **Note**: Does Power BI use aggregation?
 
-	> **Note** The answer is no because the aggregation doesn't group by the **ProductKey** column (or any other column of the **Product** table). In this case, Power BI must use a DirectQuery connection to refresh the visual.
+	> **Note**: The answer is no because the aggregation doesn't group by the **ProductKey** column (or any other column of the **Product** table). In this case, Power BI must use a DirectQuery connection to refresh the visual.
 
-	> **Note** You have now improved the performance of specific queries by allowing Power BI to retrieve data from the model cache. The key takeaway is that aggregations can accelerate the performance of fact table queries, especially for specific measure and high-level groupings. Also, dual storage mode and aggregations work well together, providing opportunities for Power BI to avoid using expensive DirectQuery connections to source data.
+	> **Note**: You have now improved the performance of specific queries by allowing Power BI to retrieve data from the model cache. The key takeaway is that aggregations can accelerate the performance of fact table queries, especially for specific measures and high-level groupings. Also, dual storage modes and aggregations work well together, providing opportunities for Power BI to avoid using expensive DirectQuery connections to source data.
 
-#### Task 10: Finish up
+### Task 2: Finish up
 
 In this task, you will finish up.
 
@@ -419,8 +411,8 @@ In this task, you will finish up.
 	![](../images/DP500-16-25.png)
 
 2. Close Power BI Desktop.
-
-3. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
    - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.

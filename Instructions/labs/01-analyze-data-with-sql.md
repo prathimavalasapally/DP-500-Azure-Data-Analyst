@@ -1,4 +1,4 @@
-# Query files using a serverless SQL pool
+# Lab1- Query files using a serverless SQL pool
 
 SQL is probably the most used language for working with data in the world. Most data analysts are proficient in using SQL queries to retrieve, filter, and aggregate data - most commonly in relational databases. As organizations increasingly take advantage of scalable file storage to create data lakes, SQL is often still the preferred choice for querying the data. Azure Synapse Analytics provides serverless SQL pools that enable you to decouple the SQL query engine from the data storage and run queries against data files in common file formats such as delimited text and Parquet.
 
@@ -11,15 +11,15 @@ This Lab provisioned with Azure Synapse Analytics workspace and an Azure Storage
 
 ### Task-1: View files in the data lake
 
-1. In the Azure portal, Click on Show Portal Menu and select **Resource groups**
+1. In the Azure portal, Click on Show Portal Menu and select **Resource groups**.
 
    ![Screenshot showing the selection of Resource groups ](../images/DP500-1-1.png)
    
-1. Inside the Resource groups,select **lab01-rg**
+1. Inside the Resource groups,select **lab01-rg**.
  
    ![Screenshot showing the selection of lab01 Resource groups ](../images/DP500-1-2.png)
    
-1. Select the Synapse workspace titled **workspace<inject key="DeploymentID" enableCopy="false"/>** 
+1. Select the Synapse workspace titled **workspace<inject key="DeploymentID" enableCopy="false"/>** .
 
    ![Screenshot showing the selection of Synapse workspace ](../images/DP500-1-3.png)
    
@@ -421,7 +421,7 @@ The external data source makes it easier to access the files in the data lake, b
    
 6. Run the SELECT script that has been generated, and verify that it retrieves the first 100 rows of data from the table, which in turn references the files in the data lake.
 
-## Task-7: Visualize query results
+### Task-7: Visualize query results
 
 Now that you've explored various ways to query files in the data lake by using SQL queries, you can analyze the results of these queries to gain insights into the data. Often, insights are easier to uncover by visualizing the query results in a chart; which you can easily do by using the integrated charting functionality in the Synapse Studio query editor.
 
@@ -462,3 +462,4 @@ Now that you've explored various ways to query files in the data lake by using S
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 **You have successfully completed the lab**
+

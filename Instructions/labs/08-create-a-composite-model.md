@@ -120,6 +120,10 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 
     ![](../images1/dp-500-lab8-9.png)
 
+1. Select **Transform Data**.
+
+    ![](../images/dp500-8-12.png)
+    
     >**Note**: You will import this data to add a table to the DirectQuery model. Because it isn't possible to connect to an Excel workbook using DirectQuery, Power BI will import it.
 
 1. In the Power Query Editor window, to rename the first column, double-click the **Period** column header.
@@ -139,6 +143,8 @@ In this task, you will add a table that stores sales targets sourced from an Exc
 1. If prompted about a potential security risk, read the message, and then select **OK**.
 
 1. In Power BI Desktop, when the load process completes, in the model diagram, position the new table directly beneath the **Order Date** table.
+
+    ![](../images/dp500-8-15.png)
 
    >**Note**: The table may be out of view. If this is the case, scroll horizontally to reveal the table.
 
@@ -168,7 +174,7 @@ In this task, you will create two model relationships.
 
     ![](../images1/dp-500-lab8-15.png)
 
-    >**Note**: The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).
+    >**Note** The "disconnected" line indicates that the relationship is a limited relationship. A model relationship is limited when there's no guaranteed "one" side. In this case, it's because the relationship spans source groups. At query time, relationship evaluation can differ for limited relationships. For more information, see [Limited relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-relationships-understand).
 
 1. Create another relationship, this time relating the **Fiscal Quarter** column of the **Order Date** table to the **Fiscal Quarter** column of the **Targets** table.
 

@@ -114,7 +114,6 @@ In this task, you will start the SQL pool.
 
     ![](../images1/dp-lab4-12.png)
 
-
     >**Important**: The SQL pool is a costly resource. Please limit the use of this resource when working on this lab. The final task in this lab will instruct you to pause the resource.
 
 ### Task 3: Link your Power BI workspace to Azure Synapse Analytics
