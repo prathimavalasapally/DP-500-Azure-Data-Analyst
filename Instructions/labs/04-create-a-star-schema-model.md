@@ -604,3 +604,4 @@ In this task, you will stop the SQL pool.
 
 3. Pause the SQL pool.
 
+**You have successfully completed the lab**
