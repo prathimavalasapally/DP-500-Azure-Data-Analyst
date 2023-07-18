@@ -179,7 +179,7 @@ In this task, you will create a new report that uses a live connection to the **
 
 7. To create a live connection, on the **Home** ribbon tab, from inside the **Data** group, select **Power BI datasets** in Data hub drawdown.
 
-	![](../images/DP500-16-3.png)
+	![](../images1/powebidatasets.png)
 
 8. In the **Select a dataset to create a report** window, select the **Sales Analysis - Create reusable Power BI artifacts** dataset.
 
